@@ -1,11 +1,10 @@
 package dynamics;
 
-import mindustry.*;
+import dynamics.content.DynamicsItems;
 import mindustry.mod.*;
-import mindustry.type.*;
-
-import static arc.Core.*;
 
 public class Dynamics extends Mod{
-
+    public void loadContent() {
+        DynamicsItems.load();
+    }
 }
