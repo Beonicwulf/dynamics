@@ -8,7 +8,7 @@ name: "fb-dynamics"
 author: "Beonicwulf"
 
 #the fully qualified main class of the mod
-main: "dynamics.MainCD"
+main: "dynamics.Dynamics"
 
 #the mod description as seen in the mod dialog
 description: "A Mindustry Java mod template."
