@@ -7,7 +7,7 @@ import mindustry.type.*;
 
 public class DynamicsItems {
     public static Item
-            /* Resources */
+            // Resources
             zinc, tantalum, component
             ;
 
