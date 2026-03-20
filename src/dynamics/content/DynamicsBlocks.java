@@ -1,5 +1,6 @@
 package dynamics.content;
 
+import mindustry.content.Fx;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.world.Block;
@@ -23,6 +24,7 @@ public class DynamicsBlocks {
             craftTime = 90f;
             size = 2;
             hasItems = true;
+            craftEffect =  Fx.drillSteam;
 
             consumeItem(DynamicsItems.zinc, 3);
             consumeLiquid(DynamicsLiquids.steam, 12f / 60f);
@@ -31,7 +33,6 @@ public class DynamicsBlocks {
                         sinMag = 3f;
                         sinScl = 5f;
                         sides = 8;
-                        //sideOffset = Mathf.PI / 2f;
                     }}, new DrawDefault()
             );
         }};
