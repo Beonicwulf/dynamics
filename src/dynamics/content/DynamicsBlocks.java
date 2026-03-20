@@ -28,16 +28,13 @@ public class DynamicsBlocks {
             consumeItem(DynamicsItems.zinc, 3);
             consumeLiquid(DynamicsLiquids.steam, 12f / 60f);
 
-            drawer = new DrawMulti(
-                    new DrawRegion("-bottom"),
-                    new DrawPistons(){{
+            drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawPistons(){{
                         sinMag = 3f;
                         sinScl = 5f;
                         sides = 8;
                         sideOffset = Mathf.PI / 2f;
-                    }},
-                    new DrawRegion("-top"),
-                    new DrawDefault()
+                    }}, new DrawDefault()
+                    //,new DrawRegion("-top")
             );
         }};
     }
