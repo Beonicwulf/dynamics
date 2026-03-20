@@ -7,8 +7,10 @@ import mindustry.type.*;
 
 public class DynamicsItems {
     public static Item
-            // Resources
-            zinc, tantalum, component
+            // resources
+            zinc, tantalum, olivine,
+            // crafted
+            component, sublime
             ;
 
     public static final Seq<Item> dynamicsItems = new Seq<>();
@@ -28,9 +30,19 @@ public class DynamicsItems {
         component = new Item("component", Color.valueOf("#b09f74")) {{
             cost = 2;
         }};
+        sublime = new Item("sublime", Color.valueOf("#b7cbd0")) {{
+            cost = 2;
+            flammability = 0.4f;
+            explosiveness = 0.4f;
+        }};
+        olivine = new Item("olivine", Color.valueOf("#8dd3c1")) {{
+            cost = 0.8f;
+            hardness = 2;
+        }};
+
 
         dynamicsItems.addAll(
-                zinc, tantalum, component
+                zinc, tantalum, component, sublime, olivine
         );
     }
 }
