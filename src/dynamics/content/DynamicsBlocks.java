@@ -29,7 +29,6 @@ public class DynamicsBlocks {
             consumeLiquid(DynamicsLiquids.steam, 12f / 60f);
 
             drawer = new DrawMulti(
-
                     new DrawRegion("-bottom"),
                     new DrawPistons(){{
                         sinMag = 2.75f;
@@ -37,8 +36,8 @@ public class DynamicsBlocks {
                         sides = 8;
                         sideOffset = Mathf.PI / 2f;
                     }},
-                    new DrawDefault(),
-                    new DrawRegion("-top")
+                    new DrawRegion("-top"),
+                    new DrawDefault()
             );
         }};
     }
