@@ -21,12 +21,12 @@ public class DynamicsBlocks {
             requirements(Category.crafting, with(DynamicsItems.zinc, 40));
 
             outputItem = new ItemStack(DynamicsItems.component, 1);
-            craftTime = 90f;
+            craftTime = 150f;
             size = 2;
             hasItems = true;
             craftEffect =  Fx.drillSteam;
 
-            consumeItem(DynamicsItems.zinc, 3);
+            consumeItem(DynamicsItems.zinc, 5);
             consumeLiquid(DynamicsLiquids.steam, 12f / 60f);
 
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawPistons(){{
