@@ -1,7 +1,5 @@
 package dynamics.content;
 
-import arc.graphics.g2d.Draw;
-import arc.math.Mathf;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.world.Block;
@@ -33,7 +31,7 @@ public class DynamicsBlocks {
                         sinMag = 3f;
                         sinScl = 5f;
                         sides = 8;
-                        sideOffset = Mathf.PI / 2f;
+                        //sideOffset = Mathf.PI / 2f;
                     }}, new DrawDefault()
             );
         }};
