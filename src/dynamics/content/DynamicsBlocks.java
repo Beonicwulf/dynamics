@@ -34,7 +34,7 @@ public class DynamicsBlocks {
                         sinScl = 5f;
                         sides = 8;
                         sideOffset = Mathf.PI / 2f;
-                    }}, new DrawRegion("-mid"), new DrawDefault()
+                    }}, new DrawDefault()
             );
         }};
     }
