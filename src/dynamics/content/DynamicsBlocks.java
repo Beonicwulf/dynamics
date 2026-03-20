@@ -18,7 +18,7 @@ public class DynamicsBlocks {
     public static void load() {
         //crafting
         mechanicalPress = new GenericCrafter("mechanical-press"){{
-            requirements(Category.crafting, with(DynamicsItems.zinc, 80));
+            requirements(Category.crafting, with(DynamicsItems.zinc, 40));
 
             outputItem = new ItemStack(DynamicsItems.component, 1);
             craftTime = 90f;
@@ -31,7 +31,7 @@ public class DynamicsBlocks {
             drawer = new DrawMulti(
                     new DrawRegion("-bottom"),
                     new DrawPistons(){{
-                        sinMag = 2.75f;
+                        sinMag = 3f;
                         sinScl = 5f;
                         sides = 8;
                         sideOffset = Mathf.PI / 2f;
