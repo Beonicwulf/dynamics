@@ -31,7 +31,7 @@ public class DynamicsBlocks {
 
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawPistons(){{
                         sinMag = 3f;
-                        sinScl = 5f;
+                        sinScl = 15f;
                         sides = 8;
                     }}, new DrawDefault()
             );
