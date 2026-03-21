@@ -19,7 +19,7 @@ public class DynamicsBlocks {
     public static void load() {
         //crafting
         mechanicalPress = new GenericCrafter("mechanical-press"){{
-            requirements(Category.crafting, with(DynamicsItems.aluminium, 40));
+            requirements(Category.crafting, with(DynamicsItems.zinc, 60, DynamicsItems.malachite, 20));
 
             outputItem = new ItemStack(DynamicsItems.component, 1);
             craftTime = 150f;
@@ -27,7 +27,7 @@ public class DynamicsBlocks {
             hasItems = true;
             craftEffect =  Fx.drillSteam;
 
-            consumeItem(DynamicsItems.aluminium, 5);
+            consumeItems(with(DynamicsItems.zinc, 10, DynamicsItems.malachite, 5));
             consumeLiquid(DynamicsLiquids.steam, 12f / 60f);
 
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawPistons(){{
