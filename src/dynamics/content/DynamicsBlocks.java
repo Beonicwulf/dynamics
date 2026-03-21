@@ -6,6 +6,7 @@ import mindustry.type.ItemStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.production.*;
 import mindustry.world.draw.*;
+import dynamics.graphics.DrawPress;
 
 import static mindustry.type.ItemStack.with;
 
@@ -33,7 +34,7 @@ public class DynamicsBlocks {
                         sinMag = 3f;
                         sinScl = 15f;
                         sides = 8;
-                    }}, new DrawDefault()
+                    }}, new DrawDefault(), new DrawPress("")
             );
         }};
     }

@@ -1,4 +1,4 @@
-package minedusty.graphics;
+package dynamics.graphics;
 
 import arc.Core;
 import arc.graphics.g2d.Draw;
