@@ -1,13 +1,12 @@
 package dynamics.content.blocks;
 
 import dynamics.content.DynamicsItems;
-import dynamics.content.DynamicsLiquids;
+import dynamics.content.DynamicsRecipes;
 import dynamics.graphics.DrawPress;
+import dynamics.world.blocks.crafting.RecipeCrafter;
 import mindustry.content.Fx;
 import mindustry.type.Category;
-import mindustry.type.ItemStack;
 import mindustry.world.Block;
-import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.draw.DrawDefault;
 import mindustry.world.draw.DrawMulti;
 import mindustry.world.draw.DrawPistons;
@@ -21,17 +20,13 @@ public class DynamicsCrafting {
             ;
 
     public static void load() {
-        mechanicalPress = new GenericCrafter("mechanical-press"){{
+        mechanicalPress = new RecipeCrafter("mechanical-press"){{
             requirements(Category.crafting, with(DynamicsItems.zinc, 60, DynamicsItems.malachite, 20));
-
-            outputItem = new ItemStack(DynamicsItems.component, 1);
-            craftTime = 150f;
+            recipes.addAll(DynamicsRecipes.basicComponentRecipe);
+            recipes.addAll(DynamicsRecipes.testRecipe);
             size = 2;
             hasItems = true;
             craftEffect =  Fx.drillSteam;
-
-            consumeItems(with(DynamicsItems.zinc, 10, DynamicsItems.malachite, 5));
-            consumeLiquid(DynamicsLiquids.steam, 12f / 60f);
 
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawPistons(){{
                 sinMag = 3f;
