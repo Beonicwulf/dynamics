@@ -22,12 +22,12 @@ public class DynamicsCrafting {
     public static void load() {
         mechanicalPress = new RecipeCrafter("mechanical-press"){{
             requirements(Category.crafting, with(DynamicsItems.zinc, 60, DynamicsItems.malachite, 20));
-            //recipes.addAll(DynamicsRecipes.basicComponentRecipe);
-            recipes.addAll(DynamicsRecipes.testRecipe);
+            recipes.addAll(DynamicsRecipes.basicComponentRecipe);
+            //recipes.addAll(DynamicsRecipes.testRecipe);
             size = 2;
             hasItems = true;
             craftEffect =  Fx.drillSteam
-            consumeItems(with(DynamicsItems.zinc, 10));
+            //consumeItems(with(DynamicsItems.zinc, 10));
             consumeLiquid(DynamicsLiquids.steam, 12f / 60f);
 
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawPistons(){{
