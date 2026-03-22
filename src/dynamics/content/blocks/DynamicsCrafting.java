@@ -26,7 +26,7 @@ public class DynamicsCrafting {
             //recipes.addAll(DynamicsRecipes.testRecipe);
             size = 2;
             hasItems = true;
-            craftEffect =  Fx.drillSteam
+            craftEffect =  Fx.drillSteam;
             //consumeItems(with(DynamicsItems.zinc, 10));
             consumeLiquid(DynamicsLiquids.steam, 12f / 60f);
 
