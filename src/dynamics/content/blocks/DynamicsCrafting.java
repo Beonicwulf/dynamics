@@ -2,6 +2,7 @@ package dynamics.content.blocks;
 
 import dynamics.content.DynamicsItems;
 import dynamics.content.DynamicsRecipes;
+import dynamics.content.DynamicsLiquids;
 import dynamics.graphics.DrawPress;
 import dynamics.world.blocks.crafting.RecipeCrafter;
 import mindustry.content.Fx;
