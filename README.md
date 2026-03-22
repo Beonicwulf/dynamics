@@ -7,7 +7,9 @@ My first Java mod, WIP
 ### Attributions
 
 Co-developers:
+
 ☆ Endofreeze 
+
 ☆ Gourmet 
 
 Big thanks to:
