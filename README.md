@@ -1,5 +1,5 @@
 # Dynamics
-
+![](icon.png)
 
 ## Info
 My first Java mod, WIP
