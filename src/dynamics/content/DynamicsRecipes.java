@@ -13,7 +13,7 @@ public class DynamicsRecipes {
     public static void load() {
         basicComponentRecipe = Seq.with(
                 new Recipe(120f).consumeItems(ItemStack.with(DynamicsItems.zinc, 10, DynamicsItems.malachite, 5)).outputItem(DynamicsItems.component),
-                new Recipe(60f).consumeItems(ItemStack.with(DynamicsItems.tantalum, 5, DynamicsItems.zinc, 15)).outputItem(DynamicsItems.sublime)
+                new Recipe(60f).consumeItems(ItemStack.with(DynamicsItems.tantalum, 5, DynamicsItems.zinc, 5)).outputItem(DynamicsItems.sublime)
         );
     }
 }
