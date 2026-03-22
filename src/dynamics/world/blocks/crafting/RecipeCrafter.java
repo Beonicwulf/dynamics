@@ -7,6 +7,7 @@ import arc.scene.ui.layout.*;
 import arc.struct.*;
 import arc.util.*;
 import arc.util.io.*;
+import dynamics.world.consumers.ConsumeItemsUses.*;
 import dynamics.world.meta.*;
 import mindustry.*;
 import mindustry.content.*;
@@ -44,12 +45,17 @@ public class RecipeCrafter extends Block {
         sync = true;
         ambientSoundVolume = 0.03f;
         flags = EnumSet.of(BlockFlag.factory);
+
+        config(Integer.class, (RecipeCrafterBuild crafter, Integer recipeID) -> {
+            if (!configurable || crafter.currentRecipeID == recipeID) return;
+            crafter.currentRecipeID = recipeID;
+        });
     }
 
     @Override
     public void setBars() {
         super.setBars();
-        // why isn't this like a boolean or something
+        // why isnt this like a boolean or something
         removeBar("items");
     }
 
@@ -174,7 +180,7 @@ public class RecipeCrafter extends Block {
         return drawer.finalIcons(this);
     }
 
-    public class RecipeCrafterBuild extends Building {
+    public class RecipeCrafterBuild extends Building implements UseCounter {
         public int currentRecipeID = -1;
         public float progress;
         public float totalProgress;
@@ -200,7 +206,7 @@ public class RecipeCrafter extends Block {
                 } else {
                     warmup = Mathf.approachDelta(warmup, 0f, warmupSpeed);
                 }
-                // uhh, yeah whatever anuke said. IDK I just copied his code
+                // uhh yeah whatever anuke said. idk i just copied his code
                 totalProgress += warmup * Time.delta;
 
                 if (progress >= 1f) {
@@ -398,6 +404,16 @@ public class RecipeCrafter extends Block {
         @Override
         public float totalProgress() {
             return totalProgress;
+        }
+
+        @Override
+        public int getUses() {
+            return uses;
+        }
+
+        @Override
+        public void setUses(int uses) {
+            this.uses = uses;
         }
 
         @Override

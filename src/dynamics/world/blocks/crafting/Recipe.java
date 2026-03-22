@@ -24,8 +24,6 @@ public class Recipe {
     // for ui
     public UnlockableContent primaryOutput;
 
-    // sector past which this recipe should be visible
-
     public Recipe(float craftTime) {
         this.craftTime = craftTime;
     }
