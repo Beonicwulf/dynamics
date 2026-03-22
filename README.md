@@ -5,10 +5,13 @@
 My first Java mod, WIP
 
 ### Attributions
+
+Co-developers:
+☆ Endofreeze 
+☆ Gourmet 
+
 Big thanks to:
 
-✧ ItsKirby69 for DrawPress.java 
+✧ ItsKirby69 for DrawPress.java (MineDustry)
 
-✧ Endofreeze for immense feedback 
-
-✧ Gourmet for playtesting 
+✧ Nullotte for RecipeCrafter.java (Carpe Diem)
