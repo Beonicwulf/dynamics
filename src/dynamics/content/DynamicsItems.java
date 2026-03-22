@@ -22,6 +22,10 @@ public class DynamicsItems {
             alwaysUnlocked = true;
             healthScaling = 0.1f;
         }};
+        malachite = new Item("malachite", Color.valueOf("#356a46")) {{
+            cost = 0.8f;
+            hardness = 2;
+        }};
         tantalum = new Item("tantalum", Color.valueOf("#606d90")) {{
             cost = 1.5f;
             hardness = 4;
@@ -35,11 +39,6 @@ public class DynamicsItems {
             flammability = 0.4f;
             explosiveness = 0.4f;
         }};
-        malachite = new Item("malachite", Color.valueOf("#356a46")) {{
-            cost = 0.8f;
-            hardness = 2;
-        }};
-
 
         dynamicsItems.addAll(
                 zinc, tantalum, component, sublime, malachite
