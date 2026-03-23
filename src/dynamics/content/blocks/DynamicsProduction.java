@@ -21,7 +21,7 @@ public class DynamicsProduction {
         clockworkDrill = new BurstDrill("clockwork-drill") {{
             requirements(Category.production, with(DynamicsItems.zinc, 50, DynamicsItems.partBasic, 5));
             size = 3;
-            drillTime = 60f * 24f;
+            drillTime = 60f * 18f;
             shake = 2f;
             drillEffect = new MultiEffect(Fx.mineImpact, Fx.drillSteam, Fx.mineImpactWave.wrap(Pal.redLight, 40f));
             consumeLiquid(DynamicsLiquids.steam, 12f / 60f);
