@@ -14,6 +14,6 @@ Co-developers:
 
 Big thanks to:
 
-✧ ItsKirby69 for DrawPress.java (MineDustry)
+✧ ItsKirby69 for DrawPress.java ([MineDusty](https://github.com/ItsKirby69/MineDusty))
 
-✧ Nullotte for RecipeCrafter.java (Carpe Diem)
+✧ Nullotte for RecipeCrafter.java ([Carpe Diem](https://github.com/nullotte/Carpe-Diem))
