@@ -28,6 +28,7 @@ public class DynamicsProduction {
             hasPower = false;
             tier = 2;
             drillMultipliers.put(DynamicsItems.zinc, 2f);
+            arrows = 1;
         }};
     }
 }
