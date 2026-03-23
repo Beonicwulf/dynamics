@@ -14,7 +14,7 @@ public class DynamicsDistribution {
 
     public static void load() {
         accelerator = new MassDriver("accelerator"){{
-            requirements(Category.distribution, with(DynamicsItems.zinc, 10, DynamicsItems.component, 1));
+            requirements(Category.distribution, with(DynamicsItems.zinc, 10, DynamicsItems.partBasic, 1));
             size = 1;
             itemCapacity = 10;
             hasPower = false;

@@ -20,7 +20,7 @@ public class DynamicsLiquidBlocks {
 
         }};
         pipeRouter = new LiquidRouter("pipe-router") {{
-            requirements(Category.liquid, with(DynamicsItems.zinc, 10, DynamicsItems.component, 1));
+            requirements(Category.liquid, with(DynamicsItems.zinc, 10, DynamicsItems.partBasic, 1));
             liquidCapacity = 40;
             size = 1;
         }};
