@@ -4,15 +4,17 @@
 ## Info
 My first Java mod, WIP
 
+
+
+
 ### Attributions
+**The Dev Team:**
 
-Co-developers:
+☆ Endofreeze
 
-☆ Endofreeze 
+☆ Gourmet
 
-☆ Gourmet 
-
-Big thanks to:
+**Big thanks to all the following:**
 
 ✧ ItsKirby69 for DrawPress.java ([MineDusty](https://github.com/ItsKirby69/MineDusty))
 
