@@ -19,7 +19,7 @@ public class DynamicsProduction {
 
     public static void load() {
         clockworkDrill = new BurstDrill("clockwork-drill") {{
-            requirements(Category.production, with(DynamicsItems.zinc, 50, DynamicsItems.partBasic, 5));
+            requirements(Category.production, with(DynamicsItems.zinc, 50, DynamicsItems.partBasic, 2));
             size = 3;
             drillTime = 60f * 18f;
             shake = 2f;
