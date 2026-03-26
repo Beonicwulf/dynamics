@@ -35,6 +35,18 @@ public class DirectionalSorter extends DuctRouter {
     public TextureRegion[] icons() {
         return new TextureRegion[]{region};
     }
+    public class DirectionalSorterBuild extends DuctRouterBuild {
+        @Override
+        public void draw() {
+            Draw.rect(baseRegion, x, y);
+            if (sortItem != null) {
+                Draw.color(sortItem.color);
+                Draw.rect(itemRegion, x, y);
+                Draw.color();
+            }
+            Draw.rect(topRegion, x, y, rotdeg());
+        }
+    }
 }
 
 // Taken from New Horizons mod
