@@ -6,6 +6,7 @@ import arc.graphics.g2d.TextureRegion;
 import arc.util.Eachable;
 import dynamics.Dynamics;
 import mindustry.entities.units.BuildPlan;
+import mindustry.world.Tile;
 import mindustry.world.blocks.distribution.DuctRouter;
 
 public class DirectionalSorter extends DuctRouter {
@@ -32,9 +33,16 @@ public class DirectionalSorter extends DuctRouter {
         Draw.rect(topRegion, plan.drawx(), plan.drawy(), plan.rotation * 90);
     }
 
+    @Override
+    public int minimapColor(Tile tile){
+        var build = (DirectionalSorterBuild)tile.build;
+        return build == null || build.sortItem == null ? 0 : build.sortItem.color.rgba();
+    }
+
     public TextureRegion[] icons() {
         return new TextureRegion[]{region};
     }
+
     public class DirectionalSorterBuild extends DuctRouterBuild {
         @Override
         public void draw() {
@@ -50,5 +58,5 @@ public class DirectionalSorter extends DuctRouter {
     }
 }
 
-// Taken from New Horizons mod
+// Taken from New Horizons mod & modified/fixed
 // Source: https://github.com/Yuria-Shikibe/NewHorizonMod/blob/78266dbf908907e4316391152ac36d99f4ac52fa/src/newhorizon/expand/block/distribution/item/logistics/AdaptDirectionalRouter.java
