@@ -19,6 +19,7 @@ public class DirectionalSorter extends DuctRouter {
         drawTeamOverlay = false;
     }
 
+    // actually lets us set the item overlay shape/size
     @Override
     public void load() {
         super.load();
@@ -33,6 +34,7 @@ public class DirectionalSorter extends DuctRouter {
         Draw.rect(topRegion, plan.drawx(), plan.drawy(), plan.rotation * 90);
     }
 
+    // was missing from NH version
     @Override
     public int minimapColor(Tile tile){
         var build = (DirectionalSorterBuild)tile.build;
@@ -51,7 +53,9 @@ public class DirectionalSorter extends DuctRouter {
                 Draw.color(sortItem.color);
                 Draw.rect(itemRegion, x, y);
                 Draw.color();
-            }else{
+            }
+            // this else statement was not present in NH version, but is present in vanilla DuctRouter
+            else{
                 Draw.rect(topRegion, x, y, rotdeg());
             }
         }
