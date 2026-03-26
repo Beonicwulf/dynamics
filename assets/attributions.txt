@@ -1,0 +1,11 @@
+# Java classes for content
+## Nullotte, Carpe Diem mod
+RecipeCrafter.java and its requirements (Recipe.java, ConsumeItemUses.java, Output.java, OutputItems.java, OutputLiquids.java, Stat.java)
+## ItsKirby69, Minedusty mod
+DrawPress.java
+
+# Sprites
+## Endofreeze
+PH tileset
+## amongus2824
+ore-zinc aka Sphalerite
