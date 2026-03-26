@@ -43,8 +43,9 @@ public class DirectionalSorter extends DuctRouter {
                 Draw.color(sortItem.color);
                 Draw.rect(itemRegion, x, y);
                 Draw.color();
+            }else{
+                Draw.rect(topRegion, x, y, rotdeg());
             }
-            Draw.rect(topRegion, x, y, rotdeg());
         }
     }
 }
