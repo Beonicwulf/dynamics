@@ -38,7 +38,7 @@ public class DynamicsProduction {
             craftEffect = new MultiEffect(Fx.turbinegenerate, Fx.drillSteam);
             drawer = new DrawMulti(new DrawRegion("-bottom"),
                     // new DrawBlurSpin("-rotator", 6f),
-                    new DrawRegion("-mid"), new DrawLiquidTile(DynamicsLiquids.steam, 38f / 4f), new DrawDefault(), new DrawPress() {{maxScale = 1.3f;}});
+                    new DrawRegion("-mid"), new DrawLiquidTile(DynamicsLiquids.steam, 38f / 4f), new DrawDefault(), new DrawPress("-press") {{maxScale = 1.3f;}});
             craftTime = 120f;
             size = 3;
             ambientSound = Sounds.loopHum;
