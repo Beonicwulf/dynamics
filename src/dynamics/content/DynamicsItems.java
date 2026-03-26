@@ -8,9 +8,9 @@ import mindustry.type.*;
 public class DynamicsItems {
     public static Item
             // resources
-            zinc, malachite, electrum, tantalum,
+            zinc, malachite, tantalum,
             // crafted
-            partBasic, partPower, sublime
+            partBasic, sublime
             ;
 
     public static final Seq<Item> dynamicsItems = new Seq<>();
@@ -27,11 +27,6 @@ public class DynamicsItems {
             hardness = 1;
             charge = 0.3f;
         }};
-        electrum = new Item("electrum", Color.valueOf("#91773b")) {{
-            cost = 1.4f;
-            hardness = 2;
-            charge = 0.5f;
-        }};
         tantalum = new Item("tantalum", Color.valueOf("#606d90")) {{
             cost = 1.5f;
             hardness = 4;
@@ -39,11 +34,6 @@ public class DynamicsItems {
         }};
         partBasic = new Item("part-basic", Color.valueOf("#aa996e")) {{
             cost = 5;
-            healthScaling = 0.2f;
-        }};
-        partPower = new Item("part-power",Color.valueOf("#85ad85")) {{
-            cost = 7.5f;
-            charge = 0.7f;
             healthScaling = 0.2f;
         }};
         sublime = new Item("sublime", Color.valueOf("#b7cbd0")) {{

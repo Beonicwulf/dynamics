@@ -4,6 +4,7 @@ import dynamics.content.DynamicsItems;
 import mindustry.content.Liquids;
 import mindustry.graphics.CacheLayer;
 import mindustry.world.Block;
+import mindustry.world.blocks.Autotiler;
 import mindustry.world.blocks.environment.*;
 import mindustry.world.meta.Attribute;
 
@@ -14,7 +15,7 @@ public class DynamicsEnvironment {
             // ores
             oreZinc, oreMalachite,
             // metal
-            phWall, phTile,
+            phWall, phTile, phAutotile,
             // rhyolite
             rhyoliteWater, rhyoliteVentWater
 
@@ -31,6 +32,9 @@ public class DynamicsEnvironment {
         // metal
         phWall = new StaticWall("ph-wall");
         phTile = new Floor("ph-tile");
+        phAutotile = new StaticWall("ph-autotile") {{
+            autotile = true;
+        }};
         // rhyolite
         rhyoliteWater = new Floor("rhyolite-water"){{
             variants = 3;

@@ -3,13 +3,14 @@ package dynamics.content.blocks;
 import dynamics.content.DynamicsItems;
 import mindustry.type.Category;
 import mindustry.world.Block;
+import mindustry.world.blocks.distribution.DuctRouter;
 import mindustry.world.blocks.distribution.MassDriver;
 
 import static mindustry.type.ItemStack.with;
 
 public class DynamicsDistribution {
     public static Block
-            accelerator
+            accelerator, zincSorter
             ;
 
     public static void load() {
@@ -24,6 +25,11 @@ public class DynamicsDistribution {
             shake = 0.6f;
             knockback = 2;
             shootSoundVolume = 0.1f;
+        }};
+        zincSorter = new DuctRouter("zinc-sorter") {{
+            requirements(Category.distribution, with(DynamicsItems.zinc, 10, DynamicsItems.partBasic, 4));
+            regionRotated1 = 1;
+            solid = false;
         }};
     }
 }
