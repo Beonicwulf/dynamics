@@ -4,7 +4,6 @@ import dynamics.content.DynamicsItems;
 import mindustry.content.Liquids;
 import mindustry.graphics.CacheLayer;
 import mindustry.world.Block;
-import mindustry.world.blocks.Autotiler;
 import mindustry.world.blocks.environment.*;
 import mindustry.world.meta.Attribute;
 
