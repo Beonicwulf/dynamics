@@ -1,6 +1,7 @@
 package dynamics.content.blocks;
 
 import dynamics.content.DynamicsItems;
+import dynamics.content.DynamicsLiquids;
 import dynamics.graphics.DynamicsPal;
 import mindustry.content.Fx;
 import mindustry.entities.Effect;
@@ -36,6 +37,8 @@ public class DynamicsTurrets {
             maxAmmo = 24;
             ammoPerShot = 1;
             shootY = 7;
+            liquidCapacity = 50f;
+            consumeLiquid(DynamicsLiquids.steam, 5f / 60f);
 
             ammo(
                     DynamicsItems.malachite, new BasicBulletType(3f, 30, "malachite-chunk-big") {{
