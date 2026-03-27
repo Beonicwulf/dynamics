@@ -50,6 +50,7 @@ public class DynamicsTurrets {
                         trailLength = 9;
                         ammoMultiplier = 3;
                         lifetime = 60f;
+                        spin = 2.5f;
                         //pierce = true;
                         //pierceBuilding = false;
                         //pierceCap = 1;
@@ -67,6 +68,7 @@ public class DynamicsTurrets {
                         homingPower = 0.4f;
                         homingDelay = 4f;
                         homingRange = 50f;
+                        spin = 3.5f;
                         sticky = true;
                         stickyExtraLifetime = 20f;
                         hitEffect = despawnEffect = Fx.hitBulletColor;
