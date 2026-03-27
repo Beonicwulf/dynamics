@@ -47,7 +47,7 @@ public class DynamicsItems {
         }};
 
         dynamicsItems.addAll(
-                zinc, tantalum, partBasic, sublime, malachite
+                zinc, tantalum, partBasic, sublime, malachite, cinnabar
         );
     }
 }
