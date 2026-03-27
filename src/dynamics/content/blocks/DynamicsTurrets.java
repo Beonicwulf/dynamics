@@ -44,7 +44,8 @@ public class DynamicsTurrets {
             ammo(
                     DynamicsItems.malachite, new BasicBulletType(2.5f, 30, "fb-dynamics-malachite-chunk-big") {{
                         hitColor = trailColor = DynamicsPal.malachite;
-                        height = width = 10;
+                        height = 11;
+                        width = 9;
                         trailWidth = 1.3f;
                         trailLength = 9;
                         ammoMultiplier = 3;
@@ -54,10 +55,15 @@ public class DynamicsTurrets {
                         fragBullets = 4;
                         fragBullet = new BasicBulletType(2f, 20, "fb-dynamics-malachite-chunk") {{
                         hitColor = trailColor = DynamicsPal.malachite;
-                        height = width = 6;
+                        height = 7;
+                        width = 5;
                         trailWidth = 0.9f;
                         trailLength = 5;
                         homingPower = 0.4f;
+                        homingDelay = 4f;
+                        homingRange = 50f;
+                        sticky = true;
+                        stickyExtraLifetime = 10f;
                         hitEffect = despawnEffect = Fx.hitBulletColor;
                         }};
                     }}
