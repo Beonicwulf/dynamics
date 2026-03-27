@@ -42,7 +42,7 @@ public class DynamicsTurrets {
             consumeLiquid(DynamicsLiquids.steam, 5f / 60f);
 
             ammo(
-                    DynamicsItems.malachite, new BasicBulletType(2.5f, 30, "fb-dynamics-malachite-chunk-big") {{
+                    DynamicsItems.malachite, new BasicBulletType(2.5f, 15, "fb-dynamics-malachite-chunk-big") {{
                         hitColor = trailColor = DynamicsPal.malachite;
                         height = 11;
                         width = 9;
@@ -50,6 +50,11 @@ public class DynamicsTurrets {
                         trailLength = 9;
                         ammoMultiplier = 3;
                         lifetime = 60f;
+                        //pierce = true;
+                        //pierceBuilding = false;
+                        //pierceCap = 1;
+                        splashDamage = 15f;
+                        splashDamageRadius = 10f;
                         hitEffect = despawnEffect = Fx.hitBulletColor;
                         shootEffect = withdrawShootEffect;
                         fragBullets = 4;
@@ -63,7 +68,7 @@ public class DynamicsTurrets {
                         homingDelay = 4f;
                         homingRange = 50f;
                         sticky = true;
-                        stickyExtraLifetime = 10f;
+                        stickyExtraLifetime = 20f;
                         hitEffect = despawnEffect = Fx.hitBulletColor;
                         }};
                     }}
