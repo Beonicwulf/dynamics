@@ -12,6 +12,7 @@ import mindustry.type.LiquidStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.production.AttributeCrafter;
 import mindustry.world.blocks.production.BurstDrill;
+import mindustry.world.blocks.production.Drill;
 import mindustry.world.draw.*;
 import mindustry.world.meta.Attribute;
 import mindustry.world.meta.BlockGroup;
@@ -23,10 +24,28 @@ public class DynamicsProduction {
             // vents
             steamCollector,
             // drills
-            clockworkDrill
+            clockworkDrill, microDrill
                     ;
 
     public static void load() {
+        microDrill = new Drill("micro-drill") {{
+            requirements(Category.production, with(DynamicsItems.zinc,10, DynamicsItems.malachite, 5));
+            size = 1;
+            tier = 1;
+            drillTime = 60f * 10f;
+        }};
+        clockworkDrill = new BurstDrill("clockwork-drill") {{
+            requirements(Category.production, with(DynamicsItems.zinc, 50, DynamicsItems.partBasic, 2));
+            size = 3;
+            drillTime = 60f * 18f;
+            shake = 2f;
+            drillEffect = new MultiEffect(Fx.mineImpact, Fx.drillSteam, Fx.mineImpactWave.wrap(Pal.redLight, 40f));
+            consumeLiquid(DynamicsLiquids.steam, 5f / 60f);
+            hasPower = false;
+            tier = 2;
+            drillMultipliers.put(DynamicsItems.zinc, 2f);
+            arrows = 1;
+        }};
         steamCollector = new AttributeCrafter("steam-collector"){{
             requirements(Category.production, with(DynamicsItems.zinc, 60, DynamicsItems.malachite, 20));
             attribute = Attribute.steam;
@@ -49,17 +68,6 @@ public class DynamicsProduction {
             outputLiquid = new LiquidStack(DynamicsLiquids.steam, 30f / 60f);
             liquidCapacity = 60f;
         }};
-        clockworkDrill = new BurstDrill("clockwork-drill") {{
-            requirements(Category.production, with(DynamicsItems.zinc, 50, DynamicsItems.partBasic, 2));
-            size = 3;
-            drillTime = 60f * 18f;
-            shake = 2f;
-            drillEffect = new MultiEffect(Fx.mineImpact, Fx.drillSteam, Fx.mineImpactWave.wrap(Pal.redLight, 40f));
-            consumeLiquid(DynamicsLiquids.steam, 5f / 60f);
-            hasPower = false;
-            tier = 2;
-            drillMultipliers.put(DynamicsItems.zinc, 2f);
-            arrows = 1;
-        }};
+
     }
 }
