@@ -5,14 +5,16 @@ displayName: "Dynamics"
 name: "fb-dynamics"
 
 #your name
-author: "Beonicwulf"
+author: "Farborne Industries ⚙️"
 
 #the fully qualified main class of the mod
 main: "dynamics.Dynamics"
 
 #the mod description as seen in the mod dialog
-description: "A Mindustry Java mod template."
-
+description:
+  '''
+  ❂ Work in Progress ❂
+  '''
 #the mod version
 version: 0.1
 

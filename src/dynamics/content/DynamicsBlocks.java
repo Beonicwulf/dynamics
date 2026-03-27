@@ -9,5 +9,6 @@ public class DynamicsBlocks {
         DynamicsDistribution.load();
         DynamicsLiquidBlocks.load();
         DynamicsProduction.load();
+        DynamicsTurrets.load();
     }
 }
