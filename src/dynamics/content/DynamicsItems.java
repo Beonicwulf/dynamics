@@ -38,7 +38,7 @@ public class DynamicsItems {
         }};
         partBasic = new Item("part-basic", Color.valueOf("#aa996e")) {{
             cost = 5;
-            healthScaling = 0.2f;
+            healthScaling = 3.5f;
         }};
         sublime = new Item("sublime", Color.valueOf("#b7cbd0")) {{
             cost = 2;
