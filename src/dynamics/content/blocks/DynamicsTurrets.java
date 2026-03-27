@@ -54,12 +54,12 @@ public class DynamicsTurrets {
                         //pierce = true;
                         //pierceBuilding = false;
                         //pierceCap = 1;
-                        splashDamage = 15f;
+                        splashDamage = 20f;
                         splashDamageRadius = 10f;
                         hitEffect = despawnEffect = Fx.hitBulletColor;
                         shootEffect = withdrawShootEffect;
                         fragBullets = 4;
-                        fragBullet = new BasicBulletType(2f, 20, "fb-dynamics-malachite-chunk") {{
+                        fragBullet = new BasicBulletType(2f, 30, "fb-dynamics-malachite-chunk") {{
                         hitColor = trailColor = DynamicsPal.malachite;
                         height = 7;
                         width = 5;
