@@ -8,7 +8,7 @@ import mindustry.type.*;
 public class DynamicsItems {
     public static Item
             // resources
-            zinc, malachite, tantalum,
+            zinc, malachite, cinnabar, tantalum,
             // crafted
             partBasic, sublime
             ;
@@ -26,6 +26,10 @@ public class DynamicsItems {
             cost = 1.2f;
             hardness = 1;
             charge = 0.3f;
+        }};
+        cinnabar = new Item("cinnabar", Color.valueOf("784132")) {{
+            hardness = 2;
+            buildable = false;
         }};
         tantalum = new Item("tantalum", Color.valueOf("#606d90")) {{
             cost = 1.5f;
