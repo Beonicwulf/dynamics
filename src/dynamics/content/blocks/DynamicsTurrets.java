@@ -29,7 +29,7 @@ public class DynamicsTurrets {
             hasPower = false;
             recoil = 2;
             reload = 35f;
-            range = 160;
+            range = 180;
             ammoUseEffect = Fx.drillSteam;
             shootSound = Sounds.shootBreach;
             targetUnderBlocks = false;
@@ -44,7 +44,8 @@ public class DynamicsTurrets {
             ammo(
                     DynamicsItems.malachite, new BasicBulletType(2.5f, 30, "fb-dynamics-malachite-chunk-big") {{
                         hitColor = trailColor = DynamicsPal.malachite;
-                        trailWidth = 0.9f;
+                        height = width = 10;
+                        trailWidth = 1.3f;
                         trailLength = 9;
                         ammoMultiplier = 3;
                         lifetime = 60f;
@@ -53,7 +54,8 @@ public class DynamicsTurrets {
                         fragBullets = 4;
                         fragBullet = new BasicBulletType(2f, 20, "fb-dynamics-malachite-chunk") {{
                         hitColor = trailColor = DynamicsPal.malachite;
-                        trailWidth = 0.5f;
+                        height = width = 5;
+                        trailWidth = 0.9f;
                         trailLength = 5;
                         homingPower = 0.4f;
                         hitEffect = despawnEffect = Fx.hitBulletColor;
