@@ -2,25 +2,63 @@ package dynamics.content.blocks;
 
 import dynamics.content.DynamicsItems;
 import dynamics.content.DynamicsLiquids;
+import dynamics.graphics.DrawPress;
 import dynamics.graphics.DynamicsPal;
 import mindustry.content.Fx;
 import mindustry.entities.Effect;
 import mindustry.entities.bullet.BasicBulletType;
 import mindustry.entities.effect.MultiEffect;
+import mindustry.entities.pattern.ShootSpread;
 import mindustry.gen.Sounds;
 import mindustry.type.Category;
 import mindustry.world.Block;
 import mindustry.world.blocks.defense.turrets.*;
+import mindustry.world.draw.*;
+import mindustry.world.draw.DrawLiquidRegion;
+import mindustry.world.draw.DrawMulti;
 
 import static mindustry.type.ItemStack.with;
 
 public class DynamicsTurrets {
     public static Block
-            withdraw
+            withdraw, steamValve
             ;
 
     public static void load(){
         Effect withdrawShootEffect = new MultiEffect(Fx.drillSteam, Fx.colorSparkBig);
+
+        steamValve = new LiquidTurret("steam-valve") {{
+            requirements(Category.defense, with(DynamicsItems.zinc, 24, DynamicsItems.partBasic, 1));
+            size = 2;
+            health = 1380; //should replace with scaledHealth? needs testing
+            ammo(
+                    DynamicsLiquids.steam, new BasicBulletType(0.5f, 10) {{
+                        targetBlocks = false;
+                        knockback = 4f;
+                        width = 25f;
+                        hitSize = 7f;
+                        height = 20f;
+                        shootEffect = Fx.shootBigColor;
+                        smokeEffect = Fx.shootSmokeSquareSparse;
+                        hitColor = backColor = trailColor = DynamicsPal.steam;
+                        frontColor = DynamicsPal.steamLight;
+                        trailWidth = 6f;
+                        trailLength = 3;
+                        hitEffect = despawnEffect = Fx.hitSquaresColor;
+
+                    }}
+            );
+            drawer = new DrawMulti(
+                    new DrawDefault(), new DrawLiquidRegion(), new DrawRegion("-rotator", 2f), new DrawRegion("-top"), new DrawPress()
+            );
+            shootEffect = Fx.drillSteam;
+            recoil = 0f;
+            reload = 40f;
+            liquidCapacity = 10f;
+            shootCone = 360f;
+            range = 20;
+            shoot = new ShootSpread(45, 8f);
+        }};
 
         withdraw = new ItemTurret("withdraw") {{
             requirements(Category.turret, with(DynamicsItems.zinc, 100, DynamicsItems.partBasic, 10));
@@ -43,7 +81,8 @@ public class DynamicsTurrets {
 
             ammo(
                     DynamicsItems.malachite, new BasicBulletType(2.5f, 15, "fb-dynamics-malachite-chunk-big") {{
-                        hitColor = trailColor = DynamicsPal.malachite;
+                        hitColor = DynamicsPal.malachite;
+                        trailColor = DynamicsPal.steam;
                         height = 11;
                         width = 9;
                         trailWidth = 1.3f;
@@ -51,9 +90,6 @@ public class DynamicsTurrets {
                         ammoMultiplier = 3;
                         lifetime = 60f;
                         spin = 2.5f;
-                        //pierce = true;
-                        //pierceBuilding = false;
-                        //pierceCap = 1;
                         splashDamage = 20f;
                         splashDamageRadius = 10f;
                         hitEffect = despawnEffect = Fx.hitBulletColor;
