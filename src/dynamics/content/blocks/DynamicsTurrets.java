@@ -53,10 +53,10 @@ public class DynamicsTurrets {
             );
             shootEffect = Fx.drillSteam;
             recoil = 0f;
-            reload = 150f;
+            reload = 90f;
             liquidCapacity = 10f;
             shootCone = 360f;
-            range = 20;
+            range = 32;
             shootY = 0;
             shoot = new ShootSpread(30, 12f);
         }};
