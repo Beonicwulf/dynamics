@@ -2,8 +2,7 @@ package dynamics.content.blocks;
 
 import dynamics.content.DynamicsItems;
 import dynamics.content.DynamicsLiquids;
-import dynamics.graphics.DrawPress;
-import dynamics.graphics.DynamicsPal;
+import dynamics.graphics.*;
 import mindustry.content.Fx;
 import mindustry.entities.Effect;
 import mindustry.entities.bullet.BasicBulletType;
@@ -14,8 +13,6 @@ import mindustry.type.Category;
 import mindustry.world.Block;
 import mindustry.world.blocks.defense.turrets.*;
 import mindustry.world.draw.*;
-import mindustry.world.draw.DrawLiquidRegion;
-import mindustry.world.draw.DrawMulti;
 
 import static mindustry.type.ItemStack.with;
 
