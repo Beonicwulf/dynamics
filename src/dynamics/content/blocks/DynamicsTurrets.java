@@ -32,7 +32,7 @@ public class DynamicsTurrets {
             size = 2;
             health = 1380; //should replace with scaledHealth? needs testing
             ammo(
-                    DynamicsLiquids.steam, new BasicBulletType(0.5f, 10) {{
+                    DynamicsLiquids.steam, new BasicBulletType(0.4f, 10) {{
                         targetBlocks = false;
                         knockback = 4f;
                         width = 25f;
