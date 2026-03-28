@@ -49,16 +49,16 @@ public class DynamicsTurrets {
                     }}
             );
             drawer = new DrawMulti(
-                    new DrawDefault(), new DrawRegion("-base"), new DrawLiquidRegion(), new DrawRegion("-rotator", 2f), new DrawRegion("-top"), new DrawPress()
+                    new DrawDefault(), new DrawRegion("-base"), new DrawLiquidRegion(), new DrawRegion("-rotator", 2f), new DrawRegion("-top"), new DrawPress("-press")
             );
             shootEffect = Fx.drillSteam;
             recoil = 0f;
-            reload = 40f;
+            reload = 240f;
             liquidCapacity = 10f;
             shootCone = 360f;
             range = 20;
             shootY = 0;
-            shoot = new ShootSpread(45, 8f);
+            shoot = new ShootSpread(36, 10f);
         }};
 
         withdraw = new ItemTurret("withdraw") {{
