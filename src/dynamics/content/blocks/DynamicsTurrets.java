@@ -49,7 +49,7 @@ public class DynamicsTurrets {
                     }}
             );
             drawer = new DrawMulti(
-                    new DrawDefault(), new DrawLiquidRegion(), new DrawRegion("-rotator", 2f), new DrawRegion("-top"), new DrawPress()
+                    new DrawDefault(), new DrawRegion("-base"), new DrawLiquidRegion(), new DrawRegion("-rotator", 2f), new DrawRegion("-top"), new DrawPress()
             );
             shootEffect = Fx.drillSteam;
             recoil = 0f;
@@ -57,6 +57,7 @@ public class DynamicsTurrets {
             liquidCapacity = 10f;
             shootCone = 360f;
             range = 20;
+            shootY = 0;
             shoot = new ShootSpread(45, 8f);
         }};
 
