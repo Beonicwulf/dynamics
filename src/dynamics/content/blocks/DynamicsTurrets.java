@@ -32,9 +32,9 @@ public class DynamicsTurrets {
             size = 2;
             health = 1380; //should replace with scaledHealth? needs testing
             ammo(
-                    DynamicsLiquids.steam, new BasicBulletType(0.4f, 10) {{
+                    DynamicsLiquids.steam, new BasicBulletType(0.6f, 10) {{
                         targetBlocks = false;
-                        knockback = 4f;
+                        knockback = 12f;
                         width = 25f;
                         hitSize = 7f;
                         height = 20f;
@@ -53,12 +53,12 @@ public class DynamicsTurrets {
             );
             shootEffect = Fx.drillSteam;
             recoil = 0f;
-            reload = 240f;
+            reload = 150f;
             liquidCapacity = 10f;
             shootCone = 360f;
             range = 20;
             shootY = 0;
-            shoot = new ShootSpread(36, 10f);
+            shoot = new ShootSpread(30, 12f);
         }};
 
         withdraw = new ItemTurret("withdraw") {{
