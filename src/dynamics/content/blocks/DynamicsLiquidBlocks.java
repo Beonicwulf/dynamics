@@ -10,7 +10,7 @@ import static mindustry.type.ItemStack.*;
 
 public class DynamicsLiquidBlocks {
     public static Block
-            pipe, pipeRouter, pipeTunnel
+            pipe, pipeRouter, pipeTunnel, pipeJunction
             ;
 
     public static void load() {
@@ -27,13 +27,19 @@ public class DynamicsLiquidBlocks {
             size = 1;
             placeableLiquid = true;
             liquidPadding = 3f/4f;
-            researchCostMultiplier = 3;
             underBullets = true;
             solid = false;
             //explosivenessScale = flammabilityScale = 40f/150f;
         }};
+        pipeJunction = new LiquidJunction("pipe-junction") {{
+            requirements(Category.liquid, with(DynamicsItems.zinc, 10, DynamicsItems.partBasic, 1));
+            size = 1;
+            solid = false;
+            placeableLiquid = true;
+            underBullets = true;
+        }};
         pipeTunnel = new DirectionLiquidBridge("pipe-tunnel") {{
-            requirements(Category.liquid, with(DynamicsItems.zinc, 20,DynamicsItems.partBasic, 5));
+            requirements(Category.liquid, with(DynamicsItems.zinc, 20, DynamicsItems.partBasic, 5));
             solid = false;
             range = 8;
             hasPower = false;

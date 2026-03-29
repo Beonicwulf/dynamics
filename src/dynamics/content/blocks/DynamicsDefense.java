@@ -16,7 +16,7 @@ import mindustry.world.draw.*;
 
 import static mindustry.type.ItemStack.with;
 
-public class DynamicsTurrets {
+public class DynamicsDefense {
     public static Block
             withdraw, steamValve
             ;
