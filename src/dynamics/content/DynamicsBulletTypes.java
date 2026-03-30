@@ -31,7 +31,6 @@ public class DynamicsBulletTypes {
         }};
 
         coreShards = malachiteShards.copy();
-        coreShards.shootEffect = Fx.casing3;
         coreShards.homingDelay = 15f;
         coreShards.homingPower = 0.3f;
         coreShards.lifetime = 40;
@@ -59,10 +58,8 @@ public class DynamicsBulletTypes {
         healingShards.keepVelocity = false;
         healingShards.hitEffect = healingShards.despawnEffect = Fx.hitLaser;
         healingShards.hitColor = healingShards.trailColor = DynamicsPal.malachite;
-        healingShards.shootEffect = Fx.drillSteam;
         healingShards.healPercent = 5.5f;
         healingShards.collidesTeam = true;
         healingShards.reflectable = false;
-        healingShards.damage = 0f;
     }
 }
