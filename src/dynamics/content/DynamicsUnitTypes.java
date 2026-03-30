@@ -36,7 +36,7 @@ public class DynamicsUnitTypes {
         }};
 
         breatheWeapon = new Weapon("breathe-weapon"){{
-            x = y = -1f;
+            x = y = -2f;
             reload = 40;
             inaccuracy = 10;
             minWarmup = 0.05f;
@@ -97,14 +97,14 @@ public class DynamicsUnitTypes {
             stepShake = 0.01f;
             legStraightness = 0.3f;
             legCount = 6;
-            legLength = 10f;
+            legLength = 16f;
             legContinuousMove = true;
             legExtension = -0.2f;
             legBaseOffset = 0.3f;
             legMaxLength = 1.1f;
             legMinLength = 0.3f;
             legLengthScl = 0.96f;
-            legForwardScl = 1.2f;
+            legForwardScl = 1f;
             legGroupSize = 3;
             rippleScale = 0.2f;
             legMoveSpace = 1;
