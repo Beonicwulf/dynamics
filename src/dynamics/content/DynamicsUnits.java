@@ -5,8 +5,6 @@ import dynamics.graphics.DynamicsPal;
 import mindustry.ai.UnitCommand;
 import mindustry.content.Fx;
 import mindustry.entities.bullet.BasicBulletType;
-import mindustry.entities.bullet.MissileBulletType;
-import mindustry.gen.Sounds;
 import mindustry.type.UnitType;
 import mindustry.type.Weapon;
 
@@ -20,12 +18,11 @@ public class DynamicsUnits {
             ;
 
     public static void load() {
-        augerBolt = new Weapon("auger-bolt"){{
+        augerBolt = new Weapon("fb-dynamics-auger-bolt"){{
             top = false;
             reload = 30f;
             ejectEffect = Fx.none;
             recoil = 2f;
-            shootSound = Sounds.shootMissilePlasmaShort;
             velocityRnd = 0.5f;
             inaccuracy = 15f;
             alternate = true;
@@ -34,7 +31,6 @@ public class DynamicsUnits {
                 keepVelocity = false;
                 hitEffect = despawnEffect = Fx.hitLaser;
                 hitColor = trailColor = DynamicsPal.malachite;
-                hitSound = Sounds.none;
                 shootEffect = Fx.drillSteam;
 
                 height = 7;
