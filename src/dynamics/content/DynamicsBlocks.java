@@ -10,5 +10,6 @@ public class DynamicsBlocks {
         DynamicsDistribution.load();
         DynamicsLiquidBlocks.load();
         DynamicsDefense.load();
+        DynamicsEffectBlocks.load();
     }
 }

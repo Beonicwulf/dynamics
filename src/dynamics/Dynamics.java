@@ -15,7 +15,7 @@ public class Dynamics extends Mod{
         DynamicsItems.load();
         DynamicsLiquids.load();
         DynamicsRecipes.load();
-        DynamicsUnits.load();
+        DynamicsUnitTypes.load();
         DynamicsBlocks.load();
 
     }

@@ -13,4 +13,6 @@ PH tileset
 ore-zinc aka Sphalerite
 ## nullevoy
 withdraw turret sprite
-
+## aerodynamic_attorney
+auger drone sprite
+core unit sprite (breathe + its leg)

@@ -1,12 +1,11 @@
 package dynamics.content.blocks;
 
+import dynamics.content.DynamicsBulletTypes;
 import dynamics.content.DynamicsItems;
 import dynamics.content.DynamicsLiquids;
 import dynamics.graphics.*;
 import mindustry.content.Fx;
-import mindustry.entities.Effect;
 import mindustry.entities.bullet.BasicBulletType;
-import mindustry.entities.effect.MultiEffect;
 import mindustry.entities.pattern.ShootSpread;
 import mindustry.gen.Sounds;
 import mindustry.type.Category;
@@ -22,7 +21,6 @@ public class DynamicsDefense {
             ;
 
     public static void load(){
-        Effect withdrawShootEffect = new MultiEffect(Fx.drillSteam, Fx.colorSparkBig);
 
         steamValve = new LiquidTurret("steam-valve") {{
             requirements(Category.defense, with(DynamicsItems.zinc, 24, DynamicsItems.partBasic, 1));
@@ -78,36 +76,7 @@ public class DynamicsDefense {
             consumeLiquid(DynamicsLiquids.steam, 5f / 60f);
 
             ammo(
-                    DynamicsItems.malachite, new BasicBulletType(2.5f, 15, "fb-dynamics-malachite-chunk-big") {{
-                        hitColor = DynamicsPal.malachite;
-                        trailColor = DynamicsPal.steam;
-                        height = 11;
-                        width = 9;
-                        trailWidth = 1.3f;
-                        trailLength = 9;
-                        ammoMultiplier = 3;
-                        lifetime = 60f;
-                        spin = 2.5f;
-                        splashDamage = 20f;
-                        splashDamageRadius = 10f;
-                        hitEffect = despawnEffect = Fx.hitBulletColor;
-                        shootEffect = withdrawShootEffect;
-                        fragBullets = 4;
-                        fragBullet = new BasicBulletType(2f, 30, "fb-dynamics-malachite-chunk") {{
-                        hitColor = trailColor = DynamicsPal.malachite;
-                        height = 7;
-                        width = 5;
-                        trailWidth = 0.9f;
-                        trailLength = 5;
-                        homingPower = 0.4f;
-                        homingDelay = 4f;
-                        homingRange = 50f;
-                        spin = 3.5f;
-                        sticky = true;
-                        stickyExtraLifetime = 20f;
-                        hitEffect = despawnEffect = Fx.hitBulletColor;
-                        }};
-                    }}
+                    DynamicsItems.malachite, DynamicsBulletTypes.malachiteFrag
             );
             //thx nullevoy for sprite
         }};
