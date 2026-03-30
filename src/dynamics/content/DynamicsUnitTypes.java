@@ -76,7 +76,7 @@ public class DynamicsUnitTypes {
 
         breathe = new UnitType("breathe") {{
             controller = u -> new BuilderAI(true, coreFleeRange);
-            constructor = UnitEntity::create;
+            constructor = LegsUnit::create;
             coreUnitDock = true;
             isEnemy = false;
             outlines = false;
