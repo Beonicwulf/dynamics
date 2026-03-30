@@ -34,12 +34,15 @@ public class DynamicsUnitTypes {
         }};
 
         breatheWeapon = new Weapon("breathe-weapon"){{
-            mirror = false;
-            x = y = 0;
-            reload = 15;
+            x = y = -0.1f;
+            reload = 40;
             inaccuracy = 10;
             minWarmup = 0.05f;
             bullet = DynamicsBulletTypes.coreShards;
+            shoot = new ShootPattern() {{
+						shots = 3;
+						shotDelay = 5;
+					}};
         }};
 
         augerDrone = new UnitType("auger-drone"){{
