@@ -35,6 +35,7 @@ public class DynamicsBulletTypes {
         coreShards.homingPower = 0.3f;
         coreShards.lifetime = 40;
         coreShards.speed = 4;
+        coreShards.damage = 40;
 
         malachiteFrag = new BasicBulletType(2.5f, 15, "fb-dynamics-malachite-chunk-big") {{
             hitColor = DynamicsPal.malachite;
