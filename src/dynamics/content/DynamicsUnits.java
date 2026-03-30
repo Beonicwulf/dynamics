@@ -5,18 +5,57 @@ import dynamics.graphics.DynamicsPal;
 import mindustry.ai.UnitCommand;
 import mindustry.content.Fx;
 import mindustry.entities.bullet.BasicBulletType;
+import mindustry.gen.UnitEntity;
 import mindustry.type.UnitType;
 import mindustry.type.Weapon;
 
 public class DynamicsUnits {
+    public static Weapon
+            augerBolt
+            ;
 
     public static UnitType
             augerDrone
             ;
 
     public static void load() {
+        augerBolt = new Weapon("auger-bolt"){{
+            top = false;
+            reload = 30f;
+            ejectEffect = Fx.none;
+            recoil = 2f;
+            velocityRnd = 0.5f;
+            inaccuracy = 15f;
+            alternate = true;
+
+            bullet = new BasicBulletType(2f, 0, "fb-dynamics-malachite-chunk"){{
+                keepVelocity = false;
+                hitEffect = despawnEffect = Fx.hitLaser;
+                hitColor = trailColor = DynamicsPal.malachite;
+                shootEffect = Fx.drillSteam;
+
+                height = 7;
+                width = 5;
+                trailWidth = 0.9f;
+                trailLength = 5;
+                homingPower = 0.4f;
+                homingDelay = 4f;
+                homingRange = 50f;
+                spin = 3.5f;
+                sticky = true;
+                stickyExtraLifetime = 20f;
+                hitEffect = despawnEffect = Fx.hitBulletColor;
+
+                healPercent = 5.5f;
+                collidesTeam = true;
+                reflectable = false;
+            }};
+        }};
+
+
         augerDrone = new UnitType("auger-drone"){{
             defaultCommand = UnitCommand.mineCommand;
+            constructor = UnitEntity::create;
 
             flying = true;
             drag = 0.06f;
@@ -32,44 +71,12 @@ public class DynamicsUnits {
             mineTier = 1;
             mineSpeed = 2.5f;
             mineItems = Seq.with(DynamicsItems.zinc, DynamicsItems.malachite);
-            
+
+            lifetime = 60f * 40f;
             targetAir  = false;
             targetGround = false;
 
-            weapons.add(
-                    new Weapon("fb-dynamics-auger-bolt"){{
-                        top = false;
-                        reload = 30f;
-                        ejectEffect = Fx.none;
-                        recoil = 2f;
-                        velocityRnd = 0.5f;
-                        inaccuracy = 15f;
-                        alternate = true;
-
-                        bullet = new BasicBulletType(2f, 0, "fb-dynamics-malachite-chunk"){{
-                            keepVelocity = false;
-                            hitEffect = despawnEffect = Fx.hitLaser;
-                            hitColor = trailColor = DynamicsPal.malachite;
-                            shootEffect = Fx.drillSteam;
-
-                            height = 7;
-                            width = 5;
-                            trailWidth = 0.9f;
-                            trailLength = 5;
-                            homingPower = 0.4f;
-                            homingDelay = 4f;
-                            homingRange = 50f;
-                            spin = 3.5f;
-                            sticky = true;
-                            stickyExtraLifetime = 20f;
-                            hitEffect = despawnEffect = Fx.hitBulletColor;
-
-                            healPercent = 5.5f;
-                            collidesTeam = true;
-                            reflectable = false;
-                        }};
-                    }}
-            );
+            weapons.add(augerBolt);
         }};
     }
 }
