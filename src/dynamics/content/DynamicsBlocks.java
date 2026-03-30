@@ -6,9 +6,9 @@ public class DynamicsBlocks {
     public static void load() {
         DynamicsEnvironment.load();
         DynamicsCrafting.load();
+        DynamicsProduction.load();
         DynamicsDistribution.load();
         DynamicsLiquidBlocks.load();
-        DynamicsProduction.load();
         DynamicsDefense.load();
     }
 }

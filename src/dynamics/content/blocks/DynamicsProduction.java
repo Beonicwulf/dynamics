@@ -47,7 +47,7 @@ public class DynamicsProduction {
             arrows = 1;
         }};
         steamCollector = new AttributeCrafter("steam-collector"){{
-            requirements(Category.production, with(DynamicsItems.zinc, 60, DynamicsItems.malachite, 20));
+            requirements(Category.liquid, with(DynamicsItems.zinc, 60, DynamicsItems.malachite, 20));
             attribute = Attribute.steam;
             group = BlockGroup.liquids;
             minEfficiency = 9f - 0.0001f;

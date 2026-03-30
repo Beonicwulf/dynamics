@@ -1,9 +1,6 @@
 package dynamics;
 
-import dynamics.content.DynamicsBlocks;
-import dynamics.content.DynamicsItems;
-import dynamics.content.DynamicsLiquids;
-import dynamics.content.DynamicsRecipes;
+import dynamics.content.*;
 import mindustry.mod.*;
 
 public class Dynamics extends Mod{
@@ -18,6 +15,7 @@ public class Dynamics extends Mod{
         DynamicsItems.load();
         DynamicsLiquids.load();
         DynamicsRecipes.load();
+        DynamicsUnits.load();
         DynamicsBlocks.load();
 
     }
