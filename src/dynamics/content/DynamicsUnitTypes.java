@@ -97,10 +97,10 @@ public class DynamicsUnitTypes {
             stepShake = 0.01f;
             legStraightness = 0.3f;
             legCount = 6;
-            legLength = 16f;
+            legLength = 13f;
             legContinuousMove = true;
-            legExtension = -0.2f;
-            legBaseOffset = 0.3f;
+            legExtension = -1f;
+            legBaseOffset = 1f;
             legMaxLength = 1.1f;
             legMinLength = 0.3f;
             legLengthScl = 0.96f;
