@@ -77,7 +77,7 @@ public class DynamicsUnitTypes {
             isEnemy = false;
             outlines = false;
             hitSize = 9;
-            speed = 1.2f;
+            speed = 1.3f;
             health = 300;
             lockLegBase = true;
             armor = mineTier = 1;
@@ -87,13 +87,14 @@ public class DynamicsUnitTypes {
             rotateSpeed = 4;
             itemCapacity = 40;
             groundLayer = 75;
+            flying = false;
             //mineItems = Seq.with(DynamicsItems.zinc, DynamicsItems.malachite);
             stepShake = 0.01f;
             legStraightness = 0.3f;
             legCount = 6;
             legLength = 10;
             legContinuousMove = true;
-            legExtension = 1;
+            legExtension = 0f;
             legBaseOffset = 1;
             legMaxLength = 1.1f;
             legMinLength = 0.3f;
