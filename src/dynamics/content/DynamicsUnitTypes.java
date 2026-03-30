@@ -35,7 +35,7 @@ public class DynamicsUnitTypes {
         }};
 
         breatheWeapon = new Weapon("breathe-weapon"){{
-            x = y = -0.1f;
+            x = y = -1f;
             reload = 40;
             inaccuracy = 10;
             minWarmup = 0.05f;
@@ -90,16 +90,16 @@ public class DynamicsUnitTypes {
             buildSpeed = 3;
             rotateSpeed = 4;
             itemCapacity = 40;
-            groundLayer = 75;
+            groundLayer = Layer.legUnit - 1f;
             flying = false;
             //mineItems = Seq.with(DynamicsItems.zinc, DynamicsItems.malachite);
             stepShake = 0.01f;
             legStraightness = 0.3f;
             legCount = 6;
-            legLength = 10;
+            legLength = 10f;
             legContinuousMove = true;
-            legExtension = 0f;
-            legBaseOffset = 1;
+            legExtension = -0.2f;
+            legBaseOffset = 0.3f;
             legMaxLength = 1.1f;
             legMinLength = 0.3f;
             legLengthScl = 0.96f;
