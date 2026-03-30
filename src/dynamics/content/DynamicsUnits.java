@@ -32,8 +32,7 @@ public class DynamicsUnits {
             mineTier = 1;
             mineSpeed = 2.5f;
             mineItems = Seq.with(DynamicsItems.zinc, DynamicsItems.malachite);
-
-            lifetime = 60f * 40f;
+            
             targetAir  = false;
             targetGround = false;
 
