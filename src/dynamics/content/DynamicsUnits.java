@@ -56,6 +56,7 @@ public class DynamicsUnits {
         augerDrone = new UnitType("auger-drone"){{
             defaultCommand = UnitCommand.mineCommand;
             constructor = UnitEntity::create;
+            outlines = false;
 
             flying = true;
             drag = 0.06f;
