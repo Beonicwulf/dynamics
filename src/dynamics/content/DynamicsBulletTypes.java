@@ -37,7 +37,7 @@ public class DynamicsBulletTypes {
         coreShards.speed = 4;
         coreShards.damage = 40;
 
-        malachiteFrag = new BasicBulletType(2.5f, 15, "fb-dynamics-malachite-chunk-big") {{
+        malachiteFrag = new BasicBulletType(2.5f, 20, "fb-dynamics-malachite-chunk-big") {{
             hitColor = DynamicsPal.malachite;
             trailColor = DynamicsPal.steam;
             height = 11;
@@ -56,11 +56,11 @@ public class DynamicsBulletTypes {
         }};
 
         healingShards = malachiteShards.copy();
-        healingShards.keepVelocity = false;
         healingShards.hitEffect = healingShards.despawnEffect = Fx.hitLaser;
         healingShards.hitColor = healingShards.trailColor = DynamicsPal.malachite;
-        healingShards.healPercent = 5.5f;
         healingShards.collidesTeam = true;
-        healingShards.reflectable = false;
+        healingShards.healPercent = healingShards.homingPower = 5.5f;
+        healingShards.reflectable = healingShards.sticky = healingShards.keepVelocity = false;
+        healingShards.damage = 0;
     }
 }

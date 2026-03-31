@@ -10,6 +10,7 @@ public class DynamicsLiquids {
         steam = new Liquid("steam", DynamicsPal.steam) {{
             temperature = 0.7f;
             gas = true;
+            explosiveness = 0.5f;
         }};
     }
 }
