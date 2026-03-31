@@ -1,4 +1,4 @@
-package dynamics.game;
+package dynamics.content;
 
 import arc.Core;
 import arc.graphics.Color;

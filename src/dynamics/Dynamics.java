@@ -1,7 +1,7 @@
 package dynamics;
 
 import dynamics.content.*;
-import dynamics.game.DynamicsTeams;
+import dynamics.content.DynamicsTeams;
 import mindustry.mod.*;
 
 public class Dynamics extends Mod{
@@ -13,7 +13,6 @@ public class Dynamics extends Mod{
 
     @Override
     public void loadContent() {
-        DynamicsTeams.load();
         DynamicsItems.load();
         DynamicsLiquids.load();
         DynamicsRecipes.load();
@@ -21,5 +20,11 @@ public class Dynamics extends Mod{
         DynamicsUnitTypes.load();
         DynamicsBlocks.load();
 
+    }
+
+    @Override
+    public void init() {
+        super.init();
+        DynamicsTeams.load();
     }
 }
