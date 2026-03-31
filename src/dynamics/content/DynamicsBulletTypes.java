@@ -17,12 +17,13 @@ public class DynamicsBulletTypes {
         Effect withdrawShootEffect = new MultiEffect(Fx.drillSteam, Fx.colorSparkBig);
 
         stickyShard = new BasicBulletType(4f, 0, "fb-dynamics-malachite-chunk") {{
-            height = 7;
-            width = 5;
+            height = 6;
+            width = 6;
             homingPower = 1f;
             sticky = true;
-            stickyExtraLifetime = 45f;
+            stickyExtraLifetime = 75f;
             lifetime = 1f;
+            hitEffect = despawnEffect = Fx.none;
         }};
 
         malachiteShards = new BasicBulletType(2f, 10, "fb-dynamics-malachite-chunk") {{
