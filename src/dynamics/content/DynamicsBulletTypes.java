@@ -9,15 +9,22 @@ import mindustry.entities.effect.MultiEffect;
 
 public class DynamicsBulletTypes {
     public static BulletType
-            stickyShards,
-            malachiteShards, malachiteFrag, healingShards, coreShards,
+            malachiteShards, malachiteFrag, healingShards, coreShards, stickyShard,
             steamBlast
             ;
 
     public static void load() {
         Effect withdrawShootEffect = new MultiEffect(Fx.drillSteam, Fx.colorSparkBig);
 
-        stickyShards = new BasicBulletType(2f, 15, "fb-dynamics-malachite-chunk") {{
+        stickyShard = new BasicBulletType(0, 0, "fb-dynamics-malachite-chunk") {{
+            height = 7;
+            width = 5;
+            homingPower = 1f;
+            sticky = true;
+            stickyExtraLifetime = 20f;
+        }};
+
+        malachiteShards = new BasicBulletType(2f, 10, "fb-dynamics-malachite-chunk") {{
             hitColor = trailColor = DynamicsPal.malachite;
             height = 7;
             width = 5;
@@ -27,22 +34,14 @@ public class DynamicsBulletTypes {
             homingDelay = 4f;
             homingRange = 50f;
             spin = 3.5f;
-            sticky = true;
-            stickyExtraLifetime = 20f;
             hitEffect = despawnEffect = Fx.hitBulletColor;
         }};
-
-        malachiteShards = stickyShards.copy();
-        malachiteShards.sticky = false;
-        malachiteShards.fragBullet = stickyShards;
-        malachiteShards.fragBullets = 1;
 
         coreShards = malachiteShards.copy();
         coreShards.homingDelay = 15f;
         coreShards.homingPower = 0.3f;
         coreShards.lifetime = 40;
         coreShards.speed = 4;
-        coreShards.damage = 20;
 
         malachiteFrag = new BasicBulletType(2.5f, 20, "fb-dynamics-malachite-chunk-big") {{
             hitColor = DynamicsPal.malachite;
