@@ -35,6 +35,7 @@ public class DynamicsBulletTypes {
         malachiteShards = stickyShards.copy();
         malachiteShards.sticky = false;
         malachiteShards.fragBullet = stickyShards;
+        malachiteShards.fragBullets = 1;
 
         coreShards = malachiteShards.copy();
         coreShards.homingDelay = 15f;

@@ -8,7 +8,7 @@
 - [x] Basic Components
 - [x] Tier 1 Defense
 - [x] Tier 1 Core
-- [ ] Enemy Team
+- [x] Enemy Team
 - [ ] Auger Drone implementation
 - [ ] Tier 1 Units
 - [ ] Hot-spring biome (Travertine & Cinnabar)
