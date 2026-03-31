@@ -10,6 +10,7 @@ public class DynamicsPal {
             tantalum = Color.valueOf("#606d90"),
             steam = Color.valueOf("#d6eaf3"),
             sublime = Color.valueOf("#b7cbd0"),
-            steamLight = Color.valueOf("#d6eaf3")
+            steamLight = Color.valueOf("#d6eaf3"),
+            dread = Color.valueOf("#9fabd1")
     ;
 }

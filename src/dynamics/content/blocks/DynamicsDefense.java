@@ -5,7 +5,6 @@ import dynamics.content.DynamicsItems;
 import dynamics.content.DynamicsLiquids;
 import dynamics.graphics.*;
 import mindustry.content.Fx;
-import mindustry.entities.bullet.BasicBulletType;
 import mindustry.entities.pattern.ShootSpread;
 import mindustry.gen.Sounds;
 import mindustry.type.Category;
@@ -27,21 +26,7 @@ public class DynamicsDefense {
             size = 2;
             health = 1380; //should replace with scaledHealth? needs testing
             ammo(
-                    DynamicsLiquids.steam, new BasicBulletType(0.6f, 10) {{
-                        targetBlocks = false;
-                        knockback = 12f;
-                        width = 25f;
-                        hitSize = 7f;
-                        height = 20f;
-                        shootEffect = Fx.shootBigColor;
-                        smokeEffect = Fx.shootSmokeSquareSparse;
-                        hitColor = backColor = trailColor = DynamicsPal.steam;
-                        frontColor = DynamicsPal.steamLight;
-                        trailWidth = 6f;
-                        trailLength = 3;
-                        hitEffect = despawnEffect = Fx.hitSquaresColor;
-
-                    }}
+                    DynamicsLiquids.steam, DynamicsBulletTypes.steamBlast
             );
             drawer = new DrawMulti(
                     new DrawDefault(), new DrawRegion("-base"), new DrawLiquidRegion(), new DrawRegion("-rotator", 2f), new DrawRegion("-top"), new DrawPress("-press")

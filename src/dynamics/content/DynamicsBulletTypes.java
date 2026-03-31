@@ -9,7 +9,8 @@ import mindustry.entities.effect.MultiEffect;
 
 public class DynamicsBulletTypes {
     public static BulletType
-            malachiteShards, malachiteFrag, healingShards, coreShards
+            malachiteShards, malachiteFrag, healingShards, coreShards,
+            steamBlast
             ;
 
     public static void load() {
@@ -62,5 +63,21 @@ public class DynamicsBulletTypes {
         healingShards.healPercent = healingShards.homingPower = 5.5f;
         healingShards.reflectable = healingShards.sticky = healingShards.keepVelocity = false;
         healingShards.damage = 0;
+
+        steamBlast = new BasicBulletType(1.2f, 10) {{
+            targetBlocks = false;
+            knockback = 12f;
+            width = 25f;
+            hitSize = 7f;
+            height = 20f;
+            shootEffect = Fx.shootBigColor;
+            smokeEffect = Fx.shootSmokeSquareSparse;
+            hitColor = backColor = trailColor = DynamicsPal.steam;
+            frontColor = DynamicsPal.steamLight;
+            trailWidth = 6f;
+            trailLength = 3;
+            hitEffect = despawnEffect = Fx.hitSquaresColor;
+            lifetime = 30f;
+        }};
     }
 }
