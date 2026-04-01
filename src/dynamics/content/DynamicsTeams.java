@@ -44,7 +44,7 @@ public class DynamicsTeams {
         stringIcons.put(name, ((char)ch) + "");
 
         int size = (int)(Fonts.def.getData().lineHeight/Fonts.def.getData().scaleY);
-        TextureRegion region = Core.atlas.find("fb-dynamics-team-" + name);
+        TextureRegion region = Core.atlas.find("team-" + name);
         Vec2 out = Scaling.fit.apply(region.width, region.height, size, size);
         Font.Glyph glyph = new Font.Glyph(){{
             id = ch;
