@@ -53,6 +53,7 @@ public class DynamicsEnvironment {
             supportsOverlay = true;
         }};
         // travertine
+        // Thank you, amongus2824 for all the Travertine Environment sprites!!!
         travertineFloor = new Floor("travertine-floor") {{
             variants = 6;
         }};
@@ -74,6 +75,8 @@ public class DynamicsEnvironment {
             supportsOverlay = true;
             liquidDrop = DynamicsLiquids.hotSpringWater;
             variants = 4;
+            cacheLayer = CacheLayer.water;
+            supportsOverlay = true;
         }};
         deepTravertine = new ShallowLiquid("deep-travertine") {{
             speedMultiplier = 0.5f;
@@ -84,6 +87,8 @@ public class DynamicsEnvironment {
             variants = 4;
             drownTime = 200f;
             liquidMultiplier = 1.25f;
+            cacheLayer = CacheLayer.water;
+            supportsOverlay = true;
         }};
         travertineGeyser = new SteamVent("travertine-geyser") {{
             parent = blendGroup = shallowTravertine;
