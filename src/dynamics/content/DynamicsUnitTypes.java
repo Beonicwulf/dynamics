@@ -49,7 +49,7 @@ public class DynamicsUnitTypes {
 
         augerDrone = new UnitType("auger-drone"){{
             defaultCommand = UnitCommand.mineCommand;
-            constructor = UnitEntity::create;
+            constructor = BuildingTetherPayloadUnit::create; //UnitEntity::create;
             outlines = false;
 
             flying = true;
