@@ -87,8 +87,8 @@ public class DynamicsUnitTypes {
             lockLegBase = true;
             armor = mineTier = 1;
             mineWalls = mineFloor = true;
-            mineSpeed = 8;
-            buildSpeed = 3;
+            mineSpeed = 6.5f;
+            buildSpeed = 1.2f;
             rotateSpeed = 4;
             itemCapacity = 40;
             groundLayer = Layer.legUnit - 1f;
