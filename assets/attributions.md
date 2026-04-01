@@ -26,3 +26,5 @@ Withdraw turret sprite
 ### ✧ aerodynamic_attorney
 Auger Drone sprite\
 Breathe sprite (core unit + its leg)
+### ✧ mimicling
+Tier 1 Core Sprite
