@@ -22,7 +22,7 @@ public class SummonPad extends UnitCargoLoader {
         @Override
         public void updateTile(){
             super.updateTile();
-            if(efficiency <= 0.3f && unit != null){unit.destroy();}
+            if(efficiency < 1 && unit != null){unit.destroy();}
         }
     }
 }
