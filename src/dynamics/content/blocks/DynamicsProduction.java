@@ -45,6 +45,7 @@ public class DynamicsProduction {
             tier = 2;
             drillMultipliers.put(DynamicsItems.zinc, 2f);
             arrows = 1;
+            placeableLiquid = true;
         }};
         steamCollector = new AttributeCrafter("steam-collector"){{
             requirements(Category.liquid, with(DynamicsItems.zinc, 60, DynamicsItems.malachite, 20));
