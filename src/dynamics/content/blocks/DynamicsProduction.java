@@ -16,6 +16,7 @@ import mindustry.world.blocks.production.Drill;
 import mindustry.world.draw.*;
 import mindustry.world.meta.Attribute;
 import mindustry.world.meta.BlockGroup;
+import mindustry.world.meta.BuildVisibility;
 
 import static mindustry.type.ItemStack.with;
 
@@ -29,7 +30,7 @@ public class DynamicsProduction {
 
     public static void load() {
         microDrill = new Drill("micro-drill") {{
-            requirements(Category.production, with(DynamicsItems.zinc,10, DynamicsItems.malachite, 5));
+            requirements(Category.production, BuildVisibility.sandboxOnly, with(DynamicsItems.zinc,10, DynamicsItems.malachite, 5));
             size = 1;
             tier = 1;
             drillTime = 60f * 10f;
