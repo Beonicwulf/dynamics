@@ -19,7 +19,7 @@
 ##### Sorted by priority more-or-less
 - [x] Sphalerite (Ore)
 - [x] Malachite (Ore)
-- [ ] Travertine
+- [x] Travertine
 - [ ] Cinnabar
 - [ ] Chalcocite
 - [ ] Peridotite
