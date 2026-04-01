@@ -49,7 +49,6 @@ public class DynamicsEnvironment {
             statusDuration = 120f;
             drownTime = 200f;
             cacheLayer = CacheLayer.water;
-            albedo = 0.9f;
             supportsOverlay = true;
         }};
         // travertine
@@ -71,8 +70,6 @@ public class DynamicsEnvironment {
         shallowTravertine = new ShallowLiquid("shallow-travertine") {{
             speedMultiplier = 0.8f;
             statusDuration = 50f;
-            albedo = 0.9f;
-            supportsOverlay = true;
             liquidDrop = DynamicsLiquids.hotSpringWater;
             variants = 4;
             cacheLayer = CacheLayer.water;
@@ -81,8 +78,6 @@ public class DynamicsEnvironment {
         deepTravertine = new ShallowLiquid("deep-travertine") {{
             speedMultiplier = 0.5f;
             statusDuration = 120f;
-            albedo = 0.9f;
-            supportsOverlay = true;
             liquidDrop = DynamicsLiquids.hotSpringWater;
             variants = 4;
             drownTime = 200f;
