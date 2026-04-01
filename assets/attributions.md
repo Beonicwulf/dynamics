@@ -17,10 +17,10 @@ Frankenstein coder & Chimera sprite artist
 [DynamicsTeams.java](https://github.com/jammuwu/BioTech/blob/master/src/biotech/content/BioTeams.java)
 ## Sprites
 ### ✧ Endofreeze
-PH tileset
+Plastic Hull tileset (ph)
 ### ✧ amongus2824
 Sphalerite (Zinc Ore)\
-Travertine Environment
+Travertine Environment (Travertine Floor, Smooth Travertine, Bright Travertine, Shallow Travertine, Deep Travertine, Hot Spring Water, Travertine Walls, Travertine Vents, Travertine Geysers, Travertine Boulders, Shallow Travertine Boulders)
 ### ✧ nullevoy
 Withdraw turret sprite
 ### ✧ aerodynamic_attorney
