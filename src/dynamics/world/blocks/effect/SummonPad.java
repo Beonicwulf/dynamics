@@ -11,6 +11,20 @@ public class SummonPad extends UnitCargoLoader {
         unitBuildTime = 60f * 8f;
         polyColor = DynamicsPal.malachite;
         itemCapacity = 0;
-        // yes, I didn't need to make a custom class for this, I just felt like it
+    }
+    public class SummonPadBuild extends UnitCargoLoader.UnitTransportSourceBuild {
+
+        @Override
+        public boolean shouldConsume(){
+            return true;
+        }
+
+        @Override
+        public void updateTile(){
+            super.updateTile();
+            if(efficiency <= 0 && unit != null){unit.destroy();}
+        }
     }
 }
+
+
