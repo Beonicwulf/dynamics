@@ -20,6 +20,7 @@ public class DynamicsLiquids {
             effect = StatusEffects.wet;
             boilPoint = 0.5f;
             gasColor = DynamicsPal.steam;
+            color = DynamicsPal.hotSpringWater;
         }};
     }
 }

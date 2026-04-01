@@ -71,19 +71,24 @@ public class DynamicsEnvironment {
             speedMultiplier = 0.8f;
             statusDuration = 50f;
             liquidDrop = DynamicsLiquids.hotSpringWater;
+            isLiquid = true;
             variants = 4;
             cacheLayer = CacheLayer.water;
             supportsOverlay = true;
+            albedo = 0.9f;
         }};
         deepTravertine = new ShallowLiquid("deep-travertine") {{
             speedMultiplier = 0.5f;
             statusDuration = 120f;
             liquidDrop = DynamicsLiquids.hotSpringWater;
+            isLiquid = true;
             variants = 4;
             drownTime = 200f;
             liquidMultiplier = 1.25f;
             cacheLayer = CacheLayer.water;
             supportsOverlay = true;
+            albedo = 0.9f;
+            drownTime = 660;
         }};
         travertineGeyser = new SteamVent("travertine-geyser") {{
             parent = blendGroup = shallowTravertine;
@@ -106,6 +111,7 @@ public class DynamicsEnvironment {
         shallowTravertineBoulder = new Prop("shallow-travertine-boulder"){{
             variants = 3;
             shallowTravertine.asFloor().decoration = deepTravertine.asFloor().decoration = this;
+            placeableLiquid = true;
         }};
     }
 }
