@@ -16,8 +16,8 @@
 - [ ] Planet
 ### Short-term To-do
 - [ ] Expand Hot-spring biome (Cinnabar)
-- [ ] Add variety to Malachite-rich biome (Chalcocite, Calcite, Goethite, Azurite, etc)
-- [ ] Seperate custom Solar System maybe?
+- [ ] Add variety to Malachite-rich biome (Chalcocite, Calcite, Goethite, Azurite, etc.)
+- [ ] Separate custom Solar System maybe?
 - [ ] Third biome (sedimentary, near a river or shore)
 ### Environment & Minerals
 ##### Sorted by priority more-or-less

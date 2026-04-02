@@ -1,5 +1,5 @@
 # Dynamics
-![zinc](icon.png)
+![zinc](assets/icon.png)
 ## Info
 My first Java mod, WIP\
 After disappearing for 2 years, I'm back with a new project.

@@ -27,6 +27,7 @@ Travertine Environment (Travertine Floor, Smooth Travertine, Bright Travertine, 
 Withdraw turret sprite
 ### ✧ aerodynamic_attorney
 Auger Drone sprite\
-Breathe sprite (core unit + its leg)
+Breathe sprite (core unit + its leg)\
+Hot Spring Water & Purified Water sprites
 ### ✧ mimicling
 Tier 1 Core Sprite
