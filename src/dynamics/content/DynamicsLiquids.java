@@ -19,8 +19,7 @@ public class DynamicsLiquids {
             heatCapacity = 0.4f;
             effect = StatusEffects.wet;
             boilPoint = 0.5f;
-            gasColor = DynamicsPal.steam;
-            color = DynamicsPal.hotSpringWater;
+            gasColor = DynamicsPal.steamSulfur;
         }};
     }
 }

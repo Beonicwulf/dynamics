@@ -34,15 +34,16 @@ public class DynamicsEffectBlocks {
         augerPad = new SummonPad("auger-pad") {{
             requirements(Category.effect, BuildVisibility.sandboxOnly, with(DynamicsItems.zinc, 2000, DynamicsItems.partBasic, 200));
             hasPower = false;
-            size = 3;
+            size = 2;
             consumeLiquid(DynamicsLiquids.steam, 45f / 60f);
             unitType = DynamicsUnitTypes.augerDrone;
             polyStroke = 1.8f;
-            polyRadius = 12f;
-            polySides = 5;
+            polyRadius = 10f;
+            polySides = 3;
             polyRotateSpeed = 1f;
             unitBuildTime = 60f * 10f;
             polyColor = DynamicsPal.malachite;
+            drawTeamOverlay = true;
         }};
     }
 }

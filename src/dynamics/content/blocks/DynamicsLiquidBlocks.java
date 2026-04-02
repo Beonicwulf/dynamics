@@ -38,6 +38,7 @@ public class DynamicsLiquidBlocks {
             solid = false;
             placeableLiquid = true;
             underBullets = true;
+            ((Conduit)pipe).junctionReplacement = this;
         }};
         pipeTunnel = new DirectionLiquidBridge("pipe-tunnel") {{
             requirements(Category.liquid, with(DynamicsItems.zinc, 20, DynamicsItems.partBasic, 5));

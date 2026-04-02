@@ -37,7 +37,7 @@ public class DynamicsItems {
             hardness = 4;
             healthScaling = 0.6f;
         }};
-        partBasic = new Item("part-basic", DynamicsPal.zinc) {{
+        partBasic = new Item("part-basic", DynamicsPal.component) {{
             cost = 5;
             healthScaling = 3f;
         }};
