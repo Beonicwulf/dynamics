@@ -1,6 +1,7 @@
 package dynamics.content.blocks;
 
 import dynamics.content.DynamicsItems;
+import dynamics.world.blocks.fluid.FluidValve;
 import mindustry.type.Category;
 import mindustry.world.Block;
 import mindustry.world.blocks.distribution.DirectionLiquidBridge;
@@ -31,7 +32,7 @@ public class DynamicsLiquidBlocks {
             solid = false;
             //explosivenessScale = flammabilityScale = 40f/150f;
         }};
-        pipeJunction = new LiquidJunction("pipe-junction") {{
+        pipeJunction = new FluidValve("pipe-junction") {{
             requirements(Category.liquid, with(DynamicsItems.zinc, 10, DynamicsItems.partBasic, 1));
             size = 1;
             solid = false;

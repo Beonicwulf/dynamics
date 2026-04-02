@@ -15,6 +15,8 @@ Frankenstein coder & Chimera sprite artist
 [DirectionalSorter.java](https://github.com/Yuria-Shikibe/NewHorizonMod/blob/78266dbf908907e4316391152ac36d99f4ac52fa/src/newhorizon/expand/block/distribution/item/logistics/AdaptDirectionalRouter.java)
 ### ✧ Biotech
 [DynamicsTeams.java](https://github.com/jammuwu/BioTech/blob/master/src/biotech/content/BioTeams.java)
+### ✧ Sh1penfire, [Meld Java Mod](https://github.com/Sh1penfire/meld-java)
+FluidValve.java
 ## Sprites
 ### ✧ Endofreeze
 Plastic Hull tileset (ph)
