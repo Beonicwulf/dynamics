@@ -9,12 +9,16 @@
 - [x] Tier 1 Defense
 - [x] Tier 1 Core
 - [x] Enemy Team
-- [ ] Auger Drone implementation
-- [ ] Tier 1 Units
-- [ ] Hot-spring biome (Travertine & Cinnabar)
-- [ ] Secondary biome
-- [ ] Malachite-rich biome
+- [x] Auger Drone implementation
+- [x] Add a Hot-spring biome (Travertine)
+- [ ] Tier 1 Units 
+- [ ] Secondary biome (Malachite-rich mineral)
 - [ ] Planet
+### Short-term To-do
+- [ ] Expand Hot-spring biome (Cinnabar)
+- [ ] Add variety to Malachite-rich biome (Chalcocite, Calcite, Goethite, Azurite, etc)
+- [ ] Seperate custom Solar System maybe?
+- [ ] Third biome (sedimentary, near a river or shore)
 ### Environment & Minerals
 ##### Sorted by priority more-or-less
 - [x] Sphalerite (Ore)
