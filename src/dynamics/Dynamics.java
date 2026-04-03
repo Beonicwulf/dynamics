@@ -19,6 +19,7 @@ public class Dynamics extends Mod{
         DynamicsBulletTypes.load();
         DynamicsUnitTypes.load();
         DynamicsBlocks.load();
+        DynamicsPlanets.load();
     }
 
     @Override
