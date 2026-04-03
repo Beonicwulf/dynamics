@@ -10,10 +10,9 @@ public class DynamicsPal {
             tantalum = Color.valueOf("#606d90"),
             component = Color.valueOf("#aa8e6e"),
             steam = Color.valueOf("#d6eaf3"),
-            sublime = Color.valueOf("#b7cbd0"),
             steamLight = Color.valueOf("#d6eaf3"),
-            dread = Color.valueOf("#9fabd1"),
+            steamSulfur = Color.valueOf("#f3edce"),
             hotSpringWater = Color.valueOf("#00959c"),
-            steamSulfur = Color.valueOf("#f3edce")
+            dread = Color.valueOf("#9fabd1")
             ;
 }

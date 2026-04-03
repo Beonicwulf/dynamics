@@ -11,14 +11,25 @@
 - [x] Enemy Team
 - [x] Auger Drone implementation
 - [x] Add a Hot-spring biome (Travertine)
+- [x] Geyser Effects
 - [ ] Tier 1 Units 
 - [ ] Secondary biome (Malachite-rich mineral)
 - [ ] Planet
+- [ ] Tech Tree
 ### Short-term To-do
+- [ ] Pump
+- [ ] Acid Rain
+- [x] Zinc Message
 - [ ] Expand Hot-spring biome (Cinnabar)
 - [ ] Add variety to Malachite-rich biome (Chalcocite, Calcite, Goethite, Azurite, etc.)
 - [ ] Separate custom Solar System maybe?
 - [ ] Third biome (sedimentary, near a river or shore)
+### Block Ideas
+- [ ] 3x3 Unloader (High cost and big size, no core unloading for balance, probably directional)
+- [ ] Canvas
+### Bugfixes
+- [ ] Fix PH Autotile
+- [ ] Fix Minimap Black Liquid
 ### Environment & Minerals
 ##### Sorted by priority more-or-less
 - [x] Sphalerite (Ore)
@@ -47,3 +58,7 @@
 - [ ] Skarn
 - [ ] Marble
 - [ ] Fluorite
+- [ ] Brimstone
+- [ ] Hematite
+##### Just some random stuff
+- [ ] Big Malachite Crystals / Decoration

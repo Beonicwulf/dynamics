@@ -11,7 +11,7 @@ public class DynamicsItems {
             // resources
             zinc, malachite, cinnabar, tantalum,
             // crafted
-            partBasic, sublime
+            partBasic
             ;
 
     public static final Seq<Item> dynamicsItems = new Seq<>();
@@ -41,14 +41,9 @@ public class DynamicsItems {
             cost = 5;
             healthScaling = 3f;
         }};
-        sublime = new Item("sublime", DynamicsPal.sublime) {{
-            cost = 2;
-            flammability = 0.4f;
-            explosiveness = 0.4f;
-        }};
 
         dynamicsItems.addAll(
-                zinc, tantalum, partBasic, sublime, malachite, cinnabar
+                zinc, tantalum, partBasic, malachite, cinnabar
         );
     }
 }

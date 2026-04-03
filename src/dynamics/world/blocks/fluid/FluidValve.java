@@ -56,3 +56,4 @@ public class FluidValve extends LiquidJunction {
 }
 
 // Thanks, Sh1penfire!
+// Source: https://github.com/Sh1penfire/meld-java/blob/cb0d574b98defc12e14f2e7c0b0524802b64f116/src/meld/world/blocks/fluid/ChannelValve.java

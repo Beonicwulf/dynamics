@@ -7,6 +7,7 @@ import dynamics.graphics.DynamicsPal;
 import dynamics.world.blocks.effect.SummonPad;
 import mindustry.type.Category;
 import mindustry.world.Block;
+import mindustry.world.blocks.logic.MessageBlock;
 import mindustry.world.blocks.storage.CoreBlock;
 import mindustry.world.meta.BuildVisibility;
 
@@ -14,7 +15,8 @@ import static mindustry.type.ItemStack.with;
 
 public class DynamicsEffectBlocks {
     public static Block
-            coreSurface, augerPad
+            coreSurface, augerPad,
+            zincMessage
             ;
 
     public static void load() {
@@ -44,6 +46,10 @@ public class DynamicsEffectBlocks {
             unitBuildTime = 60f * 10f;
             polyColor = DynamicsPal.malachite;
             drawTeamOverlay = true;
+            alwaysUnlocked = true;
+        }};
+        zincMessage = new MessageBlock("zinc-message") {{
+           requirements(Category.logic, with(DynamicsItems.zinc, 10, DynamicsItems.malachite, 5, DynamicsItems.partBasic, 1));
         }};
     }
 }

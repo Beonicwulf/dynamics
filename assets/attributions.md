@@ -15,11 +15,13 @@ Frankenstein coder & Chimera sprite artist
 [DirectionalSorter.java](https://github.com/Yuria-Shikibe/NewHorizonMod/blob/78266dbf908907e4316391152ac36d99f4ac52fa/src/newhorizon/expand/block/distribution/item/logistics/AdaptDirectionalRouter.java)
 ### ✧ Biotech
 [DynamicsTeams.java](https://github.com/jammuwu/BioTech/blob/master/src/biotech/content/BioTeams.java)
-### ✧ Sh1penfire, [Meld Java Mod](https://github.com/Sh1penfire/meld-java)
-FluidValve.java
+### ✧ Sh1penfire, Meld Java Mod
+[FluidValve.java](https://github.com/Sh1penfire/meld-java/blob/cb0d574b98defc12e14f2e7c0b0524802b64f116/src/meld/world/blocks/fluid/ChannelValve.java)
+[FluidVent.java](https://github.com/Sh1penfire/meld-java/blob/cb0d574b98defc12e14f2e7c0b0524802b64f116/src/meld/world/blocks/fluid/ChannelVent.java)
+[ValveController.java](https://github.com/Sh1penfire/meld-java/blob/cb0d574b98defc12e14f2e7c0b0524802b64f116/src/meld/world/blocks/fluid/ValveController.java)
 ## Sprites
 ### ✧ Endofreeze
-Plastic Hull tileset (ph)
+Plastic Hull tileset
 ### ✧ amongus2824
 Sphalerite (Zinc Ore)\
 Travertine Environment (Travertine Floor, Smooth Travertine, Bright Travertine, Shallow Travertine, Deep Travertine, Hot Spring Water, Travertine Walls, Travertine Vents, Travertine Geysers, Travertine Boulders, Shallow Travertine Boulders)

@@ -2,11 +2,16 @@ package dynamics.content.blocks;
 
 import dynamics.content.DynamicsItems;
 import dynamics.content.DynamicsLiquids;
+import dynamics.graphics.DynamicsPal;
+import mindustry.content.Fx;
 import mindustry.content.StatusEffects;
+import mindustry.entities.effect.MultiEffect;
 import mindustry.graphics.CacheLayer;
 import mindustry.world.Block;
 import mindustry.world.blocks.environment.*;
 import mindustry.world.meta.Attribute;
+
+import java.util.Random;
 
 public class DynamicsEnvironment {
     public static Block
@@ -19,7 +24,7 @@ public class DynamicsEnvironment {
             shallowTravertine, deepTravertine,
             travertineWall, travertineVent, travertineGeyser,
             // metal
-            phWall, phTile, phAutotile,
+            phWall, phTile, phConnect,
             // props
             travertineBoulder, shallowTravertineBoulder
             ;
@@ -35,7 +40,7 @@ public class DynamicsEnvironment {
         // metal
         phWall = new StaticWall("ph-wall");
         phTile = new Floor("ph-tile");
-        phAutotile = new StaticWall("ph-autotile") {{
+        phConnect = new StaticWall("ph-connect"){{
             autotile = true;
         }};
         // liquids
@@ -66,6 +71,7 @@ public class DynamicsEnvironment {
             parent = blendGroup = travertineFloor;
             attributes.set(Attribute.steam, 1f);
             variants = 2;
+            effectColor = DynamicsPal.steamSulfur;
         }};
         shallowTravertine = new ShallowLiquid("shallow-travertine") {{
             speedMultiplier = 0.8f;
@@ -100,6 +106,9 @@ public class DynamicsEnvironment {
             cacheLayer = CacheLayer.water;
             albedo = 0.9f;
             supportsOverlay = true;
+            effectSpacing = 720;
+            effectColor = DynamicsPal.steamSulfur;
+            effect = new MultiEffect(Fx.drillSteam, Fx.steam, Fx.vapor, Fx.smokeCloud);
         }};
         travertineWall = new StaticWall("travertine-wall") {{
             travertineFloor.asFloor().wall = smoothTravertine.asFloor().wall = brightTravertine.asFloor().wall = shallowTravertine.asFloor().wall = deepTravertine.asFloor().wall = this;
