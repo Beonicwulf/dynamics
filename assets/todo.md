@@ -1,5 +1,5 @@
 # To-do & Ideas
-### For the first Sector
+### For the first Release
 - [x] Tier 1 Ores
 - [x] Liquid Transportation
 - [x] Item Transportation
@@ -12,10 +12,11 @@
 - [x] Auger Drone implementation
 - [x] Add a Hot-spring biome (Travertine)
 - [x] Geyser Effects
-- [ ] Tier 1 Units 
+- [ ] Tier 1 Tank 
 - [ ] Secondary biome (Malachite-rich mineral)
-- [ ] Planet
-- [ ] Tech Tree
+- [x] Planet
+- [x] Tech Tree
+- [ ] Embark
 ### Short-term To-do
 - [ ] Pump
 - [ ] Acid Rain
@@ -27,9 +28,10 @@
 ### Block Ideas
 - [ ] 3x3 Unloader (High cost and big size, no core unloading for balance, probably directional)
 - [ ] Canvas
+- [ ] Big Malachite Crystals / Decoration
 ### Bugfixes
-- [ ] Fix PH Autotile
-- [ ] Fix Minimap Black Liquid
+- [x] Fix PH Autotile
+- [ ] Fix Black Liquid (Minimap & Ripples)
 ### Environment & Minerals
 ##### Sorted by priority more-or-less
 - [x] Sphalerite (Ore)
@@ -60,5 +62,3 @@
 - [ ] Fluorite
 - [ ] Brimstone
 - [ ] Hematite
-##### Just some random stuff
-- [ ] Big Malachite Crystals / Decoration

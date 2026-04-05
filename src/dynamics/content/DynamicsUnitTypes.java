@@ -1,5 +1,6 @@
 package dynamics.content;
 
+import arc.math.geom.Rect;
 import arc.struct.Seq;
 import mindustry.ai.UnitCommand;
 import mindustry.ai.types.BuilderAI;
@@ -12,12 +13,12 @@ import mindustry.type.Weapon;
 
 public class DynamicsUnitTypes {
     public static Weapon
-            augerBolt, breatheWeapon
+            augerBolt, breatheWeapon, splitWeapon
             ;
 
     public static UnitType
             // core units
-            augerDrone, breathe
+            augerDrone, breathe, split
             ;
 
     public static void load() {
@@ -47,9 +48,21 @@ public class DynamicsUnitTypes {
 					}};
         }};
 
+        splitWeapon = new Weapon("fb-dynamics-split-gun") {{
+            layerOffset = 0.0001f;
+            x = 3.25f;
+            y = -2.75f;
+            reload = 40;
+            recoil = 1f;
+            mirror = true;
+            bullet = DynamicsBulletTypes.tankShard;
+            rotate = true;
+            rotateSpeed = 3;
+        }};
+
         augerDrone = new UnitType("auger-drone"){{
             defaultCommand = UnitCommand.mineCommand;
-            constructor = BuildingTetherPayloadUnit::create; //UnitEntity::create;
+            constructor = BuildingTetherPayloadUnit::create;
             outlines = false;
 
             flying = true;
@@ -114,5 +127,38 @@ public class DynamicsUnitTypes {
             weapons.add(breatheWeapon);
         }};
         // sprite by aerodynamic_attorney
+
+        split = new UnitType("split") {{
+            constructor = TankUnit::create;
+            outlines = false;
+            rotateMoveFirst = true;
+            faceTarget = omniMovement = false;
+            rotateSpeed = 2;
+            floorMultiplier = 1.5f;
+            speed = 0.9f;
+            hitSize = 10;
+            health = 480;
+            armor = 2;
+            itemCapacity = 0;
+            treadPullOffset = 3;
+            treadRects = new Rect[] {
+                    new Rect(-13f, -21f, 26, 42)
+            };
+            weapons.add(splitWeapon);
+        }};
+        // sprite by aerodynamic_attorney
     }
 }
+
+/* REFERENCE
+              "flying": UnitEntity::create
+              "mech": MechUnit::create
+              "legs": LegsUnit::create
+              "naval": UnitWaterMove::create
+              "payload": PayloadUnit::create
+              "missile": TimedKillUnit::create
+              "tank": TankUnit::create
+              "hover": ElevationMoveUnit::create
+              "tether": BuildingTetherPayloadUnit::create
+              "crawl": CrawlUnit::create
+*/

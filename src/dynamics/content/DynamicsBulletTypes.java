@@ -9,7 +9,7 @@ import mindustry.entities.effect.MultiEffect;
 
 public class DynamicsBulletTypes {
     public static BulletType
-            malachiteShards, malachiteFrag, healingShards, coreShards, stickyShard,
+            malachiteShards, malachiteFrag, healingShards, coreShards, stickyShard, tankShard,
             steamBlast
             ;
 
@@ -46,6 +46,11 @@ public class DynamicsBulletTypes {
         coreShards.homingPower = 0.3f;
         coreShards.lifetime = 40;
         coreShards.speed = 4;
+
+        tankShard = coreShards.copy();
+        tankShard.speed = 3;
+        tankShard.lifetime = 60;
+        tankShard.damage = 30;
 
         malachiteFrag = new BasicBulletType(2.5f, 20, "fb-dynamics-malachite-chunk-big") {{
             hitColor = DynamicsPal.malachite;
