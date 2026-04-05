@@ -32,6 +32,7 @@ public class Dynamics extends Mod{
         DynamicsUnitTypes.load();
         DynamicsBlocks.load();
         DynamicsPlanets.load();
+        DynamicsSectorPresets.load();
         ThalassaTechTree.load();
     }
 
