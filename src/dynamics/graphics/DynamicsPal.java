@@ -3,7 +3,7 @@ package dynamics.graphics;
 import arc.graphics.*;
 
 public class DynamicsPal {
-    public static Color
+    public static Color //Items, Fluids, Bullets etc
             zinc = Color.valueOf("#aa996e"),
             malachite = Color.valueOf("#356a46"),
             cinnabar = Color.valueOf("#784132"),
@@ -16,4 +16,12 @@ public class DynamicsPal {
             purifiedWater = Color.valueOf("#6b9eaa"),
             dread = Color.valueOf("#9fabd1")
             ;
+
+    public static Color //Planet Colors
+            waterDarkerTone = Color.valueOf("#3c4e61"),
+            waterDarkTone = Color.valueOf("#506f80"),
+            travertineMidTone = Color.valueOf("#ad7411"),
+            travertineLightTone = Color.valueOf("#e0b422")
+            ;
+
 }

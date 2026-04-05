@@ -3,6 +3,7 @@ package dynamics.content;
 import arc.struct.ObjectFloatMap;
 import mindustry.type.Item;
 
+import static dynamics.content.DynamicsUnitTypes.*;
 import static dynamics.content.blocks.DynamicsCrafting.*;
 import static dynamics.content.blocks.DynamicsDefense.*;
 import static dynamics.content.blocks.DynamicsEffectBlocks.*;
@@ -34,7 +35,7 @@ public class ThalassaTechTree {
             });
             node(mechanicalPress);
             node(steamValve, () -> node(withdraw));
-            node(augerPad);
+            node(augerPad, () -> node(augerDrone));
             nodeProduce(DynamicsItems.zinc, () ->{
                 nodeProduce(DynamicsItems.malachite, () -> {
                     nodeProduce(DynamicsItems.cinnabar, () -> {});

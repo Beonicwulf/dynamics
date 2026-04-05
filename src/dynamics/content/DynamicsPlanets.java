@@ -1,6 +1,7 @@
 package dynamics.content;
 
 import arc.graphics.Color;
+import dynamics.Dynamics;
 import dynamics.content.blocks.DynamicsEffectBlocks;
 import dynamics.graphics.DynamicsPal;
 import dynamics.maps.planets.KhioneGenerator;
@@ -24,12 +25,13 @@ public class DynamicsPlanets {
 
             orbitRadius = 24;
             orbitSpacing = 1;
-            minZoom = 0.8f;
+            minZoom = 0.5f;
+            maxZoom = 2.4f;
             bloom = false;
             hasAtmosphere = true;
             atmosphereColor = DynamicsPal.steam;
             atmosphereRadIn = 0;
-            atmosphereRadOut = 0.4f;
+            atmosphereRadOut = 0.1f;
 
             startSector = 34;
             sectorSeed = 14513;
@@ -50,43 +52,48 @@ public class DynamicsPlanets {
             unlockedOnLand.add(DynamicsEffectBlocks.augerPad);
 
             meshLoader = () -> new MultiMesh(
+                    //dark sand
                     new NoiseMesh(this, 7,
                             5, 1.229f, 4, 5, 1, 0.5f,
                             Color.valueOf("#515151"), Color.valueOf("#3c3838"),
                             1, 0.5f, 1, 0.5f),
-                    new NoiseMesh(this, 94,
-                            5, 1.22f, 4, 0.6f, 1, 0.5f,
-                            Color.valueOf("#bcc4cb"), Color.valueOf("#879d9b"),
-                            1, 0.5f, 1, 0.5f),
+                    //scoria
                     new NoiseMesh(this, 101,
-                            6, 1.2441f, 5, 0.8f, 1, 0.5f,
+                            6, 1.2441f, 5, 0.9f, 1, 0.5f,
                             Color.valueOf("#ce735e"), Color.valueOf("#af4753"),
                             1, 0.5f, 1, 0.5f),
-                    new NoiseMesh(this, 69,
-                            5, 1.212f, 4, 1, 0.75f, 0.5f,
-                            Color.valueOf("#5867ac"), Color.valueOf("#4d5ca4"),
-                            1, 0.5f, 1, 0.5f),
+                    //travertine
                     new NoiseMesh(this, 101,
                             5, 1.247f, 4, 1.1f, 1, 0.5f,
-                            Color.valueOf("#e9ebff"), Color.valueOf("#c2bffb"),
+                            DynamicsPal.travertineLightTone, DynamicsPal.travertineMidTone,
                             1, 0.5f, 1, 0.5f),
+                    //grass
                     new NoiseMesh(this, 61,
-                            6, 1.248f, 4, 1.1f, 1, 0.5f,
+                            6, 1.248f, 4, 1.1f, 0.5f, 0.425f,
                             Color.valueOf("#80b963"), Color.valueOf("#6aa95e"),
                             1, 0.5f, 1, 0.5f),
+                    //ocean water
                     new NoiseMesh(this, 17,
-                            6, 1.2514f, 6, 0.9f, 1, 0.5f,
-                            Color.valueOf("#3c4448"), Color.valueOf("#282b34"),
+                            6, 1.2514f, 6, 1f, 1, 0.55f,
+                            DynamicsPal.waterDarkTone, DynamicsPal.waterDarkerTone,
+                            1, 0.5f, 1, 0.5f),
+                    //lighter water
+                    new NoiseMesh(this, 69,
+                            5, 1.212f, 4, 1.1f, 0.75f, 0.5f,
+                            DynamicsPal.hotSpringWater, DynamicsPal.purifiedWater,
                             1, 0.5f, 1, 0.5f)
             );
             cloudMeshLoader = () -> new MultiMesh(
+                    //bright lavender
                     new HexSkyMesh(this, 1,
                             1.21f, 0.1f, 6, Color.valueOf("c6ace8").a(0.49f), 3, 0.3f, 1, 0.6f),
                     new HexSkyMesh(this, 1,
-                    1.01f, 0.11f, 6, Color.valueOf("d1e4ff").a(0.49f), 3, 0.4f, 0.9f, 0.6f),
+                            1.01f, 0.11f, 6, DynamicsPal.steamLight.a(0.49f), 3, 0.4f, 0.9f, 0.6f),
                     new HexSkyMesh(this, 1,
-                            0.891f, 0.091f, 6, Color.valueOf("#97a5f7").a(0.49f), 3, 0.5f, 1.1f, 0.6f)
+                            0.891f, 0.091f, 6, DynamicsPal.steam.a(0.49f), 3, 0.5f, 1.1f, 0.6f)
             );
+
+
         }};
         khione = new Planet("khione", thalassa, 0.6f, 2) {{
             iconColor = DynamicsPal.tantalum;
@@ -95,7 +102,8 @@ public class DynamicsPlanets {
 
             orbitRadius = 4;
             orbitSpacing = 12;
-            minZoom = 0.8f;
+            minZoom = 0.5f;
+            maxZoom = 3f;
             bloom = false;
             hasAtmosphere = false;
             atmosphereColor = DynamicsPal.steamLight;
