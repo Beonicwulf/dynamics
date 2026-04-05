@@ -81,11 +81,11 @@ public class DynamicsPlanets {
             );
             cloudMeshLoader = () -> new MultiMesh(
                     new HexSkyMesh(this, 1,
-                            1.21f, 0.1f, 6, Color.valueOf("c6ace87e"), 3, 0.3f, 1, 0.6f),
+                            1.21f, 0.1f, 6, Color.valueOf("c6ace8").a(0.49f), 3, 0.3f, 1, 0.6f),
                     new HexSkyMesh(this, 1,
-                    1.01f, 0.11f, 6, Color.valueOf("d1e4ff7e"), 3, 0.4f, 0.9f, 0.6f),
+                    1.01f, 0.11f, 6, Color.valueOf("d1e4ff").a(0.49f), 3, 0.4f, 0.9f, 0.6f),
                     new HexSkyMesh(this, 1,
-                            0.891f, 0.091f, 6, Color.valueOf("#97a5f77e"), 3, 0.5f, 1.1f, 0.6f)
+                            0.891f, 0.091f, 6, Color.valueOf("#97a5f7").a(0.49f), 3, 0.5f, 1.1f, 0.6f)
             );
         }};
         khione = new Planet("khione", thalassa, 0.6f, 2) {{
@@ -110,10 +110,10 @@ public class DynamicsPlanets {
 
             meshLoader = () -> new NoiseMesh(this, 69,
                     2, 0.6f, 3, 0.8f, 0.15f, 1.5f,
-                    Color.valueOf("#66d90"), Color.valueOf("#394462"),
+                    Color.valueOf("#606d90"), Color.valueOf("#394462"),
                     1, 0.5f, 1, 0.5f);
             cloudMeshLoader = () -> new HexSkyMesh(this, 96,
-                    0.4f, 0.05f, 1, Color.valueOf("96a0be7e"), 3, 0.7f, 0.15f, 0.4f);
+                    0.4f, 0.05f, 1, Color.valueOf("96a0be").a(0.49f), 3, 0.7f, 0.15f, 0.4f);
         }};
     }
 }
