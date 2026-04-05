@@ -13,6 +13,7 @@ public class DynamicsPal {
             steamLight = Color.valueOf("#d6eaf3"),
             steamSulfur = Color.valueOf("#f3edce"),
             hotSpringWater = Color.valueOf("#00959c"),
+            purifiedWater = Color.valueOf("#6b9eaa"),
             dread = Color.valueOf("#9fabd1")
             ;
 }

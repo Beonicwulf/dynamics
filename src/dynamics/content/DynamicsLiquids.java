@@ -6,7 +6,7 @@ import mindustry.type.Liquid;
 
 public class DynamicsLiquids {
     public static Liquid
-            steam, hotSpringWater
+            steam, hotSpringWater, purifiedWater
             ;
 
     public static void load() {
@@ -16,10 +16,16 @@ public class DynamicsLiquids {
             explosiveness = 0.5f;
         }};
         hotSpringWater = new Liquid("hot-spring-water", DynamicsPal.hotSpringWater) {{
+            heatCapacity = 0.3f;
+            effect = StatusEffects.wet;
+            boilPoint = 0.4f;
+            gasColor = DynamicsPal.steamSulfur;
+        }};
+        purifiedWater = new Liquid("purified-water", DynamicsPal.purifiedWater) {{
             heatCapacity = 0.4f;
             effect = StatusEffects.wet;
             boilPoint = 0.5f;
-            gasColor = DynamicsPal.steamSulfur;
+            gasColor = DynamicsPal.steamLight;
         }};
     }
 }
