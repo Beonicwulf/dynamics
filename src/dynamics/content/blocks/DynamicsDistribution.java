@@ -25,14 +25,14 @@ public class DynamicsDistribution {
             shake = 0.6f;
             knockback = 2;
             shootSoundVolume = 0.1f;
-            researchCost = with(DynamicsItems.zinc, 10, DynamicsItems.malachite, 5);
+            researchCost = with(DynamicsItems.zinc, 10 * 5, DynamicsItems.malachite, 5 * 5);
         }};
         zincSorter = new DirectionalSorter("zinc-sorter") {{
             requirements(Category.distribution, with(DynamicsItems.zinc, 10, DynamicsItems.partBasic, 4));
             regionRotated1 = 1;
             solid = false;
             placeableLiquid = true;
-            researchCost = with(DynamicsItems.zinc, 100, DynamicsItems.partBasic, 40);
+            researchCost = with(DynamicsItems.zinc, 100 * 5, DynamicsItems.partBasic, 40 * 5);
         }};
     }
 }

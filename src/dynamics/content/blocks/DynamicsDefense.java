@@ -39,7 +39,7 @@ public class DynamicsDefense {
             range = 32;
             shootY = 0;
             shoot = new ShootSpread(30, 12f);
-            researchCost = with(DynamicsItems.zinc, 24, DynamicsItems.partBasic, 1);
+            researchCost = with(DynamicsItems.zinc, 24 * 5, DynamicsItems.partBasic, 5);
         }};
 
         withdraw = new ItemTurret("withdraw") {{
@@ -65,7 +65,7 @@ public class DynamicsDefense {
                     DynamicsItems.malachite, DynamicsBulletTypes.malachiteFrag
             );
             //thx nullevoy for sprite
-            researchCost = with(DynamicsItems.zinc, 100, DynamicsItems.partBasic, 10);
+            researchCost = with(DynamicsItems.zinc, 100 * 5, DynamicsItems.partBasic, 10 * 5);
         }};
     }
 }

@@ -38,7 +38,7 @@ public class DynamicsCrafting {
                 maxScale = 1.5f;
             }}
             );
-            researchCost = with(DynamicsItems.zinc, 60, DynamicsItems.malachite, 20);
+            researchCost = with(DynamicsItems.zinc, 60 * 5, DynamicsItems.malachite, 20 * 5);
         }};
     }
 }

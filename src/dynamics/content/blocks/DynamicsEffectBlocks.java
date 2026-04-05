@@ -50,7 +50,7 @@ public class DynamicsEffectBlocks {
         }};
         zincMessage = new MessageBlock("zinc-message") {{
            requirements(Category.logic, with(DynamicsItems.zinc, 10, DynamicsItems.malachite, 5, DynamicsItems.partBasic, 1));
-           researchCost = with(DynamicsItems.zinc, 100, DynamicsItems.malachite, 50, DynamicsItems.partBasic, 10);
+           researchCost = with(DynamicsItems.zinc, 100 * 5, DynamicsItems.malachite, 50 * 5, DynamicsItems.partBasic, 10 * 5);
         }};
     }
 }

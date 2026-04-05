@@ -23,7 +23,7 @@ public class DynamicsLiquidBlocks {
             underBullets = true;
             placeableLiquid = true;
             //explosivenessScale = flammabilityScale = 20f/50f;
-            researchCost = with(DynamicsItems.zinc, 10);
+            researchCost = with(DynamicsItems.zinc, 10 * 5);
         }};
         pipeRouter = new LiquidRouter("pipe-router") {{
             requirements(Category.liquid, with(DynamicsItems.zinc, 10, DynamicsItems.partBasic, 1));
@@ -34,7 +34,7 @@ public class DynamicsLiquidBlocks {
             underBullets = true;
             solid = false;
             //explosivenessScale = flammabilityScale = 40f/150f;
-            researchCost = with(DynamicsItems.zinc, 100, DynamicsItems.partBasic, 10);
+            researchCost = with(DynamicsItems.zinc, 100 * 5, DynamicsItems.partBasic, 10 * 5);
         }};
         pipeJunction = new FluidValve("pipe-junction") {{
             requirements(Category.liquid, with(DynamicsItems.zinc, 10, DynamicsItems.partBasic, 1));
@@ -43,7 +43,7 @@ public class DynamicsLiquidBlocks {
             placeableLiquid = true;
             underBullets = true;
             ((Conduit)pipe).junctionReplacement = this;
-            researchCost = with(DynamicsItems.zinc, 100, DynamicsItems.partBasic, 10);
+            researchCost = with(DynamicsItems.zinc, 100 * 5, DynamicsItems.partBasic, 10 * 5);
         }};
         pipeTunnel = new DirectionLiquidBridge("pipe-tunnel") {{
             requirements(Category.liquid, with(DynamicsItems.zinc, 20, DynamicsItems.partBasic, 5));
@@ -55,7 +55,7 @@ public class DynamicsLiquidBlocks {
             underBullets = true;
             //explosivenessScale = flammabilityScale = 20f/120f;
             ((Conduit)pipe).rotBridgeReplacement = this;
-            researchCost = with(DynamicsItems.zinc, 140, DynamicsItems.partBasic, 35);
+            researchCost = with(DynamicsItems.zinc, 140 * 5, DynamicsItems.partBasic, 35 * 5);
         }};
         pipeVent = new FluidVent("pipe-vent") {{
             requirements(Category.liquid, with(DynamicsItems.zinc, 10));
@@ -65,14 +65,14 @@ public class DynamicsLiquidBlocks {
             liquidCapacity = 100;
             solid = false;
             placeableLiquid = true;
-            researchCost = with(DynamicsItems.zinc, 100);
+            researchCost = with(DynamicsItems.zinc, 100 * 5);
         }};
         pipeController = new ValveController("pipe-controller") {{
             requirements(Category.liquid, BuildVisibility.sandboxOnly, with(DynamicsItems.zinc, 10, DynamicsItems.partBasic, 3));
             size = 1;
             solid = false;
             placeableLiquid = true;
-            researchCost = with(DynamicsItems.zinc, 100, DynamicsItems.partBasic, 30);
+            researchCost = with(DynamicsItems.zinc, 100 * 5, DynamicsItems.partBasic, 30 * 5);
         }};
     }
 }
