@@ -15,11 +15,12 @@ import static mindustry.content.TechTree.*;
 
 public class ThalassaTechTree {
     public static void load() {
+        float costBalance = 0.2f;
         var costMultipliers = new ObjectFloatMap<Item>();
-        for(var item : content.items()) costMultipliers.put(item, 0.9f);
+        for(var item : content.items()) costMultipliers.put(item, costBalance);
 
         //these are hard to make
-        costMultipliers.put(DynamicsItems.partBasic, 0.2f);
+        costMultipliers.put(DynamicsItems.partBasic, costBalance * 0.2f);
 
         DynamicsPlanets.thalassa.techTree = nodeRoot("thalassa", coreSurface, true, () -> {
             context().researchCostMultipliers = costMultipliers;
@@ -31,7 +32,9 @@ public class ThalassaTechTree {
             node(steamCollector, () -> node(clockworkDrill));
             node(pipe, () -> {
                 node(pipeRouter, () -> node(pipeTunnel));
-                node(pipeJunction, () -> node(pipeVent, () -> node(pipeController)));
+                node(pipeJunction, () -> node(pipeVent
+                        //, () -> node(pipeController)
+                ));
             });
             node(mechanicalPress);
             node(steamValve, () -> node(withdraw));

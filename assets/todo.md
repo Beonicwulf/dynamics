@@ -12,14 +12,17 @@
 - [x] Auger Drone implementation
 - [x] Add a Hot-spring biome (Travertine)
 - [x] Geyser Effects
-- [ ] Tier 1 Tank 
+- [x] Tier 1 Tank 
+- [ ] Tier 1 Tank factory
 - [ ] Secondary biome (Malachite-rich mineral)
 - [x] Planet
 - [x] Tech Tree
+- [ ] Acid Rain
+- [ ] Proper Icon
+- [ ] Proper Mod Description
 - [ ] Embark
 ### Short-term To-do
 - [ ] Pump
-- [ ] Acid Rain
 - [x] Zinc Message
 - [ ] Expand Hot-spring biome (Cinnabar)
 - [ ] Add variety to Malachite-rich biome (Chalcocite, Calcite, Goethite, Azurite, etc.)
@@ -62,3 +65,5 @@
 - [ ] Fluorite
 - [ ] Brimstone
 - [ ] Hematite
+# Completed categories
+### (none atm)

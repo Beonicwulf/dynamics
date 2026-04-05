@@ -47,6 +47,7 @@ public class DynamicsProduction {
             drillMultipliers.put(DynamicsItems.zinc, 2f);
             arrows = 1;
             placeableLiquid = true;
+            researchCost = with(DynamicsItems.zinc, 50, DynamicsItems.partBasic, 2);
         }};
         steamCollector = new AttributeCrafter("steam-collector"){{
             requirements(Category.liquid, with(DynamicsItems.zinc, 60, DynamicsItems.malachite, 20));
@@ -69,6 +70,7 @@ public class DynamicsProduction {
             itemCapacity = 0;
             outputLiquid = new LiquidStack(DynamicsLiquids.steam, 30f / 60f);
             liquidCapacity = 60f;
+            researchCost = with(DynamicsItems.zinc, 60, DynamicsItems.malachite, 20);
         }};
 
     }

@@ -145,6 +145,7 @@ public class DynamicsUnitTypes {
                     new Rect(-13f, -21f, 26, 42)
             };
             weapons.add(splitWeapon);
+            researchCostMultiplier = 0f;
         }};
         // sprite by aerodynamic_attorney
     }
