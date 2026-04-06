@@ -3,6 +3,7 @@ package dynamics.content;
 import arc.math.geom.Rect;
 import arc.struct.Seq;
 import mindustry.ai.UnitCommand;
+import mindustry.ai.types.AssemblerAI;
 import mindustry.ai.types.BuilderAI;
 import mindustry.content.Fx;
 import mindustry.entities.pattern.*;
@@ -18,7 +19,7 @@ public class DynamicsUnitTypes {
 
     public static UnitType
             // core units
-            augerDrone, breathe, split
+            augerDrone, breathe, split, augerAssembler
             ;
 
     public static void load() {
@@ -64,7 +65,7 @@ public class DynamicsUnitTypes {
             defaultCommand = UnitCommand.mineCommand;
             constructor = BuildingTetherPayloadUnit::create;
             outlines = false;
-
+            createWreck = false;
             flying = true;
             drag = 0.06f;
             accel = 0.12f;
@@ -148,6 +149,24 @@ public class DynamicsUnitTypes {
             researchCostMultiplier = 0f;
         }};
         // sprite by aerodynamic_attorney
+
+        augerAssembler = new UnitType("auger-assembler") {{
+            constructor = BuildingTetherPayloadUnit::create;
+            controller = u -> new AssemblerAI();
+
+            flying = true;
+            drag = 0.06f;
+            accel = 0.11f;
+            speed = 1.3f;
+            health = 90;
+            engineSize = 2f;
+            engineOffset = 6.5f;
+            payloadCapacity = 0f;
+            targetable = bounded = isEnemy = useUnitCap = logicControllable = playerControllable = allowedInPayloads = createWreck = false;
+
+            outlines = false;
+            hidden = true;
+        }};
     }
 }
 

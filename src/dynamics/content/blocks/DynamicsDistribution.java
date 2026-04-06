@@ -32,7 +32,7 @@ public class DynamicsDistribution {
             regionRotated1 = 1;
             solid = false;
             placeableLiquid = true;
-            researchCost = with(DynamicsItems.zinc, 100 * 5, DynamicsItems.partBasic, 40 * 5);
+            researchCost = with(DynamicsItems.zinc, 10 * 10 * 5, DynamicsItems.partBasic, 4 * 10 * 5);
         }};
     }
 }

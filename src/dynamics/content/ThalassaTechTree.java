@@ -4,11 +4,13 @@ import arc.struct.ObjectFloatMap;
 import mindustry.type.Item;
 
 import static dynamics.content.DynamicsUnitTypes.*;
+import static dynamics.content.blocks.DynamicsComponentBlocks.*;
 import static dynamics.content.blocks.DynamicsCrafting.*;
 import static dynamics.content.blocks.DynamicsDefense.*;
 import static dynamics.content.blocks.DynamicsEffectBlocks.*;
 import static dynamics.content.blocks.DynamicsDistribution.*;
 import static dynamics.content.blocks.DynamicsLiquidBlocks.*;
+import static dynamics.content.blocks.DynamicsPayloadBlocks.*;
 import static dynamics.content.blocks.DynamicsProduction.*;
 import static mindustry.Vars.content;
 import static mindustry.content.TechTree.*;
@@ -32,9 +34,8 @@ public class ThalassaTechTree {
             node(steamCollector, () -> node(clockworkDrill));
             node(pipe, () -> {
                 node(pipeRouter, () -> node(pipeTunnel));
-                node(pipeJunction, () -> node(pipeVent
-                        //, () -> node(pipeController)
-                ));
+                node(pipeJunction, () -> node(pipeVent, () -> node(pipeController)));
+                node(clockworkPump);
             });
             node(mechanicalPress);
             node(steamValve, () -> node(withdraw));
@@ -46,6 +47,10 @@ public class ThalassaTechTree {
                 });
                 nodeProduce(DynamicsItems.partBasic, () -> {});
                 nodeProduce(DynamicsLiquids.steam, () -> nodeProduce(DynamicsLiquids.hotSpringWater, () -> nodeProduce(DynamicsLiquids.purifiedWater, () -> {})));
+            });
+            node(basicConstructor, () -> {
+                node(zincConveyor, () -> node(basicDeconstructor));
+                node(bUAK, () -> node(splitFrame, () -> node(splitAssembler)));
             });
         });
     }

@@ -13,16 +13,16 @@
 - [x] Add a Hot-spring biome (Travertine)
 - [x] Geyser Effects
 - [x] Tier 1 Tank 
-- [ ] Tier 1 Tank factory
-- [ ] Secondary biome (Malachite-rich mineral)
 - [x] Planet
 - [x] Tech Tree
-- [ ] Acid Rain
-- [ ] Proper Icon
-- [ ] Proper Mod Description
-- [ ] Embark
+- [x] Tier 1 Tank factory
+- [x] Acid Rain
+- [x] Proper Icon
+- [x] Proper Mod Description
+- [ ] Secondary biome (Malachite-rich mineral)
+- [ ] Sector Embark
 ### Short-term To-do
-- [ ] Pump
+- [x] Pump
 - [x] Zinc Message
 - [ ] Expand Hot-spring biome (Cinnabar)
 - [ ] Add variety to Malachite-rich biome (Chalcocite, Calcite, Goethite, Azurite, etc.)
@@ -40,10 +40,10 @@
 - [x] Sphalerite (Ore)
 - [x] Malachite (Ore)
 - [x] Travertine
-- [ ] Cinnabar
 - [ ] Chalcocite
-- [ ] Peridotite
+- [ ] Cinnabar
 - [ ] Limestone
+- [ ] Peridotite
 - [ ] Azurite
 - [ ] Calcite
 - [ ] Scoria

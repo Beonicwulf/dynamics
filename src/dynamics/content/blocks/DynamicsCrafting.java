@@ -28,7 +28,7 @@ public class DynamicsCrafting {
             hasItems = true;
             itemCapacity = 40;
             craftEffect =  Fx.drillSteam;
-            consumeLiquid(DynamicsLiquids.steam, 15f / 60f);
+            consumeLiquid(DynamicsLiquids.steam, 5f / 60f);
 
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawPistons(){{
                 sinMag = 3f;

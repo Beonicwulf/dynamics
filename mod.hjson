@@ -5,7 +5,7 @@ displayName: "Dynamics"
 name: "fb-dynamics"
 
 #your name
-author: "Farborne Industries ⚙️"
+author: "Beo⚙️"
 
 #the fully qualified main class of the mod
 main: "dynamics.Dynamics"
@@ -14,12 +14,15 @@ main: "dynamics.Dynamics"
 description:
   '''
   ❂ Work in Progress ❂
+  You are in command of a core that is stranded on Thalassa, a distant planet, covered mostly in oceans.
+  However, it seems that there's an enemy faction that has already begun harvesting its resources and developing rapidly.
+  The arms race has begun, and you must play catch-up.
   '''
 #the mod version
-version: 0.1
+version: alpha 1
 
 #the minimum game build required to run this mod
-minGameVersion: 154
+minGameVersion: 156
 
 #this is a java mod
 java: true
