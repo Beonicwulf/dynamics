@@ -23,6 +23,8 @@ public class DynamicsEnvironment {
             travertineFloor, smoothTravertine, brightTravertine,
             shallowTravertine, deepTravertine,
             travertineWall, travertineVent, travertineGeyser,
+            // chalcocite
+            chalcociteFloor,
             // metal
             phWall, phTile, phConnect,
             // props
@@ -121,6 +123,9 @@ public class DynamicsEnvironment {
             variants = 3;
             shallowTravertine.asFloor().decoration = deepTravertine.asFloor().decoration = this;
             placeableLiquid = true;
+        }};
+        chalcociteFloor = new Floor("chalcocite-floor") {{
+            variants = 5;
         }};
     }
 }
