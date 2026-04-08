@@ -3,10 +3,11 @@ main: "dynamics.Dynamics"
 version: Alpha-1
 minGameVersion: 156
 java: true
+repo: Beonicwulf/dynamics
 
 displayName: "Dynamics"
 author: "Farborne Industries ⚙️"
-subtitle: Release/Reborne
+subtitle: "[[]#aa8e6e]Release/Reborne[[]]"
 
 description:"Work in Progress
-\n ⚠ This mod replaces Blue Team and might therefore not be compatible with some other mods.\n\n You are in command of a core that is stranded on Thalassa, a distant planet, covered mostly in oceans. However, it seems that there's an enemy faction that has already begun harvesting its resources and developing rapidly. The arms race has begun, and you must play catch-up."
+\n [[]accent]⚠[[]] [[]red]This mod replaces [[]#9fabd1]Blue Team[[]] and might therefore not be compatible with some other mods.[[]]\n\n You are in command of a [[]#aa8e6e]core[[]] that is stranded on [[]#9fabd1]Thalassa[[]], a distant planet, covered mostly in oceans. However, it seems that there's an enemy faction that has already begun harvesting its [[]#aa996e]resources[[]] and developing rapidly. The arms race has begun, and you must play catch-up."
