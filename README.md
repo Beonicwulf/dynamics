@@ -11,7 +11,7 @@ The arms race has begun, and you must play catch-up.
 ### Embark
 Your crash landing site is in a hot spring, near a small Dread research outpost.
 Use the steam released by geysers to power basic machinery and establish a base.
-### Warning
+### ⚠ Compatibility Warning ⚠
 Replaces Blue Team with Dread. Other mods might do so too, causing overlap. Consequences unknown.
 ### [Attributions](assets/attributions.md)
 ### [To-do list](assets/todo.md)

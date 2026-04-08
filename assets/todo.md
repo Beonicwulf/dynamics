@@ -32,6 +32,14 @@
 - [ ] 3x3 Unloader (High cost and big size, no core unloading for balance, probably directional)
 - [ ] Canvas
 - [ ] Big Malachite Crystals / Decoration
+### Progression
+- [ ] Cinnabar
+- [ ] Chlorine
+######
+- [ ] Water Purifier
+- [ ] Hydration Chamber
+- [ ] Chemical Extractor
+- [ ] Electrolysis
 ### Bugfixes
 - [x] Fix PH Autotile
 - [ ] Fix Black Liquid (Minimap & Ripples)

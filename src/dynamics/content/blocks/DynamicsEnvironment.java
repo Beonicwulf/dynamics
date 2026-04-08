@@ -1,5 +1,6 @@
 package dynamics.content.blocks;
 
+import dynamics.content.DynamicsAttributes;
 import dynamics.content.DynamicsItems;
 import dynamics.content.DynamicsLiquids;
 import dynamics.graphics.DynamicsPal;
@@ -10,8 +11,6 @@ import mindustry.graphics.CacheLayer;
 import mindustry.world.Block;
 import mindustry.world.blocks.environment.*;
 import mindustry.world.meta.Attribute;
-
-import java.util.Random;
 
 public class DynamicsEnvironment {
     public static Block
@@ -24,7 +23,7 @@ public class DynamicsEnvironment {
             shallowTravertine, deepTravertine,
             travertineWall, travertineVent, travertineGeyser,
             // chalcocite
-            chalcociteFloor,
+            chalcociteFloor, gildedChalcocite,
             // metal
             phWall, phTile, phConnect,
             // props
@@ -126,6 +125,10 @@ public class DynamicsEnvironment {
         }};
         chalcociteFloor = new Floor("chalcocite-floor") {{
             variants = 5;
+        }};
+        gildedChalcocite = new Floor("gilded-chalcocite") {{
+            variants = 5;
+            attributes.set(DynamicsAttributes.azurite, 1);
         }};
     }
 }

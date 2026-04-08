@@ -1,28 +1,12 @@
-#the mod name as displayed in-game
-displayName: "Dynamics"
-
-#the internal name of your mod
 name: "fb-dynamics"
-
-#your name
-author: "Beo⚙️"
-
-#the fully qualified main class of the mod
 main: "dynamics.Dynamics"
-
-#the mod description as seen in the mod dialog
-description:
-  '''
-  ❂ Work in Progress ❂
-  You are in command of a core that is stranded on Thalassa, a distant planet, covered mostly in oceans.
-  However, it seems that there's an enemy faction that has already begun harvesting its resources and developing rapidly.
-  The arms race has begun, and you must play catch-up.
-  '''
-#the mod version
-version: alpha 1
-
-#the minimum game build required to run this mod
+version: Alpha-1
 minGameVersion: 156
-
-#this is a java mod
 java: true
+
+displayName: "Dynamics"
+author: "Farborne Industries ⚙️"
+subtitle: Release/Reborne
+
+description:"Work in Progress
+\n ⚠ This mod replaces Blue Team and might therefore not be compatible with some other mods.\n\n You are in command of a core that is stranded on Thalassa, a distant planet, covered mostly in oceans. However, it seems that there's an enemy faction that has already begun harvesting its resources and developing rapidly. The arms race has begun, and you must play catch-up."
