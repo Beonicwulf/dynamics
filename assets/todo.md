@@ -16,9 +16,9 @@
 - [x] Planet
 - [x] Tech Tree
 - [x] Tier 1 Tank factory
-- [x] Acid Rain
 - [x] Proper Icon
 - [x] Proper Mod Description
+- [ ] Acid Rain
 - [ ] Secondary biome (Malachite-rich mineral)
 - [ ] Sector Embark
 ### Short-term To-do

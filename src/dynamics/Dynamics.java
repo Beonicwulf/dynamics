@@ -1,6 +1,7 @@
 package dynamics;
 
 import arc.Core;
+import arc.Events;
 import arc.struct.Seq;
 import arc.util.Log;
 import dynamics.content.*;
@@ -8,6 +9,7 @@ import dynamics.content.DynamicsTeams;
 import dynamics.ui.ButtonPref;
 import mindustry.content.TechTree;
 import mindustry.ctype.UnlockableContent;
+import mindustry.game.EventType;
 import mindustry.game.Saves;
 import mindustry.gen.Icon;
 import mindustry.mod.*;
@@ -21,6 +23,12 @@ public class Dynamics extends Mod{
 
     public static String name(String name) {
         return MOD_NAME + "-" + name;
+    }
+
+    public Dynamics(){
+        Events.on(EventType.MusicRegisterEvent.class, e ->
+                DynamicsMusics.load()
+        );
     }
 
     @Override

@@ -6,6 +6,9 @@ Playtesting & ideas (concepts & progression)
 Constant playtesting & feedback
 ### ☆ Et moi, Beo :3
 Frankenstein coder & Chimera sprite artist
+## Music
+### ✧ [CLEgor](https://t.me/CLEgorcannelmusi_k)
+Dynamics OST: Reborne
 ## Java classes for content
 ### ✧ Nullotte, Carpe Diem mod
 [RecipeCrafter.java](https://github.com/nullotte/Carpe-Diem/blob/main/src/carpediem/world/blocks/crafting/RecipeCrafter.java) and its requirements ([Recipe.java](https://github.com/nullotte/Carpe-Diem/blob/main/src/carpediem/world/blocks/crafting/Recipe.java), [ConsumeItemUses.java](https://github.com/nullotte/Carpe-Diem/blob/main/src/carpediem/world/consumers/ConsumeItemsUses.java), [Output.java](https://github.com/nullotte/Carpe-Diem/blob/main/src/carpediem/world/outputs/Output.java), [OutputItems.java](https://github.com/nullotte/Carpe-Diem/blob/main/src/carpediem/world/outputs/OutputItems.java), [OutputLiquids.java](https://github.com/nullotte/Carpe-Diem/blob/main/src/carpediem/world/outputs/OutputLiquids.java), [Stat.java](https://github.com/nullotte/Carpe-Diem/blob/main/src/carpediem/world/meta/CDStat.java))
