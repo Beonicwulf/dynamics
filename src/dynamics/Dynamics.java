@@ -1,34 +1,15 @@
 package dynamics;
 
-import arc.Core;
-import arc.Events;
-import arc.struct.Seq;
-import arc.util.Log;
 import dynamics.content.*;
 import dynamics.content.DyTeams;
-import dynamics.ui.ButtonPref;
-import mindustry.content.TechTree;
-import mindustry.ctype.UnlockableContent;
-import mindustry.game.EventType;
-import mindustry.game.Saves;
-import mindustry.gen.Icon;
+import dynamics.ui.DySettings;
 import mindustry.mod.*;
-
-import static arc.Core.bundle;
-import static arc.Core.settings;
-import static mindustry.Vars.*;
 
 public class Dynamics extends Mod{
     public static final String MOD_NAME = "fb-dynamics";
 
     public static String name(String name) {
         return MOD_NAME + "-" + name;
-    }
-
-    public Dynamics(){
-        Events.on(EventType.MusicRegisterEvent.class, e ->
-                DyMusics.load()
-        );
     }
 
     @Override
@@ -49,35 +30,7 @@ public class Dynamics extends Mod{
     public void init() {
         super.init();
         DyTeams.load();
-        loadSettings();
-    }
-
-    public static void loadSettings() {
-        ui.settings.addCategory(bundle.get("setting.fb-dynamics-category"), Icon.settings, t -> {
-            t.pref(new ButtonPref(bundle.get("setting.fb-dynamics-clear-tech-tree"), Icon.trash, () -> ui.showConfirm("@confirm", bundle.get("setting.fb-dynamics-clear-tech-tree.confirm"), () -> {
-                DyPlanets.thalassa.techTree.reset();
-                for (TechTree.TechNode node : DyPlanets.thalassa.techTree.children) {
-                    node.reset();
-                }
-                content.each(c -> {
-                    if (c instanceof UnlockableContent u && c.minfo != null && c.minfo.mod != null && c.minfo.mod.name.equals("fb-dynamics")) {
-                        u.clearUnlock();
-                    }
-                });
-                settings.remove("unlocks");
-            })));
-            t.pref(new ButtonPref(bundle.get("setting.fb-dynamics-clear-campaign"), Icon.trash, () -> ui.showConfirm("@confirm", bundle.get("setting.fb-dynamics-clear-campaign.confirm"), () -> {
-                Seq<Saves.SaveSlot> toDelete = Seq.with();
-                control.saves.getSaveSlots().each(s -> {
-                    if (s.getSector() == null) return;
-                    if (s.getSector().planet == DyPlanets.thalassa) {
-                        toDelete.add(s);
-                        Log.info("Deleted Dynamics sector: " + s.getSector().id + (s.getSector().preset != null ? " " + s.getSector().preset.localizedName : ""));
-                    }
-                });
-                toDelete.each(Saves.SaveSlot::delete);
-                ui.showInfoOnHidden(bundle.get("setting.fb-dynamics-clear-campaign-close.confirm"), () -> Core.app.exit());
-            })));
-        });
+        DySettings.loadSettings();
+        DyMusics.load();
     }
 }

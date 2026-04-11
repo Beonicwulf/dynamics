@@ -17,8 +17,7 @@ Dynamics OST: Reborne
 ### ✧ New Horizons, without permission
 [DirectionalSorter.java](https://github.com/Yuria-Shikibe/NewHorizonMod/blob/78266dbf908907e4316391152ac36d99f4ac52fa/src/newhorizon/expand/block/distribution/item/logistics/AdaptDirectionalRouter.java)
 ### ✧ Biotech
-[DynamicsTeams.java](https://github.com/jammuwu/BioTech/blob/master/src/biotech/content/BioTeams.java)\
-[ButtonPref.java](https://github.com/jammuwu/BioTech/blob/18cd2a9a613c38c844ce5bde7609356838f119b4/src/biotech/ui/ButtonPref.java#L8)
+[DynamicsTeams.java](https://github.com/jammuwu/BioTech/blob/master/src/biotech/content/BioTeams.java)
 ### ✧ Sh1penfire, Meld Java Mod
 [FluidValve.java](https://github.com/Sh1penfire/meld-java/blob/cb0d574b98defc12e14f2e7c0b0524802b64f116/src/meld/world/blocks/fluid/ChannelValve.java)\
 [FluidVent.java](https://github.com/Sh1penfire/meld-java/blob/cb0d574b98defc12e14f2e7c0b0524802b64f116/src/meld/world/blocks/fluid/ChannelVent.java)\

@@ -68,7 +68,7 @@ public class DyMusics {
         musicSets.put("vanillaDark", new Seq<>(Vars.control.sound.darkMusic));
         musicSets.put("vanillaBoss", new Seq<>(Vars.control.sound.bossMusic));
 
-        //musicSets.put("thalassaAmbient", Seq.with(chained, darkPurity, wisdom, space, sundown));
+        //musicSets.put("thalassaAmbient", Seq.with(reborne));
     }
 
     /** Sets up event handlers for updating music based on game events. */
