@@ -18,15 +18,17 @@
 - [x] Tier 1 Tank factory
 - [x] Proper Icon
 - [x] Proper Mod Description
+- [ ] Separate Solar System
 - [ ] Acid Rain
+- [ ] Music
 - [ ] Secondary biome (Malachite-rich mineral)
+- [ ] Hints
 - [ ] Sector Embark
 ### Short-term To-do
 - [x] Pump
 - [x] Zinc Message
 - [ ] Expand Hot-spring biome (Cinnabar)
 - [ ] Add variety to Malachite-rich biome (Chalcocite, Calcite, Goethite, Azurite, etc.)
-- [ ] Separate custom Solar System maybe?
 - [ ] Third biome (sedimentary, near a river or shore)
 ### Block Ideas
 - [ ] 3x3 Unloader (High cost and big size, no core unloading for balance, probably directional)
