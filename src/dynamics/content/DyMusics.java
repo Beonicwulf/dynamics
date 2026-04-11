@@ -1,5 +1,6 @@
 package dynamics.content;
 
+import arc.Core;
 import arc.Events;
 import arc.audio.Music;
 import mindustry.Vars;
@@ -15,6 +16,6 @@ public class DyMusics {
 
     public static void load(){
         reborne = Vars.tree.loadMusic("reborne");
-        Musics.menu = reborne;
+        if (Core.settings.getBool("menu-reborne")) {Musics.menu = reborne;}
     }
 }
