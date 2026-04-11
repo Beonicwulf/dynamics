@@ -1,8 +1,8 @@
 package dynamics.content.blocks;
 
-import dynamics.content.DynamicsAttributes;
-import dynamics.content.DynamicsItems;
-import dynamics.content.DynamicsLiquids;
+import dynamics.content.DyAttributes;
+import dynamics.content.DyItems;
+import dynamics.content.DyLiquids;
 import dynamics.graphics.DynamicsPal;
 import mindustry.content.Fx;
 import mindustry.content.StatusEffects;
@@ -12,7 +12,7 @@ import mindustry.world.Block;
 import mindustry.world.blocks.environment.*;
 import mindustry.world.meta.Attribute;
 
-public class DynamicsEnvironment {
+public class DyEnvironment {
     public static Block
             // ores
             oreZinc, oreMalachite,
@@ -32,10 +32,10 @@ public class DynamicsEnvironment {
 
     public static void load() {
         // ores
-        oreZinc = new OreBlock("ore-zinc", DynamicsItems.zinc) {{
+        oreZinc = new OreBlock("ore-zinc", DyItems.zinc) {{
             variants = 4;
         }};
-        oreMalachite = new OreBlock("ore-malachite", DynamicsItems.malachite) {{
+        oreMalachite = new OreBlock("ore-malachite", DyItems.malachite) {{
             variants = 5;
         }};
         // metal
@@ -48,7 +48,7 @@ public class DynamicsEnvironment {
         deepHotSpringWater = new Floor("deep-hot-spring-water"){{
             speedMultiplier = 0.2f;
             variants = 0;
-            liquidDrop = DynamicsLiquids.hotSpringWater;
+            liquidDrop = DyLiquids.hotSpringWater;
             liquidMultiplier = 1.5f;
             isLiquid = true;
             status = StatusEffects.wet;
@@ -77,7 +77,7 @@ public class DynamicsEnvironment {
         shallowTravertine = new ShallowLiquid("shallow-travertine") {{
             speedMultiplier = 0.8f;
             statusDuration = 50f;
-            liquidDrop = DynamicsLiquids.hotSpringWater;
+            liquidDrop = DyLiquids.hotSpringWater;
             isLiquid = true;
             variants = 4;
             cacheLayer = CacheLayer.water;
@@ -87,7 +87,7 @@ public class DynamicsEnvironment {
         deepTravertine = new ShallowLiquid("deep-travertine") {{
             speedMultiplier = 0.5f;
             statusDuration = 120f;
-            liquidDrop = DynamicsLiquids.hotSpringWater;
+            liquidDrop = DyLiquids.hotSpringWater;
             isLiquid = true;
             variants = 4;
             drownTime = 200f;
@@ -102,7 +102,7 @@ public class DynamicsEnvironment {
             attributes.set(Attribute.steam, 1f);
             variants = 2;
             shallow = true;
-            liquidDrop = DynamicsLiquids.hotSpringWater;
+            liquidDrop = DyLiquids.hotSpringWater;
             isLiquid = true;
             cacheLayer = CacheLayer.water;
             albedo = 0.9f;
@@ -128,7 +128,7 @@ public class DynamicsEnvironment {
         }};
         gildedChalcocite = new Floor("gilded-chalcocite") {{
             variants = 5;
-            attributes.set(DynamicsAttributes.azurite, 1);
+            attributes.set(DyAttributes.azurite, 1);
         }};
     }
 }

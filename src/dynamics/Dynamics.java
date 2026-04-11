@@ -5,7 +5,7 @@ import arc.Events;
 import arc.struct.Seq;
 import arc.util.Log;
 import dynamics.content.*;
-import dynamics.content.DynamicsTeams;
+import dynamics.content.DyTeams;
 import dynamics.ui.ButtonPref;
 import mindustry.content.TechTree;
 import mindustry.ctype.UnlockableContent;
@@ -27,36 +27,36 @@ public class Dynamics extends Mod{
 
     public Dynamics(){
         Events.on(EventType.MusicRegisterEvent.class, e ->
-                DynamicsMusics.load()
+                DyMusics.load()
         );
     }
 
     @Override
     public void loadContent() {
-        DynamicsItems.load();
-        DynamicsLiquids.load();
-        DynamicsRecipes.load();
-        DynamicsBulletTypes.load();
-        DynamicsUnitTypes.load();
-        DynamicsBlocks.load();
-        DynamicsWeathers.load();
-        DynamicsPlanets.load();
-        DynamicsSectorPresets.load();
+        DyItems.load();
+        DyLiquids.load();
+        DyRecipes.load();
+        DyBulletTypes.load();
+        DyUnitTypes.load();
+        DyBlocks.load();
+        DyWeathers.load();
+        DyPlanets.load();
+        DySectorPresets.load();
         ThalassaTechTree.load();
     }
 
     @Override
     public void init() {
         super.init();
-        DynamicsTeams.load();
+        DyTeams.load();
         loadSettings();
     }
 
     public static void loadSettings() {
         ui.settings.addCategory(bundle.get("setting.fb-dynamics-category"), Icon.settings, t -> {
             t.pref(new ButtonPref(bundle.get("setting.fb-dynamics-clear-tech-tree"), Icon.trash, () -> ui.showConfirm("@confirm", bundle.get("setting.fb-dynamics-clear-tech-tree.confirm"), () -> {
-                DynamicsPlanets.thalassa.techTree.reset();
-                for (TechTree.TechNode node : DynamicsPlanets.thalassa.techTree.children) {
+                DyPlanets.thalassa.techTree.reset();
+                for (TechTree.TechNode node : DyPlanets.thalassa.techTree.children) {
                     node.reset();
                 }
                 content.each(c -> {
@@ -70,7 +70,7 @@ public class Dynamics extends Mod{
                 Seq<Saves.SaveSlot> toDelete = Seq.with();
                 control.saves.getSaveSlots().each(s -> {
                     if (s.getSector() == null) return;
-                    if (s.getSector().planet == DynamicsPlanets.thalassa) {
+                    if (s.getSector().planet == DyPlanets.thalassa) {
                         toDelete.add(s);
                         Log.info("Deleted Dynamics sector: " + s.getSector().id + (s.getSector().preset != null ? " " + s.getSector().preset.localizedName : ""));
                     }

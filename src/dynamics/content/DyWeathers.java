@@ -7,7 +7,7 @@ import mindustry.type.Weather;
 import mindustry.type.weather.RainWeather;
 import mindustry.world.meta.Attribute;
 
-public class DynamicsWeathers {
+public class DyWeathers {
     public static Weather
             sulfurRain
             ;
@@ -18,7 +18,7 @@ public class DynamicsWeathers {
             status = StatusEffects.corroded;
             sound = Sounds.rain;
             soundVol = 0.25f;
-            liquid = DynamicsLiquids.hotSpringWater;
+            liquid = DyLiquids.hotSpringWater;
             color = DynamicsPal.steamSulfur;
         }};
     }

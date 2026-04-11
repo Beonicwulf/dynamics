@@ -1,13 +1,13 @@
 package dynamics.world.blocks.effect;
 
-import dynamics.content.DynamicsUnitTypes;
+import dynamics.content.DyUnitTypes;
 import dynamics.graphics.DynamicsPal;
 import mindustry.world.blocks.units.UnitCargoLoader;
 
 public class SummonPad extends UnitCargoLoader {
     public SummonPad(String name) {
         super(name);
-        unitType = DynamicsUnitTypes.augerDrone;
+        unitType = DyUnitTypes.augerDrone;
         unitBuildTime = 60f * 8f;
         polyColor = DynamicsPal.malachite;
         itemCapacity = 0;

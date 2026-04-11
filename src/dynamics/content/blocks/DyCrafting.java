@@ -1,8 +1,8 @@
 package dynamics.content.blocks;
 
-import dynamics.content.DynamicsItems;
-import dynamics.content.DynamicsRecipes;
-import dynamics.content.DynamicsLiquids;
+import dynamics.content.DyItems;
+import dynamics.content.DyRecipes;
+import dynamics.content.DyLiquids;
 import dynamics.graphics.DrawPress;
 import dynamics.world.blocks.crafting.RecipeCrafter;
 import mindustry.content.Fx;
@@ -15,20 +15,20 @@ import mindustry.world.draw.DrawRegion;
 
 import static mindustry.type.ItemStack.with;
 
-public class DynamicsCrafting {
+public class DyCrafting {
     public static Block
             mechanicalPress
             ;
 
     public static void load() {
         mechanicalPress = new RecipeCrafter("mechanical-press"){{
-            requirements(Category.crafting, with(DynamicsItems.zinc, 60, DynamicsItems.malachite, 20));
-            recipes.addAll(DynamicsRecipes.basicComponentRecipe);
+            requirements(Category.crafting, with(DyItems.zinc, 60, DyItems.malachite, 20));
+            recipes.addAll(DyRecipes.basicComponentRecipe);
             size = 2;
             hasItems = true;
             itemCapacity = 40;
             craftEffect =  Fx.drillSteam;
-            consumeLiquid(DynamicsLiquids.steam, 5f / 60f);
+            consumeLiquid(DyLiquids.steam, 5f / 60f);
 
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawPistons(){{
                 sinMag = 3f;
@@ -38,7 +38,7 @@ public class DynamicsCrafting {
                 maxScale = 1.5f;
             }}
             );
-            researchCost = with(DynamicsItems.zinc, 60 * 5, DynamicsItems.malachite, 20 * 5);
+            researchCost = with(DyItems.zinc, 60 * 5, DyItems.malachite, 20 * 5);
         }};
     }
 }

@@ -4,7 +4,7 @@ import dynamics.graphics.DynamicsPal;
 import mindustry.content.StatusEffects;
 import mindustry.type.Liquid;
 
-public class DynamicsLiquids {
+public class DyLiquids {
     public static Liquid
             steam, hotSpringWater, purifiedWater
             ;

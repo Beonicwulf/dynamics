@@ -23,6 +23,8 @@ Dynamics OST: Reborne
 [FluidValve.java](https://github.com/Sh1penfire/meld-java/blob/cb0d574b98defc12e14f2e7c0b0524802b64f116/src/meld/world/blocks/fluid/ChannelValve.java)\
 [FluidVent.java](https://github.com/Sh1penfire/meld-java/blob/cb0d574b98defc12e14f2e7c0b0524802b64f116/src/meld/world/blocks/fluid/ChannelVent.java)\
 [ValveController.java](https://github.com/Sh1penfire/meld-java/blob/cb0d574b98defc12e14f2e7c0b0524802b64f116/src/meld/world/blocks/fluid/ValveController.java)
+### ✧ Stabu_, Omaloon mod
+[DynamicsMusics.java](https://github.com/stabu-dev/Omaloon/blob/master/src/omaloon/content/OlMusics.java)
 ## Sprites
 ### ✧ Endofreeze
 Plastic Hull tileset

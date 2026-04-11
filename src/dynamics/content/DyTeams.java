@@ -14,7 +14,7 @@ import dynamics.graphics.DynamicsPal;
 import mindustry.game.Team;
 import mindustry.ui.Fonts;
 
-public class DynamicsTeams {
+public class DyTeams {
     public static Team
             dread
             ;

@@ -4,13 +4,13 @@ import arc.struct.Seq;
 import dynamics.world.blocks.crafting.Recipe;
 import mindustry.type.ItemStack;
 
-public class DynamicsRecipes {
+public class DyRecipes {
     public static Seq<Recipe>
     basicComponentRecipe
             ;
     public static void load() {
         basicComponentRecipe = Seq.with(
-                new Recipe(120f).consumeItems(ItemStack.with(DynamicsItems.malachite, 5, DynamicsItems.zinc, 10)).outputItem(DynamicsItems.partBasic)
+                new Recipe(120f).consumeItems(ItemStack.with(DyItems.malachite, 5, DyItems.zinc, 10)).outputItem(DyItems.partBasic)
         );
     }
 }

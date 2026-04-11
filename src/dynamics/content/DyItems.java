@@ -1,12 +1,11 @@
 package dynamics.content;
 
-import arc.graphics.*;
 import arc.struct.*;
 
 import dynamics.graphics.DynamicsPal;
 import mindustry.type.*;
 
-public class DynamicsItems {
+public class DyItems {
     public static Item
             // resources
             zinc, malachite, cinnabar, tantalum,

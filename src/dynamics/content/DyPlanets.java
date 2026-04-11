@@ -1,8 +1,7 @@
 package dynamics.content;
 
 import arc.graphics.Color;
-import dynamics.Dynamics;
-import dynamics.content.blocks.DynamicsEffectBlocks;
+import dynamics.content.blocks.DyEffectBlocks;
 import dynamics.graphics.DynamicsPal;
 import dynamics.maps.planets.KhioneGenerator;
 import dynamics.maps.planets.ThalassaGenerator;
@@ -12,7 +11,7 @@ import mindustry.graphics.g3d.MultiMesh;
 import mindustry.graphics.g3d.NoiseMesh;
 import mindustry.type.Planet;
 
-public class DynamicsPlanets {
+public class DyPlanets {
     public static Planet
             thalassa, khione
             ;
@@ -36,11 +35,11 @@ public class DynamicsPlanets {
             startSector = 34;
             sectorSeed = 14513;
             allowLaunchToNumbered = allowLaunchSchematics = allowLaunchLoadout = allowSectorInvasion = false;
-            defaultCore = DynamicsEffectBlocks.coreSurface;
+            defaultCore = DyEffectBlocks.coreSurface;
             allowWaves = clearSectorOnLose = true;
 
             ruleSetter = r -> {
-                r.waveTeam = DynamicsTeams.dread;
+                r.waveTeam = DyTeams.dread;
                 r.placeRangeCheck = false;
                 r.showSpawns = true;
             };
@@ -48,8 +47,8 @@ public class DynamicsPlanets {
             campaignRuleDefaults.showSpawns = true;
             campaignRuleDefaults.rtsAI = true;
 
-            unlockedOnLand.add(DynamicsEffectBlocks.coreSurface);
-            unlockedOnLand.add(DynamicsEffectBlocks.augerPad);
+            unlockedOnLand.add(DyEffectBlocks.coreSurface);
+            unlockedOnLand.add(DyEffectBlocks.augerPad);
 
             meshLoader = () -> new MultiMesh(
                     //dark sand
@@ -113,7 +112,7 @@ public class DynamicsPlanets {
             startSector = 45;
             sectorSeed = 678;
             allowLaunchToNumbered = allowLaunchSchematics = allowLaunchLoadout = allowSectorInvasion = false;
-            defaultCore = DynamicsEffectBlocks.coreSurface;
+            defaultCore = DyEffectBlocks.coreSurface;
             allowWaves = clearSectorOnLose = true;
 
             meshLoader = () -> new NoiseMesh(this, 69,

@@ -12,7 +12,7 @@ import mindustry.graphics.*;
 import mindustry.type.UnitType;
 import mindustry.type.Weapon;
 
-public class DynamicsUnitTypes {
+public class DyUnitTypes {
     public static Weapon
             augerBolt, breatheWeapon, splitWeapon
             ;
@@ -34,7 +34,7 @@ public class DynamicsUnitTypes {
             inaccuracy = 15f;
             alternate = true;
 
-            bullet = DynamicsBulletTypes.healingShards;
+            bullet = DyBulletTypes.healingShards;
         }};
 
         breatheWeapon = new Weapon("breathe-weapon"){{
@@ -42,7 +42,7 @@ public class DynamicsUnitTypes {
             reload = 40;
             inaccuracy = 10;
             minWarmup = 0.05f;
-            bullet = DynamicsBulletTypes.coreShards;
+            bullet = DyBulletTypes.coreShards;
             shoot = new ShootPattern() {{
 						shots = 3;
 						shotDelay = 5;
@@ -56,7 +56,7 @@ public class DynamicsUnitTypes {
             reload = 40;
             recoil = 1f;
             mirror = true;
-            bullet = DynamicsBulletTypes.tankShard;
+            bullet = DyBulletTypes.tankShard;
             rotate = true;
             rotateSpeed = 3;
         }};
@@ -79,7 +79,7 @@ public class DynamicsUnitTypes {
 
             mineTier = 1;
             mineSpeed = 2.5f;
-            mineItems = Seq.with(DynamicsItems.zinc, DynamicsItems.malachite);
+            mineItems = Seq.with(DyItems.zinc, DyItems.malachite);
 
             lifetime = 60f * 40f;
             targetAir  = false;
@@ -107,7 +107,7 @@ public class DynamicsUnitTypes {
             itemCapacity = 40;
             groundLayer = Layer.legUnit - 1f;
             flying = false;
-            //mineItems = Seq.with(DynamicsItems.zinc, DynamicsItems.malachite);
+            //mineItems = Seq.with(DyItems.zinc, DyItems.malachite);
             stepShake = 0.01f;
             legStraightness = 0.3f;
             legCount = 6;

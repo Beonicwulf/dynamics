@@ -1,8 +1,8 @@
 package dynamics.content.blocks;
 
-import dynamics.content.DynamicsBulletTypes;
-import dynamics.content.DynamicsItems;
-import dynamics.content.DynamicsLiquids;
+import dynamics.content.DyBulletTypes;
+import dynamics.content.DyItems;
+import dynamics.content.DyLiquids;
 import dynamics.graphics.*;
 import mindustry.content.Fx;
 import mindustry.entities.pattern.ShootSpread;
@@ -14,7 +14,7 @@ import mindustry.world.draw.*;
 
 import static mindustry.type.ItemStack.with;
 
-public class DynamicsDefense {
+public class DyDefense {
     public static Block
             withdraw, steamValve
             ;
@@ -22,11 +22,11 @@ public class DynamicsDefense {
     public static void load(){
 
         steamValve = new LiquidTurret("steam-valve") {{
-            requirements(Category.defense, with(DynamicsItems.zinc, 24, DynamicsItems.partBasic, 1));
+            requirements(Category.defense, with(DyItems.zinc, 24, DyItems.partBasic, 1));
             size = 2;
             health = 1380; //should replace with scaledHealth? needs testing
             ammo(
-                    DynamicsLiquids.steam, DynamicsBulletTypes.steamBlast
+                    DyLiquids.steam, DyBulletTypes.steamBlast
             );
             drawer = new DrawMulti(
                     new DrawDefault(), new DrawRegion("-base"), new DrawLiquidRegion(), new DrawRegion("-rotator", 2f), new DrawRegion("-top"), new DrawPress("-press")
@@ -39,11 +39,11 @@ public class DynamicsDefense {
             range = 32;
             shootY = 0;
             shoot = new ShootSpread(30, 12f);
-            researchCost = with(DynamicsItems.zinc, 24 * 5, DynamicsItems.partBasic, 5);
+            researchCost = with(DyItems.zinc, 24 * 5, DyItems.partBasic, 5);
         }};
 
         withdraw = new ItemTurret("withdraw") {{
-            requirements(Category.turret, with(DynamicsItems.zinc, 100, DynamicsItems.partBasic, 10));
+            requirements(Category.turret, with(DyItems.zinc, 100, DyItems.partBasic, 10));
             targetAir = true;
             size = 3;
             hasPower = false;
@@ -59,13 +59,13 @@ public class DynamicsDefense {
             ammoPerShot = 1;
             shootY = 7;
             liquidCapacity = 50f;
-            consumeLiquid(DynamicsLiquids.steam, 5f / 60f);
+            consumeLiquid(DyLiquids.steam, 5f / 60f);
 
             ammo(
-                    DynamicsItems.malachite, DynamicsBulletTypes.malachiteFrag
+                    DyItems.malachite, DyBulletTypes.malachiteFrag
             );
             //thx nullevoy for sprite
-            researchCost = with(DynamicsItems.zinc, 100 * 5, DynamicsItems.partBasic, 10 * 5);
+            researchCost = with(DyItems.zinc, 100 * 5, DyItems.partBasic, 10 * 5);
         }};
     }
 }

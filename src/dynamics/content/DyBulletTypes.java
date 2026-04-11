@@ -7,7 +7,7 @@ import mindustry.entities.bullet.BasicBulletType;
 import mindustry.entities.bullet.BulletType;
 import mindustry.entities.effect.MultiEffect;
 
-public class DynamicsBulletTypes {
+public class DyBulletTypes {
     public static BulletType
             malachiteShards, malachiteFrag, healingShards, coreShards, stickyShard, tankShard,
             steamBlast
@@ -38,7 +38,7 @@ public class DynamicsBulletTypes {
             spin = 3.5f;
             hitEffect = despawnEffect = Fx.hitBulletColor;
             fragBullets = 1;
-            fragBullet = DynamicsBulletTypes.stickyShard;
+            fragBullet = DyBulletTypes.stickyShard;
         }};
 
         coreShards = malachiteShards.copy();
@@ -67,7 +67,7 @@ public class DynamicsBulletTypes {
             hitEffect = despawnEffect = Fx.hitBulletColor;
             shootEffect = withdrawShootEffect;
             fragBullets = 4;
-            fragBullet = DynamicsBulletTypes.malachiteShards;
+            fragBullet = DyBulletTypes.malachiteShards;
         }};
 
         healingShards = malachiteShards.copy();
