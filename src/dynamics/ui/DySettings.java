@@ -18,7 +18,8 @@ public class DySettings {
     public static void loadSettings(){
         ui.settings.addCategory(bundle.get("setting.fb-dynamics-category"), Icon.planet, t -> {
             t.defaults().size(280f, 60f).left();
-            //t.checkPref("debug-access", false);
+            t.checkPref("debug-access", false);
+            t.row();
             t.button(bundle.get("setting.fb-dynamics-clear-tech-tree"), Icon.trash, Styles.flatt, () -> ui.showConfirm("@confirm", bundle.get("setting.fb-dynamics-clear-tech-tree.confirm"), () -> {
                 DyPlanets.thalassa.techTree.reset();
                 for (TechTree.TechNode node : DyPlanets.thalassa.techTree.children) {

@@ -19,7 +19,7 @@
 - [x] Proper Icon
 - [x] Proper Mod Description
 - [x] Main Menu Music
-- [ ] Separate Solar System
+- [x] Separate Solar System
 - [ ] Acid Rain
 - [ ] Secondary biome (Malachite-rich mineral)
 - [ ] Hints

@@ -1,5 +1,6 @@
 package dynamics.content;
 
+import arc.Core;
 import arc.graphics.Color;
 import dynamics.content.blocks.DyEffectBlocks;
 import dynamics.graphics.DyPal;
@@ -13,15 +14,19 @@ import mindustry.type.Planet;
 
 public class DyPlanets {
     public static Planet
+            // star
             aurora,
+            // campaign
             thalassa, khione,
-            seraph, thor, gaia, aureostrom, juno, heranthir, artemis
+            // Scrapped TBS solar system
+            vulcan, seraph, gaia, thor, aureostrom, juno, heranthir, artemis
             ;
 
     public static void load() {
+        // star
         aurora = new Planet("aurora", null, 11f){{
             bloom = true;
-            accessible = false;
+            accessible = alwaysUnlocked = Core.settings.getBool("debug-access");
             meshLoader = () -> new SunMesh(
                     this, 4,
                     5, 0.3, 1.7, 1.2, 1,
@@ -34,13 +39,14 @@ public class DyPlanets {
                     Color.valueOf("#e3e3dd")
             );
         }};
-        seraph = new Planet("seraph", aurora, 0.7f, 1) {{
-            iconColor = DyPal.steamSulfur;
+        // planets
+        vulcan = new Planet("vulcan", aurora, 0.4f, 1) {{
+            iconColor = DyPal.zinc;
             generator = new ThalassaGenerator();
-            accessible = alwaysUnlocked  = true; // SET TO FALSE
+            accessible = alwaysUnlocked = Core.settings.getBool("debug-access");
             visible = drawOrbit = true;
 
-            orbitRadius = 24;
+            orbitRadius = 18;
             orbitSpacing = 1;
             minZoom = 0.5f;
             maxZoom = 2.4f;
@@ -53,38 +59,81 @@ public class DyPlanets {
             meshLoader = () -> new MultiMesh(
                     //darker
                     new NoiseMesh(this, 101,
-                            6, this.radius + 0.0441f, 5, 0.9f, 1, 0.5f,
+                            4, this.radius + 0.0441f, 5, 0.9f, 1, 0.5f,
                             Color.valueOf("#884006"), Color.valueOf("#501c04"),
                             1, 0.5f, 1, 0.5f),
                     //dark
                     new NoiseMesh(this, 101,
-                            5, this.radius + 0.047f, 4, 1.1f, 1, 0.5f,
+                            3, this.radius + 0.047f, 4, 1.1f, 1, 0.5f,
                             Color.valueOf("#ac8357"), Color.valueOf("#ba7436"),
                             1, 0.5f, 1, 0.5f),
                     //mid
                     new NoiseMesh(this, 61,
-                            6, this.radius + 0.048f, 4, 1.1f, 0.5f, 0.425f,
+                            4, this.radius + 0.048f, 4, 1.1f, 0.5f, 0.425f,
                             Color.valueOf("#e0bc5b"), Color.valueOf("#d0bd71"),
                             1, 0.5f, 1, 0.5f),
                     //light
                     new NoiseMesh(this, 17,
-                            6, this.radius + 0.0514f, 6, 1f, 1, 0.55f,
+                            4, this.radius + 0.0514f, 6, 1.1f, 1, 0.55f,
                             Color.valueOf("#eedf8c"), Color.valueOf("#ffe8be"),
                             1, 0.5f, 1, 0.5f),
                     //lighter
                     new NoiseMesh(this, 69,
-                            5, this.radius + 0.012f, 4, 1.1f, 0.75f, 0.5f,
+                            3, this.radius + 0.012f, 6, 1.1f, 0.75f, 0.5f,
                             Color.valueOf("#e3cca0"), Color.valueOf("#f8f0cc"),
                             1, 0.5f, 1, 0.5f)
             );
             cloudMeshLoader = () -> new MultiMesh(
                     //bright lavender
                     new HexSkyMesh(this, 1,
-                            1.21f, 0.1f, 6, DyPal.steam.a(0.49f), 3, 0.5f, 1, 0.6f),
+                            1.21f, 0.1f, 4, DyPal.steam.a(0.49f), 3, 0.5f, 1, 0.6f),
                     new HexSkyMesh(this, 1,
-                            1.01f, 0.11f, 6, Color.valueOf("dbbcb3").a(0.49f), 3, 0.6f, 0.9f, 0.6f),
+                            1.01f, 0.11f, 4, Color.valueOf("dbbcb3").a(0.49f), 3, 0.6f, 0.9f, 0.6f),
                     new HexSkyMesh(this, 1,
-                            0.891f, 0.091f, 6, DyPal.steamSulfur.a(0.49f), 3, 0.7f, 1.1f, 0.6f)
+                            0.891f, 0.091f, 4, DyPal.steamSulfur.a(0.49f), 3, 0.7f, 1.1f, 0.6f)
+            );
+        }};
+        seraph = new Planet("seraph", aurora, 0.7f, 1) {{
+            iconColor = DyPal.steamSulfur;
+            generator = new ThalassaGenerator();
+            accessible = alwaysUnlocked = Core.settings.getBool("debug-access");
+            visible = drawOrbit = true;
+
+            orbitRadius = 24;
+            orbitSpacing = 1;
+            minZoom = 0.5f;
+            maxZoom = 2.4f;
+            bloom = false;
+            hasAtmosphere = true;
+            atmosphereColor = DyPal.steam;
+            atmosphereRadIn = 0;
+            atmosphereRadOut = 0.1f;
+
+            meshLoader = () -> new MultiMesh(
+                    //mid
+                    new NoiseMesh(this, 61,
+                            5, this.radius + 0.048f, 4, 1.1f, 0.5f, 0.425f,
+                            DyPal.steamSulfur, DyPal.steam,
+                            1, 0.5f, 1, 0.5f),
+                    //light
+                    new NoiseMesh(this, 17,
+                            5, this.radius + 0.0514f, 6, 1.1f, 1, 0.55f,
+                            Color.valueOf("#eedf8c"), Color.valueOf("#ffe8be"),
+                            1, 0.5f, 1, 0.5f),
+                    //lighter
+                    new NoiseMesh(this, 69,
+                            4, this.radius + 0.012f, 6, 1.1f, 0.75f, 0.5f,
+                            Color.valueOf("#e3cca0"), Color.valueOf("#f8f0cc"),
+                            1, 0.5f, 1, 0.5f)
+            );
+            cloudMeshLoader = () -> new MultiMesh(
+                    //bright lavender
+                    new HexSkyMesh(this, 1,
+                            1.21f, 0.1f, 5, DyPal.steam.a(0.49f), 3, 0.5f, 1, 0.6f),
+                    new HexSkyMesh(this, 1,
+                            1.01f, 0.11f, 5, Color.valueOf("dbbcb3").a(0.49f), 3, 0.6f, 0.9f, 0.6f),
+                    new HexSkyMesh(this, 1,
+                            0.891f, 0.091f, 5, Color.valueOf("#d7d7f9").a(0.49f), 3, 0.7f, 1.1f, 0.6f)
             );
         }};
         thalassa = new Planet("thalassa", aurora, 1.2f, 2) {{
@@ -164,10 +213,12 @@ public class DyPlanets {
 
 
         }};
-        khione = new Planet("khione", thalassa, 0.6f, 2) {{
+        // moons
+        khione = new Planet("khione", thalassa, 0.5f, 1) {{
             iconColor = DyPal.tantalum;
             generator = new KhioneGenerator();
-            visible = accessible = drawOrbit = updateLighting = alwaysUnlocked = true;
+            accessible = alwaysUnlocked = Core.settings.getBool("debug-access");
+            visible =  drawOrbit = updateLighting = true;
 
             orbitRadius = 4;
             orbitSpacing = 12;
@@ -186,7 +237,7 @@ public class DyPlanets {
             allowWaves = clearSectorOnLose = true;
 
             meshLoader = () -> new NoiseMesh(this, 69,
-                    2, 0.6f, 3, 0.8f, 0.15f, 1.5f,
+                    2, 0.5f, 3, 0.8f, 0.15f, 1.5f,
                     Color.valueOf("#606d90"), Color.valueOf("#394462"),
                     1, 0.5f, 1, 0.5f);
             cloudMeshLoader = () -> new HexSkyMesh(this, 96,
