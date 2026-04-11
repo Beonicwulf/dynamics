@@ -18,9 +18,9 @@
 - [x] Tier 1 Tank factory
 - [x] Proper Icon
 - [x] Proper Mod Description
+- [x] Main Menu Music
 - [ ] Separate Solar System
 - [ ] Acid Rain
-- [ ] Music
 - [ ] Secondary biome (Malachite-rich mineral)
 - [ ] Hints
 - [ ] Sector Embark

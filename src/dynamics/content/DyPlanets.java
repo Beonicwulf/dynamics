@@ -5,24 +5,94 @@ import dynamics.content.blocks.DyEffectBlocks;
 import dynamics.graphics.DyPal;
 import dynamics.maps.planets.KhioneGenerator;
 import dynamics.maps.planets.ThalassaGenerator;
-import mindustry.content.Planets;
 import mindustry.graphics.g3d.HexSkyMesh;
 import mindustry.graphics.g3d.MultiMesh;
 import mindustry.graphics.g3d.NoiseMesh;
+import mindustry.graphics.g3d.SunMesh;
 import mindustry.type.Planet;
 
 public class DyPlanets {
     public static Planet
-            thalassa, khione
+            aurora,
+            thalassa, khione,
+            seraph, thor, gaia, aureostrom, juno, heranthir, artemis
             ;
 
     public static void load() {
-        thalassa = new Planet("thalassa", Planets.sun, 1.2f, 2) {{
+        aurora = new Planet("aurora", null, 11f){{
+            bloom = true;
+            accessible = false;
+            meshLoader = () -> new SunMesh(
+                    this, 4,
+                    5, 0.3, 1.7, 1.2, 1,
+                    1.1f,
+                    Color.valueOf("#dbd7e0"),
+                    Color.valueOf("#ddc5c0"),
+                    Color.valueOf("#ddbfa1"),
+                    Color.valueOf("#e0c887"),
+                    Color.valueOf("#e2e2c6"),
+                    Color.valueOf("#e3e3dd")
+            );
+        }};
+        seraph = new Planet("seraph", aurora, 0.7f, 1) {{
+            iconColor = DyPal.steamSulfur;
+            generator = new ThalassaGenerator();
+            accessible = alwaysUnlocked  = true; // SET TO FALSE
+            visible = drawOrbit = true;
+
+            orbitRadius = 24;
+            orbitSpacing = 1;
+            minZoom = 0.5f;
+            maxZoom = 2.4f;
+            bloom = false;
+            hasAtmosphere = true;
+            atmosphereColor = DyPal.steamSulfur;
+            atmosphereRadIn = 0;
+            atmosphereRadOut = 0.1f;
+
+            meshLoader = () -> new MultiMesh(
+                    //darker
+                    new NoiseMesh(this, 101,
+                            6, this.radius + 0.0441f, 5, 0.9f, 1, 0.5f,
+                            Color.valueOf("#884006"), Color.valueOf("#501c04"),
+                            1, 0.5f, 1, 0.5f),
+                    //dark
+                    new NoiseMesh(this, 101,
+                            5, this.radius + 0.047f, 4, 1.1f, 1, 0.5f,
+                            Color.valueOf("#ac8357"), Color.valueOf("#ba7436"),
+                            1, 0.5f, 1, 0.5f),
+                    //mid
+                    new NoiseMesh(this, 61,
+                            6, this.radius + 0.048f, 4, 1.1f, 0.5f, 0.425f,
+                            Color.valueOf("#e0bc5b"), Color.valueOf("#d0bd71"),
+                            1, 0.5f, 1, 0.5f),
+                    //light
+                    new NoiseMesh(this, 17,
+                            6, this.radius + 0.0514f, 6, 1f, 1, 0.55f,
+                            Color.valueOf("#eedf8c"), Color.valueOf("#ffe8be"),
+                            1, 0.5f, 1, 0.5f),
+                    //lighter
+                    new NoiseMesh(this, 69,
+                            5, this.radius + 0.012f, 4, 1.1f, 0.75f, 0.5f,
+                            Color.valueOf("#e3cca0"), Color.valueOf("#f8f0cc"),
+                            1, 0.5f, 1, 0.5f)
+            );
+            cloudMeshLoader = () -> new MultiMesh(
+                    //bright lavender
+                    new HexSkyMesh(this, 1,
+                            1.21f, 0.1f, 6, DyPal.steam.a(0.49f), 3, 0.5f, 1, 0.6f),
+                    new HexSkyMesh(this, 1,
+                            1.01f, 0.11f, 6, Color.valueOf("dbbcb3").a(0.49f), 3, 0.6f, 0.9f, 0.6f),
+                    new HexSkyMesh(this, 1,
+                            0.891f, 0.091f, 6, DyPal.steamSulfur.a(0.49f), 3, 0.7f, 1.1f, 0.6f)
+            );
+        }};
+        thalassa = new Planet("thalassa", aurora, 1.2f, 2) {{
             iconColor = DyPal.dread;
             generator = new ThalassaGenerator();
             visible = accessible = drawOrbit = updateLighting = alwaysUnlocked = true;
 
-            orbitRadius = 24;
+            orbitRadius = 64;
             orbitSpacing = 1;
             minZoom = 0.5f;
             maxZoom = 2.4f;
@@ -36,7 +106,7 @@ public class DyPlanets {
             sectorSeed = 14513;
             allowLaunchToNumbered = allowLaunchSchematics = allowLaunchLoadout = allowSectorInvasion = false;
             defaultCore = DyEffectBlocks.coreSurface;
-            allowWaves = clearSectorOnLose = true;
+            allowWaves = clearSectorOnLose = allowCampaignRules = true;
 
             ruleSetter = r -> {
                 r.waveTeam = DyTeams.dread;
