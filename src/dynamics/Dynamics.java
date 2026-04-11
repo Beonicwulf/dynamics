@@ -12,6 +12,10 @@ public class Dynamics extends Mod{
         return MOD_NAME + "-" + name;
     }
 
+    public Dynamics () {
+        DyMusics.preload();
+    }
+
     @Override
     public void loadContent() {
         DyItems.load();
@@ -31,6 +35,5 @@ public class Dynamics extends Mod{
         super.init();
         DyTeams.load();
         DySettings.loadSettings();
-        DyMusics.load();
     }
 }

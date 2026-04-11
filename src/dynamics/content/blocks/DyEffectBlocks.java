@@ -2,8 +2,9 @@ package dynamics.content.blocks;
 
 import dynamics.content.DyItems;
 import dynamics.content.DyLiquids;
+import dynamics.content.DyMusics;
 import dynamics.content.DyUnitTypes;
-import dynamics.graphics.DynamicsPal;
+import dynamics.graphics.DyPal;
 import dynamics.world.blocks.effect.SummonPad;
 import mindustry.type.Category;
 import mindustry.world.Block;
@@ -32,6 +33,7 @@ public class DyEffectBlocks {
             unitCapModifier = 15;
             requiresCoreZone = true;
             incinerateNonBuildable = true;
+            //landMusic = DyMusics.reborne;
         }};
         augerPad = new SummonPad("auger-pad") {{
             requirements(Category.effect, BuildVisibility.sandboxOnly, with(DyItems.zinc, 2000, DyItems.partBasic, 200));
@@ -44,7 +46,7 @@ public class DyEffectBlocks {
             polySides = 3;
             polyRotateSpeed = 1f;
             unitBuildTime = 60f * 10f;
-            polyColor = DynamicsPal.malachite;
+            polyColor = DyPal.malachite;
             drawTeamOverlay = true;
             alwaysUnlocked = true;
             health = 1410;

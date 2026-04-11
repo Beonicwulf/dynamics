@@ -2,7 +2,7 @@ package dynamics.content;
 
 import arc.graphics.Color;
 import dynamics.content.blocks.DyEffectBlocks;
-import dynamics.graphics.DynamicsPal;
+import dynamics.graphics.DyPal;
 import dynamics.maps.planets.KhioneGenerator;
 import dynamics.maps.planets.ThalassaGenerator;
 import mindustry.content.Planets;
@@ -18,7 +18,7 @@ public class DyPlanets {
 
     public static void load() {
         thalassa = new Planet("thalassa", Planets.sun, 1.2f, 2) {{
-            iconColor = DynamicsPal.dread;
+            iconColor = DyPal.dread;
             generator = new ThalassaGenerator();
             visible = accessible = drawOrbit = updateLighting = alwaysUnlocked = true;
 
@@ -28,7 +28,7 @@ public class DyPlanets {
             maxZoom = 2.4f;
             bloom = false;
             hasAtmosphere = true;
-            atmosphereColor = DynamicsPal.steam;
+            atmosphereColor = DyPal.steam;
             atmosphereRadIn = 0;
             atmosphereRadOut = 0.1f;
 
@@ -64,7 +64,7 @@ public class DyPlanets {
                     //travertine
                     new NoiseMesh(this, 101,
                             5, 1.247f, 4, 1.1f, 1, 0.5f,
-                            DynamicsPal.travertineLightTone, DynamicsPal.travertineMidTone,
+                            DyPal.travertineLightTone, DyPal.travertineMidTone,
                             1, 0.5f, 1, 0.5f),
                     //grass
                     new NoiseMesh(this, 61,
@@ -74,12 +74,12 @@ public class DyPlanets {
                     //ocean water
                     new NoiseMesh(this, 17,
                             6, 1.2514f, 6, 1f, 1, 0.55f,
-                            DynamicsPal.waterDarkTone, DynamicsPal.waterDarkerTone,
+                            DyPal.waterDarkTone, DyPal.waterDarkerTone,
                             1, 0.5f, 1, 0.5f),
                     //lighter water
                     new NoiseMesh(this, 69,
                             5, 1.212f, 4, 1.1f, 0.75f, 0.5f,
-                            DynamicsPal.hotSpringWater, DynamicsPal.purifiedWater,
+                            DyPal.hotSpringWater, DyPal.purifiedWater,
                             1, 0.5f, 1, 0.5f)
             );
             cloudMeshLoader = () -> new MultiMesh(
@@ -87,15 +87,15 @@ public class DyPlanets {
                     new HexSkyMesh(this, 1,
                             1.21f, 0.1f, 6, Color.valueOf("c6ace8").a(0.49f), 3, 0.3f, 1, 0.6f),
                     new HexSkyMesh(this, 1,
-                            1.01f, 0.11f, 6, DynamicsPal.steamLight.a(0.49f), 3, 0.4f, 0.9f, 0.6f),
+                            1.01f, 0.11f, 6, DyPal.steamLight.a(0.49f), 3, 0.4f, 0.9f, 0.6f),
                     new HexSkyMesh(this, 1,
-                            0.891f, 0.091f, 6, DynamicsPal.steam.a(0.49f), 3, 0.5f, 1.1f, 0.6f)
+                            0.891f, 0.091f, 6, DyPal.steam.a(0.49f), 3, 0.5f, 1.1f, 0.6f)
             );
 
 
         }};
         khione = new Planet("khione", thalassa, 0.6f, 2) {{
-            iconColor = DynamicsPal.tantalum;
+            iconColor = DyPal.tantalum;
             generator = new KhioneGenerator();
             visible = accessible = drawOrbit = updateLighting = alwaysUnlocked = true;
 
@@ -105,7 +105,7 @@ public class DyPlanets {
             maxZoom = 3f;
             bloom = false;
             hasAtmosphere = false;
-            atmosphereColor = DynamicsPal.steamLight;
+            atmosphereColor = DyPal.steamLight;
             atmosphereRadIn = 0;
             atmosphereRadOut = 0.08f;
 

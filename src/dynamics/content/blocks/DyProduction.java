@@ -20,7 +20,7 @@ import mindustry.world.meta.BuildVisibility;
 
 import static mindustry.type.ItemStack.with;
 
-public class DynamicsProduction {
+public class DyProduction {
     public static Block
             // vents
             steamCollector,

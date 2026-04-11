@@ -1,7 +1,7 @@
 package dynamics.world.blocks.effect;
 
 import dynamics.content.DyUnitTypes;
-import dynamics.graphics.DynamicsPal;
+import dynamics.graphics.DyPal;
 import mindustry.world.blocks.units.UnitCargoLoader;
 
 public class SummonPad extends UnitCargoLoader {
@@ -9,7 +9,7 @@ public class SummonPad extends UnitCargoLoader {
         super(name);
         unitType = DyUnitTypes.augerDrone;
         unitBuildTime = 60f * 8f;
-        polyColor = DynamicsPal.malachite;
+        polyColor = DyPal.malachite;
         itemCapacity = 0;
     }
     public class SummonPadBuild extends UnitCargoLoader.UnitTransportSourceBuild {

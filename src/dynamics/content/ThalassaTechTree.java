@@ -11,7 +11,7 @@ import static dynamics.content.blocks.DyEffectBlocks.*;
 import static dynamics.content.blocks.DyDistribution.*;
 import static dynamics.content.blocks.DyLiquidBlocks.*;
 import static dynamics.content.blocks.DyPayloadBlocks.*;
-import static dynamics.content.blocks.DynamicsProduction.*;
+import static dynamics.content.blocks.DyProduction.*;
 import static mindustry.Vars.content;
 import static mindustry.content.TechTree.*;
 

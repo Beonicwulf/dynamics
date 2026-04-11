@@ -3,7 +3,7 @@ package dynamics.content.blocks;
 import dynamics.content.DyAttributes;
 import dynamics.content.DyItems;
 import dynamics.content.DyLiquids;
-import dynamics.graphics.DynamicsPal;
+import dynamics.graphics.DyPal;
 import mindustry.content.Fx;
 import mindustry.content.StatusEffects;
 import mindustry.entities.effect.MultiEffect;
@@ -72,7 +72,7 @@ public class DyEnvironment {
             parent = blendGroup = travertineFloor;
             attributes.set(Attribute.steam, 1f);
             variants = 2;
-            effectColor = DynamicsPal.steamSulfur;
+            effectColor = DyPal.steamSulfur;
         }};
         shallowTravertine = new ShallowLiquid("shallow-travertine") {{
             speedMultiplier = 0.8f;
@@ -108,7 +108,7 @@ public class DyEnvironment {
             albedo = 0.9f;
             supportsOverlay = true;
             effectSpacing = 720;
-            effectColor = DynamicsPal.steamSulfur;
+            effectColor = DyPal.steamSulfur;
             effect = new MultiEffect(Fx.drillSteam, Fx.steam, Fx.vapor, Fx.smokeCloud);
         }};
         travertineWall = new StaticWall("travertine-wall") {{

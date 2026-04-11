@@ -10,7 +10,7 @@ import arc.struct.ObjectMap;
 import arc.struct.Seq;
 import arc.util.Reflect;
 import arc.util.Scaling;
-import dynamics.graphics.DynamicsPal;
+import dynamics.graphics.DyPal;
 import mindustry.game.Team;
 import mindustry.ui.Fonts;
 
@@ -20,7 +20,7 @@ public class DyTeams {
             ;
 
     public static void load() {
-        dread = newTeam(5, "dread", DynamicsPal.dread);
+        dread = newTeam(5, "dread", DyPal.dread);
     };
 
     private static Team newTeam(int id, String name, Color color) {

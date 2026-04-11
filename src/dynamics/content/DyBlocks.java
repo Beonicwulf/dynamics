@@ -6,7 +6,7 @@ public class DyBlocks {
     public static void load() {
         DyEnvironment.load();
         DyCrafting.load();
-        DynamicsProduction.load();
+        DyProduction.load();
         DyDistribution.load();
         DyLiquidBlocks.load();
         DyDefense.load();

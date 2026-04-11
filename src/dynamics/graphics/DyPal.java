@@ -2,7 +2,7 @@ package dynamics.graphics;
 
 import arc.graphics.*;
 
-public class DynamicsPal {
+public class DyPal {
     public static Color //Items, Fluids, Bullets etc
             zinc = Color.valueOf("#aa996e"),
             malachite = Color.valueOf("#356a46"),

@@ -1,6 +1,6 @@
 package dynamics.content;
 
-import dynamics.graphics.DynamicsPal;
+import dynamics.graphics.DyPal;
 import mindustry.content.StatusEffects;
 import mindustry.gen.Sounds;
 import mindustry.type.Weather;
@@ -19,7 +19,7 @@ public class DyWeathers {
             sound = Sounds.rain;
             soundVol = 0.25f;
             liquid = DyLiquids.hotSpringWater;
-            color = DynamicsPal.steamSulfur;
+            color = DyPal.steamSulfur;
         }};
     }
 }

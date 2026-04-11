@@ -1,6 +1,6 @@
 package dynamics.content;
 
-import dynamics.graphics.DynamicsPal;
+import dynamics.graphics.DyPal;
 import mindustry.content.StatusEffects;
 import mindustry.type.Liquid;
 
@@ -10,22 +10,22 @@ public class DyLiquids {
             ;
 
     public static void load() {
-        steam = new Liquid("steam", DynamicsPal.steam) {{
+        steam = new Liquid("steam", DyPal.steam) {{
             temperature = 0.7f;
             gas = true;
             explosiveness = 0.5f;
         }};
-        hotSpringWater = new Liquid("hot-spring-water", DynamicsPal.hotSpringWater) {{
+        hotSpringWater = new Liquid("hot-spring-water", DyPal.hotSpringWater) {{
             heatCapacity = 0.3f;
             effect = StatusEffects.wet;
             boilPoint = 0.4f;
-            gasColor = DynamicsPal.steamSulfur;
+            gasColor = DyPal.steamSulfur;
         }};
-        purifiedWater = new Liquid("purified-water", DynamicsPal.purifiedWater) {{
+        purifiedWater = new Liquid("purified-water", DyPal.purifiedWater) {{
             heatCapacity = 0.4f;
             effect = StatusEffects.wet;
             boilPoint = 0.5f;
-            gasColor = DynamicsPal.steamLight;
+            gasColor = DyPal.steamLight;
         }};
     }
 }

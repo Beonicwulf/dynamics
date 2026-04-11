@@ -1,6 +1,6 @@
 package dynamics.content;
 
-import dynamics.graphics.DynamicsPal;
+import dynamics.graphics.DyPal;
 import mindustry.content.Fx;
 import mindustry.entities.Effect;
 import mindustry.entities.bullet.BasicBulletType;
@@ -27,7 +27,7 @@ public class DyBulletTypes {
         }};
 
         malachiteShards = new BasicBulletType(2f, 10, "fb-dynamics-malachite-chunk") {{
-            hitColor = trailColor = DynamicsPal.malachite;
+            hitColor = trailColor = DyPal.malachite;
             height = 7;
             width = 5;
             trailWidth = 0.9f;
@@ -53,8 +53,8 @@ public class DyBulletTypes {
         tankShard.damage = 30;
 
         malachiteFrag = new BasicBulletType(2.5f, 20, "fb-dynamics-malachite-chunk-big") {{
-            hitColor = DynamicsPal.malachite;
-            trailColor = DynamicsPal.steam;
+            hitColor = DyPal.malachite;
+            trailColor = DyPal.steam;
             height = 11;
             width = 9;
             trailWidth = 1.3f;
@@ -72,7 +72,7 @@ public class DyBulletTypes {
 
         healingShards = malachiteShards.copy();
         healingShards.hitEffect = healingShards.despawnEffect = Fx.hitLaser;
-        healingShards.hitColor = healingShards.trailColor = DynamicsPal.malachite;
+        healingShards.hitColor = healingShards.trailColor = DyPal.malachite;
         healingShards.collidesTeam = true;
         healingShards.healPercent = healingShards.homingPower = 5.5f;
         healingShards.reflectable = healingShards.keepVelocity = false;
@@ -86,8 +86,8 @@ public class DyBulletTypes {
             height = 20f;
             shootEffect = Fx.shootBigColor;
             smokeEffect = Fx.shootSmokeSquareSparse;
-            hitColor = backColor = trailColor = DynamicsPal.steam;
-            frontColor = DynamicsPal.steamLight;
+            hitColor = backColor = trailColor = DyPal.steam;
+            frontColor = DyPal.steamLight;
             trailWidth = 6f;
             trailLength = 3;
             hitEffect = despawnEffect = Fx.hitSquaresColor;
