@@ -31,13 +31,15 @@ public class ThalassaTechTree {
                 node(zincSorter);
                 node(zincMessage);
             });
-            node(steamCollector, () -> node(clockworkDrill));
+            node(steamCollector, () -> {
+                node(clockworkDrill);
+                node(mechanicalPress);
+            });
             node(pipe, () -> {
                 node(pipeRouter, () -> node(pipeTunnel));
                 node(pipeJunction, () -> node(pipeVent, () -> node(pipeController)));
                 node(clockworkPump);
             });
-            node(mechanicalPress);
             node(steamValve, () -> node(withdraw));
             node(augerPad, () -> node(augerDrone));
             nodeProduce(DyItems.zinc, () ->{
@@ -50,7 +52,7 @@ public class ThalassaTechTree {
             });
             node(basicConstructor, () -> {
                 node(zincConveyor, () -> node(basicDeconstructor));
-                node(bUAK, () -> node(splitFrame, () -> node(splitAssembler)));
+                node(bUAK, () -> node(splitAssembler, () -> node(splitFrame, () -> node(split))));
             });
         });
     }
