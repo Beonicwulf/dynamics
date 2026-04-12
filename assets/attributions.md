@@ -34,7 +34,7 @@ Travertine Environment (Travertine Floor, Smooth Travertine, Bright Travertine, 
 ### ✧ nullevoy
 Withdraw turret sprite
 ### ✧ aerodynamic_attorney
-Auger Drone sprite\
+Tusk & Fang unit sprites\
 Breathe sprite (core unit + its leg)\
 Hot Spring Water & Purified Water sprites\
 Tier 1 Tank sprite

@@ -170,6 +170,7 @@ public class DyUnitTypes {
             outlines = false;
             hidden = true;
         }};
+        // sprite by aerodynamic_attorney
     }
 }
 
