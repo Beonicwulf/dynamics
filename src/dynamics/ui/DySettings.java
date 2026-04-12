@@ -17,9 +17,8 @@ import static mindustry.Vars.*;
 public class DySettings {
     public static void loadSettings(){
         ui.settings.addCategory(bundle.get("setting.fb-dynamics-category"), Icon.planet, t -> {
-            t.defaults().size(280f, 60f).left();
+            t.defaults().size(300f, 60f).left();
             t.checkPref("debug-access", false);
-            t.row();
             t.checkPref("menu-reborne", true);
             t.row();
             t.button(bundle.get("setting.fb-dynamics-clear-tech-tree"), Icon.trash, Styles.flatt, () -> ui.showConfirm("@confirm", bundle.get("setting.fb-dynamics-clear-tech-tree.confirm"), () -> {
@@ -33,8 +32,7 @@ public class DySettings {
                     }
                 });
                 settings.remove("unlocks");
-            })).marginLeft(4);
-            t.row();
+            })).marginLeft(8).row();
             t.button(bundle.get("setting.fb-dynamics-clear-campaign"), Icon.trash, Styles.flatt, () -> ui.showConfirm("@confirm", bundle.get("setting.fb-dynamics-clear-campaign.confirm"), () -> {
                 Seq<Saves.SaveSlot> toDelete = Seq.with();
                 control.saves.getSaveSlots().each(s -> {
@@ -46,7 +44,7 @@ public class DySettings {
                 });
                 toDelete.each(Saves.SaveSlot::delete);
                 ui.showInfoOnHidden(bundle.get("setting.fb-dynamics-clear-campaign-close.confirm"), () -> Core.app.exit());
-            })).marginLeft(4);
+            })).marginLeft(8).row();
         });
     }
 }

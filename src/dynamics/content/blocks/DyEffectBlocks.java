@@ -2,7 +2,6 @@ package dynamics.content.blocks;
 
 import dynamics.content.DyItems;
 import dynamics.content.DyLiquids;
-import dynamics.content.DyMusics;
 import dynamics.content.DyUnitTypes;
 import dynamics.graphics.DyPal;
 import dynamics.world.blocks.effect.SummonPad;
@@ -16,10 +15,10 @@ import static mindustry.type.ItemStack.with;
 
 public class DyEffectBlocks {
     public static Block
+            // Cores
             coreSurface, augerPad,
-            zincMessage
-            ;
-
+            // Logic
+            zincMessage;
     public static void load() {
         coreSurface = new CoreBlock("core-surface") {{
             requirements(Category.effect, with(DyItems.zinc, 2000, DyItems.partBasic, 200));

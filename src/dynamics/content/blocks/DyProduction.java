@@ -25,9 +25,7 @@ public class DyProduction {
             // vents
             steamCollector,
             // drills
-            clockworkDrill, microDrill
-                    ;
-
+            clockworkDrill, microDrill;
     public static void load() {
         microDrill = new Drill("micro-drill") {{
             requirements(Category.production, BuildVisibility.sandboxOnly, with(DyItems.zinc,10, DyItems.malachite, 5));
@@ -58,9 +56,7 @@ public class DyProduction {
             displayEfficiency = false;
             hasPower = false;
             craftEffect = new MultiEffect(Fx.turbinegenerate, Fx.drillSteam);
-            drawer = new DrawMulti(new DrawRegion("-bottom"),
-                    // new DrawBlurSpin("-rotator", 6f),
-                    new DrawRegion("-mid"), new DrawLiquidTile(DyLiquids.steam, 38f / 4f), new DrawDefault(), new DrawPress("-press") {{maxScale = 1.3f;}});
+            drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawRegion("-mid"), new DrawLiquidTile(DyLiquids.steam, 38f / 4f), new DrawDefault(), new DrawPress("-press") {{maxScale = 1.3f;}});
             craftTime = 120f;
             size = 3;
             ambientSound = Sounds.loopHum;

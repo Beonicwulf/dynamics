@@ -14,17 +14,20 @@ import mindustry.type.Weapon;
 
 public class DyUnitTypes {
     public static Weapon
-            augerBolt, breatheWeapon, splitWeapon
+            // core units
+            augerBolt, breatheWeapon,
+            // split
+            splitWeapon
             ;
-
     public static UnitType
             // core units
-            augerDrone, breathe, split, augerAssembler
+            augerDrone, breathe,
+            // split
+            split,
+            // assembler
+            augerAssembler
             ;
-
-    public static void load() {
-        float coreFleeRange = 500f;
-
+    public static void loadWeapons() {
         augerBolt = new Weapon("auger-bolt"){{
             top = false;
             reload = 30f;
@@ -33,10 +36,8 @@ public class DyUnitTypes {
             velocityRnd = 0.5f;
             inaccuracy = 15f;
             alternate = true;
-
             bullet = DyBulletTypes.healingShards;
         }};
-
         breatheWeapon = new Weapon("breathe-weapon"){{
             x = y = -2f;
             reload = 40;
@@ -44,11 +45,10 @@ public class DyUnitTypes {
             minWarmup = 0.05f;
             bullet = DyBulletTypes.coreShards;
             shoot = new ShootPattern() {{
-						shots = 3;
-						shotDelay = 5;
-					}};
+                shots = 3;
+                shotDelay = 5;
+            }};
         }};
-
         splitWeapon = new Weapon("fb-dynamics-split-gun") {{
             layerOffset = 0.0001f;
             x = 3.25f;
@@ -60,7 +60,10 @@ public class DyUnitTypes {
             rotate = true;
             rotateSpeed = 3;
         }};
-
+    }
+    public static void load() {
+        float coreFleeRange = 500f;
+        loadWeapons();
         augerDrone = new UnitType("auger-drone"){{
             defaultCommand = UnitCommand.mineCommand;
             constructor = BuildingTetherPayloadUnit::create;

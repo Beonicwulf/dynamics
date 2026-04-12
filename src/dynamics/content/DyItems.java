@@ -10,11 +10,8 @@ public class DyItems {
             // resources
             zinc, malachite, cinnabar, tantalum,
             // crafted
-            partBasic
-            ;
-
+            partBasic;
     public static final Seq<Item> dynamicsItems = new Seq<>();
-
     public static void load() {
         zinc = new Item("zinc", DyPal.zinc) {{
             cost = 1;
@@ -40,7 +37,6 @@ public class DyItems {
             cost = 5;
             healthScaling = 3f;
         }};
-
         dynamicsItems.addAll(
                 zinc, tantalum, partBasic, malachite, cinnabar
         );

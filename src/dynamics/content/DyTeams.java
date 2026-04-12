@@ -15,14 +15,8 @@ import mindustry.game.Team;
 import mindustry.ui.Fonts;
 
 public class DyTeams {
-    public static Team
-            dread
-            ;
-
-    public static void load() {
-        dread = newTeam(5, "dread", DyPal.dread);
-    };
-
+    public static Team dread;
+    public static void load() {dread = newTeam(5, "dread", DyPal.dread);};
     private static Team newTeam(int id, String name, Color color) {
         Team team = Team.get(id);
         team.name = name;
@@ -32,9 +26,7 @@ public class DyTeams {
         team.palette[1] = color.cpy().mul(0.75f);
         team.palette[2] = color.cpy().mul(0.5f);
 
-        for(int i = 0; i < 3; i++){
-            team.palettei[i] = team.palette[i].rgba();
-        }
+        for(int i = 0; i < 3; i++){team.palettei[i] = team.palette[i].rgba();}
 
         Seq<Font> fonts = Seq.with(Fonts.def, Fonts.outline);
 
@@ -67,8 +59,6 @@ public class DyTeams {
 
         //now put whatever the heck we get for an emoji
         team.emoji = stringIcons.get(team.name, "");
-
-
         return team;
     }
 }

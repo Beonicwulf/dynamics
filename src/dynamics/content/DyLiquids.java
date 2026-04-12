@@ -6,9 +6,10 @@ import mindustry.type.Liquid;
 
 public class DyLiquids {
     public static Liquid
-            steam, hotSpringWater, purifiedWater
-            ;
-
+            // Gases
+            steam,
+            // water
+            hotSpringWater, purifiedWater;
     public static void load() {
         steam = new Liquid("steam", DyPal.steam) {{
             temperature = 0.7f;

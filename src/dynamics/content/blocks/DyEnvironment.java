@@ -27,23 +27,15 @@ public class DyEnvironment {
             // metal
             phWall, phTile, phConnect,
             // props
-            travertineBoulder, shallowTravertineBoulder
-            ;
-
+            travertineBoulder, shallowTravertineBoulder;
     public static void load() {
         // ores
-        oreZinc = new OreBlock("ore-zinc", DyItems.zinc) {{
-            variants = 4;
-        }};
-        oreMalachite = new OreBlock("ore-malachite", DyItems.malachite) {{
-            variants = 5;
-        }};
+        oreZinc = new OreBlock("ore-zinc", DyItems.zinc) {{variants = 4;}};
+        oreMalachite = new OreBlock("ore-malachite", DyItems.malachite) {{variants = 5;}};
         // metal
         phWall = new StaticWall("ph-wall");
         phTile = new Floor("ph-tile");
-        phConnect = new StaticWall("ph-connect"){{
-            autotile = true;
-        }};
+        phConnect = new StaticWall("ph-connect"){{autotile = true;}};
         // liquids
         deepHotSpringWater = new Floor("deep-hot-spring-water"){{
             speedMultiplier = 0.2f;
@@ -59,15 +51,9 @@ public class DyEnvironment {
         }};
         // travertine
         // Thank you, amongus2824 for all the Travertine Environment sprites!!!
-        travertineFloor = new Floor("travertine-floor") {{
-            variants = 6;
-        }};
-        smoothTravertine = new Floor("smooth-travertine") {{
-            variants = 6;
-        }};
-        brightTravertine = new Floor("bright-travertine") {{
-            variants = 6;
-        }};
+        travertineFloor = new Floor("travertine-floor") {{variants = 6;}};
+        smoothTravertine = new Floor("smooth-travertine") {{variants = 6;}};
+        brightTravertine = new Floor("bright-travertine") {{variants = 6;}};
         travertineVent = new SteamVent("travertine-vent"){{
             parent = blendGroup = travertineFloor;
             attributes.set(Attribute.steam, 1f);
@@ -123,9 +109,7 @@ public class DyEnvironment {
             shallowTravertine.asFloor().decoration = deepTravertine.asFloor().decoration = this;
             placeableLiquid = true;
         }};
-        chalcociteFloor = new Floor("chalcocite-floor") {{
-            variants = 5;
-        }};
+        chalcociteFloor = new Floor("chalcocite-floor") {{variants = 5;}};
         gildedChalcocite = new Floor("gilded-chalcocite") {{
             variants = 5;
             attributes.set(DyAttributes.azurite, 1);

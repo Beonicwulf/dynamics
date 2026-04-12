@@ -9,13 +9,17 @@ import mindustry.entities.effect.MultiEffect;
 
 public class DyBulletTypes {
     public static BulletType
-            malachiteShards, malachiteFrag, healingShards, coreShards, stickyShard, tankShard,
-            steamBlast
-            ;
-
+            // malachite
+            stickyShard, malachiteShards,
+            // turrets
+            malachiteFrag,
+            // units
+            healingShards, coreShards, tankShard,
+            // Steam Valve
+            steamBlast;
     public static void load() {
         Effect withdrawShootEffect = new MultiEffect(Fx.drillSteam, Fx.colorSparkBig);
-
+        // Sticky Cosmetic
         stickyShard = new BasicBulletType(4f, 0, "fb-dynamics-malachite-chunk") {{
             height = 6;
             width = 6;
@@ -25,7 +29,7 @@ public class DyBulletTypes {
             lifetime = 1f;
             hitEffect = despawnEffect = Fx.none;
         }};
-
+        // Homing Small
         malachiteShards = new BasicBulletType(2f, 10, "fb-dynamics-malachite-chunk") {{
             hitColor = trailColor = DyPal.malachite;
             height = 7;
@@ -40,18 +44,18 @@ public class DyBulletTypes {
             fragBullets = 1;
             fragBullet = DyBulletTypes.stickyShard;
         }};
-
+        // Breathe
         coreShards = malachiteShards.copy();
         coreShards.homingDelay = 15f;
         coreShards.homingPower = 0.3f;
         coreShards.lifetime = 40;
         coreShards.speed = 4;
-
+        // Split
         tankShard = coreShards.copy();
         tankShard.speed = 3;
         tankShard.lifetime = 60;
         tankShard.damage = 30;
-
+        // Withdraw
         malachiteFrag = new BasicBulletType(2.5f, 20, "fb-dynamics-malachite-chunk-big") {{
             hitColor = DyPal.malachite;
             trailColor = DyPal.steam;
@@ -69,7 +73,7 @@ public class DyBulletTypes {
             fragBullets = 4;
             fragBullet = DyBulletTypes.malachiteShards;
         }};
-
+        // Tusk
         healingShards = malachiteShards.copy();
         healingShards.hitEffect = healingShards.despawnEffect = Fx.hitLaser;
         healingShards.hitColor = healingShards.trailColor = DyPal.malachite;
@@ -77,7 +81,7 @@ public class DyBulletTypes {
         healingShards.healPercent = healingShards.homingPower = 5.5f;
         healingShards.reflectable = healingShards.keepVelocity = false;
         healingShards.damage = 0;
-
+        // Steam Valve
         steamBlast = new BasicBulletType(1.2f, 10) {{
             targetBlocks = false;
             knockback = 12f;

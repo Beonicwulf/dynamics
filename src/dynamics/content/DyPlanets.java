@@ -19,9 +19,8 @@ public class DyPlanets {
             // campaign
             thalassa, khione,
             // Scrapped TBS solar system
-            vulcan, seraph, gaia, thor, aureostrom, juno, heranthir, artemis
+            vulcan, seraph, gaia, thor, aureostrom//, juno, heranthir, artemis
             ;
-
     public static void load() {
         // star
         aurora = new Planet("aurora", null, 11f){{

@@ -15,10 +15,10 @@ import mindustry.world.blocks.units.UnitAssembler;
 
 public class DyPayloadBlocks {
     public static Block
+            // Assemblers
             splitAssembler,
-            basicConstructor, zincConveyor, basicDeconstructor
-            ;
-
+            // Payload
+            basicConstructor, zincConveyor, basicDeconstructor;
     public static void load() {
         splitAssembler = new UnitAssembler("split-assembler") {{
             requirements(Category.units, ItemStack.with(DyItems.zinc, 150, DyItems.partBasic, 10));
@@ -28,9 +28,7 @@ public class DyPayloadBlocks {
             droneType = DyUnitTypes.augerAssembler;
             //dronesCreated = 1;
             consumeLiquid(DyLiquids.steam, 10f/60f);
-            plans.add(
-                    new AssemblerUnitPlan(DyUnitTypes.split, 35f * 60f, PayloadStack.list(DyComponentBlocks.bUAK, 1, DyComponentBlocks.splitFrame, 1))
-            );
+            plans.add(new AssemblerUnitPlan(DyUnitTypes.split, 35f * 60f, PayloadStack.list(DyComponentBlocks.bUAK, 1, DyComponentBlocks.splitFrame, 1)));
         }};
         basicConstructor = new Constructor("basic-constructor") {{
             requirements(Category.units, ItemStack.with(DyItems.zinc, 75, DyItems.partBasic, 10));

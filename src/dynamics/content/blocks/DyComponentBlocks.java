@@ -8,10 +8,7 @@ import mindustry.world.Block;
 import mindustry.world.meta.BuildVisibility;
 
 public class DyComponentBlocks {
-    public static Block
-            bUAK, splitFrame
-            ;
-
+    public static Block bUAK, splitFrame;
     public static void load() {
         bUAK = new ComponentBlock("b-u-a-k") {{
             requirements(Category.units, BuildVisibility.editorOnly, ItemStack.with(DyItems.zinc, 10, DyItems.partBasic, 5));

@@ -20,7 +20,7 @@
 - [x] Proper Mod Description
 - [x] Main Menu Music
 - [x] Separate Solar System
-- [ ] Acid Rain
+- [x] Acid Rain
 - [ ] Secondary biome (Malachite-rich mineral)
 - [ ] Hints
 - [ ] Sector Embark
@@ -30,6 +30,17 @@
 - [ ] Expand Hot-spring biome (Cinnabar)
 - [ ] Add variety to Malachite-rich biome (Chalcocite, Calcite, Goethite, Azurite, etc.)
 - [ ] Third biome (sedimentary, near a river or shore)
+### Solar System
+- [x] Aurora
+- [x] Seraph
+- [x] Vulcan
+- [x] Thalassa
+- [x] Gaia
+- [x] Thor
+- [x] Aureostrom
+- [ ] Juno
+- [ ] Heranthir
+- [ ] Artemis
 ### Block Ideas
 - [ ] 3x3 Unloader (High cost and big size, no core unloading for balance, probably directional)
 - [ ] Canvas

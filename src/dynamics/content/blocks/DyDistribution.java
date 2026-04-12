@@ -9,10 +9,7 @@ import mindustry.world.blocks.distribution.MassDriver;
 import static mindustry.type.ItemStack.with;
 
 public class DyDistribution {
-    public static Block
-            accelerator, zincSorter
-            ;
-
+    public static Block accelerator, zincSorter;
     public static void load() {
         accelerator = new MassDriver("accelerator"){{
             requirements(Category.distribution, with(DyItems.zinc, 10, DyItems.malachite, 5));

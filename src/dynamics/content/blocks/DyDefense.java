@@ -16,21 +16,17 @@ import static mindustry.type.ItemStack.with;
 
 public class DyDefense {
     public static Block
-            withdraw, steamValve
-            ;
-
+            // turrets
+            withdraw,
+            // defense
+            steamValve;
     public static void load(){
-
         steamValve = new LiquidTurret("steam-valve") {{
             requirements(Category.defense, with(DyItems.zinc, 24, DyItems.partBasic, 1));
             size = 2;
             health = 1380; //should replace with scaledHealth? needs testing
-            ammo(
-                    DyLiquids.steam, DyBulletTypes.steamBlast
-            );
-            drawer = new DrawMulti(
-                    new DrawDefault(), new DrawRegion("-base"), new DrawLiquidRegion(), new DrawRegion("-rotator", 2f), new DrawRegion("-top"), new DrawPress("-press")
-            );
+            ammo(DyLiquids.steam, DyBulletTypes.steamBlast);
+            drawer = new DrawMulti(new DrawDefault(), new DrawRegion("-base"), new DrawLiquidRegion(), new DrawRegion("-rotator", 2f), new DrawRegion("-top"), new DrawPress("-press"));
             shootEffect = Fx.drillSteam;
             recoil = 0f;
             reload = 90f;
@@ -41,7 +37,6 @@ public class DyDefense {
             shoot = new ShootSpread(30, 12f);
             researchCost = with(DyItems.zinc, 24 * 5, DyItems.partBasic, 5);
         }};
-
         withdraw = new ItemTurret("withdraw") {{
             requirements(Category.turret, with(DyItems.zinc, 100, DyItems.partBasic, 10));
             targetAir = true;
@@ -60,10 +55,7 @@ public class DyDefense {
             shootY = 7;
             liquidCapacity = 50f;
             consumeLiquid(DyLiquids.steam, 5f / 60f);
-
-            ammo(
-                    DyItems.malachite, DyBulletTypes.malachiteFrag
-            );
+            ammo(DyItems.malachite, DyBulletTypes.malachiteFrag);
             //thx nullevoy for sprite
             researchCost = with(DyItems.zinc, 100 * 5, DyItems.partBasic, 10 * 5);
         }};

@@ -21,9 +21,7 @@ public class DyLiquidBlocks {
     public static Block
             pipe, pipeRouter, pipeTunnel,
             pipeJunction, pipeVent, pipeController,
-            clockworkPump
-            ;
-
+            clockworkPump;
     public static void load() {
         pipe = new ArmoredConduit("pipe") {{
             requirements(Category.liquid, with(DyItems.zinc, 2));
