@@ -7,6 +7,7 @@ import dynamics.graphics.DyPal;
 import dynamics.world.blocks.effect.SummonPad;
 import mindustry.type.Category;
 import mindustry.world.Block;
+import mindustry.world.blocks.logic.CanvasBlock;
 import mindustry.world.blocks.logic.MessageBlock;
 import mindustry.world.blocks.storage.CoreBlock;
 import mindustry.world.meta.BuildVisibility;
@@ -18,7 +19,7 @@ public class DyEffectBlocks {
             // Cores
             coreSurface, augerPad,
             // Logic
-            zincMessage;
+            zincMessage, zincCanvas;
     public static void load() {
         coreSurface = new CoreBlock("core-surface") {{
             requirements(Category.effect, with(DyItems.zinc, 2000, DyItems.partBasic, 200));
@@ -53,6 +54,13 @@ public class DyEffectBlocks {
         zincMessage = new MessageBlock("zinc-message") {{
            requirements(Category.logic, with(DyItems.zinc, 10, DyItems.malachite, 5, DyItems.partBasic, 1));
            researchCost = with(DyItems.zinc, 10 * 10 * 5, DyItems.malachite, 5 * 10 * 5, DyItems.partBasic, 10 * 5);
+        }};
+        zincCanvas = new CanvasBlock("zinc-canvas") {{
+            requirements(Category.logic, with(DyItems.zinc, 10, DyItems.partBasic, 5, DyItems.malachite, 15));
+            canvasSize = 24;
+            padding = 7f / 4f * 2f;
+
+            size = 3;
         }};
     }
 }

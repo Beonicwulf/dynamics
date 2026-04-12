@@ -1,0 +1,206 @@
+# ========== Name ==========
+## ----- Items -----
+### Resources
+item.dy-zinc.name = Zinc
+item.dy-malachite.name = Malachite
+item.dy-cinnabar.name = Cinnabar
+item.dy-tantalum.name = Tantalum
+### Components
+item.dy-part-basic.name = Basic Component
+## ----- Fluids -----
+### Gasses
+liquid.dy-steam.name = Steam
+### Liquids
+liquid.dy-hot-spring-water.name = Hot Spring Water
+liquid.dy-purified-water.name = Purified Water
+## ----- Units -----
+### Auger
+unit.dy-auger-drone.name = Tusk
+unit.dy-auger-assembler.name = Fang
+### Core unit
+unit.dy-breathe.name = Breathe
+### Tank
+unit.dy-split.name = Split
+## ----- Sectors -----
+### Testing
+sector.dy-test-sector.name = Testing Grounds
+## ----- Status Effects -----
+### Negative
+status.dy-corroding.name = Corroding
+status.dy-shielding.name = Shielding
+## ----- Blocks -----
+### Turrets
+block.dy-withdraw.name = Withdraw
+### Defense
+block.dy-steam-valve.name = Steam Valve
+### Distribution
+block.dy-accelerator.name = Item Accelerator
+block.dy-zinc-sorter.name = Mechanical Sorter
+block.dy-zinc-unloader = Mechanical Unloader
+### Crafting
+block.dy-mechanical-press.name = Mechanical Press
+### Liquid Blocks
+block.dy-pipe.name = Pipe
+block.dy-pipe-router.name = Pipe Router
+block.dy-pipe-tunnel.name = Pipe Tunnel
+block.dy-pipe-junction.name = Pipe Valve
+block.dy-pipe-vent.name = Pipe Vent
+block.dy-pipe-controller.name = Pipe Controller
+block.dy-clockwork-pump.name = Clockwork Pump
+### Production
+block.dy-steam-collector.name = Steam Collector
+block.dy-clockwork-drill.name = Clockwork Drill
+block.dy-micro-drill.name = Miniature Drill
+### Effect
+block.dy-core-surface.name = [#aa8e6e]Sora[]
+block.dy-auger-pad.name = [#aa8e6e]Auger Nexus[]
+# block.dy-core-shallow.name = Kairi
+### Logic
+block.dy-zinc-message.name = Clockwork Message
+block.dy-zinc-canvas.name = Mechanical Canvas
+### Payload
+block.dy-basic-constructor.name = Basic Constructor
+block.dy-zinc-conveyor.name = Large Conveyor
+block.dy-basic-deconstructor.name = Basic Deconstructor
+block.dy-split-assembler.name = Basic Unit Assembler
+### Component Blocks
+block.dy-b-u-a-k.name = [#aa8e6e]B.U.A.K.[]
+block.dy-split-frame.name = [#aa8e6e]Split Frame[]
+### Environment
+#### Ores
+block.dy-ore-zinc.name = [#85ad85]Sphalerite[]
+block.dy-ore-malachite.name = Malachite
+#### Metal Tiles
+block.dy-ph-wall.name = Plastic Hull Wall
+block.dy-ph-tile.name = Plastic Hull Tiles
+block.dy-ph-connect.name = Plastic Hull
+#### Liquid
+block.dy-deep-hot-spring-water.name = Hot Spring Water
+#### Travertine
+block.dy-travertine-floor.name = Travertine
+block.dy-smooth-travertine.name = Smooth Travertine
+block.dy-bright-travertine.name = Bright Travertine
+block.dy-shallow-travertine.name = Submerged Travertine
+block.dy-deep-travertine.name = Deep Submerged Travertine
+block.dy-travertine-wall.name = Travertine Wall
+block.dy-travertine-vent.name = Travertine Vent
+block.dy-travertine-geyser.name = Travertine Geyser
+block.dy-travertine-boulder.name = Travertine Boulder
+block.dy-shallow-travertine-boulder.name = Submerged Travertine Boulder
+#### Chalcocite
+block.dy-chalcocite-floor.name = Chalcocite
+block.dy-gilded-chalcocite.name = Gilded Chalcocite
+# ========== Description ==========
+## ----- Items -----
+### Resources
+item.dy-zinc.description = Basic resource. Abundant near the surface.
+item.dy-malachite.description = Beautiful green mineral with mystical properties...
+item.dy-tantalum.description = Durable metal used for more advanced tech. The deeper you go, the more you find.
+### Components
+item.dy-part-basic.description = [#aa996e]Zinc[] sheet engraved with [#85ad85]malachite[] circuits. Crucial for early tech.
+## ----- Fluids -----
+### Gasses
+liquid.dy-steam.description = Boiling hot. Can be transported through pipes; transfers kinetic power to machines.
+liquid.dy-hot-spring-water.description = Water found in [#00959c]hot springs[]. Sterile, but contains lots of [#f3edce]sulfur[] and mineral salts. Must be purified before industrial use.
+## ----- Units -----
+### Auger
+unit.dy-auger-drone.description = [#aa8e6e]Assist-Core unit[]. Assists in mining resources and shoots healing [#85ad85]malachite[] shards at damaged structures but cannot build or damage enemies.
+### Core unit
+unit.dy-breathe.description = [#aa8e6e]Core unit[]. Capable of construction. Shoots homing [#85ad85]malachite[] shards to protect the core.
+## ----- Sectors -----
+### Testing
+sector.dy-test-sector.description = Area for testing. Not part of the campaign.\n [red]Abandon sector when it gets updated.[]
+## ----- Status Effects -----
+### Negative
+status.dy-corroding.description = The sulfurous acid rain is extremely corrosive...
+status.dy-shielding.description = Shields units from the harmful effects of corrosion.
+## ----- Blocks -----
+### Turrets
+block.dy-withdraw.description = Uses pressure from [#d6eaf3]steam[] to launch chunks of [#85ad85]malachite[] at enemies.
+### Defense
+block.dy-steam-valve.description = Releases [#d6eaf3]steam[] to push enemies away.
+### Distribution
+block.dy-accelerator.description = Transports items by shooting them.
+block.dy-zinc-sorter.description = Takes input from the back, outputs filtered item out front and outputs the rest from the sides.
+### Crafting
+block.dy-mechanical-press.description = Uses pressure from [#d6eaf3]steam[] to engrave [#85ad85]malachite[] circuits into [#aa996e]zinc[] sheets.
+### Liquid Blocks
+block.dy-pipe.description = Transports fluids. Does not accept inputs from the sides.
+block.dy-pipe-router.description = All sides are inputs and outputs for fluids.
+block.dy-pipe-tunnel.description = Transports fluids underground, passing under buildings and terrain.
+block.dy-pipe-junction.description = Allows two pipes to cross without mixing their contents. Can be toggled off to stop fluids from going through.
+block.dy-pipe-vent.description = Releases any fluid that flows into it.
+block.dy-pipe-controller.description = Toggles nearby pipe valves when fluid flows through it.
+### Production
+block.dy-steam-collector.description = Collects hot [#d6eaf3]steam[] from geysers.
+block.dy-clockwork-drill.description = Builds up [#d6eaf3]steam[], then releases it at once to strike the earth.
+### Effect
+block.dy-core-surface.description = The [#aa8e6e]Core[] of your base. Must be protected at all costs; failure results in loss of control and termination of command. Guarded by the Core Unit.
+block.dy-auger-pad.description = A secondary [#aa8e6e]Assist-Core[] that must be constantly powered with [#d6eaf3]steam[] to support the Assist-Core Unit.
+### Logic
+block.dy-zinc-message.description = Displays a message using a [#85ad85]malachite[] display.
+### Payload
+block.dy-basic-constructor.description = Constructs unit parts from materials.
+block.dy-zinc-conveyor.description = Transports payloads and units.
+block.dy-basic-deconstructor.description = Deconstructs blocks and units into materials.
+block.dy-split-assembler.description = Assembles units from a B.U.A.K. and a unit Frame.
+### Component Blocks
+block.dy-b-u-a-k.description = [#aa8e6e]Basic Unit Assembler Kit[], the internal components for early units.
+block.dy-split-frame.description = Unit frame constructed for Split.
+
+# ========== Details ==========
+## ----- Items -----
+### Resources
+item.dy-zinc.details = Found in [#e09321]Sphalerite[] in high concentrations. Not to be confused with Zirconium.
+item.dy-malachite.details = Unusually magnetic, due to oddities in the planet's gravitational field... This calls for more research.
+item.dy-cinnabar.details = [#f3edce]Sulfur[] caves were invented by me, actually ('u')
+## ----- Blocks -----
+### Turrets
+block.dy-withdraw.details = [#85ad85]Malachite[] shards seem to attract to enemies after breaking...
+### Defense
+block.dy-steam-valve.details = Uses a magnetic compass made of [#85ad85]malachite[] to detect when enemies are nearby.
+### Liquid Blocks
+block.dy-pipe-junction.details = Steamworks? I sure hope it does!
+### Production
+block.dy-clockwork-drill.details = Strike the Earth! Rock and Stone!
+### Effect
+block.dy-core-surface.details = Only 10% of an iceberg is visible above the water. What you see now is just the tip.
+## ----- Units -----
+### Auger
+unit.dy-auger-drone.details = When its core runs out of [#d6eaf3]steam[], it collapses and its shell needs to be reconstructed. Please treat with care. It feels pain and remembers.
+### Core unit
+unit.dy-breathe.details = Itsy bitsy spider climbed up the water spout.\n Down came the rain and washed the spider out.\n Out came the sun and dried up all the rain,\n so the itsy bitsy spider climbed up the spout again.
+### Tank
+unit.dy-split.details = You fell for it, fool!\n Thunder Cross Split Attack!
+# ========== UI ==========
+stat.recipes = Recipes
+team.dread.name = [#9fabd1]Dread[]
+## ----- Planets -----
+planet.dy-aurora.name = Aurora
+planet.dy-seraph.name = Seraph
+planet.dy-vulcan.name = Vulcan
+planet.dy-thalassa.name = Thalassa
+planet.dy-khione.name = Khione
+planet.dy-gaia.name = Gaia
+planet.dy-thor.name = Thor
+planet.dy-aureostrom.name = Aureostrom
+planet.dy-juno.name = Juno
+planet.dy-heranthir.name = Heranthir
+planet.dy-artemis.name = Artemis
+## ----- Settings -----
+setting.dy-category = Dynamics Settings
+dy-settings = Dynamics Settings
+setting.dy-clear-tech-tree = Purge Database
+setting.dy-clear-tech-tree.confirm = [red]Purge Database?[] (Clear research progress)
+setting.dy-clear-campaign = Initiate Self-Destruct
+setting.dy-clear-campaign.confirm = [red]Initiate Self-Destruct?[] (Clear campaign saves)
+setting.dy-clear-campaign-close.confirm = [red]Temporal reset initiated. The game will now exit. [#aa8e6e]Tusk[red] will remember...[]
+setting.debug-access.name = Debug Access
+setting.debug-access.description = Only for testing.\n [red]Restart required to take effect.[]
+setting.menu-reborne.name = Reborne Menu Theme
+setting.menu-reborne.description = Reborne by CLEgor.\n Approved by [#aa8e6e]Tusk[].\n [red]Restart required to take effect.[]
+settings.dy-mod-data = Mod Data
+setting.dy-reset-hints = Reset Hints
+setting.dy-reset-hints.confirm = [#aa8e6e]Reset Hints?[]
+## ----- Hints -----
+hint.dy-reborne = It seems [#9fabd1]Reborne[] isn't set as the main menu theme in the mod settings. [red]It seems [#aa8e6e]Tusk[] isn't happy about that.[]

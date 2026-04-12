@@ -43,7 +43,7 @@
 - [ ] Artemis
 ### Block Ideas
 - [x] Big Unloader (High cost and big size, no core unloading for balance, probably directional)
-- [ ] Canvas
+- [x] Canvas
 - [ ] Big Malachite Crystals / Decoration
 ### Progression
 - [ ] Cinnabar
