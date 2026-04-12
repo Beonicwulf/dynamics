@@ -42,7 +42,7 @@
 - [ ] Heranthir
 - [ ] Artemis
 ### Block Ideas
-- [ ] 3x3 Unloader (High cost and big size, no core unloading for balance, probably directional)
+- [x] Big Unloader (High cost and big size, no core unloading for balance, probably directional)
 - [ ] Canvas
 - [ ] Big Malachite Crystals / Decoration
 ### Progression

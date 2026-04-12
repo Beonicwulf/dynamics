@@ -49,7 +49,7 @@ public class DyUnitTypes {
                 shotDelay = 5;
             }};
         }};
-        splitWeapon = new Weapon("fb-dynamics-split-gun") {{
+        splitWeapon = new Weapon("dy-split-gun") {{
             layerOffset = 0.0001f;
             x = 3.25f;
             y = -2.75f;
@@ -65,7 +65,7 @@ public class DyUnitTypes {
         float coreFleeRange = 500f;
         loadWeapons();
         augerDrone = new UnitType("auger-drone"){{
-            defaultCommand = UnitCommand.mineCommand;
+            defaultCommand = UnitCommand.repairCommand;
             constructor = BuildingTetherPayloadUnit::create;
             outlines = false;
             createWreck = false;

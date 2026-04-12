@@ -4,12 +4,13 @@ import dynamics.content.DyItems;
 import dynamics.world.blocks.distribution.DirectionalSorter;
 import mindustry.type.Category;
 import mindustry.world.Block;
+import mindustry.world.blocks.distribution.DirectionalUnloader;
 import mindustry.world.blocks.distribution.MassDriver;
 
 import static mindustry.type.ItemStack.with;
 
 public class DyDistribution {
-    public static Block accelerator, zincSorter;
+    public static Block accelerator, zincSorter, zincUnloader;
     public static void load() {
         accelerator = new MassDriver("accelerator"){{
             requirements(Category.distribution, with(DyItems.zinc, 10, DyItems.malachite, 5));
@@ -30,6 +31,16 @@ public class DyDistribution {
             solid = false;
             placeableLiquid = true;
             researchCost = with(DyItems.zinc, 10 * 10 * 5, DyItems.partBasic, 4 * 10 * 5);
+        }};
+        zincUnloader = new DirectionalUnloader("zinc-unloader") {{
+            requirements(Category.distribution, with(DyItems.zinc, 30, DyItems.partBasic, 10));
+            researchCost = with(DyItems.zinc, 30 * 10 * 5, DyItems.partBasic, 10 * 10 * 5);
+            size = 2;
+            solid = true;
+            placeableLiquid = false;
+            speed = 4f;
+            underBullets = true;
+            regionRotated1 = 1;
         }};
     }
 }

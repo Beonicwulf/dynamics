@@ -2,11 +2,13 @@ package dynamics;
 
 import dynamics.content.*;
 import dynamics.content.DyTeams;
-import dynamics.ui.DySettings;
+import dynamics.core.ModSettings;
+import dynamics.ui.DyHints;
+import mindustry.Vars;
 import mindustry.mod.*;
 
 public class Dynamics extends Mod{
-    public static final String MOD_NAME = "fb-dynamics";
+    public static final String MOD_NAME = "dy";
 
     public static String name(String name) {
         return MOD_NAME + "-" + name;
@@ -14,6 +16,7 @@ public class Dynamics extends Mod{
 
     public Dynamics () {
         DyMusics.preload();
+        DyHints.preInit();
     }
 
     @Override
@@ -34,6 +37,8 @@ public class Dynamics extends Mod{
     public void init() {
         super.init();
         DyTeams.load();
-        DySettings.loadSettings();
+        //DySettings.loadSettings();
+        if (!Vars.headless) {
+            ModSettings.load();}
     }
 }

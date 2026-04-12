@@ -16,24 +16,24 @@ import static mindustry.Vars.*;
 
 public class DySettings {
     public static void loadSettings(){
-        ui.settings.addCategory(bundle.get("setting.fb-dynamics-category"), Icon.planet, t -> {
+        ui.settings.addCategory(bundle.get("setting.dy-category"), Icon.planet, t -> {
             t.defaults().size(300f, 60f).left();
             t.checkPref("debug-access", false);
             t.checkPref("menu-reborne", true);
             t.row();
-            t.button(bundle.get("setting.fb-dynamics-clear-tech-tree"), Icon.trash, Styles.flatt, () -> ui.showConfirm("@confirm", bundle.get("setting.fb-dynamics-clear-tech-tree.confirm"), () -> {
+            t.button(bundle.get("setting.dy-clear-tech-tree"), Icon.trash, Styles.flatt, () -> ui.showConfirm("@confirm", bundle.get("setting.dy-clear-tech-tree.confirm"), () -> {
                 DyPlanets.thalassa.techTree.reset();
                 for (TechTree.TechNode node : DyPlanets.thalassa.techTree.children) {
                     node.reset();
                 }
                 content.each(c -> {
-                    if (c instanceof UnlockableContent u && c.minfo != null && c.minfo.mod != null && c.minfo.mod.name.equals("fb-dynamics")) {
+                    if (c instanceof UnlockableContent u && c.minfo != null && c.minfo.mod != null && c.minfo.mod.name.equals("dy")) {
                         u.clearUnlock();
                     }
                 });
                 settings.remove("unlocks");
             })).marginLeft(8).row();
-            t.button(bundle.get("setting.fb-dynamics-clear-campaign"), Icon.trash, Styles.flatt, () -> ui.showConfirm("@confirm", bundle.get("setting.fb-dynamics-clear-campaign.confirm"), () -> {
+            t.button(bundle.get("setting.dy-clear-campaign"), Icon.trash, Styles.flatt, () -> ui.showConfirm("@confirm", bundle.get("setting.dy-clear-campaign.confirm"), () -> {
                 Seq<Saves.SaveSlot> toDelete = Seq.with();
                 control.saves.getSaveSlots().each(s -> {
                     if (s.getSector() == null) return;
@@ -43,7 +43,7 @@ public class DySettings {
                     }
                 });
                 toDelete.each(Saves.SaveSlot::delete);
-                ui.showInfoOnHidden(bundle.get("setting.fb-dynamics-clear-campaign-close.confirm"), () -> Core.app.exit());
+                ui.showInfoOnHidden(bundle.get("setting.dy-clear-campaign-close.confirm"), () -> Core.app.exit());
             })).marginLeft(8).row();
         });
     }

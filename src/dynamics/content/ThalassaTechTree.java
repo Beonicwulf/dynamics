@@ -28,7 +28,7 @@ public class ThalassaTechTree {
             context().researchCostMultipliers = costMultipliers;
 
             node(accelerator, () -> {
-                node(zincSorter);
+                node(zincSorter, () -> node(zincUnloader));
                 node(zincMessage);
             });
             node(steamCollector, () -> {

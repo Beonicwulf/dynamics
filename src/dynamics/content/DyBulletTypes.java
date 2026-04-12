@@ -20,7 +20,7 @@ public class DyBulletTypes {
     public static void load() {
         Effect withdrawShootEffect = new MultiEffect(Fx.drillSteam, Fx.colorSparkBig);
         // Sticky Cosmetic
-        stickyShard = new BasicBulletType(4f, 0, "fb-dynamics-malachite-chunk") {{
+        stickyShard = new BasicBulletType(4f, 0, "dy-malachite-chunk") {{
             height = 6;
             width = 6;
             homingPower = 1f;
@@ -30,7 +30,7 @@ public class DyBulletTypes {
             hitEffect = despawnEffect = Fx.none;
         }};
         // Homing Small
-        malachiteShards = new BasicBulletType(2f, 10, "fb-dynamics-malachite-chunk") {{
+        malachiteShards = new BasicBulletType(2f, 10, "dy-malachite-chunk") {{
             hitColor = trailColor = DyPal.malachite;
             height = 7;
             width = 5;
@@ -56,7 +56,7 @@ public class DyBulletTypes {
         tankShard.lifetime = 60;
         tankShard.damage = 30;
         // Withdraw
-        malachiteFrag = new BasicBulletType(2.5f, 20, "fb-dynamics-malachite-chunk-big") {{
+        malachiteFrag = new BasicBulletType(2.5f, 20, "dy-malachite-chunk-big") {{
             hitColor = DyPal.malachite;
             trailColor = DyPal.steam;
             height = 11;

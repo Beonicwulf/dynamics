@@ -17,13 +17,14 @@ Dynamics OST: Reborne
 ### ✧ New Horizons, without permission
 [DirectionalSorter.java](https://github.com/Yuria-Shikibe/NewHorizonMod/blob/78266dbf908907e4316391152ac36d99f4ac52fa/src/newhorizon/expand/block/distribution/item/logistics/AdaptDirectionalRouter.java)
 ### ✧ Biotech
-[DynamicsTeams.java](https://github.com/jammuwu/BioTech/blob/master/src/biotech/content/BioTeams.java)
+[Teams.java](https://github.com/jammuwu/BioTech/blob/master/src/biotech/content/BioTeams.java)
 ### ✧ Sh1penfire, Meld Java Mod
 [FluidValve.java](https://github.com/Sh1penfire/meld-java/blob/cb0d574b98defc12e14f2e7c0b0524802b64f116/src/meld/world/blocks/fluid/ChannelValve.java)\
 [FluidVent.java](https://github.com/Sh1penfire/meld-java/blob/cb0d574b98defc12e14f2e7c0b0524802b64f116/src/meld/world/blocks/fluid/ChannelVent.java)\
 [ValveController.java](https://github.com/Sh1penfire/meld-java/blob/cb0d574b98defc12e14f2e7c0b0524802b64f116/src/meld/world/blocks/fluid/ValveController.java)
-### ✧ Stabu_, Omaloon mod
-[DynamicsMusics.java](https://github.com/stabu-dev/Omaloon/blob/master/src/omaloon/content/OlMusics.java)
+### ✧ uujuju1, Steamworks mod
+[Better Settings menu](https://github.com/uujuju1/Steam-Works/blob/9a85ed1712f6c1e1c67093c49ea0454287d111ad/src/sw/core/ModSettings.java)\
+[Hints.java](https://github.com/uujuju1/Steam-Works/blob/9a85ed1712f6c1e1c67093c49ea0454287d111ad/src/sw/ui/EventHints.java)
 ## Sprites
 ### ✧ Endofreeze
 Plastic Hull tileset

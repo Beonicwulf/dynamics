@@ -8,7 +8,7 @@ public class DySectorPresets {
             // testing
             testSector;
     public static void load() {
-        testSector = new SectorPreset("test-sector", DyPlanets.thalassa, 35){{
+        testSector = new SectorPreset("test-sector", DyPlanets.thalassa, 34){{
             alwaysUnlocked = Core.settings.getBool("debug-access");
             difficulty = 1;
             captureWave = 15;

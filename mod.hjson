@@ -1,6 +1,6 @@
-name: "fb-dynamics"
+name: "dy"
 main: "dynamics.Dynamics"
-version: Alpha-1
+version: Alpha-1.1
 minGameVersion: 156
 java: true
 repo: Beonicwulf/dynamics
