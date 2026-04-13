@@ -24,8 +24,8 @@ public class DyEnvironment {
             travertineWall, travertineVent, travertineGeyser,
             // chalcocite
             chalcociteFloor, gildedChalcocite,
-            chalcociteWall, gildedChalcociteWall,
             shallowChalcocite,
+            chalcociteWall, gildedChalcociteWall,
             // metal
             phWall, phTile, phConnect,
             // props
@@ -116,13 +116,6 @@ public class DyEnvironment {
             variants = 5;
             attributes.set(DyAttributes.azurite, 1);
         }};
-        chalcociteWall = new StaticWall("chalcocite-wall") {{
-            chalcociteFloor.asFloor().wall = shallowChalcocite.asFloor().wall =  this;
-        }};
-        gildedChalcociteWall = new StaticWall("gilded-chalcocite-wall") {{
-            gildedChalcocite.asFloor().wall = this;
-            attributes.set(DyAttributes.azurite, 1);
-        }};
         shallowChalcocite = new ShallowLiquid("shallow-chalcocite") {{
             speedMultiplier = 0.8f;
             statusDuration = 50f;
@@ -132,6 +125,13 @@ public class DyEnvironment {
             cacheLayer = CacheLayer.water;
             supportsOverlay = true;
             albedo = 0.9f;
+        }};
+        chalcociteWall = new StaticWall("chalcocite-wall") {{
+            chalcociteFloor.asFloor().wall = shallowChalcocite.asFloor().wall =  this;
+        }};
+        gildedChalcociteWall = new StaticWall("gilded-chalcocite-wall") {{
+            gildedChalcocite.asFloor().wall = this;
+            attributes.set(DyAttributes.azurite, 1);
         }};
         azuriteBoulder = new Prop("azurite-boulder"){{
             variants = 6;
