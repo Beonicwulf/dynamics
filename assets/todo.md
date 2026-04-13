@@ -27,11 +27,11 @@
 ### Short-term To-do
 - [x] Pump
 - [x] Zinc Message
+- [ ] Status effect icons
 - [ ] Expand Hot-spring biome (Cinnabar)
 - [ ] Add variety to Malachite-rich biome (Chalcocite, Calcite, Goethite, Azurite, etc.)
 - [ ] Third biome (sedimentary, near a river or shore)
-### Solar System
-- [x] Aurora
+### Planets
 - [x] Seraph
 - [x] Vulcan
 - [x] Thalassa
