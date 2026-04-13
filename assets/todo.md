@@ -21,7 +21,7 @@
 - [x] Main Menu Music
 - [x] Separate Solar System
 - [x] Acid Rain
-- [ ] Secondary biome (Malachite-rich mineral)
+- [x] Secondary biome (Malachite-rich mineral)
 - [ ] Hints
 - [ ] Sector Embark
 ### Short-term To-do
@@ -29,7 +29,7 @@
 - [x] Zinc Message
 - [ ] Status effect icons
 - [ ] Expand Hot-spring biome (Cinnabar)
-- [ ] Add variety to Malachite-rich biome (Chalcocite, Calcite, Goethite, Azurite, etc.)
+- [ ] Add variety to Malachite-rich biome (Calcite, Goethite, Azurite, etc.)
 - [ ] Third biome (sedimentary, near a river or shore)
 ### Planets
 - [x] Seraph
@@ -41,10 +41,11 @@
 - [ ] Juno
 - [ ] Heranthir
 - [ ] Artemis
-### Block Ideas
+### Misc Block Ideas
 - [x] Big Unloader (High cost and big size, no core unloading for balance, probably directional)
 - [x] Canvas
 - [ ] Big Malachite Crystals / Decoration
+- [ ] Big Azurite Crystals / Decoration
 ### Progression
 - [ ] Cinnabar
 - [ ] Chlorine
@@ -61,7 +62,7 @@
 - [x] Sphalerite (Ore)
 - [x] Malachite (Ore)
 - [x] Travertine
-- [ ] Chalcocite
+- [x] Chalcocite
 - [ ] Cinnabar
 - [ ] Limestone
 - [ ] Peridotite

@@ -24,10 +24,12 @@ public class DyEnvironment {
             travertineWall, travertineVent, travertineGeyser,
             // chalcocite
             chalcociteFloor, gildedChalcocite,
+            chalcociteWall, gildedChalcociteWall,
+            shallowChalcocite,
             // metal
             phWall, phTile, phConnect,
             // props
-            travertineBoulder, shallowTravertineBoulder;
+            travertineBoulder, shallowTravertineBoulder, azuriteBoulder;
     public static void load() {
         // ores
         oreZinc = new OreBlock("ore-zinc", DyItems.zinc) {{variants = 4;}};
@@ -113,6 +115,27 @@ public class DyEnvironment {
         gildedChalcocite = new Floor("gilded-chalcocite") {{
             variants = 5;
             attributes.set(DyAttributes.azurite, 1);
+        }};
+        chalcociteWall = new StaticWall("chalcocite-wall") {{
+            chalcociteFloor.asFloor().wall = shallowChalcocite.asFloor().wall =  this;
+        }};
+        gildedChalcociteWall = new StaticWall("gilded-chalcocite-wall") {{
+            gildedChalcocite.asFloor().wall = this;
+            attributes.set(DyAttributes.azurite, 1);
+        }};
+        shallowChalcocite = new ShallowLiquid("shallow-chalcocite") {{
+            speedMultiplier = 0.8f;
+            statusDuration = 50f;
+            liquidDrop = DyLiquids.hotSpringWater;
+            isLiquid = true;
+            variants = 2;
+            cacheLayer = CacheLayer.water;
+            supportsOverlay = true;
+            albedo = 0.9f;
+        }};
+        azuriteBoulder = new Prop("azurite-boulder"){{
+            variants = 6;
+            chalcociteFloor.asFloor().decoration = gildedChalcocite.asFloor().decoration = shallowChalcocite.asFloor().decoration = this;
         }};
     }
 }
