@@ -23,7 +23,7 @@ public class DyLiquids {
             gasColor = DyPal.steamSulfur;
         }};
         purifiedWater = new Liquid("purified-water", DyPal.purifiedWater) {{
-            heatCapacity = 0.4f;
+            heatCapacity = 0.45f;
             effect = StatusEffects.wet;
             boilPoint = 0.5f;
             gasColor = DyPal.steamLight;

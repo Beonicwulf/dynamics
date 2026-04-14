@@ -21,6 +21,7 @@ public class Dynamics extends Mod{
 
     @Override
     public void loadContent() {
+        DyStatusEffects.load();
         DyItems.load();
         DyLiquids.load();
         DyRecipes.load();

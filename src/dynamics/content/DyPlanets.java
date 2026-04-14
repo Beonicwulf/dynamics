@@ -158,10 +158,12 @@ public class DyPlanets {
                 r.waveTeam = DyTeams.dread;
                 r.placeRangeCheck = false;
                 r.showSpawns = true;
+                r.coreIncinerates = true;
+                r.onlyDepositCore = false;
             };
-            campaignRuleDefaults.fog = true;
+            campaignRuleDefaults.fog = false;
             campaignRuleDefaults.showSpawns = true;
-            campaignRuleDefaults.rtsAI = true;
+            campaignRuleDefaults.rtsAI = campaignRuleDefaults.randomWaveAI = false;
 
             unlockedOnLand.add(DyEffectBlocks.coreSurface);
             unlockedOnLand.add(DyEffectBlocks.augerPad);

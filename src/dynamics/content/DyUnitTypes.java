@@ -75,7 +75,7 @@ public class DyUnitTypes {
             speed = 1.5f;
             health = 100;
             engineSize = 1.8f;
-            engineOffset = 5.7f;
+            engineOffset = 5.2f;
             range = 50f;
             isEnemy = false;
             wreckSoundVolume = deathSoundVolume = 0.7f;
@@ -136,6 +136,7 @@ public class DyUnitTypes {
             constructor = TankUnit::create;
             outlines = false;
             rotateMoveFirst = true;
+            squareShape = true;
             faceTarget = omniMovement = false;
             rotateSpeed = 2;
             floorMultiplier = 1.5f;
@@ -145,9 +146,7 @@ public class DyUnitTypes {
             armor = 2;
             itemCapacity = 0;
             treadPullOffset = 3;
-            treadRects = new Rect[] {
-                    new Rect(-13f, -21f, 26, 42)
-            };
+            treadRects = new Rect[] {new Rect(-13f, -21f, 26, 42)};
             weapons.add(splitWeapon);
             researchCostMultiplier = 0f;
         }};
@@ -163,7 +162,7 @@ public class DyUnitTypes {
             speed = 1.3f;
             health = 90;
             engineSize = 2f;
-            engineOffset = 6.5f;
+            engineOffset = 4.0f;
             payloadCapacity = 0f;
             targetable = bounded = isEnemy = useUnitCap = logicControllable = playerControllable = allowedInPayloads = createWreck = false;
 
