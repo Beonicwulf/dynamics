@@ -29,7 +29,7 @@ public class DyEnvironment {
             // metal
             phWall, phTile, phConnect,
             // props
-            travertineBoulder, shallowTravertineBoulder, azuriteBoulder;
+            travertineBoulder, shallowTravertineBoulder, azuriteBoulder, malachiteCluster;
     public static void load() {
         // ores
         oreZinc = new OreBlock("ore-zinc", DyItems.zinc) {{variants = 4;}};
@@ -115,6 +115,8 @@ public class DyEnvironment {
         gildedChalcocite = new Floor("gilded-chalcocite") {{
             variants = 5;
             attributes.set(DyAttributes.azurite, 1);
+            itemDrop = DyItems.malachite;
+            playerUnmineable = true;
         }};
         shallowChalcocite = new ShallowLiquid("shallow-chalcocite") {{
             speedMultiplier = 0.8f;
@@ -137,5 +139,10 @@ public class DyEnvironment {
             variants = 6;
             chalcociteFloor.asFloor().decoration = gildedChalcocite.asFloor().decoration = shallowChalcocite.asFloor().decoration = this;
         }};
+        malachiteCluster = new TallBlock("malachite-cluster") {{
+            variants = 0;
+            itemDrop = DyItems.malachite;
+        }};
+        // sprite by Sh1p
     }
 }

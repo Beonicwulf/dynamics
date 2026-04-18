@@ -9,7 +9,9 @@ public class DyLiquids {
             // Gases
             steam,
             // water
-            hotSpringWater, purifiedWater;
+            hotSpringWater, purifiedWater,
+            // acid
+            sulfuricAcid;
     public static void load() {
         steam = new Liquid("steam", DyPal.steam) {{
             temperature = 0.7f;
@@ -27,6 +29,11 @@ public class DyLiquids {
             effect = StatusEffects.wet;
             boilPoint = 0.5f;
             gasColor = DyPal.steamLight;
+        }};
+        sulfuricAcid = new Liquid("sulfuric-acid", DyPal.sulfuricAcid) {{
+            effect = DyStatusEffects.corroding;
+            heatCapacity = 0.3f;
+            boilPoint = 0.7f;
         }};
     }
 }

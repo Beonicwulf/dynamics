@@ -40,3 +40,5 @@ Hot Spring Water & Purified Water sprites\
 Tier 1 Tank sprite
 ### ✧ mimicling
 Tier 1 Core sprite
+### ✧ Sh1penfire
+Malachite Cluster sprite (borrowed meld crystals)

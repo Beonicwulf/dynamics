@@ -9,8 +9,10 @@ public class DyItems {
     public static Item
             // resources
             zinc, malachite, cinnabar, tantalum,
+            // components
+            partBasic, partPower,
             // crafted
-            partBasic;
+            montroydite;
     public static final Seq<Item> dynamicsItems = new Seq<>();
     public static void load() {
         zinc = new Item("zinc", DyPal.zinc) {{
@@ -24,21 +26,27 @@ public class DyItems {
             hardness = 1;
             charge = 0.3f;
         }};
+        partBasic = new Item("part-basic", DyPal.component) {{
+            cost = 5;
+            healthScaling = 3f;
+        }};
         cinnabar = new Item("cinnabar", DyPal.cinnabar) {{
             hardness = 2;
             buildable = false;
+        }};
+        montroydite = new Item("montroydite", DyPal.montroydite) //{{buildable = false;}}
+        ;
+        partPower = new Item("part-power", DyPal.component) {{
+           cost = 5;
+           charge = 0.5f;
         }};
         tantalum = new Item("tantalum", DyPal.tantalum) {{
             cost = 1.5f;
             hardness = 4;
             healthScaling = 0.6f;
         }};
-        partBasic = new Item("part-basic", DyPal.component) {{
-            cost = 5;
-            healthScaling = 3f;
-        }};
         dynamicsItems.addAll(
-                zinc, tantalum, partBasic, malachite, cinnabar
+                zinc, tantalum, partBasic, malachite, cinnabar, montroydite
         );
     }
 }
