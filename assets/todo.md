@@ -42,10 +42,9 @@
 - [ ] Juno
 - [ ] Heranthir
 - [ ] Artemis
-
 ### Progression
 - [ ] Cinnabar
-- [ ] Chlorine
+- [x] Halite
 ######
 - [ ] Water Purifier
 - [ ] Hydration Chamber
@@ -63,6 +62,7 @@
 - [ ] Cinnabar
 - [ ] Limestone
 - [ ] Peridotite
+- [ ] Halite
 - [ ] Azurite
 - [ ] Calcite
 - [ ] Scoria

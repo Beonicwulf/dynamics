@@ -16,7 +16,9 @@ public class DyPal {
             purifiedWater = Color.valueOf("#6b9eaa"),
             dread = Color.valueOf("#9fabd1"),
             montroydite = Color.valueOf("#fa7c28"),
-            sulfuricAcid = Color.valueOf("#b2d97c")
+            sulfuricAcid = Color.valueOf("#b2d97c"),
+            halite = Color.valueOf("#cb7b7a"),
+            sodium = Color.valueOf("#9cb9c1")
             ;
 
     public static Color //Planet Colors

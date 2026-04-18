@@ -29,11 +29,11 @@ public class ThalassaTechTree {
 
             node(accelerator, () -> {
                 node(zincSorter, () -> node(zincUnloader));
-                node(zincMessage);
+                node(zincMessage, () -> node(zincCanvas));
             });
             node(steamCollector, () -> {
                 node(clockworkDrill);
-                node(mechanicalPress);
+                node(mechanicalPress, () -> node(steamHeater));
             });
             node(pipe, () -> {
                 node(pipeRouter, () -> node(pipeTunnel));
@@ -44,11 +44,15 @@ public class ThalassaTechTree {
             node(augerPad, () -> node(augerDrone));
             nodeProduce(DyItems.zinc, () ->{
                 nodeProduce(DyItems.malachite, () -> {
-                    nodeProduce(DyItems.cinnabar, () -> {});
+                    nodeProduce(DyItems.cinnabar, () -> nodeProduce(DyItems.montroydite, () -> {}));
+                    nodeProduce(DyItems.halite, () -> nodeProduce(DyItems.sodium, () -> {}));
                     nodeProduce(DyItems.tantalum, () -> {});
                 });
-                nodeProduce(DyItems.partBasic, () -> {});
-                nodeProduce(DyLiquids.steam, () -> nodeProduce(DyLiquids.hotSpringWater, () -> nodeProduce(DyLiquids.purifiedWater, () -> {})));
+                nodeProduce(DyItems.partBasic, () -> nodeProduce(DyItems.partPower, () -> {}));
+                nodeProduce(DyLiquids.steam, () -> {
+                    nodeProduce(DyLiquids.hotSpringWater, () -> nodeProduce(DyLiquids.purifiedWater, () -> {}));
+                    nodeProduce(DyLiquids.sulfuricAcid, () -> {});
+                });
             });
             node(basicConstructor, () -> {
                 node(zincConveyor, () -> node(basicDeconstructor));

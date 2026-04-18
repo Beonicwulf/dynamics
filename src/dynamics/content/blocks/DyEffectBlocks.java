@@ -2,6 +2,7 @@ package dynamics.content.blocks;
 
 import dynamics.content.DyItems;
 import dynamics.content.DyLiquids;
+import dynamics.content.DyMusics;
 import dynamics.content.DyUnitTypes;
 import dynamics.graphics.DyPal;
 import dynamics.world.blocks.effect.SummonPad;
@@ -25,7 +26,7 @@ public class DyEffectBlocks {
             requirements(Category.effect, with(DyItems.zinc, 2000, DyItems.partBasic, 200));
             size = 4;
             unitType = DyUnitTypes.breathe;
-            itemCapacity = 2000;
+            itemCapacity = 1200;
             health = 4000;
             armor = 4;
             alwaysUnlocked = true;
@@ -33,7 +34,7 @@ public class DyEffectBlocks {
             unitCapModifier = 15;
             requiresCoreZone = true;
             incinerateNonBuildable = true;
-            //landMusic = DyMusics.reborne;
+            landMusic = DyMusics.reborne;
         }};
         augerPad = new SummonPad("auger-pad") {{
             requirements(Category.effect, BuildVisibility.sandboxOnly, with(DyItems.zinc, 2000, DyItems.partBasic, 200));
@@ -59,7 +60,6 @@ public class DyEffectBlocks {
             requirements(Category.logic, with(DyItems.zinc, 10, DyItems.partBasic, 5, DyItems.malachite, 15));
             canvasSize = 24;
             padding = 7f / 4f * 2f;
-
             size = 3;
         }};
     }
