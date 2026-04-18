@@ -42,11 +42,7 @@
 - [ ] Juno
 - [ ] Heranthir
 - [ ] Artemis
-### Misc Block Ideas
-- [x] Big Unloader (High cost and big size, no core unloading for balance, probably directional)
-- [x] Canvas
-- [ ] Big Malachite Crystals / Decoration
-- [ ] Big Azurite Crystals / Decoration
+
 ### Progression
 - [ ] Cinnabar
 - [ ] Chlorine
@@ -89,4 +85,8 @@
 - [ ] Brimstone
 - [ ] Hematite
 # Completed categories
-### (none atm)
+### Misc Block Ideas
+- [x] Big Unloader (High cost and big size, no core unloading for balance, probably directional)
+- [x] Canvas
+- [x] Big Malachite Crystals / Decoration
+- [x] Big Azurite Crystals / Decoration

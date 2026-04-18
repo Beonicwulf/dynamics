@@ -29,7 +29,8 @@ public class DyEnvironment {
             // metal
             phWall, phTile, phConnect,
             // props
-            travertineBoulder, shallowTravertineBoulder, azuriteBoulder, malachiteCluster;
+            travertineBoulder, shallowTravertineBoulder, azuriteBoulder,
+            malachiteCluster, azuriteCluster;
     public static void load() {
         // ores
         oreZinc = new OreBlock("ore-zinc", DyItems.zinc) {{variants = 4;}};
@@ -142,6 +143,12 @@ public class DyEnvironment {
         malachiteCluster = new TallBlock("malachite-cluster") {{
             variants = 0;
             itemDrop = DyItems.malachite;
+        }};
+        // sprite by Sh1p
+        azuriteCluster = new TallBlock("azurite-cluster") {{
+            variants = 0;
+            itemDrop = DyItems.malachite;
+            attributes.set(DyAttributes.azurite, 1);
         }};
         // sprite by Sh1p
     }
