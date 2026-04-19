@@ -4,6 +4,8 @@ import arc.*;
 import arc.func.*;
 import arc.struct.*;
 import arc.util.*;
+import dynamics.content.blocks.DyDefense;
+import dynamics.content.blocks.DyProduction;
 import mindustry.*;
 import mindustry.game.EventType;
 import mindustry.ui.fragments.HintsFragment.*;
@@ -12,6 +14,14 @@ public enum DyHints implements Hint {
     reborne(
             () -> false,
             () -> !Core.settings.getBool("menu-reborne")
+    ),
+    collector(
+            () -> false,
+            () -> Vars.control.input.block == DyProduction.steamCollector
+    ),
+    valve(
+            () -> false,
+            () -> Vars.control.input.block == DyDefense.steamValve
     );
 
     final Boolp complete;
@@ -44,9 +54,7 @@ public enum DyHints implements Hint {
     }
 
     public static void preInit() {
-        Events.on(EventType.ClientLoadEvent.class, e -> {
-            init();
-        });
+        Events.on(EventType.ClientLoadEvent.class, e -> init());
     }
 
     public static void init() {

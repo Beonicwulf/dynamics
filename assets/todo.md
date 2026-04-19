@@ -1,5 +1,5 @@
 # To-do & Ideas
-[To Resprite](to-resprite.md)
+### [To Resprite](to-resprite.md)
 ### For the first Release
 - [x] Tier 1 Ores
 - [x] Liquid Transportation
@@ -23,12 +23,10 @@
 - [x] Separate Solar System
 - [x] Acid Rain
 - [x] Secondary biome (Malachite-rich mineral)
+- [ ] Status effect icons
 - [ ] Hints
 - [ ] Sector Embark
 ### Short-term To-do
-- [x] Pump
-- [x] Zinc Message
-- [ ] Status effect icons
 - [ ] Expand Hot-spring biome (Cinnabar)
 - [ ] Add variety to Malachite-rich biome (Calcite, Goethite, Azurite, etc.)
 - [ ] Third biome (sedimentary, near a river or shore)
@@ -42,17 +40,6 @@
 - [ ] Juno
 - [ ] Heranthir
 - [ ] Artemis
-### Progression
-- [ ] Cinnabar
-- [x] Halite
-######
-- [ ] Water Purifier
-- [ ] Hydration Chamber
-- [ ] Chemical Extractor
-- [ ] Electrolysis
-### Bugfixes
-- [x] Fix PH Autotile
-- [ ] Fix Black Liquid (Minimap & Ripples)
 ### Environment & Minerals
 ##### Sorted by priority more-or-less
 - [x] Sphalerite (Ore)
@@ -86,7 +73,12 @@
 - [ ] Hematite
 # Completed categories
 ### Misc Block Ideas
+- [x] Zinc Message
 - [x] Big Unloader (High cost and big size, no core unloading for balance, probably directional)
 - [x] Canvas
 - [x] Big Malachite Crystals / Decoration
 - [x] Big Azurite Crystals / Decoration
+### Pre-Beta Bugfixes
+- [x] Fix PH Autotile
+- [x] Fix Black Liquid (Minimap & Ripples)
+- [x] Dread Icon not displaying

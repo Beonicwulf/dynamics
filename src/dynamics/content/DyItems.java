@@ -11,7 +11,7 @@ public class DyItems {
             zinc, malachite, cinnabar, tantalum,
             // components
             partBasic, partPower,
-            // crafted
+            // raw crafted
             montroydite, halite, sodium;
     public static final Seq<Item> dynamicsItems = new Seq<>();
     public static void load() {
@@ -38,12 +38,9 @@ public class DyItems {
             hardness = 2;
             buildable = false;
         }};
-        halite = new Item("halite", DyPal.halite) //{{buildable = false;}}
-        ;
-        sodium = new Item("sodium", DyPal.sodium) //{{buildable = false;}}
-        ;
-        montroydite = new Item("montroydite", DyPal.montroydite) //{{buildable = false;}}
-        ;
+        halite = new Item("halite", DyPal.halite) {{buildable = false;}};
+        sodium = new Item("sodium", DyPal.sodium) {{buildable = false;}};
+        montroydite = new Item("montroydite", DyPal.montroydite) {{buildable = false;}};
         tantalum = new Item("tantalum", DyPal.tantalum) {{
             cost = 1.5f;
             hardness = 4;

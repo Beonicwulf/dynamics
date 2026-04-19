@@ -16,7 +16,9 @@ import mindustry.ui.Fonts;
 
 public class DyTeams {
     public static Team dread;
-    public static void load() {dread = newTeam(5, "dread", DyPal.dread);};
+    public static void load() {
+        dread = newTeam(5, "dread", DyPal.dread);
+    }
     private static Team newTeam(int id, String name, Color color) {
         Team team = Team.get(id);
         team.name = name;
@@ -26,7 +28,9 @@ public class DyTeams {
         team.palette[1] = color.cpy().mul(0.75f);
         team.palette[2] = color.cpy().mul(0.5f);
 
-        for(int i = 0; i < 3; i++){team.palettei[i] = team.palette[i].rgba();}
+        for(int i = 0; i < 3; i++){
+            team.palettei[i] = team.palette[i].rgba();
+        }
 
         Seq<Font> fonts = Seq.with(Fonts.def, Fonts.outline);
 
@@ -36,7 +40,7 @@ public class DyTeams {
         stringIcons.put(name, ((char)ch) + "");
 
         int size = (int)(Fonts.def.getData().lineHeight/Fonts.def.getData().scaleY);
-        TextureRegion region = Core.atlas.find("team-" + name);
+        TextureRegion region = Core.atlas.find("dy-team-" + name);
         Vec2 out = Scaling.fit.apply(region.width, region.height, size, size);
         Font.Glyph glyph = new Font.Glyph(){{
             id = ch;

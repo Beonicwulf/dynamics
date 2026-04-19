@@ -1,6 +1,8 @@
 package dynamics.content;
 
 import arc.struct.ObjectFloatMap;
+import arc.struct.Seq;
+import mindustry.game.Objectives;
 import mindustry.type.Item;
 
 import static dynamics.content.DyUnitTypes.*;
@@ -28,21 +30,21 @@ public class ThalassaTechTree {
             context().researchCostMultipliers = costMultipliers;
 
             node(accelerator, () -> {
-                node(zincSorter, () -> node(zincUnloader));
-                node(zincMessage, () -> node(zincCanvas));
+                node(zincSorter, () -> node(zincUnloader, Seq.with(new Objectives.OnSector(DySectorPresets.testSector)), () -> {}));
+                node(zincMessage, () -> node(zincCanvas, Seq.with(new Objectives.OnSector(DySectorPresets.testSector)), () -> {}));
             });
             node(steamCollector, () -> {
                 node(clockworkDrill);
-                node(mechanicalPress, () -> node(steamHeater));
+                node(mechanicalPress, () -> node(steamHeater, Seq.with(new Objectives.OnSector(DySectorPresets.testSector)), () -> node(waterPurifier)));
             });
             node(pipe, () -> {
                 node(pipeRouter, () -> node(pipeTunnel));
-                node(pipeJunction, () -> node(pipeVent, () -> node(pipeController)));
-                node(clockworkPump);
+                node(pipeJunction, () -> node(pipeVent, Seq.with(new Objectives.OnSector(DySectorPresets.testSector)), () -> node(pipeController)));
+                node(clockworkPump, Seq.with(new Objectives.OnSector(DySectorPresets.testSector)), () -> {});
             });
             node(steamValve, () -> node(withdraw));
             node(augerPad, () -> node(augerDrone));
-            nodeProduce(DyItems.zinc, () ->{
+            nodeProduce(DyItems.zinc, () -> {
                 nodeProduce(DyItems.malachite, () -> {
                     nodeProduce(DyItems.cinnabar, () -> nodeProduce(DyItems.montroydite, () -> {}));
                     nodeProduce(DyItems.halite, () -> nodeProduce(DyItems.sodium, () -> {}));
@@ -55,7 +57,7 @@ public class ThalassaTechTree {
                 });
             });
             node(basicConstructor, () -> {
-                node(zincConveyor, () -> node(basicDeconstructor));
+                node(zincConveyor, () -> node(basicDeconstructor, Seq.with(new Objectives.Research(split), new Objectives.OnSector(DySectorPresets.testSector)), () -> {}));
                 node(bUAK, () -> node(splitAssembler, () -> node(splitFrame, () -> node(split))));
             });
         });

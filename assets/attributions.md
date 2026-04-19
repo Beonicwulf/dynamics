@@ -39,6 +39,7 @@ Breathe sprite (core unit + its leg)\
 Hot Spring Water & Purified Water sprites\
 Tier 1 Tank sprite
 ### ✧ mimicling
-Tier 1 Core sprite
+Tier 1 Core sprite\
+Water Purifier Sprite
 ### ✧ Sh1penfire
 Malachite/Azurite Cluster sprites (borrowed meld crystals)

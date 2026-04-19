@@ -51,6 +51,7 @@ public class DyEnvironment {
             drownTime = 200f;
             cacheLayer = CacheLayer.water;
             supportsOverlay = true;
+            mapColor = DyPal.hotSpringWater;
         }};
         // travertine
         // Thank you, amongus2824 for all the Travertine Environment sprites!!!
@@ -72,6 +73,8 @@ public class DyEnvironment {
             cacheLayer = CacheLayer.water;
             supportsOverlay = true;
             albedo = 0.9f;
+            mapColor = DyPal.hotSpringWater;
+            status = StatusEffects.wet;
         }};
         deepTravertine = new ShallowLiquid("deep-travertine") {{
             speedMultiplier = 0.5f;
@@ -85,6 +88,8 @@ public class DyEnvironment {
             supportsOverlay = true;
             albedo = 0.9f;
             drownTime = 660;
+            mapColor = DyPal.hotSpringWater;
+            status = StatusEffects.wet;
         }};
         travertineGeyser = new SteamVent("travertine-geyser") {{
             parent = blendGroup = shallowTravertine;
@@ -99,6 +104,8 @@ public class DyEnvironment {
             effectSpacing = 720;
             effectColor = DyPal.steamSulfur;
             effect = new MultiEffect(Fx.drillSteam, Fx.steam, Fx.vapor, Fx.smokeCloud);
+            mapColor = DyPal.hotSpringWater;
+            status = StatusEffects.wet;
         }};
         travertineWall = new StaticWall("travertine-wall") {{
             travertineFloor.asFloor().wall = smoothTravertine.asFloor().wall = brightTravertine.asFloor().wall = shallowTravertine.asFloor().wall = deepTravertine.asFloor().wall = this;
@@ -128,6 +135,8 @@ public class DyEnvironment {
             cacheLayer = CacheLayer.water;
             supportsOverlay = true;
             albedo = 0.9f;
+            mapColor = DyPal.hotSpringWater;
+            status = StatusEffects.wet;
         }};
         chalcociteWall = new StaticWall("chalcocite-wall") {{
             chalcociteFloor.asFloor().wall = shallowChalcocite.asFloor().wall =  this;
@@ -149,6 +158,7 @@ public class DyEnvironment {
             variants = 0;
             itemDrop = DyItems.malachite;
             attributes.set(DyAttributes.azurite, 1);
+            playerUnmineable = true;
         }};
         // sprite by Sh1p
     }

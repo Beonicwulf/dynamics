@@ -161,8 +161,8 @@ public class DyUnitTypes {
             accel = 0.11f;
             speed = 1.3f;
             health = 90;
-            engineSize = 2f;
-            engineOffset = 4.0f;
+            engineSize = 1.4f;
+            engineOffset = 4.1f;
             payloadCapacity = 0f;
             targetable = bounded = isEnemy = useUnitCap = logicControllable = playerControllable = allowedInPayloads = createWreck = false;
 
