@@ -6,6 +6,7 @@ import mindustry.entities.Effect;
 import mindustry.entities.bullet.BasicBulletType;
 import mindustry.entities.bullet.BulletType;
 import mindustry.entities.effect.MultiEffect;
+import mindustry.entities.effect.WrapEffect;
 
 public class DyBulletTypes {
     public static BulletType
@@ -18,7 +19,7 @@ public class DyBulletTypes {
             // Steam Valve
             steamBlast;
     public static void load() {
-        Effect withdrawShootEffect = new MultiEffect(Fx.drillSteam, Fx.colorSparkBig);
+        Effect withdrawShootEffect = new MultiEffect(new WrapEffect(Fx.drillSteam, DyPal.flux), Fx.colorSparkBig);
         // Sticky Cosmetic
         stickyShard = new BasicBulletType(4f, 0, "dy-malachite-chunk") {{
             height = 6;

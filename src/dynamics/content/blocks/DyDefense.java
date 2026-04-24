@@ -3,7 +3,9 @@ package dynamics.content.blocks;
 import dynamics.content.DyBulletTypes;
 import dynamics.content.DyItems;
 import dynamics.content.DyLiquids;
+import dynamics.graphics.DyPal;
 import mindustry.content.Fx;
+import mindustry.entities.effect.WrapEffect;
 import mindustry.gen.Sounds;
 import mindustry.type.Category;
 import mindustry.world.Block;
@@ -24,7 +26,7 @@ public class DyDefense {
             recoil = 2;
             reload = 35f;
             range = 180;
-            ammoUseEffect = Fx.drillSteam;
+            ammoUseEffect = new WrapEffect(Fx.drillSteam, DyPal.flux);
             shootSound = Sounds.shootBreach;
             targetUnderBlocks = false;
             shootCone = 25;

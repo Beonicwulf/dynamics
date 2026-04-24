@@ -3,7 +3,9 @@ package dynamics.content.blocks;
 import arc.math.Mathf;
 import dynamics.content.DyItems;
 import dynamics.content.DyLiquids;
+import dynamics.graphics.DyPal;
 import mindustry.content.Fx;
+import mindustry.entities.effect.WrapEffect;
 import mindustry.gen.Sounds;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
@@ -36,7 +38,7 @@ public class DyCrafting {
             researchCost = with(DyItems.zinc, 60 * 5, DyItems.malachite, 20 * 5);
             hasItems = true;
             itemCapacity = 40;
-            craftEffect =  Fx.drillSteam;
+            craftEffect =  new WrapEffect(Fx.drillSteam, DyPal.flux);
             size = 3;
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawPistons(){{sides = 8; sideOffset = Mathf.PI / 2f;}}, new DrawHeatInput(), new DrawDefault());
             consumeItems(with(DyItems.zinc, 10, DyItems.malachite, 5));
