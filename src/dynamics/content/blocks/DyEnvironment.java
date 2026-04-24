@@ -23,7 +23,7 @@ public class DyEnvironment {
             shallowTravertine, deepTravertine,
             travertineWall, travertineVent, travertineGeyser,
             // chalcocite
-            chalcociteFloor, gildedChalcocite,
+            chalcociteFloor, gildedChalcocite, resonantChalcocite,
             shallowChalcocite,
             chalcociteWall, gildedChalcociteWall,
             // metal
@@ -119,10 +119,17 @@ public class DyEnvironment {
             shallowTravertine.asFloor().decoration = deepTravertine.asFloor().decoration = this;
             placeableLiquid = true;
         }};
+        // chalcocite
         chalcociteFloor = new Floor("chalcocite-floor") {{variants = 5;}};
         gildedChalcocite = new Floor("gilded-chalcocite") {{
             variants = 5;
             attributes.set(DyAttributes.azurite, 1);
+            itemDrop = DyItems.malachite;
+            playerUnmineable = true;
+        }};
+        resonantChalcocite = new Floor("resonant-chalcocite") {{
+            variants = 5;
+            attributes.set(DyAttributes.flux, 1);
             itemDrop = DyItems.malachite;
             playerUnmineable = true;
         }};

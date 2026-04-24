@@ -6,7 +6,6 @@ import mindustry.game.Objectives;
 import mindustry.type.Item;
 
 import static dynamics.content.DyUnitTypes.*;
-import static dynamics.content.blocks.DyComponentBlocks.*;
 import static dynamics.content.blocks.DyCrafting.*;
 import static dynamics.content.blocks.DyDefense.*;
 import static dynamics.content.blocks.DyEffectBlocks.*;
@@ -33,32 +32,23 @@ public class ThalassaTechTree {
                 node(zincSorter, () -> node(zincUnloader, Seq.with(new Objectives.OnSector(DySectorPresets.testSector)), () -> {}));
                 node(zincMessage, () -> node(zincCanvas, Seq.with(new Objectives.OnSector(DySectorPresets.testSector)), () -> {}));
             });
-            node(steamCollector, () -> {
+            node(fluxCollector, () -> {
                 node(clockworkDrill);
-                node(mechanicalPress, () -> node(steamHeater, Seq.with(new Objectives.OnSector(DySectorPresets.testSector)), () -> node(waterPurifier)));
+                node(fluxHeater, () -> node(grafter));
             });
             node(pipe, () -> {
                 node(pipeRouter, () -> node(pipeTunnel));
                 node(pipeJunction, () -> node(pipeVent, Seq.with(new Objectives.OnSector(DySectorPresets.testSector)), () -> node(pipeController)));
-                node(clockworkPump, Seq.with(new Objectives.OnSector(DySectorPresets.testSector)), () -> {});
             });
-            node(steamValve, () -> node(withdraw));
+            node(withdraw);
             node(augerPad, () -> node(augerDrone));
             nodeProduce(DyItems.zinc, () -> {
-                nodeProduce(DyItems.malachite, () -> {
-                    nodeProduce(DyItems.cinnabar, () -> nodeProduce(DyItems.montroydite, () -> {}));
-                    nodeProduce(DyItems.halite, () -> nodeProduce(DyItems.sodium, () -> {}));
-                    nodeProduce(DyItems.tantalum, () -> {});
-                });
-                nodeProduce(DyItems.partBasic, () -> nodeProduce(DyItems.partPower, () -> {}));
-                nodeProduce(DyLiquids.steam, () -> {
-                    nodeProduce(DyLiquids.hotSpringWater, () -> nodeProduce(DyLiquids.purifiedWater, () -> {}));
-                    nodeProduce(DyLiquids.sulfuricAcid, () -> {});
-                });
+                nodeProduce(DyItems.malachite, () -> {});
+                nodeProduce(DyItems.partBasic, () -> {});
+                nodeProduce(DyLiquids.flux, () -> {});
             });
             node(basicConstructor, () -> {
                 node(zincConveyor, () -> node(basicDeconstructor, Seq.with(new Objectives.Research(split), new Objectives.OnSector(DySectorPresets.testSector)), () -> {}));
-                node(bUAK, () -> node(splitAssembler, () -> node(splitFrame, () -> node(split))));
             });
         });
     }

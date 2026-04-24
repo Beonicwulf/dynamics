@@ -6,7 +6,6 @@ public class DyPal {
     public static Color //Items, Fluids, Bullets etc
             zinc = Color.valueOf("#aa996e"),
             malachite = Color.valueOf("#356a46"),
-            cinnabar = Color.valueOf("#784132"),
             tantalum = Color.valueOf("#606d90"),
             component = Color.valueOf("#aa8e6e"),
             steam = Color.valueOf("#d6eaf3"),
@@ -15,10 +14,8 @@ public class DyPal {
             hotSpringWater = Color.valueOf("#00959c"),
             purifiedWater = Color.valueOf("#6b9eaa"),
             dread = Color.valueOf("#9fabd1"),
-            montroydite = Color.valueOf("#fa7c28"),
-            sulfuricAcid = Color.valueOf("#b2d97c"),
-            halite = Color.valueOf("#cb7b7a"),
-            sodium = Color.valueOf("#9cb9c1")
+            flux = Color.valueOf("#62bd96"),
+            fluxLight = Color.valueOf("#93d9b4")
             ;
 
     public static Color //Planet Colors

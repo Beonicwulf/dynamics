@@ -1,0 +1,234 @@
+
+splitAssembler = new UnitAssembler("split-assembler") {{
+            requirements(Category.units, ItemStack.with(DyItems.zinc, 150, DyItems.partBasic, 10));
+            researchCost = ItemStack.with(DyItems.zinc, 150 * 3 * 5, DyItems.partBasic, 10 * 3 * 5);
+            size = 3;
+            areaSize = 5;
+            droneType = DyUnitTypes.augerAssembler;
+            //dronesCreated = 1;
+            consumeLiquid(DyLiquids.steam, 10f/60f);
+            plans.add(new AssemblerUnitPlan(DyUnitTypes.split, 35f * 60f, PayloadStack.list(DyComponentBlocks.bUAK, 1, DyComponentBlocks.splitFrame, 1)));
+        }};
+
+        clockworkDrill = new BurstDrill("clockwork-drill") {{
+            requirements(Category.production, with(DyItems.zinc, 50, DyItems.partBasic, 2));
+            size = 3;
+            drillTime = 60f * 18f;
+            shake = 2f;
+            drillEffect = new MultiEffect(Fx.mineImpact, Fx.drillSteam, Fx.mineImpactWave.wrap(Pal.redLight, 40f));
+            consumeLiquid(DyLiquids.steam, 5f / 60f);
+            hasPower = false;
+            tier = 2;
+            drillMultipliers.put(DyItems.zinc, 2f);
+            arrows = 1;
+            placeableLiquid = true;
+            researchCost = with(DyItems.zinc, 50 * 5, DyItems.partBasic, 2 * 5);
+        }};
+
+
+
+public class DyRecipes {
+    public static Seq<Recipe>
+            // components
+            basicComponentRecipe, powerComponentRecipe;
+    public static void load() {
+        basicComponentRecipe = Seq.with(new Recipe(120f).consumeItems(ItemStack.with(DyItems.malachite, 5, DyItems.zinc, 10)).outputItem(DyItems.partBasic));
+        powerComponentRecipe = Seq.with(new Recipe(210f).consumeItems(ItemStack.with(DyItems.montroydite, 10, DyItems.zinc, 30)).outputItem(DyItems.partPower, 3));
+    }
+}
+
+new DrawParticles(){{
+                color = DyPal.travertineMidTone;
+                alpha = 0.6f;
+                particleSize = 2f;
+                particles = 12;
+                particleRad = 9f;
+                particleLife = 90f;
+                reverse = true;
+            }},
+
+
+        waterPurifier = new HeatCrafter("water-purifier") {{
+            requirements(Category.crafting, with(DyItems.zinc, 40, DyItems.partBasic, 3));
+            researchCost = with(DyItems.zinc, 40 * 10 * 5, DyItems.partBasic, 3 * 10 * 5);
+            size = 3;
+            heatRequirement = 12f;
+            maxEfficiency = 1f;
+            craftTime = 240f;
+            drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidTile(DyLiquids.purifiedWater), new DrawDefault(), new DrawHeatInput());
+            consumeLiquid(DyLiquids.hotSpringWater, 20f/60f * 4f);
+            outputLiquid = new LiquidStack(DyLiquids.purifiedWater, 15f/60f * 4f);
+            outputItem = new ItemStack(DyItems.halite, 1);
+        }};
+
+
+        steamHeater = new HeatProducer("steam-heater") {{
+            requirements(Category.crafting, with(DyItems.zinc, 30, DyItems.partBasic, 2));
+            size = 2;
+            drawer = new DrawMulti(new DrawDefault(), new DrawHeatOutput());
+            itemCapacity = 0;
+            liquidCapacity = 30f;
+            rotateDraw = false;
+            regionRotated1 = 1;
+            ambientSound = Sounds.loopHum;
+            consumeLiquid(DyLiquids.steam, 5f / 60f);
+            heatOutput = 3f;
+            researchCost = with(DyItems.zinc, 30 * 10 * 5, DyItems.partBasic, 2 * 10 * 5);
+        }};
+
+
+        partPower = new Item("part-power", DyPal.component) {{
+            cost = 5;
+            charge = 0.5f;
+        }};
+        cinnabar = new Item("cinnabar", DyPal.cinnabar) {{
+            hardness = 2;
+            buildable = false;
+        }};
+        halite = new Item("halite", DyPal.halite) {{buildable = false;}};
+        sodium = new Item("sodium", DyPal.sodium) {{buildable = false;}};
+        montroydite = new Item("montroydite", DyPal.montroydite) {{buildable = false;}};
+        tantalum = new Item("tantalum", DyPal.tantalum) {{
+            cost = 1.5f;
+            hardness = 4;
+            healthScaling = 0.6f;
+        }};
+
+
+
+        sulfuricAcid = new Liquid("sulfuric-acid", DyPal.sulfuricAcid) {{
+            effect = DyStatusEffects.corroding;
+            heatCapacity = 0.3f;
+            boilPoint = 0.7f;
+        }};
+
+
+            cinnabar = Color.valueOf("#784132"),
+            montroydite = Color.valueOf("#fa7c28"),
+            sulfuricAcid = Color.valueOf("#b2d97c"),
+            halite = Color.valueOf("#cb7b7a"),
+            sodium = Color.valueOf("#9cb9c1")
+
+        mechanicalPress = new GenericCrafter("mechanical-press"){{
+            requirements(Category.crafting, with(DyItems.zinc, 60, DyItems.malachite, 20));
+            consumeItems(with(DyItems.zinc, 10, DyItems.malachite, 5));
+            craftTime = 120f;
+            outputItem = new ItemStack(DyItems.partBasic, 1);
+            size = 2;
+            hasItems = true;
+            itemCapacity = 40;
+            craftEffect =  Fx.drillSteam;
+            consumeLiquid(DyLiquids.steam, 5f / 60f);
+            drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawPistons(){{sinMag = 3f; sinScl = 15f; sides = 8;}}, new DrawDefault(), new DrawPress(""){{maxScale = 1.5f;}});
+            researchCost = with(DyItems.zinc, 60 * 5, DyItems.malachite, 20 * 5);
+        }};
+
+        steamCollector = new AttributeCrafter("steam-collector"){{
+            requirements(Category.liquid, with(DyItems.zinc, 60, DyItems.malachite, 20));
+            attribute = Attribute.steam;
+            group = BlockGroup.liquids;
+            minEfficiency = 9f - 0.0001f;
+            baseEfficiency = 0f;
+            displayEfficiency = false;
+            hasPower = false;
+            craftEffect = new MultiEffect(Fx.turbinegenerate, Fx.drillSteam);
+            drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawRegion("-mid"), new DrawLiquidTile(DyLiquids.steam, 38f / 4f), new DrawDefault(), new DrawPress("-press") {{maxScale = 1.3f;}});
+            craftTime = 120f;
+            size = 3;
+            ambientSound = Sounds.loopHum;
+            ambientSoundVolume = 0.06f;
+            hasLiquids = true;
+            boostScale = 1f / 9f;
+            itemCapacity = 0;
+            outputLiquid = new LiquidStack(DyLiquids.steam, 30f / 60f);
+            liquidCapacity = 60f;
+            researchCost = with(DyItems.zinc, 60 * 5, DyItems.malachite, 20 * 5);
+        }};
+
+        steam = new Liquid("steam", DyPal.steam) {{
+            temperature = 0.7f;
+            gas = true;
+            //explosiveness = 0.5f;
+        }};
+
+        steamValve = new LiquidTurret("steam-valve") {{
+            requirements(Category.defense, with(DyItems.zinc, 24, DyItems.malachite, 5));
+            size = 2;
+            health = 1380; //should replace with scaledHealth? needs testing
+            ammo(DyLiquids.steam, DyBulletTypes.steamBlast);
+            drawer = new DrawMulti(new DrawDefault(), new DrawRegion("-base"), new DrawLiquidRegion(), new DrawRegion("-rotator", 2f), new DrawRegion("-top"), new DrawPress("-press"));
+            shootEffect = Fx.drillSteam;
+            recoil = 0f;
+            reload = 90f;
+            liquidCapacity = 10f;
+            shootCone = 360f;
+            range = 32;
+            shootY = 0;
+            shoot = new ShootSpread(30, 12f);
+            researchCost = with(DyItems.zinc, 24 * 5, DyItems.malachite, 5 * 5);
+        }};
+
+item.dy-cinnabar.name = Cinnabar
+item.dy-cinnabar.description = A reddish mineral comprised of Mercury and Sulfur.
+item.dy-cinnabar.details = [#f3edce]Sulfur[] caves were invented by me, actually ('u')
+item.dy-halite.name = Halite
+## ----- Crafted -----
+item.dy-montroydite.name = Montroydite
+item.dy-sodium.name = Sodium
+item.dy-part-power.name = Flux Capacitor
+liquid.dy-steam.name = Steam
+liquid.dy-steam.description = Boiling hot. Can be transported through pipes; transfers kinetic power to machines.
+liquid.dy-sulfuric-acid.name = Acid
+## ----- Defense -----
+block.dy-steam-valve.name = Steam Valve
+block.dy-steam-valve.description = Releases [#d6eaf3]steam[] to push enemies away.
+block.dy-steam-valve.details = Uses a magnetic compass made of [#85ad85]malachite[] to detect when enemies are nearby.
+block.dy-mechanical-press.name = Mechanical Press
+block.dy-mechanical-press.description = Uses pressure from [#d6eaf3]steam[] to engrave [#85ad85]malachite[] circuits into [#aa996e]zinc[] sheets.
+block.dy-steam-heater.name = Steam Heater
+block.dy-water-purifier.name = Water Purifier
+block.dy-steam-collector.name = Steam Collector
+block.dy-steam-collector.description = Collects hot [#d6eaf3]steam[] from geysers.
+## ----- Component Blocks -----
+block.dy-b-u-a-k.name = [#aa8e6e]B.U.A.K.[]
+block.dy-b-u-a-k.description = [#aa8e6e]Basic Unit Assembler Kit[], the internal components for early units.
+block.dy-split-frame.name = [#aa8e6e]Split Frame[]
+block.dy-split-frame.description = Unit frame constructed for Split.
+hint.dy-collector = Collect [#d6eaf3]steam[] from geysers to power all sorts of machinery, from drills to turrets.
+hint.dy-valve = The [#d6eaf3]Steam[] Valve can be used as walls to protect your base, and push enemies away with bursts of hot [#d6eaf3]steam[].
+
+block.dy-clockwork-pump.name = Clockwork Pump
+block.dy-clockwork-pump.description = Uses pressure to pump liquids from pools.
+block.dy-withdraw.description = Uses pressure from [#d6eaf3]steam[] to launch chunks of [#85ad85]malachite[] at enemies.
+block.dy-withdraw.details = [#85ad85]Malachite[] shards seem to attract to enemies after breaking...
+block.dy-clockwork-drill.description = Builds up [#d6eaf3]steam[], then releases it at once to strike the earth.
+block.dy-split-assembler.name = Basic Unit Assembler
+block.dy-split-assembler.description = Assembles units from a B.U.A.K. and a unit Frame.
+
+        clockworkPump = new Pump("clockwork-pump") {{
+            requirements(Category.liquid, ItemStack.with(DyItems.zinc, 40, DyItems.partBasic, 5));
+            researchCost = ItemStack.with(DyItems.zinc, 40 * 10 * 5, DyItems.partBasic, 5 * 10 * 5);
+            size = 2;
+            pumpAmount = 20f / 60f / 4f;
+            liquidCapacity = 160f;
+            consumeLiquid(DyLiquids.steam, 2.5f/60f);
+            drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidRegion(), new DrawDefault(), new DrawPress("-press"));
+        }};
+
+public class DyComponentBlocks {
+    public static Block bUAK, splitFrame;
+    public static void load() {
+        bUAK = new ComponentBlock("b-u-a-k") {{
+            requirements(Category.units, BuildVisibility.editorOnly, ItemStack.with(DyItems.zinc, 10, DyItems.partBasic, 5));
+            size = 1;
+            researchCost = ItemStack.with(DyItems.zinc, 10 * 5, DyItems.partBasic, 5 * 5);
+        }};
+        splitFrame = new ComponentBlock("split-frame") {{
+            requirements(Category.units, BuildVisibility.editorOnly, ItemStack.with(DyItems.zinc, 20, DyItems.malachite, 10));
+            size = 1;
+            researchCost = ItemStack.with(DyItems.zinc, 20 * 5, DyItems.malachite, 10 * 5);
+        }};
+    }
+}
+
+

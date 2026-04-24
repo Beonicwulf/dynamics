@@ -11,7 +11,7 @@ public class DyBlocks {
         DyLiquidBlocks.load();
         DyDefense.load();
         DyEffectBlocks.load();
-        DyComponentBlocks.load();
+        //DyComponentBlocks.load();
         DyPayloadBlocks.load();
     }
 }

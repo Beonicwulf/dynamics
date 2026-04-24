@@ -5,17 +5,11 @@ import mindustry.content.StatusEffects;
 import mindustry.type.Liquid;
 
 public class DyLiquids {
-    public static Liquid
-            // Gases
-            steam,
-            // water
-            hotSpringWater, purifiedWater,
-            // acid
-            sulfuricAcid;
+    public static Liquid steam, flux, hotSpringWater,purifiedWater;
     public static void load() {
-        steam = new Liquid("steam", DyPal.steam) {{
-            temperature = 0.7f;
+        flux = new Liquid("flux", DyPal.flux) {{
             gas = true;
+            lightColor = DyPal.fluxLight.a(0.2f);
             explosiveness = 0.5f;
         }};
         hotSpringWater = new Liquid("hot-spring-water", DyPal.hotSpringWater) {{
@@ -25,15 +19,10 @@ public class DyLiquids {
             gasColor = DyPal.steamSulfur;
         }};
         purifiedWater = new Liquid("purified-water", DyPal.purifiedWater) {{
-            heatCapacity = 0.45f;
+            heatCapacity = 0.35f;
             effect = StatusEffects.wet;
-            boilPoint = 0.5f;
+            boilPoint = 0.45f;
             gasColor = DyPal.steamLight;
-        }};
-        sulfuricAcid = new Liquid("sulfuric-acid", DyPal.sulfuricAcid) {{
-            effect = DyStatusEffects.corroding;
-            heatCapacity = 0.3f;
-            boilPoint = 0.7f;
         }};
     }
 }

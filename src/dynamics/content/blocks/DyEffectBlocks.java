@@ -23,7 +23,7 @@ public class DyEffectBlocks {
             zincMessage, zincCanvas;
     public static void load() {
         coreSurface = new CoreBlock("core-surface") {{
-            requirements(Category.effect, with(DyItems.zinc, 2000, DyItems.partBasic, 200));
+            requirements(Category.effect, with(DyItems.zinc, 1200, DyItems.partBasic, 200));
             size = 4;
             unitType = DyUnitTypes.breathe;
             itemCapacity = 1200;
@@ -37,10 +37,10 @@ public class DyEffectBlocks {
             landMusic = DyMusics.reborne;
         }};
         augerPad = new SummonPad("auger-pad") {{
-            requirements(Category.effect, BuildVisibility.sandboxOnly, with(DyItems.zinc, 2000, DyItems.partBasic, 200));
+            requirements(Category.effect, BuildVisibility.sandboxOnly, with(DyItems.zinc, 1200, DyItems.partBasic, 200));
             hasPower = false;
             size = 2;
-            consumeLiquid(DyLiquids.steam, 45f / 60f);
+            consumeLiquid(DyLiquids.flux, 30f / 60f);
             unitType = DyUnitTypes.augerDrone;
             polyStroke = 1.8f;
             polyRadius = 10f;

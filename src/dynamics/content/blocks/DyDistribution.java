@@ -13,7 +13,7 @@ public class DyDistribution {
     public static Block accelerator, zincSorter, zincUnloader;
     public static void load() {
         accelerator = new MassDriver("accelerator"){{
-            requirements(Category.distribution, with(DyItems.zinc, 10, DyItems.malachite, 5));
+            requirements(Category.distribution, with(DyItems.zinc, 5, DyItems.malachite, 5));
             size = 1;
             itemCapacity = 10;
             hasPower = false;

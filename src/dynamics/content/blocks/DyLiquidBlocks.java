@@ -1,19 +1,11 @@
 package dynamics.content.blocks;
 
 import dynamics.content.DyItems;
-import dynamics.content.DyLiquids;
-import dynamics.graphics.DrawPress;
 import dynamics.world.blocks.fluid.*;
 import mindustry.type.Category;
-import mindustry.type.ItemStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.distribution.DirectionLiquidBridge;
 import mindustry.world.blocks.liquid.*;
-import mindustry.world.blocks.production.Pump;
-import mindustry.world.draw.DrawDefault;
-import mindustry.world.draw.DrawLiquidRegion;
-import mindustry.world.draw.DrawMulti;
-import mindustry.world.draw.DrawRegion;
 
 import static mindustry.type.ItemStack.*;
 
@@ -79,15 +71,6 @@ public class DyLiquidBlocks {
             solid = false;
             placeableLiquid = true;
             researchCost = with(DyItems.zinc, 10 * 10 * 5, DyItems.partBasic, 3 * 10 * 5);
-        }};
-        clockworkPump = new Pump("clockwork-pump") {{
-            requirements(Category.liquid, ItemStack.with(DyItems.zinc, 40, DyItems.partBasic, 5));
-            researchCost = ItemStack.with(DyItems.zinc, 40 * 10 * 5, DyItems.partBasic, 5 * 10 * 5);
-            size = 2;
-            pumpAmount = 20f / 60f / 4f;
-            liquidCapacity = 160f;
-            consumeLiquid(DyLiquids.steam, 2.5f/60f);
-            drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidRegion(), new DrawDefault(), new DrawPress("-press"));
         }};
     }
 }

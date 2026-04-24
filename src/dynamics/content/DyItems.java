@@ -8,11 +8,9 @@ import mindustry.type.*;
 public class DyItems {
     public static Item
             // resources
-            zinc, malachite, cinnabar, tantalum,
+            zinc, malachite,
             // components
-            partBasic, partPower,
-            // raw crafted
-            montroydite, halite, sodium;
+            partBasic;
     public static final Seq<Item> dynamicsItems = new Seq<>();
     public static void load() {
         zinc = new Item("zinc", DyPal.zinc) {{
@@ -30,24 +28,8 @@ public class DyItems {
             cost = 5;
             healthScaling = 3f;
         }};
-        partPower = new Item("part-power", DyPal.component) {{
-            cost = 5;
-            charge = 0.5f;
-        }};
-        cinnabar = new Item("cinnabar", DyPal.cinnabar) {{
-            hardness = 2;
-            buildable = false;
-        }};
-        halite = new Item("halite", DyPal.halite) {{buildable = false;}};
-        sodium = new Item("sodium", DyPal.sodium) {{buildable = false;}};
-        montroydite = new Item("montroydite", DyPal.montroydite) {{buildable = false;}};
-        tantalum = new Item("tantalum", DyPal.tantalum) {{
-            cost = 1.5f;
-            hardness = 4;
-            healthScaling = 0.6f;
-        }};
         dynamicsItems.addAll(
-                zinc, tantalum, partBasic, malachite, cinnabar, montroydite, partPower, halite
+                zinc, malachite, partBasic
         );
     }
 }
