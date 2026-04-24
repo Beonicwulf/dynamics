@@ -31,21 +31,20 @@ public class DyProduction {
             size = 1;
             tier = 1;
             drillTime = 60f * 10f;
-            liquidBoostIntensity = 0f;
+            liquidBoostIntensity = 1f;
             hasLiquids = false;
         }};
         clockworkDrill = new Drill("clockwork-drill") {{
             requirements(Category.production, with(DyItems.zinc, 50, DyItems.partBasic, 2));
             size = 3;
             drillTime = 60f * 2f * 9f;
-            //consumeLiquid(DyLiquids.flux, 5f / 60f);
+            consumeLiquid(DyLiquids.flux, 1.25f / 60f);
             hasPower = false;
             tier = 2;
             drillMultipliers.put(DyItems.zinc, 2f);
             placeableLiquid = true;
             researchCost = with(DyItems.zinc, 50 * 5, DyItems.partBasic, 2 * 5);
-            liquidBoostIntensity = 0f;
-            hasLiquids = false;
+            liquidBoostIntensity = 1f;
         }};
         fluxCollector = new AttributeCrafter("flux-collector"){{
             requirements(Category.production, with(DyItems.zinc, 60, DyItems.malachite, 20));
