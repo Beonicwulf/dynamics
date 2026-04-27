@@ -39,6 +39,7 @@ public class DyProduction {
             size = 3;
             drillTime = 2.5f * 9f * 60f; // 9 blocks area, 60 ticks per second. 2.5 should be like Mechanical Drill
             consumeLiquid(DyLiquids.flux, 1.25f / 60f).boost();
+            liquidBoostIntensity = 1.3f;
             tier = 2;
             drillMultipliers.put(DyItems.zinc, 2f);
             placeableLiquid = true;
