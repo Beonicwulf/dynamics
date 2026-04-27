@@ -31,7 +31,7 @@ public class DyDefense {
             drawer = new DrawMulti(new DrawDefault(), new DrawRegion("-base"), new DrawLiquidRegion(), new DrawRegion("-rotator", 2f), new DrawRegion("-top"), new DrawPress("-press"));
             shootEffect = Fx.drillSteam;
             recoil = 0f;
-            reload = 180f;
+            reload = 60f;
             rotateSpeed = 0f;
             heatRequirement = 3f;
             maxHeatEfficiency = 1f;
@@ -48,7 +48,7 @@ public class DyDefense {
             size = 3;
             hasPower = false;
             recoil = 2;
-            reload = 120f;
+            reload = 30f;
             range = 180;
             ammoUseEffect = new WrapEffect(Fx.drillSteam, DyPal.flux);
             shootSound = Sounds.shootBreach;
