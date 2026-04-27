@@ -10,8 +10,6 @@ Frankenstein coder & Chimera sprite artist
 ### ✧ [CLEgor](https://t.me/CLEgorcannelmusi_k)
 Dynamics OST: Reborne
 ## Java classes for content
-### ✧ Nullotte, Carpe Diem mod
-[RecipeCrafter.java](https://github.com/nullotte/Carpe-Diem/blob/main/src/carpediem/world/blocks/crafting/RecipeCrafter.java) and its requirements ([Recipe.java](https://github.com/nullotte/Carpe-Diem/blob/main/src/carpediem/world/blocks/crafting/Recipe.java), [ConsumeItemUses.java](https://github.com/nullotte/Carpe-Diem/blob/main/src/carpediem/world/consumers/ConsumeItemsUses.java), [Output.java](https://github.com/nullotte/Carpe-Diem/blob/main/src/carpediem/world/outputs/Output.java), [OutputItems.java](https://github.com/nullotte/Carpe-Diem/blob/main/src/carpediem/world/outputs/OutputItems.java), [OutputLiquids.java](https://github.com/nullotte/Carpe-Diem/blob/main/src/carpediem/world/outputs/OutputLiquids.java), [Stat.java](https://github.com/nullotte/Carpe-Diem/blob/main/src/carpediem/world/meta/CDStat.java))
 ### ✧ ItsKirby69, Minedusty mod
 [DrawPress.java](https://github.com/ItsKirby69/MineDusty/blob/master/src/minedusty/graphics/DrawPress.java)
 ### ✧ New Horizons, without permission

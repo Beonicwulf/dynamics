@@ -24,7 +24,7 @@ public class DyDefense {
             size = 3;
             hasPower = false;
             recoil = 2;
-            reload = 35f;
+            reload = 60f;
             range = 180;
             ammoUseEffect = new WrapEffect(Fx.drillSteam, DyPal.flux);
             shootSound = Sounds.shootBreach;
@@ -34,8 +34,9 @@ public class DyDefense {
             maxAmmo = 24;
             ammoPerShot = 1;
             shootY = 7;
+            //coolantMultiplier = 10f;
             liquidCapacity = 50f;
-            consumeLiquid(DyLiquids.flux, 5f / 60f);
+            coolant = consumeLiquid(DyLiquids.flux, 5f/60f);
             ammo(DyItems.malachite, DyBulletTypes.malachiteFrag);
             //thx nullevoy for sprite
             researchCost = with(DyItems.zinc, 100 * 5, DyItems.partBasic, 10 * 5);

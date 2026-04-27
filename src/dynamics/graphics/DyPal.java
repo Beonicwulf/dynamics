@@ -8,7 +8,7 @@ public class DyPal {
             malachite = Color.valueOf("#356a46"),
             tantalum = Color.valueOf("#606d90"),
             component = Color.valueOf("#aa8e6e"),
-            steam = Color.valueOf("#d6eaf3"),
+            steam = Color.valueOf("#a2c0c8"),
             steamLight = Color.valueOf("#d6eaf3"),
             steamSulfur = Color.valueOf("#f3edce"),
             hotSpringWater = Color.valueOf("#00959c"),

@@ -30,21 +30,19 @@ public class DyProduction {
             requirements(Category.production, BuildVisibility.sandboxOnly, with(DyItems.zinc,10, DyItems.malachite, 5));
             size = 1;
             tier = 1;
-            drillTime = 60f * 10f;
+            drillTime = 10f * 60f;
             liquidBoostIntensity = 1f;
             hasLiquids = false;
         }};
         clockworkDrill = new Drill("clockwork-drill") {{
             requirements(Category.production, with(DyItems.zinc, 50, DyItems.partBasic, 2));
             size = 3;
-            drillTime = 60f * 2f * 9f;
-            consumeLiquid(DyLiquids.flux, 1.25f / 60f);
-            hasPower = false;
+            drillTime = 2.5f * 9f * 60f; // 9 blocks area, 60 ticks per second. 2.5 should be like Mechanical Drill
+            consumeLiquid(DyLiquids.flux, 1.25f / 60f).boost();
             tier = 2;
             drillMultipliers.put(DyItems.zinc, 2f);
             placeableLiquid = true;
             researchCost = with(DyItems.zinc, 50 * 5, DyItems.partBasic, 2 * 5);
-            liquidBoostIntensity = 1f;
         }};
         fluxCollector = new AttributeCrafter("flux-collector"){{
             requirements(Category.production, with(DyItems.zinc, 60, DyItems.malachite, 20));
