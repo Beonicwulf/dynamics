@@ -151,23 +151,6 @@ new DrawParticles(){{
             //explosiveness = 0.5f;
         }};
 
-        steamValve = new LiquidTurret("steam-valve") {{
-            requirements(Category.defense, with(DyItems.zinc, 24, DyItems.malachite, 5));
-            size = 2;
-            health = 1380; //should replace with scaledHealth? needs testing
-            ammo(DyLiquids.steam, DyBulletTypes.steamBlast);
-            drawer = new DrawMulti(new DrawDefault(), new DrawRegion("-base"), new DrawLiquidRegion(), new DrawRegion("-rotator", 2f), new DrawRegion("-top"), new DrawPress("-press"));
-            shootEffect = Fx.drillSteam;
-            recoil = 0f;
-            reload = 90f;
-            liquidCapacity = 10f;
-            shootCone = 360f;
-            range = 32;
-            shootY = 0;
-            shoot = new ShootSpread(30, 12f);
-            researchCost = with(DyItems.zinc, 24 * 5, DyItems.malachite, 5 * 5);
-        }};
-
 item.dy-cinnabar.name = Cinnabar
 item.dy-cinnabar.description = A reddish mineral comprised of Mercury and Sulfur.
 item.dy-cinnabar.details = [#f3edce]Sulfur[] caves were invented by me, actually ('u')
@@ -179,12 +162,7 @@ item.dy-part-power.name = Flux Capacitor
 liquid.dy-steam.name = Steam
 liquid.dy-steam.description = Boiling hot. Can be transported through pipes; transfers kinetic power to machines.
 liquid.dy-sulfuric-acid.name = Acid
-## ----- Defense -----
-block.dy-steam-valve.name = Steam Valve
-block.dy-steam-valve.description = Releases [#d6eaf3]steam[] to push enemies away.
-block.dy-steam-valve.details = Uses a magnetic compass made of [#85ad85]malachite[] to detect when enemies are nearby.
-block.dy-mechanical-press.name = Mechanical Press
-block.dy-mechanical-press.description = Uses pressure from [#d6eaf3]steam[] to engrave [#85ad85]malachite[] circuits into [#aa996e]zinc[] sheets.
+
 block.dy-steam-heater.name = Steam Heater
 block.dy-water-purifier.name = Water Purifier
 block.dy-steam-collector.name = Steam Collector
@@ -199,9 +177,6 @@ hint.dy-valve = The [#d6eaf3]Steam[] Valve can be used as walls to protect your 
 
 block.dy-clockwork-pump.name = Clockwork Pump
 block.dy-clockwork-pump.description = Uses pressure to pump liquids from pools.
-block.dy-withdraw.description = Uses pressure from [#d6eaf3]steam[] to launch chunks of [#85ad85]malachite[] at enemies.
-block.dy-withdraw.details = [#85ad85]Malachite[] shards seem to attract to enemies after breaking...
-block.dy-clockwork-drill.description = Builds up [#d6eaf3]steam[], then releases it at once to strike the earth.
 block.dy-split-assembler.name = Basic Unit Assembler
 block.dy-split-assembler.description = Assembles units from a B.U.A.K. and a unit Frame.
 

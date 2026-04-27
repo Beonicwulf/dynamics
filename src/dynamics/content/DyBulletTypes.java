@@ -59,7 +59,7 @@ public class DyBulletTypes {
         // Withdraw
         malachiteFrag = new BasicBulletType(2.5f, 20, "dy-malachite-chunk-big") {{
             hitColor = DyPal.malachite;
-            trailColor = DyPal.steam;
+            trailColor = DyPal.flux;
             height = 11;
             width = 9;
             trailWidth = 1.3f;
@@ -91,8 +91,8 @@ public class DyBulletTypes {
             height = 20f;
             shootEffect = Fx.shootBigColor;
             smokeEffect = Fx.shootSmokeSquareSparse;
-            hitColor = backColor = trailColor = DyPal.steam;
-            frontColor = DyPal.steamLight;
+            hitColor = backColor = trailColor = DyPal.flux;
+            frontColor = DyPal.fluxLight;
             trailWidth = 6f;
             trailLength = 3;
             hitEffect = despawnEffect = Fx.hitSquaresColor;
