@@ -33,8 +33,7 @@ public class DyDefense {
             recoil = 0f;
             reload = 60f;
             rotateSpeed = 0f;
-            heatRequirement = 3f;
-            maxHeatEfficiency = 1f;
+            //heatRequirement = 3f; maxHeatEfficiency = 1f;
             liquidCapacity = 10f;
             shootCone = 360f;
             range = 32;
@@ -48,7 +47,7 @@ public class DyDefense {
             size = 3;
             hasPower = false;
             recoil = 2;
-            reload = 30f;
+            reload = 20f;
             range = 180;
             ammoUseEffect = new WrapEffect(Fx.drillSteam, DyPal.flux);
             shootSound = Sounds.shootBreach;
