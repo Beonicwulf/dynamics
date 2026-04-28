@@ -79,6 +79,7 @@ public class DyDefense {
             researchCost = ItemStack.mult(requirements, 50);
             health = malachiteWall.health * 4;
             shardChance = 0.05f;
+            size = 2;
         }};
     }
 }
