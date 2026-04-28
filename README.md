@@ -15,3 +15,4 @@ Use the steam released by geysers to power basic machinery and establish a base.
 Replaces Blue Team with Dread. Other mods might do so too, causing overlap. Consequences unknown.
 ### [Attributions](assets/attributions.md)
 ### [To-do list](assets/todo.md)
+### [Mod Discord Server](https://discord.gg/V7f9CDWqb) 
