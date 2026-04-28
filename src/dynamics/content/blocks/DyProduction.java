@@ -10,6 +10,7 @@ import mindustry.entities.effect.MultiEffect;
 import mindustry.entities.effect.WrapEffect;
 import mindustry.gen.Sounds;
 import mindustry.type.Category;
+import mindustry.type.ItemStack;
 import mindustry.type.LiquidStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.production.AttributeCrafter;
@@ -36,6 +37,7 @@ public class DyProduction {
         }};
         clockworkDrill = new Drill("clockwork-drill") {{
             requirements(Category.production, with(DyItems.zinc, 50, DyItems.partBasic, 2));
+            researchCost = ItemStack.mult(requirements, 5);
             size = 3;
             drillTime = 2.5f * 9f * 60f; // 9 blocks area, 60 ticks per second. 2.5 should be like Mechanical Drill
             consumeLiquid(DyLiquids.flux, 1.25f / 60f).boost();
@@ -43,10 +45,10 @@ public class DyProduction {
             tier = 2;
             drillMultipliers.put(DyItems.zinc, 2f);
             placeableLiquid = true;
-            researchCost = with(DyItems.zinc, 50 * 5, DyItems.partBasic, 2 * 5);
         }};
         fluxCollector = new AttributeCrafter("flux-collector"){{
             requirements(Category.production, with(DyItems.zinc, 60, DyItems.malachite, 20));
+            researchCost = ItemStack.mult(requirements, 5);
             attribute = DyAttributes.flux;
             baseEfficiency = 0f;
             minEfficiency = 1f;
@@ -63,7 +65,6 @@ public class DyProduction {
             itemCapacity = 0;
             outputLiquid = new LiquidStack(DyLiquids.flux, 45f / 60f);
             liquidCapacity = 60f;
-            researchCost = with(DyItems.zinc, 60 * 5, DyItems.malachite, 20 * 5);
         }};
     }
 }

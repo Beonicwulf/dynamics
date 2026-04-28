@@ -7,6 +7,7 @@ import dynamics.content.DyUnitTypes;
 import dynamics.graphics.DyPal;
 import dynamics.world.blocks.effect.SummonPad;
 import mindustry.type.Category;
+import mindustry.type.ItemStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.logic.CanvasBlock;
 import mindustry.world.blocks.logic.MessageBlock;
@@ -54,10 +55,11 @@ public class DyEffectBlocks {
         }};
         zincMessage = new MessageBlock("zinc-message") {{
            requirements(Category.logic, with(DyItems.zinc, 10, DyItems.malachite, 5, DyItems.partBasic, 1));
-           researchCost = with(DyItems.zinc, 10 * 10 * 5, DyItems.malachite, 5 * 10 * 5, DyItems.partBasic, 10 * 5);
+           researchCost = ItemStack.mult(requirements, 50);
         }};
         zincCanvas = new CanvasBlock("zinc-canvas") {{
             requirements(Category.logic, with(DyItems.zinc, 10, DyItems.partBasic, 5, DyItems.malachite, 15));
+            researchCost = ItemStack.mult(requirements, 50);
             canvasSize = 24;
             padding = 7f / 4f * 2f;
             size = 3;

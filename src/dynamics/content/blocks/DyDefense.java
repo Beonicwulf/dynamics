@@ -5,14 +5,17 @@ import dynamics.content.DyItems;
 import dynamics.content.DyLiquids;
 import dynamics.graphics.DrawPress;
 import dynamics.graphics.DyPal;
+import dynamics.world.blocks.defense.ShardWall;
 import mindustry.content.Fx;
 import mindustry.entities.effect.WrapEffect;
 import mindustry.entities.pattern.ShootSpread;
 import mindustry.gen.Sounds;
 import mindustry.type.Category;
+import mindustry.type.ItemStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.defense.turrets.*;
 import mindustry.world.draw.*;
+import mindustry.world.meta.BuildVisibility;
 
 import static mindustry.type.ItemStack.with;
 
@@ -20,11 +23,14 @@ public class DyDefense {
     public static Block
             // defense
             steamValve,
+            // walls
+            malachiteWall, malachiteWallLarge,
             // turrets
             withdraw;
     public static void load(){
         steamValve = new LiquidTurret("steam-valve") {{
-            requirements(Category.defense, with(DyItems.zinc, 20, DyItems.malachite, 5));
+            requirements(Category.defense, BuildVisibility.sandboxOnly, with(DyItems.zinc, 20, DyItems.malachite, 5));
+            researchCost = ItemStack.mult(requirements, 50);
             size = 2;
             health = 1380; //should replace with scaledHealth? needs testing
             ammo(DyLiquids.flux, DyBulletTypes.steamBlast);
@@ -39,10 +45,10 @@ public class DyDefense {
             range = 32;
             shootY = 0;
             shoot = new ShootSpread(20, 18f);
-            researchCost = with(DyItems.zinc, 20 * 5, DyItems.malachite, 5 * 5);
         }};
         withdraw = new ItemTurret("withdraw") {{
             requirements(Category.turret, with(DyItems.zinc, 100, DyItems.partBasic, 10));
+            researchCost = ItemStack.mult(requirements, 50);
             targetAir = true;
             size = 3;
             hasPower = false;
@@ -61,7 +67,18 @@ public class DyDefense {
             maxHeatEfficiency = 1f;
             ammo(DyItems.malachite, DyBulletTypes.malachiteFrag);
             //thx nullevoy for sprite
-            researchCost = with(DyItems.zinc, 100 * 5, DyItems.partBasic, 10 * 5);
+        }};
+        malachiteWall = new ShardWall("malachite-wall") {{
+            requirements(Category.defense, with(DyItems.malachite, 10));
+            researchCost = ItemStack.mult(requirements, 50);
+            health = 345;
+            shardChance = 0.05f;
+        }};
+        malachiteWallLarge = new ShardWall("malachite-wall-large") {{
+            requirements(Category.defense, BuildVisibility.sandboxOnly, ItemStack.mult(malachiteWall.requirements, 4));
+            researchCost = ItemStack.mult(requirements, 50);
+            health = malachiteWall.health * 4;
+            shardChance = 0.05f;
         }};
     }
 }

@@ -16,13 +16,13 @@
 - [x] Tier 1 Tank 
 - [x] Planet
 - [x] Tech Tree
-- [x] Tier 1 Tank factory
 - [x] Proper Icon
 - [x] Proper Mod Description
 - [x] Main Menu Music
 - [x] Separate Solar System
 - [x] Acid Rain
 - [x] Secondary biome (Malachite-rich mineral)
+- [x] Tier 1 Tank factory
 - [ ] Status effect icons
 - [ ] Hints
 - [ ] Sector Embark

@@ -3,6 +3,7 @@ package dynamics.content.blocks;
 import dynamics.content.DyItems;
 import dynamics.world.blocks.distribution.DirectionalSorter;
 import mindustry.type.Category;
+import mindustry.type.ItemStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.distribution.DirectionalUnloader;
 import mindustry.world.blocks.distribution.MassDriver;
@@ -14,6 +15,7 @@ public class DyDistribution {
     public static void load() {
         accelerator = new MassDriver("accelerator"){{
             requirements(Category.distribution, with(DyItems.zinc, 5, DyItems.malachite, 5));
+            researchCost = ItemStack.mult(requirements, 5);
             size = 1;
             itemCapacity = 10;
             hasPower = false;
@@ -23,18 +25,17 @@ public class DyDistribution {
             shake = 0.6f;
             knockback = 2;
             shootSoundVolume = 0.1f;
-            researchCost = with(DyItems.zinc, 10 * 5, DyItems.malachite, 5 * 5);
         }};
         zincSorter = new DirectionalSorter("zinc-sorter") {{
             requirements(Category.distribution, with(DyItems.zinc, 10, DyItems.partBasic, 4));
+            researchCost = ItemStack.mult(requirements, 50);
             regionRotated1 = 1;
             solid = false;
             placeableLiquid = true;
-            researchCost = with(DyItems.zinc, 10 * 10 * 5, DyItems.partBasic, 4 * 10 * 5);
         }};
         zincUnloader = new DirectionalUnloader("zinc-unloader") {{
             requirements(Category.distribution, with(DyItems.zinc, 30, DyItems.partBasic, 10));
-            researchCost = with(DyItems.zinc, 30 * 10 * 5, DyItems.partBasic, 10 * 10 * 5);
+            researchCost = ItemStack.mult(requirements, 50);
             size = 2;
             solid = true;
             placeableLiquid = false;

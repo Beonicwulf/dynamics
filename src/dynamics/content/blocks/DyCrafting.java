@@ -22,6 +22,7 @@ public class DyCrafting {
     public static void load() {
         fluxHeater = new HeatProducer("flux-heater") {{
             requirements(Category.crafting, with(DyItems.zinc, 20, DyItems.malachite, 5));
+            researchCost = ItemStack.mult(requirements, 5);
             drawer = new DrawMulti(new DrawDefault(), new DrawHeatOutput());
             rotateDraw = false;
             size = 1;
@@ -31,11 +32,10 @@ public class DyCrafting {
             ambientSound = Sounds.loopHum;
             consumeLiquid(DyLiquids.flux, 5f / 60f);
             heatOutput = 1f;
-            researchCost = with(DyItems.zinc, 20 * 5, DyItems.malachite, 5 * 5);
         }};
         grafter = new HeatCrafter("grafter"){{
             requirements(Category.crafting, with(DyItems.zinc, 60, DyItems.malachite, 20));
-            researchCost = with(DyItems.zinc, 60 * 5, DyItems.malachite, 20 * 5);
+            researchCost = ItemStack.mult(requirements, 5);
             hasItems = true;
             itemCapacity = 40;
             craftEffect =  new WrapEffect(Fx.drillSteam, DyPal.flux);

@@ -212,36 +212,6 @@ public class DyPlanets {
 
 
         }};
-        // moons
-        khione = new Planet("khione", thalassa, 0.5f, 1) {{
-            iconColor = DyPal.dread;
-            generator = new KhioneGenerator();
-            accessible = alwaysUnlocked = Core.settings.getBool("debug-access");
-            visible =  drawOrbit = updateLighting = true;
-
-            orbitRadius = 4;
-            orbitSpacing = 12;
-            minZoom = 0.5f;
-            maxZoom = 3f;
-            bloom = false;
-            hasAtmosphere = false;
-            atmosphereColor = DyPal.steamLight;
-            atmosphereRadIn = 0;
-            atmosphereRadOut = 0.08f;
-
-            startSector = 45;
-            sectorSeed = 678;
-            allowLaunchToNumbered = allowLaunchSchematics = allowLaunchLoadout = allowSectorInvasion = false;
-            defaultCore = DyEffectBlocks.coreSurface;
-            allowWaves = clearSectorOnLose = true;
-
-            meshLoader = () -> new NoiseMesh(this, 69,
-                    2, 0.5f, 3, 0.8f, 0.15f, 1.5f,
-                    Color.valueOf("#606d90"), Color.valueOf("#394462"),
-                    1, 0.5f, 1, 0.5f);
-            cloudMeshLoader = () -> new HexSkyMesh(this, 96,
-                    0.4f, 0.05f, 1, Color.valueOf("96a0be").a(0.49f), 3, 0.7f, 0.15f, 0.4f);
-        }};
         gaia = new Planet("gaia", aurora, 1.0f, 2) {{
             iconColor = DyPal.malachite;
             generator = new ThalassaGenerator();
@@ -389,6 +359,36 @@ public class DyPlanets {
                     new HexSkyMesh(this, 1,
                             0.891f, 0.141f, 6, DyPal.component.a(0.73f), 3, 0.6f, 1.15f, 0.6f)
             );
+        }};
+        // moons
+        khione = new Planet("khione", thalassa, 0.5f, 1) {{
+            iconColor = DyPal.dread;
+            generator = new KhioneGenerator();
+            accessible = alwaysUnlocked = Core.settings.getBool("debug-access");
+            visible =  drawOrbit = updateLighting = true;
+
+            orbitRadius = 4;
+            orbitSpacing = 12;
+            minZoom = 0.5f;
+            maxZoom = 3f;
+            bloom = false;
+            hasAtmosphere = false;
+            atmosphereColor = DyPal.steamLight;
+            atmosphereRadIn = 0;
+            atmosphereRadOut = 0.08f;
+
+            startSector = 45;
+            sectorSeed = 678;
+            allowLaunchToNumbered = allowLaunchSchematics = allowLaunchLoadout = allowSectorInvasion = false;
+            defaultCore = DyEffectBlocks.coreSurface;
+            allowWaves = clearSectorOnLose = true;
+
+            meshLoader = () -> new NoiseMesh(this, 69,
+                    2, 0.5f, 3, 0.8f, 0.15f, 1.5f,
+                    Color.valueOf("#606d90"), Color.valueOf("#394462"),
+                    1, 0.5f, 1, 0.5f);
+            cloudMeshLoader = () -> new HexSkyMesh(this, 96,
+                    0.4f, 0.05f, 1, Color.valueOf("96a0be").a(0.49f), 3, 0.7f, 0.15f, 0.4f);
         }};
     }
 }

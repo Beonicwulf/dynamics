@@ -40,15 +40,16 @@ public class ThalassaTechTree {
                 node(pipeRouter, () -> node(pipeTunnel));
                 node(pipeJunction, () -> node(pipeVent, Seq.with(new Objectives.OnSector(DySectorPresets.testSector)), () -> node(pipeController)));
             });
-            node(withdraw);
+            node(malachiteWall, () -> node(withdraw));
             node(augerPad, () -> node(augerDrone));
             nodeProduce(DyItems.zinc, () -> {
                 nodeProduce(DyItems.malachite, () -> {});
                 nodeProduce(DyItems.partBasic, () -> {});
                 nodeProduce(DyLiquids.flux, () -> {});
             });
-            node(basicConstructor, () -> {
-                node(zincConveyor, () -> node(basicDeconstructor, Seq.with(new Objectives.Research(split), new Objectives.OnSector(DySectorPresets.testSector)), () -> {}));
+            node(splitFabricator, () -> {
+                node(split);
+                node(basicConstructor, Seq.with(new Objectives.Research(split), new Objectives.OnSector(DySectorPresets.testSector)), () -> node(zincConveyor, () -> node(basicDeconstructor, () -> {})));
             });
         });
     }
