@@ -34,10 +34,7 @@ public class DyEnvironment {
     public static void load() {
         // ores
         oreZinc = new OreBlock("ore-zinc", DyItems.zinc) {{variants = 4;}};
-        oreMalachite = new OreBlock("ore-malachite", DyItems.malachite) {{
-            variants = 5;
-            attributes.set(DyAttributes.flux, 0.4f);
-        }};
+        oreMalachite = new OreBlock("ore-malachite", DyItems.malachite) {{variants = 5;}};
         // metal
         phWall = new StaticWall("ph-wall");
         phTile = new Floor("ph-tile");

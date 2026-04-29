@@ -1,4 +1,3 @@
-
 splitAssembler = new UnitAssembler("split-assembler") {{
             requirements(Category.units, ItemStack.with(DyItems.zinc, 150, DyItems.partBasic, 10));
             researchCost = ItemStack.with(DyItems.zinc, 150 * 3 * 5, DyItems.partBasic, 10 * 3 * 5);
@@ -25,8 +24,6 @@ splitAssembler = new UnitAssembler("split-assembler") {{
             researchCost = with(DyItems.zinc, 50 * 5, DyItems.partBasic, 2 * 5);
         }};
 
-
-
 public class DyRecipes {
     public static Seq<Recipe>
             // components
@@ -47,7 +44,6 @@ new DrawParticles(){{
                 reverse = true;
             }},
 
-
         waterPurifier = new HeatCrafter("water-purifier") {{
             requirements(Category.crafting, with(DyItems.zinc, 40, DyItems.partBasic, 3));
             researchCost = with(DyItems.zinc, 40 * 10 * 5, DyItems.partBasic, 3 * 10 * 5);
@@ -60,7 +56,6 @@ new DrawParticles(){{
             outputLiquid = new LiquidStack(DyLiquids.purifiedWater, 15f/60f * 4f);
             outputItem = new ItemStack(DyItems.halite, 1);
         }};
-
 
         steamHeater = new HeatProducer("steam-heater") {{
             requirements(Category.crafting, with(DyItems.zinc, 30, DyItems.partBasic, 2));
@@ -75,7 +70,6 @@ new DrawParticles(){{
             heatOutput = 3f;
             researchCost = with(DyItems.zinc, 30 * 10 * 5, DyItems.partBasic, 2 * 10 * 5);
         }};
-
 
         partPower = new Item("part-power", DyPal.component) {{
             cost = 5;
@@ -94,14 +88,11 @@ new DrawParticles(){{
             healthScaling = 0.6f;
         }};
 
-
-
         sulfuricAcid = new Liquid("sulfuric-acid", DyPal.sulfuricAcid) {{
             effect = DyStatusEffects.corroding;
             heatCapacity = 0.3f;
             boilPoint = 0.7f;
         }};
-
 
             cinnabar = Color.valueOf("#784132"),
             montroydite = Color.valueOf("#fa7c28"),
