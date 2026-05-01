@@ -24,5 +24,6 @@ public class DyFX {
                     });
                 }
             }),
+    // thanks, @Cirrus for the geyser effect
             withdrawShootEffect = new MultiEffect(new WrapEffect(Fx.drillSteam, DyPal.flux), Fx.colorSparkBig);
 }

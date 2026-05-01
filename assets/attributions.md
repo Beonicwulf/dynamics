@@ -23,6 +23,9 @@ Dynamics OST: Reborne
 ### ✧ uujuju1, Steamworks mod
 [Better Settings menu](https://github.com/uujuju1/Steam-Works/blob/9a85ed1712f6c1e1c67093c49ea0454287d111ad/src/sw/core/ModSettings.java)\
 [Hints.java](https://github.com/uujuju1/Steam-Works/blob/9a85ed1712f6c1e1c67093c49ea0454287d111ad/src/sw/ui/EventHints.java)
+## Other Code
+### ✧ Cirrus
+Geyser Effect
 ## Sprites
 ### ✧ Endofreeze
 Plastic Hull tileset
