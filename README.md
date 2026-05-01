@@ -13,6 +13,7 @@ Your crash landing site is in a hot spring, near a small Dread research outpost.
 Use the steam released by geysers to power basic machinery and establish a base.
 ### ⚠ Compatibility Warning ⚠
 Replaces Blue Team with Dread. Other mods might do so too, causing overlap. Consequences unknown.
-### [Attributions](assets/attributions.md)
-### [To-do list](assets/todo.md)
+### [Attributions](ATTRIBUTIONS.md)
+### [To-do list](TODO.md)
+### [Building](BUILDING.md)
 ### [Mod Discord Server](https://discord.gg/V7f9CDWqb) 
