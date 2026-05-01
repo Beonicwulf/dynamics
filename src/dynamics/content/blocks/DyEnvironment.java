@@ -1,12 +1,11 @@
 package dynamics.content.blocks;
 
 import dynamics.content.DyAttributes;
+import dynamics.content.DyFX;
 import dynamics.content.DyItems;
 import dynamics.content.DyLiquids;
 import dynamics.graphics.DyPal;
-import mindustry.content.Fx;
 import mindustry.content.StatusEffects;
-import mindustry.entities.effect.MultiEffect;
 import mindustry.graphics.CacheLayer;
 import mindustry.world.Block;
 import mindustry.world.blocks.environment.*;
@@ -59,7 +58,7 @@ public class DyEnvironment {
         smoothTravertine = new Floor("smooth-travertine") {{variants = 6;}};
         brightTravertine = new Floor("bright-travertine") {{variants = 6;}};
         travertineVent = new SteamVent("travertine-vent"){{
-            parent = blendGroup = travertineFloor;
+            parent = blendGroup = brightTravertine;
             attributes.set(Attribute.steam, 1f);
             variants = 2;
             effectColor = DyPal.steamSulfur;
@@ -101,9 +100,7 @@ public class DyEnvironment {
             cacheLayer = CacheLayer.water;
             albedo = 0.9f;
             supportsOverlay = true;
-            effectSpacing = 720;
-            effectColor = DyPal.steamSulfur;
-            effect = new MultiEffect(Fx.drillSteam, Fx.steam, Fx.vapor, Fx.smokeCloud);
+            effect = DyFX.geyserFx;
             mapColor = DyPal.hotSpringWater;
             status = StatusEffects.wet;
         }};

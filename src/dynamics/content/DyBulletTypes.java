@@ -19,7 +19,7 @@ public class DyBulletTypes {
             // Steam Valve
             steamBlast;
     public static void load() {
-        Effect withdrawShootEffect = new MultiEffect(new WrapEffect(Fx.drillSteam, DyPal.flux), Fx.colorSparkBig);
+
         // Sticky Cosmetic
         stickyShard = new BasicBulletType(4f, 0, "dy-malachite-chunk") {{
             height = 6;
@@ -70,7 +70,7 @@ public class DyBulletTypes {
             splashDamage = 20f;
             splashDamageRadius = 10f;
             hitEffect = despawnEffect = Fx.hitBulletColor;
-            shootEffect = withdrawShootEffect;
+            shootEffect = DyFX.withdrawShootEffect;
             fragBullets = 4;
             fragBullet = DyBulletTypes.malachiteShards;
         }};

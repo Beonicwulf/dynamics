@@ -68,7 +68,7 @@ public class DyUnitTypes {
             defaultCommand = UnitCommand.repairCommand;
             constructor = BuildingTetherPayloadUnit::create;
             outlines = false;
-            createWreck = false;
+            createWreck = useUnitCap = false;
             flying = true;
             drag = 0.06f;
             accel = 0.12f;
@@ -140,9 +140,9 @@ public class DyUnitTypes {
             faceTarget = omniMovement = false;
             rotateSpeed = 2;
             floorMultiplier = 1.5f;
-            speed = 0.9f;
+            speed = 0.8f;
             hitSize = 10;
-            health = 480;
+            health = 420;
             armor = 2;
             itemCapacity = 0;
             treadPullOffset = 3;

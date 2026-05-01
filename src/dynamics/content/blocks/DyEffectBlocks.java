@@ -5,7 +5,7 @@ import dynamics.content.DyLiquids;
 import dynamics.content.DyMusics;
 import dynamics.content.DyUnitTypes;
 import dynamics.graphics.DyPal;
-import dynamics.world.blocks.effect.SummonPad;
+import dynamics.world.blocks.effect.UnitPad;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.world.Block;
@@ -24,7 +24,7 @@ public class DyEffectBlocks {
             zincMessage, zincCanvas;
     public static void load() {
         coreSurface = new CoreBlock("core-surface") {{
-            requirements(Category.effect, with(DyItems.zinc, 1200, DyItems.partBasic, 200));
+            requirements(Category.effect, with(DyItems.zinc, 1000, DyItems.partBasic, 200));
             size = 4;
             unitType = DyUnitTypes.breathe;
             itemCapacity = 1200;
@@ -37,8 +37,9 @@ public class DyEffectBlocks {
             incinerateNonBuildable = true;
             landMusic = DyMusics.reborne;
         }};
-        augerPad = new SummonPad("auger-pad") {{
-            requirements(Category.effect, BuildVisibility.sandboxOnly, with(DyItems.zinc, 1200, DyItems.partBasic, 200));
+        augerPad = new UnitPad("auger-pad") {{
+            requirements(Category.effect, BuildVisibility.sandboxOnly, with(DyItems.zinc, 900, DyItems.partBasic, 200));
+            researchCost = ItemStack.mult(requirements, 50);
             hasPower = false;
             size = 2;
             consumeLiquid(DyLiquids.flux, 30f / 60f);
@@ -49,9 +50,8 @@ public class DyEffectBlocks {
             polyRotateSpeed = 1f;
             unitBuildTime = 60f * 10f;
             polyColor = DyPal.malachite;
-            drawTeamOverlay = true;
-            alwaysUnlocked = true;
             health = 1410;
+            drawTeam = requiresCoreZone = true;
         }};
         zincMessage = new MessageBlock("zinc-message") {{
            requirements(Category.logic, with(DyItems.zinc, 10, DyItems.malachite, 5, DyItems.partBasic, 1));

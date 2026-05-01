@@ -6,8 +6,12 @@ import arc.graphics.g2d.TextureRegion;
 import arc.util.Eachable;
 import dynamics.Dynamics;
 import mindustry.entities.units.BuildPlan;
+import mindustry.gen.Unit;
 import mindustry.world.Tile;
 import mindustry.world.blocks.distribution.DuctRouter;
+
+import static mindustry.Vars.headless;
+import static mindustry.Vars.renderer;
 
 public class DirectionalSorter extends DuctRouter {
     public TextureRegion baseRegion, itemRegion;
@@ -57,6 +61,15 @@ public class DirectionalSorter extends DuctRouter {
             // this else statement was not present in NH version, but is present in vanilla DuctRouter
             else{
                 Draw.rect(topRegion, x, y, rotdeg());
+            }
+        }
+
+        @Override
+        public void configured(Unit player, Object value){
+            super.configured(player, value);
+
+            if(!headless){
+                renderer.minimap.update(tile);
             }
         }
     }

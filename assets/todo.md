@@ -23,6 +23,7 @@
 - [x] Acid Rain
 - [x] Secondary biome (Malachite-rich mineral)
 - [x] Tier 1 Tank factory
+- [x] Assist Core
 - [ ] Status effect icons
 - [ ] Hints
 - [ ] Sector Embark
