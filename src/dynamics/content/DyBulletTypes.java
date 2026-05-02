@@ -31,7 +31,7 @@ public class DyBulletTypes {
             hitEffect = despawnEffect = Fx.none;
         }};
         // Homing Small
-        malachiteShards = new BasicBulletType(2f, 10, "dy-malachite-chunk") {{
+        malachiteShards = new BasicBulletType(2f, 15, "dy-malachite-chunk") {{
             hitColor = trailColor = DyPal.malachite;
             height = 7;
             width = 5;
@@ -55,7 +55,7 @@ public class DyBulletTypes {
         tankShard = coreShards.copy();
         tankShard.speed = 3;
         tankShard.lifetime = 60;
-        tankShard.damage = 30;
+        tankShard.damage = coreShards.damage + 20;
         // Withdraw
         malachiteFrag = new BasicBulletType(2.5f, 20, "dy-malachite-chunk-big") {{
             hitColor = DyPal.malachite;

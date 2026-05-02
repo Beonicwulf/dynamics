@@ -140,10 +140,10 @@ public class DyUnitTypes {
             faceTarget = omniMovement = false;
             rotateSpeed = 2;
             floorMultiplier = 1.5f;
-            speed = 0.8f;
+            speed = 0.7f;
             hitSize = 10;
             health = 420;
-            armor = 2;
+            armor = 5;
             itemCapacity = 0;
             treadPullOffset = 3;
             treadRects = new Rect[] {new Rect(-13f, -21f, 26, 42)};
