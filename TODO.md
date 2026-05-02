@@ -1,5 +1,5 @@
 # To-do & Ideas
-### [To Resprite](to-resprite.md)
+### [To Resprite](assets/to-resprite.md)
 ### For the first Release
 - [x] Tier 1 Ores
 - [x] Liquid Transportation

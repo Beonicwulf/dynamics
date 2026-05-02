@@ -2,6 +2,8 @@
 ### Missing sprites
 - [ ] Corroding Status
 - [ ] Shielding Status
+### Horrible Sprites
+- [ ] Unloader
 ### Sprites that could be improved
 - [ ] Withdraw (Not steampunk enough?)
 - [ ] Chalcocite environment
