@@ -7,6 +7,7 @@ import mindustry.type.Item;
 
 import static dynamics.content.DyUnits.*;
 import static dynamics.content.blocks.DyCrafting.*;
+import static dynamics.content.blocks.DyDecorative.*;
 import static dynamics.content.blocks.DyDefense.*;
 import static dynamics.content.blocks.DyEffectBlocks.*;
 import static dynamics.content.blocks.DyDistribution.*;
@@ -30,7 +31,10 @@ public class ThalassaTechTree {
 
             node(accelerator, () -> {
                 node(zincSorter, () -> node(zincUnloader, () -> {}));
-                node(zincMessage, () -> node(zincCanvas, () -> {}));
+                node(zincMessage, () -> {
+                    node(zincCanvas);
+                    node(brazier);
+                });
             });
             node(fluxCollector, () -> {
                 node(clockworkDrill);
