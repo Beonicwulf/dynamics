@@ -22,7 +22,7 @@ public class DyLiquids {
             gas = true;
             flammability = 0.5f;
         }};
-        saltWater = new Liquid("purified-water", DyPal.purifiedWater) {{
+        saltWater = new Liquid("salt-water", DyPal.saltWater) {{
             heatCapacity = 0.35f;
             effect = StatusEffects.wet;
             boilPoint = 0.45f;

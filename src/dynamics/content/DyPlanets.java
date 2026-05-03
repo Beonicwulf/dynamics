@@ -134,7 +134,7 @@ public class DyPlanets {
             );
         }};
         thalassa = new Planet("thalassa", aurora, 1.2f, 2) {{
-            iconColor = DyPal.purifiedWater;
+            iconColor = DyPal.saltWater;
             generator = new ThalassaGenerator();
             visible = accessible = drawOrbit = updateLighting = alwaysUnlocked = true;
 
@@ -197,7 +197,7 @@ public class DyPlanets {
                     //lighter water
                     new NoiseMesh(this, 69,
                             5, 1.212f, 4, 1.1f, 0.75f, 0.5f,
-                            DyPal.hotSpringWater, DyPal.purifiedWater,
+                            DyPal.hotSpringWater, DyPal.saltWater,
                             1, 0.5f, 1, 0.5f)
             );
             cloudMeshLoader = () -> new MultiMesh(
@@ -256,7 +256,7 @@ public class DyPlanets {
                     //lighter water
                     new NoiseMesh(this, 69,
                             5, this.radius + 0.012f, 4, 1.2f, 0.85f, 0.5f,
-                            DyPal.hotSpringWater, DyPal.purifiedWater,
+                            DyPal.hotSpringWater, DyPal.saltWater,
                             1, 0.5f, 1, 0.5f)
             );
             cloudMeshLoader = () -> new MultiMesh(
@@ -307,7 +307,7 @@ public class DyPlanets {
                     //water
                     new NoiseMesh(this, 69,
                             5, this.radius + 0.012f, 4, 1.2f, 0.85f, 0.5f,
-                            DyPal.waterDarkTone, DyPal.purifiedWater,
+                            DyPal.waterDarkTone, DyPal.saltWater,
                             1, 0.5f, 1, 0.5f)
             );
             cloudMeshLoader = () -> new MultiMesh(

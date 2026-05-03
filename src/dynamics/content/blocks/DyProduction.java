@@ -56,7 +56,7 @@ public class DyProduction {
             boostScale = 1f / 9f;
             hasPower = false;
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawRegion("-mid"), new DrawLiquidTile(DyLiquids.flux, 38f / 4f), new DrawDefault(), new DrawPress("-press") {{maxScale = 1.3f;}});
-            craftTime = 120f;
+            craftTime = 40f;
             craftEffect = new MultiEffect(Fx.turbinegenerate, new WrapEffect(Fx.drillSteam, DyPal.flux));
             size = 3;
             ambientSound = Sounds.loopHum;

@@ -19,9 +19,9 @@ import static mindustry.type.ItemStack.with;
 
 public class DyCrafting {
     public static Block
-            fluxHeater, grafter, saltSplitter;
+            fluxOutlet, grafter, saltSplitter;
     public static void load() {
-        fluxHeater = new HeatOutlet("flux-heater") {{
+        fluxOutlet = new HeatOutlet("flux-outlet") {{
             requirements(Category.crafting, with(DyItems.zinc, 20, DyItems.malachite, 5));
             researchCost = ItemStack.mult(requirements, 5);
             drawer = new DrawMulti(new DrawDefault(), new DrawHeatOutput());

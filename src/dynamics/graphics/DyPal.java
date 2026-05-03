@@ -17,7 +17,7 @@ public class DyPal {
             steamLight = Color.valueOf("#d6eaf3"),
             steamSulfur = Color.valueOf("#f3edce"),
             hotSpringWater = Color.valueOf("#00959c"),
-            purifiedWater = Color.valueOf("#6b9eaa"),
+            saltWater = Color.valueOf("#6b9eaa"),
             flux = Color.valueOf("#62bd96"),
             fluxLight = Color.valueOf("#93d9b4"),
             chlorine = Color.valueOf("#88c29a"),

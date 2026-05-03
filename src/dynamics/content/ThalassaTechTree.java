@@ -34,7 +34,7 @@ public class ThalassaTechTree {
             });
             node(fluxCollector, () -> {
                 node(clockworkDrill);
-                node(fluxHeater, () -> {
+                node(fluxOutlet, () -> {
                     node(grafter);
                     node(saltSplitter);
                 });
