@@ -11,14 +11,27 @@ import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.defense.turrets.ContinuousLiquidTurret;
+import mindustry.world.blocks.logic.CanvasBlock;
+import mindustry.world.blocks.logic.MessageBlock;
 
 import static mindustry.type.ItemStack.with;
 
 public class DyDecorative {
-    public static Block brazier;
+    public static Block zincMessage, zincCanvas, brazier;
     public static void load(){
+        zincMessage = new MessageBlock("zinc-message") {{
+            requirements(Category.logic, with(DyItems.zinc, 10, DyItems.malachite, 5, DyItems.partBasic, 1));
+            researchCost = ItemStack.mult(requirements, 50);
+        }};
+        zincCanvas = new CanvasBlock("zinc-canvas") {{
+            requirements(Category.logic, with(DyItems.zinc, 10, DyItems.partBasic, 5, DyItems.malachite, 15));
+            researchCost = ItemStack.mult(requirements, 50);
+            canvasSize = 24;
+            padding = 7f / 4f * 2f;
+            size = 3;
+        }};
         brazier = new ContinuousLiquidTurret("brazier") {{
-            requirements(Category.effect, with(DyItems.zinc, 15, DyItems.malachite, 5));
+            requirements(Category.logic, with(DyItems.zinc, 15, DyItems.malachite, 5));
             researchCost = ItemStack.mult(requirements, 100);
             liquidCapacity = 10f;
             liquidConsumed = 0.5f / 60f;

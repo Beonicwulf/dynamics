@@ -9,19 +9,14 @@ import dynamics.world.blocks.effect.UnitPad;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.world.Block;
-import mindustry.world.blocks.logic.CanvasBlock;
-import mindustry.world.blocks.logic.MessageBlock;
 import mindustry.world.blocks.storage.CoreBlock;
-import mindustry.world.meta.BuildVisibility;
 
 import static mindustry.type.ItemStack.with;
 
 public class DyEffectBlocks {
     public static Block
             // Cores
-            coreSurface, augerPad,
-            // Logic
-            zincMessage, zincCanvas;
+            coreSurface, augerPad;
     public static void load() {
         coreSurface = new CoreBlock("core-surface") {{
             requirements(Category.effect, with(DyItems.zinc, 1000, DyItems.partBasic, 200));
@@ -38,7 +33,7 @@ public class DyEffectBlocks {
             landMusic = DyMusic.reborne;
         }};
         augerPad = new UnitPad("auger-pad") {{
-            requirements(Category.effect, BuildVisibility.sandboxOnly, with(DyItems.zinc, 900, DyItems.partBasic, 200));
+            requirements(Category.effect, with(DyItems.zinc, 900, DyItems.partBasic, 200));
             researchCost = ItemStack.mult(requirements, 50);
             hasPower = false;
             size = 2;
@@ -52,17 +47,6 @@ public class DyEffectBlocks {
             polyColor = DyPal.malachite;
             health = 1410;
             drawTeam = requiresCoreZone = true;
-        }};
-        zincMessage = new MessageBlock("zinc-message") {{
-           requirements(Category.logic, with(DyItems.zinc, 10, DyItems.malachite, 5, DyItems.partBasic, 1));
-           researchCost = ItemStack.mult(requirements, 50);
-        }};
-        zincCanvas = new CanvasBlock("zinc-canvas") {{
-            requirements(Category.logic, with(DyItems.zinc, 10, DyItems.partBasic, 5, DyItems.malachite, 15));
-            researchCost = ItemStack.mult(requirements, 50);
-            canvasSize = 24;
-            padding = 7f / 4f * 2f;
-            size = 3;
         }};
     }
 }
