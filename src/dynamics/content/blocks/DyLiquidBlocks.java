@@ -18,7 +18,7 @@ public class DyLiquidBlocks {
         pipe = new ArmoredConduit("pipe") {{
             requirements(Category.liquid, with(DyItems.zinc, 2));
             researchCost = ItemStack.mult(requirements, 5);
-            leaks = true;
+            leaks = false;
             underBullets = true;
             placeableLiquid = true;
             //explosivenessScale = flammabilityScale = 20f/50f;

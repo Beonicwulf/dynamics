@@ -34,7 +34,7 @@ public class DyDefense {
             size = 2;
             health = 1380; //should replace with scaledHealth? needs testing
             ammo(DyLiquids.flux, DyBullets.steamBlast);
-            drawer = new DrawMulti(new DrawDefault(), new DrawRegion("-base"), new DrawLiquidRegion(), new DrawRegion("-rotator", 2f), new DrawRegion("-top"), new DrawPress("-press"));
+            drawer = new DrawMulti(new DrawDefault(), new DrawRegion("-base"), new DrawLiquidRegion(), new DrawRegion("-rotator", -2f), new DrawRegion("-top"), new DrawPress("-press"));
             shootEffect = Fx.drillSteam;
             recoil = 0f;
             reload = 60f;
@@ -82,7 +82,7 @@ public class DyDefense {
             size = 2;
         }};
         warFrame = new ShardWall("framed-malachite") {{
-            requirements(Category.defense, with(DyItems.malachite, 60, DyItems.sodium, 10));
+            requirements(Category.defense, with(DyItems.malachite, 60, DyItems.zinc, 20, DyItems.sodium, 10));
             researchCost = ItemStack.mult(requirements, 50);
             health = malachiteWall.health * 9 + 400;
             shardChance = 0.1f;
