@@ -2,13 +2,10 @@ package dynamics.content;
 
 import dynamics.graphics.DyPal;
 import mindustry.content.Fx;
-import mindustry.entities.Effect;
 import mindustry.entities.bullet.BasicBulletType;
 import mindustry.entities.bullet.BulletType;
-import mindustry.entities.effect.MultiEffect;
-import mindustry.entities.effect.WrapEffect;
 
-public class DyBulletTypes {
+public class DyBullets {
     public static BulletType
             // malachite
             stickyShard, malachiteShards,
@@ -16,6 +13,8 @@ public class DyBulletTypes {
             malachiteFrag,
             // units
             healingShards, coreShards, tankShard,
+            // sodium
+            sodiumBullet,
             // Steam Valve
             steamBlast;
     public static void load() {
@@ -43,7 +42,7 @@ public class DyBulletTypes {
             spin = 3.5f;
             hitEffect = despawnEffect = Fx.hitBulletColor;
             fragBullets = 1;
-            fragBullet = DyBulletTypes.stickyShard;
+            fragBullet = DyBullets.stickyShard;
         }};
         // Breathe
         coreShards = malachiteShards.copy();
@@ -72,7 +71,7 @@ public class DyBulletTypes {
             hitEffect = despawnEffect = Fx.hitBulletColor;
             shootEffect = DyFX.withdrawShootEffect;
             fragBullets = 4;
-            fragBullet = DyBulletTypes.malachiteShards;
+            fragBullet = DyBullets.malachiteShards;
         }};
         // Tusk
         healingShards = malachiteShards.copy();
@@ -97,6 +96,18 @@ public class DyBulletTypes {
             trailLength = 3;
             hitEffect = despawnEffect = Fx.hitSquaresColor;
             lifetime = 30f;
+        }};
+
+        sodiumBullet = new BasicBulletType(1.5f, 30) {{
+            lifetime = 90f;
+            width = 5f;
+            height = 8f;
+            shootEffect = Fx.shootBigColor;
+            hitColor = backColor = trailColor = DyPal.sodium;
+            frontColor = DyPal.sodium;
+            trailWidth = 1f;
+            trailLength = 11;
+            hitEffect = despawnEffect = Fx.hitSquaresColor;
         }};
     }
 }

@@ -15,7 +15,7 @@ public class Dynamics extends Mod{
     }
 
     public Dynamics () {
-        DyMusics.preload();
+        DyMusic.preload();
         DyHints.preInit();
     }
 
@@ -24,8 +24,8 @@ public class Dynamics extends Mod{
         DyStatusEffects.load();
         DyItems.load();
         DyLiquids.load();
-        DyBulletTypes.load();
-        DyUnitTypes.load();
+        DyBullets.load();
+        DyUnits.load();
         DyBlocks.load();
         DyWeathers.load();
         DyPlanets.load();

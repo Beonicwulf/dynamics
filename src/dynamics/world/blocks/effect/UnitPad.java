@@ -1,6 +1,6 @@
 package dynamics.world.blocks.effect;
 
-import dynamics.content.DyUnitTypes;
+import dynamics.content.DyUnits;
 import dynamics.graphics.DyPal;
 import mindustry.entities.Units;
 import mindustry.game.Team;
@@ -13,7 +13,7 @@ public class UnitPad extends UnitCargoLoader {
 
     public UnitPad(String name) {
         super(name);
-        unitType = DyUnitTypes.augerDrone;
+        unitType = DyUnits.augerDrone;
         unitBuildTime = 60f * 8f;
         polyColor = DyPal.malachite;
         itemCapacity = 0;

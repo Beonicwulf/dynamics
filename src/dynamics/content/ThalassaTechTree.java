@@ -5,7 +5,7 @@ import arc.struct.Seq;
 import mindustry.game.Objectives;
 import mindustry.type.Item;
 
-import static dynamics.content.DyUnitTypes.*;
+import static dynamics.content.DyUnits.*;
 import static dynamics.content.blocks.DyCrafting.*;
 import static dynamics.content.blocks.DyDefense.*;
 import static dynamics.content.blocks.DyEffectBlocks.*;
@@ -34,13 +34,19 @@ public class ThalassaTechTree {
             });
             node(fluxCollector, () -> {
                 node(clockworkDrill);
-                node(fluxHeater, () -> node(grafter));
+                node(fluxHeater, () -> {
+                    node(grafter);
+                    node(saltSplitter);
+                });
             });
             node(pipe, () -> {
                 node(pipeRouter, () -> node(pipeTunnel));
                 node(pipeJunction, () -> node(pipeVent, Seq.with(new Objectives.OnSector(DySectorPresets.testSector)), () -> node(pipeController)));
             });
-            node(malachiteWall, () -> node(withdraw));
+            node(malachiteWall, () -> {
+                node(withdraw);
+                node(warFrame);
+            });
             node(augerPad, () -> node(augerDrone));
             nodeProduce(DyItems.zinc, () -> {
                 nodeProduce(DyItems.malachite, () -> {});
@@ -49,6 +55,7 @@ public class ThalassaTechTree {
             });
             node(splitFabricator, () -> {
                 node(split);
+                node(emberFabricator, () -> node(ember));
                 node(basicConstructor, Seq.with(new Objectives.Research(split), new Objectives.OnSector(DySectorPresets.testSector)), () -> node(zincConveyor, () -> node(basicDeconstructor, () -> {})));
             });
         });

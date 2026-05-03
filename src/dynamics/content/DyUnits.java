@@ -6,26 +6,32 @@ import mindustry.ai.UnitCommand;
 import mindustry.ai.types.AssemblerAI;
 import mindustry.ai.types.BuilderAI;
 import mindustry.content.Fx;
+import mindustry.entities.part.DrawPart;
+import mindustry.entities.part.RegionPart;
 import mindustry.entities.pattern.*;
 import mindustry.gen.*;
 import mindustry.graphics.*;
 import mindustry.type.UnitType;
 import mindustry.type.Weapon;
 
-public class DyUnitTypes {
+public class DyUnits {
     public static Weapon
             // core units
             augerBolt, breatheWeapon,
-            // split
-            splitWeapon
+            // tank
+            splitWeapon,
+            // copter
+            emberSideGuns
             ;
     public static UnitType
             // core units
             augerDrone, breathe,
-            // split
+            // tank
             split,
             // assembler
-            augerAssembler
+            augerAssembler,
+            // copter
+            ember
             ;
     public static void loadWeapons() {
         augerBolt = new Weapon("auger-bolt"){{
@@ -36,14 +42,14 @@ public class DyUnitTypes {
             velocityRnd = 0.5f;
             inaccuracy = 15f;
             alternate = true;
-            bullet = DyBulletTypes.healingShards;
+            bullet = DyBullets.healingShards;
         }};
         breatheWeapon = new Weapon("breathe-weapon"){{
             x = y = -2f;
             reload = 40;
             inaccuracy = 10;
-            minWarmup = 0.05f;
-            bullet = DyBulletTypes.coreShards;
+            minWarmup = 0.15f;
+            bullet = DyBullets.coreShards;
             shoot = new ShootPattern() {{
                 shots = 3;
                 shotDelay = 5;
@@ -56,9 +62,23 @@ public class DyUnitTypes {
             reload = 40;
             recoil = 1f;
             mirror = true;
-            bullet = DyBulletTypes.tankShard;
+            bullet = DyBullets.tankShard;
             rotate = true;
             rotateSpeed = 3;
+        }};
+        emberSideGuns = new Weapon("dy-ember-side-gun") {{
+            x = y = 0;
+            mirror = true;
+            reload = 40;
+            recoil = 2f;
+            inaccuracy = 5;
+            minWarmup = 0.35f;
+            shoot = new ShootAlternate() {{
+                shots = 2;
+                shotDelay = 10;
+            }};
+            bullet = DyBullets.sodiumBullet;
+            shootX = 4f;
         }};
     }
     public static void load() {
@@ -170,6 +190,41 @@ public class DyUnitTypes {
             hidden = true;
         }};
         // sprite by aerodynamic_attorney
+
+        ember = new UnitType("ember"){{
+            constructor = UnitEntity::create;
+            flying = true;
+            engineSize = 0;
+            outlines = false;
+            weapons.add(emberSideGuns);
+            targetGround = targetAir = true;
+            drag = 0.06f;
+            accel = 0.12f;
+            speed = 2f;
+            health = 420f;
+            parts.addAll(
+                    new RegionPart("-blade"){{
+                        outline = false;
+                        moveRot = 3600f;
+                        progress = DrawPart.PartProgress.time.loop(360);
+                    }},
+                    new RegionPart("-blade"){{
+                        outline = false;
+                        moveRot = 3600f;
+                        progress = DrawPart.PartProgress.time.loop(360);
+                        rotation = -120f;
+                    }},
+                    new RegionPart("-blade"){{
+                        outline = false;
+                        moveRot = 3600f;
+                        progress = DrawPart.PartProgress.time.loop(360);
+                        rotation = -240f;
+                    }},
+                    new RegionPart("-top")
+            );
+        }};
+        // thanks a lot uujuju for help with weapon parts,
+        // and thanks, aerodynamic_attorney for the sprites
     }
 }
 

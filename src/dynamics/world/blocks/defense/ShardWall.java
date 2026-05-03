@@ -1,14 +1,14 @@
 package dynamics.world.blocks.defense;
 
 import arc.math.Mathf;
-import dynamics.content.DyBulletTypes;
+import dynamics.content.DyBullets;
 import mindustry.entities.bullet.BulletType;
 import mindustry.gen.Bullet;
 import mindustry.world.blocks.defense.Wall;
 
 public class ShardWall extends Wall {
     public float shardChance = -1f;
-    public BulletType shard = DyBulletTypes.malachiteShards;
+    public BulletType shard = DyBullets.malachiteShards;
     public ShardWall(String name) {
         super(name);
     }

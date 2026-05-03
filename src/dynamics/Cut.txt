@@ -197,4 +197,30 @@ public class DyComponentBlocks {
     }
 }
 
+            weapons.add(new Weapon(){{
+                x = y = recoil = 0;
+                mirror = rotate = false;
+                alwaysShooting = true;
+                reload = 15;
+                bullet = new BasicBulletType(0, 0){{
+                    backColor = frontColor = Color.clear;
+                    hitEffect = despawnEffect = smokeEffect = Fx.none;
+                    instantDisappear = true;
+                    pierceBuilding = true;
+                    shootEffect = new Effect(20, f->{
+                        region = Core.atlas.find("dy-ember-rotor");
+                        spin = -2f;
+                        layer = 140f;
+                    }){{
+                        followParent = rotWithParent = true;
+                    }};
+                }};
+            }});
+
+                    new RegionPart("-rotor"){{
+                        outline = false;
+                        moveRot = 3600f;
+                        progress = DrawPart.PartProgress.time.loop(360);
+                    }},
+
 

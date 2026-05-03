@@ -5,7 +5,7 @@ import mindustry.content.StatusEffects;
 import mindustry.type.Liquid;
 
 public class DyLiquids {
-    public static Liquid steam, flux, hotSpringWater,purifiedWater;
+    public static Liquid flux, hotSpringWater, chlorine, purifiedWater;
     public static void load() {
         flux = new Liquid("flux", DyPal.flux) {{
             gas = true;
@@ -18,11 +18,17 @@ public class DyLiquids {
             boilPoint = 0.4f;
             gasColor = DyPal.steamSulfur;
         }};
+        chlorine = new Liquid("chlorine", DyPal.chlorine){{
+            gas = true;
+            flammability = 0.5f;
+        }};
         purifiedWater = new Liquid("purified-water", DyPal.purifiedWater) {{
+            hidden = true;
             heatCapacity = 0.35f;
             effect = StatusEffects.wet;
             boilPoint = 0.45f;
             gasColor = DyPal.steamLight;
         }};
+
     }
 }

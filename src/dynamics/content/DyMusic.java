@@ -7,7 +7,7 @@ import mindustry.Vars;
 import mindustry.game.EventType;
 import mindustry.gen.Musics;
 
-public class DyMusics {
+public class DyMusic {
     public static Music reborne;
     // preload check
     public static void preload(){

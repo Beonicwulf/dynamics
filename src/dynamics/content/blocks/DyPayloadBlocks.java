@@ -2,7 +2,7 @@ package dynamics.content.blocks;
 
 import dynamics.content.DyItems;
 import dynamics.content.DyLiquids;
-import dynamics.content.DyUnitTypes;
+import dynamics.content.DyUnits;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.world.Block;
@@ -16,7 +16,7 @@ public class DyPayloadBlocks {
             // Payload
             basicConstructor, zincConveyor, basicDeconstructor,
             // Unit Fabricators
-            splitFabricator
+            splitFabricator, emberFabricator
             ;
     public static void load() {
         splitFabricator = new UnitFactory("split-fabricator"){{
@@ -25,7 +25,15 @@ public class DyPayloadBlocks {
             size = 3;
             hasPower = configurable = false;
             consumeLiquid(DyLiquids.flux, 10f/60f);
-            plans.add(new UnitPlan(DyUnitTypes.split, 900, ItemStack.with(DyItems.zinc, 60, DyItems.partBasic, 3)));
+            plans.add(new UnitPlan(DyUnits.split, 900, ItemStack.with(DyItems.zinc, 60, DyItems.partBasic, 3)));
+        }};
+        emberFabricator = new UnitFactory("ember-fabricator"){{
+            requirements(Category.units, ItemStack.with(DyItems.zinc, 120, DyItems.sodium, 60, DyItems.partBasic, 20));
+            researchCost = ItemStack.mult(requirements, 10);
+            size = 3;
+            hasPower = configurable = false;
+            consumeLiquid(DyLiquids.flux, 10f/60f);
+            plans.add(new UnitPlan(DyUnits.ember, 900, ItemStack.with(DyItems.zinc, 60, DyItems.sodium, 10, DyItems.partBasic, 3)));
         }};
         basicConstructor = new Constructor("basic-constructor") {{
             requirements(Category.units, ItemStack.with(DyItems.zinc, 75, DyItems.partBasic, 10));

@@ -38,7 +38,8 @@ Withdraw turret sprite
 Tusk & Fang unit sprites\
 Breathe sprite (core unit + its leg)\
 Hot Spring Water & Purified Water sprites\
-Tier 1 Tank sprite
+Tier 1 Tank sprite\
+Tier 1 Copter sprite
 ### ✧ mimicling
 Tier 1 Core sprite\
 Water Purifier Sprite

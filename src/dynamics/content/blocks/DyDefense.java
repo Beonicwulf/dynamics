@@ -1,6 +1,6 @@
 package dynamics.content.blocks;
 
-import dynamics.content.DyBulletTypes;
+import dynamics.content.DyBullets;
 import dynamics.content.DyItems;
 import dynamics.content.DyLiquids;
 import dynamics.graphics.DrawPress;
@@ -24,7 +24,7 @@ public class DyDefense {
             // defense
             steamValve,
             // walls
-            malachiteWall, malachiteWallLarge,
+            malachiteWall, malachiteWallLarge, warFrame,
             // turrets
             withdraw;
     public static void load(){
@@ -33,7 +33,7 @@ public class DyDefense {
             researchCost = ItemStack.mult(requirements, 50);
             size = 2;
             health = 1380; //should replace with scaledHealth? needs testing
-            ammo(DyLiquids.flux, DyBulletTypes.steamBlast);
+            ammo(DyLiquids.flux, DyBullets.steamBlast);
             drawer = new DrawMulti(new DrawDefault(), new DrawRegion("-base"), new DrawLiquidRegion(), new DrawRegion("-rotator", 2f), new DrawRegion("-top"), new DrawPress("-press"));
             shootEffect = Fx.drillSteam;
             recoil = 0f;
@@ -65,7 +65,7 @@ public class DyDefense {
             shootY = 7;
             heatRequirement = 4f;
             maxHeatEfficiency = 1f;
-            ammo(DyItems.malachite, DyBulletTypes.malachiteFrag);
+            ammo(DyItems.malachite, DyBullets.malachiteFrag);
             //thx nullevoy for sprite
         }};
         malachiteWall = new ShardWall("malachite-wall") {{
@@ -80,6 +80,13 @@ public class DyDefense {
             health = malachiteWall.health * 4;
             shardChance = 0.05f;
             size = 2;
+        }};
+        warFrame = new ShardWall("framed-malachite") {{
+            requirements(Category.defense, with(DyItems.malachite, 60, DyItems.sodium, 10));
+            researchCost = ItemStack.mult(requirements, 50);
+            health = malachiteWall.health * 9 + 400;
+            shardChance = 0.1f;
+            size = 3;
         }};
     }
 }

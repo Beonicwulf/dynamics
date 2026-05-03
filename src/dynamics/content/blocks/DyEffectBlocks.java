@@ -2,8 +2,8 @@ package dynamics.content.blocks;
 
 import dynamics.content.DyItems;
 import dynamics.content.DyLiquids;
-import dynamics.content.DyMusics;
-import dynamics.content.DyUnitTypes;
+import dynamics.content.DyMusic;
+import dynamics.content.DyUnits;
 import dynamics.graphics.DyPal;
 import dynamics.world.blocks.effect.UnitPad;
 import mindustry.type.Category;
@@ -26,7 +26,7 @@ public class DyEffectBlocks {
         coreSurface = new CoreBlock("core-surface") {{
             requirements(Category.effect, with(DyItems.zinc, 1000, DyItems.partBasic, 200));
             size = 4;
-            unitType = DyUnitTypes.breathe;
+            unitType = DyUnits.breathe;
             itemCapacity = 1200;
             health = 4000;
             armor = 4;
@@ -35,7 +35,7 @@ public class DyEffectBlocks {
             unitCapModifier = 15;
             requiresCoreZone = true;
             incinerateNonBuildable = true;
-            landMusic = DyMusics.reborne;
+            landMusic = DyMusic.reborne;
         }};
         augerPad = new UnitPad("auger-pad") {{
             requirements(Category.effect, BuildVisibility.sandboxOnly, with(DyItems.zinc, 900, DyItems.partBasic, 200));
@@ -43,7 +43,7 @@ public class DyEffectBlocks {
             hasPower = false;
             size = 2;
             consumeLiquid(DyLiquids.flux, 30f / 60f);
-            unitType = DyUnitTypes.augerDrone;
+            unitType = DyUnits.augerDrone;
             polyStroke = 1.8f;
             polyRadius = 10f;
             polySides = 3;
