@@ -23,7 +23,6 @@ public class DyLiquids {
             flammability = 0.5f;
         }};
         purifiedWater = new Liquid("purified-water", DyPal.purifiedWater) {{
-            hidden = true;
             heatCapacity = 0.35f;
             effect = StatusEffects.wet;
             boilPoint = 0.45f;
