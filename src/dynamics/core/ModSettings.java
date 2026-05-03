@@ -43,6 +43,17 @@ public class ModSettings {
         gameData = new BaseDialog("@settings.dy-mod-data") {{
             addCloseButton();
             cont.table(Tex.button, cat -> {
+                cat.button(bundle.get("setting.dy-unlock-tech-tree"), Icon.tree, Styles.flatt, () -> ui.showConfirm("@confirm", bundle.get("setting.dy-unlock-tech-tree.confirm"), () -> {
+                    DyPlanets.thalassa.techTree.finishedRequirements = DyPlanets.thalassa.techTree.requirements;
+                    for (TechTree.TechNode node : DyPlanets.thalassa.techTree.children) {
+                        node.finishedRequirements = node.requirements;
+                    }
+                    content.each(c -> {
+                        if (c instanceof UnlockableContent u && c.minfo != null && c.minfo.mod != null && c.minfo.mod.name.equals("dy")) {
+                            u.unlock();
+                        }
+                    });
+                })).growX().marginLeft(8).height(50).row();
                 cat.button(bundle.get("setting.dy-clear-tech-tree"), Icon.trash, Styles.flatt, iconMed, () -> ui.showConfirm("@confirm", bundle.get("setting.dy-clear-tech-tree.confirm"), () -> {
                     DyPlanets.thalassa.techTree.reset();
                     for (TechTree.TechNode node : DyPlanets.thalassa.techTree.children) {

@@ -29,8 +29,8 @@ public class ThalassaTechTree {
             context().researchCostMultipliers = costMultipliers;
 
             node(accelerator, () -> {
-                node(zincSorter, () -> node(zincUnloader, Seq.with(new Objectives.OnSector(DySectorPresets.testSector)), () -> {}));
-                node(zincMessage, () -> node(zincCanvas, Seq.with(new Objectives.OnSector(DySectorPresets.testSector)), () -> {}));
+                node(zincSorter, () -> node(zincUnloader, () -> {}));
+                node(zincMessage, () -> node(zincCanvas, () -> {}));
             });
             node(fluxCollector, () -> {
                 node(clockworkDrill);
@@ -41,7 +41,7 @@ public class ThalassaTechTree {
             });
             node(pipe, () -> {
                 node(pipeRouter, () -> node(pipeTunnel));
-                node(pipeJunction, () -> node(pipeVent, Seq.with(new Objectives.OnSector(DySectorPresets.testSector)), () -> node(pipeController)));
+                node(pipeJunction, () -> node(pipeVent, () -> node(pipeController)));
             });
             node(malachiteWall, () -> {
                 node(withdraw);
@@ -50,13 +50,13 @@ public class ThalassaTechTree {
             node(augerPad, () -> node(augerDrone));
             nodeProduce(DyItems.zinc, () -> {
                 nodeProduce(DyItems.malachite, () -> {});
-                nodeProduce(DyItems.partBasic, () -> {});
+                nodeProduce(DyItems.partBasic, () -> nodeProduce(DyItems.sodium, () -> {}));
                 nodeProduce(DyLiquids.flux, () -> {});
             });
             node(splitFabricator, () -> {
                 node(split);
                 node(emberFabricator, () -> node(ember));
-                node(basicConstructor, Seq.with(new Objectives.Research(split), new Objectives.OnSector(DySectorPresets.testSector)), () -> node(zincConveyor, () -> node(basicDeconstructor, () -> {})));
+                node(basicConstructor, Seq.with(new Objectives.Research(ember)), () -> node(zincConveyor, () -> node(basicDeconstructor, () -> {})));
             });
         });
     }
