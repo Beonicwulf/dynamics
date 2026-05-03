@@ -13,5 +13,6 @@ public class DyBlocks {
         DyEffectBlocks.load();
         //DyComponentBlocks.load();
         DyPayloadBlocks.load();
+        DyDecorative.load();
     }
 }

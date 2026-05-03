@@ -4,7 +4,6 @@ import arc.graphics.*;
 
 public class DyPal {
     public static Color
-
             // Items
             zinc = Color.valueOf("#aa996e"),
             malachite = Color.valueOf("#356a46"),
@@ -21,6 +20,11 @@ public class DyPal {
             flux = Color.valueOf("#62bd96"),
             fluxLight = Color.valueOf("#93d9b4"),
             chlorine = Color.valueOf("#88c29a"),
+
+            // flame
+            copperBurnOne = Color.valueOf("#80e8fe"),
+            copperBurnTwo = Color.valueOf("#109686"),
+            copperBurnThree = Color.valueOf("#206f5a"),
 
             // Teams
             dread = Color.valueOf("#9fabd1"),

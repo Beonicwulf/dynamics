@@ -1,8 +1,6 @@
 package dynamics.content.blocks;
 
-import dynamics.content.DyBullets;
-import dynamics.content.DyItems;
-import dynamics.content.DyLiquids;
+import dynamics.content.*;
 import dynamics.graphics.DrawPress;
 import dynamics.graphics.DyPal;
 import dynamics.world.blocks.defense.ShardWall;
@@ -26,7 +24,8 @@ public class DyDefense {
             // walls
             malachiteWall, malachiteWallLarge, warFrame,
             // turrets
-            withdraw;
+            withdraw
+            ;
     public static void load(){
         steamValve = new LiquidTurret("steam-valve") {{
             requirements(Category.defense, BuildVisibility.sandboxOnly, with(DyItems.zinc, 20, DyItems.malachite, 5));
