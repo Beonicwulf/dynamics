@@ -42,7 +42,7 @@ public class DyCrafting {
             itemCapacity = 40;
             craftEffect =  new WrapEffect(Fx.drillSteam, DyPal.flux);
             size = 3;
-            drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawPistons(){{sides = 8; sideOffset = Mathf.PI / 2f;}}, new DrawHeatInput(), new DrawDefault());
+            drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawPistons(){{sides = 8; sideOffset = Mathf.PI / 2f;}}, new DrawDefault(), new DrawHeatInput());
             consumeItems(with(DyItems.zinc, 10, DyItems.malachite, 5));
             craftTime = 60f;
             outputItem = new ItemStack(DyItems.partBasic, 1);
@@ -63,7 +63,7 @@ public class DyCrafting {
                         radius = 1.5f;
                         amount = 20;
                     }},
-                    new DrawRegion()
+                    new DrawRegion(), new DrawHeatInput()
             );
             ambientSound = Sounds.loopElectricHum;
             ambientSoundVolume = 0.08f;
