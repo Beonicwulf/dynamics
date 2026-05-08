@@ -9,7 +9,7 @@ public class DyLiquids {
     public static void load() {
         flux = new Liquid("flux", DyPal.flux) {{
             gas = true;
-            lightColor = DyPal.fluxLight.a(0.2f);
+            lightColor = DyPal.fluxLight.a(0.05f);
             explosiveness = 0.5f;
         }};
         hotSpringWater = new Liquid("hot-spring-water", DyPal.hotSpringWater) {{
