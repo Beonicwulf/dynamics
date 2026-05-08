@@ -31,10 +31,7 @@ public class ThalassaTechTree {
 
             node(accelerator, () -> {
                 node(zincSorter, () -> node(zincUnloader, () -> {}));
-                node(zincMessage, () -> {
-                    node(zincCanvas);
-                    node(brazier);
-                });
+                node(zincMessage, () -> node(zincCanvas));
             });
             node(fluxCollector, () -> {
                 node(clockworkDrill);
@@ -45,7 +42,10 @@ public class ThalassaTechTree {
             });
             node(pipe, () -> {
                 node(pipeRouter, () -> node(pipeTunnel));
-                node(pipeJunction, () -> node(pipeVent, () -> node(pipeController)));
+                node(pipeJunction, () -> node(pipeVent, () -> {
+                    node(pipeController);
+                    node(brazier);
+                }));
             });
             node(malachiteWall, () -> {
                 node(withdraw);

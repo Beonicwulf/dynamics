@@ -19,7 +19,7 @@ public class DyEffectBlocks {
             coreSurface, augerPad;
     public static void load() {
         coreSurface = new CoreBlock("core-surface") {{
-            requirements(Category.effect, with(DyItems.zinc, 1000, DyItems.partBasic, 200));
+            requirements(Category.effect, with(DyItems.zinc, 1000, DyItems.partBasic, 100));
             size = 4;
             unitType = DyUnits.breathe;
             itemCapacity = 1200;
@@ -33,7 +33,7 @@ public class DyEffectBlocks {
             landMusic = DyMusic.reborne;
         }};
         augerPad = new UnitPad("auger-pad") {{
-            requirements(Category.effect, with(DyItems.zinc, 900, DyItems.partBasic, 200));
+            requirements(Category.effect, with(DyItems.zinc, 800, DyItems.partBasic, 60));
             researchCost = ItemStack.mult(requirements, 50);
             hasPower = false;
             size = 2;

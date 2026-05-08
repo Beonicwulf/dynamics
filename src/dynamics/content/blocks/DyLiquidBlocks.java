@@ -44,7 +44,7 @@ public class DyLiquidBlocks {
             ((Conduit)pipe).junctionReplacement = this;
         }};
         pipeTunnel = new DirectionLiquidBridge("pipe-tunnel") {{
-            requirements(Category.liquid, with(DyItems.zinc, 20, DyItems.partBasic, 5));
+            requirements(Category.liquid, with(DyItems.zinc, 20, DyItems.partBasic, 2));
             researchCost = ItemStack.mult(requirements, 10);
             solid = false;
             placeableLiquid = true;

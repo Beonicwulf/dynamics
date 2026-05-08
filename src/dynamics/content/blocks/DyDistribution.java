@@ -27,7 +27,7 @@ public class DyDistribution {
             shootSoundVolume = 0.1f;
         }};
         zincSorter = new DirectionalSorter("zinc-sorter") {{
-            requirements(Category.distribution, with(DyItems.zinc, 10, DyItems.partBasic, 4));
+            requirements(Category.distribution, with(DyItems.zinc, 10, DyItems.partBasic, 2));
             researchCost = ItemStack.mult(requirements, 50);
             regionRotated1 = 1;
             solid = false;

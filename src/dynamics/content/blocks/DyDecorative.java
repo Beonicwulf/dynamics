@@ -39,7 +39,7 @@ public class DyDecorative {
             rotateSpeed = 0f;
             loopSound = Sounds.shootSublimate;
             shootSound = Sounds.none;
-            loopSoundVolume = 0.05f;
+            loopSoundVolume = 0.01f;
             shootY = -1f;
             recoil = 0f;
             ammo(

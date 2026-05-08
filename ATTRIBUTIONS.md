@@ -16,13 +16,15 @@ Dynamics OST: Reborne
 [DirectionalSorter.java](https://github.com/Yuria-Shikibe/NewHorizonMod/blob/78266dbf908907e4316391152ac36d99f4ac52fa/src/newhorizon/expand/block/distribution/item/logistics/AdaptDirectionalRouter.java)
 ### ✧ Biotech
 [Teams.java](https://github.com/jammuwu/BioTech/blob/master/src/biotech/content/BioTeams.java)
-### ✧ Sh1penfire, Meld Java Mod
+### ✧ Sh1penfire, Meld Java mod
 [FluidValve.java](https://github.com/Sh1penfire/meld-java/blob/cb0d574b98defc12e14f2e7c0b0524802b64f116/src/meld/world/blocks/fluid/ChannelValve.java)\
 [FluidVent.java](https://github.com/Sh1penfire/meld-java/blob/cb0d574b98defc12e14f2e7c0b0524802b64f116/src/meld/world/blocks/fluid/ChannelVent.java)\
 [ValveController.java](https://github.com/Sh1penfire/meld-java/blob/cb0d574b98defc12e14f2e7c0b0524802b64f116/src/meld/world/blocks/fluid/ValveController.java)
 ### ✧ uujuju1, Steamworks mod
 [Better Settings menu](https://github.com/uujuju1/Steam-Works/blob/9a85ed1712f6c1e1c67093c49ea0454287d111ad/src/sw/core/ModSettings.java)\
 [Hints.java](https://github.com/uujuju1/Steam-Works/blob/9a85ed1712f6c1e1c67093c49ea0454287d111ad/src/sw/ui/EventHints.java)
+### ✧ Stabu_, Omaloon mod
+[IconLoader.java](https://github.com/stabu-dev/Omaloon/blob/68d63adeb1104c5a04daaf6f554f3ef9b5b081f6/src/omaloon/utils/IconLoader.java)
 ## Other Code
 ### ✧ Cirrus
 Geyser Effect
@@ -42,6 +44,8 @@ Tier 1 Tank sprite\
 Tier 1 Copter sprite
 ### ✧ mimicling
 Tier 1 Core sprite\
-Water Purifier Sprite
+Salt Splitter Sprite
 ### ✧ Sh1penfire
 Malachite/Azurite Cluster sprites (borrowed meld crystals)
+### ✧ Xaphiron
+Dread team icon

@@ -12,6 +12,7 @@ import arc.util.Reflect;
 import arc.util.Scaling;
 import dynamics.graphics.DyPal;
 import mindustry.game.Team;
+import mindustry.gen.Icon;
 import mindustry.ui.Fonts;
 
 public class DyTeams {
@@ -34,7 +35,7 @@ public class DyTeams {
 
         Seq<Font> fonts = Seq.with(Fonts.def, Fonts.outline);
 
-        var ch = 65000 + id;
+        var ch = 50000 - 5 + id;
         Reflect.<ObjectIntMap<String>>get(Fonts.class, "unicodeIcons").put(name, ch);
         var stringIcons = Reflect.<ObjectMap<String, String>>get(Fonts.class, "stringIcons");
         stringIcons.put(name, ((char)ch) + "");

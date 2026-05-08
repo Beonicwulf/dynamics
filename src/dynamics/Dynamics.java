@@ -3,6 +3,7 @@ package dynamics;
 import dynamics.content.*;
 import dynamics.content.DyTeams;
 import dynamics.core.ModSettings;
+import dynamics.graphics.IconLoader;
 import dynamics.ui.DyHints;
 import mindustry.Vars;
 import mindustry.mod.*;
@@ -36,9 +37,11 @@ public class Dynamics extends Mod{
     @Override
     public void init() {
         super.init();
+        IconLoader.loadIcons();
         DyTeams.load();
         //DySettings.loadSettings();
         if (!Vars.headless) {
-            ModSettings.load();}
+            ModSettings.load();
+        }
     }
 }
