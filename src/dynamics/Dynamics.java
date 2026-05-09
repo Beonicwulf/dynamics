@@ -25,6 +25,7 @@ public class Dynamics extends Mod{
         DyStatusEffects.load();
         DyItems.load();
         DyLiquids.load();
+        DyLoreFragments.load();
         DyBullets.load();
         DyUnits.load();
         DyBlocks.load();

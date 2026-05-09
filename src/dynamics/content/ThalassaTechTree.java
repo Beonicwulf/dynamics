@@ -5,6 +5,7 @@ import arc.struct.Seq;
 import mindustry.game.Objectives;
 import mindustry.type.Item;
 
+import static dynamics.content.DyLoreFragments.*;
 import static dynamics.content.DyUnits.*;
 import static dynamics.content.blocks.DyCrafting.*;
 import static dynamics.content.blocks.DyDecorative.*;
@@ -47,10 +48,8 @@ public class ThalassaTechTree {
                     node(brazier);
                 }));
             });
-            node(malachiteWall, () -> {
-                node(withdraw);
-                node(warFrame);
-            });
+            node(malachiteWall, () -> node(warFrame));
+            node(withdraw);
             node(augerPad, () -> node(augerDrone));
             nodeProduce(DyItems.zinc, () -> {
                 nodeProduce(DyItems.malachite, () -> {});
@@ -62,6 +61,7 @@ public class ThalassaTechTree {
                 node(emberFabricator, () -> node(ember));
                 node(basicConstructor, Seq.with(new Objectives.Research(ember)), () -> node(zincConveyor, () -> node(basicDeconstructor, () -> {})));
             });
+            node(spear, Seq.with(new Objectives.Research(malachiteWall)), () -> {});
         });
     }
 }

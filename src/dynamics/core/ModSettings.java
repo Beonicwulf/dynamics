@@ -78,7 +78,7 @@ public class ModSettings {
                     toDelete.each(Saves.SaveSlot::delete);
                     ui.showInfoOnHidden(bundle.get("setting.dy-clear-campaign-close.confirm"), () -> Core.app.exit());
                 })).growX().marginLeft(8).height(50).row();
-                cat.button(bundle.get("setting.dy-reset-hints"), Icon.trash, Styles.flatt, Vars.iconMed, () -> Vars.ui.showConfirm(bundle.get("setting.dy-reset-hints.confirm"),
+                cat.button(bundle.get("setting.dy-reset-hints"), Icon.book, Styles.flatt, Vars.iconMed, () -> Vars.ui.showConfirm(bundle.get("setting.dy-reset-hints.confirm"),
                         DyHints::reset
                 )).growX().marginLeft(8).height(50).row();
             }).width(400f).row();

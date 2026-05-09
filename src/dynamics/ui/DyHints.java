@@ -4,6 +4,7 @@ import arc.*;
 import arc.func.*;
 import arc.struct.*;
 import arc.util.*;
+import dynamics.content.blocks.DyProduction;
 import mindustry.*;
 import mindustry.game.EventType;
 import mindustry.ui.fragments.HintsFragment.*;
@@ -12,6 +13,10 @@ public enum DyHints implements Hint {
     reborne(
             () -> false,
             () -> !Core.settings.getBool("menu-reborne")
+    ),
+    collector(
+            () -> false,
+            () -> Vars.control.input.block == DyProduction.fluxCollector
     );
 
     final Boolp complete;
