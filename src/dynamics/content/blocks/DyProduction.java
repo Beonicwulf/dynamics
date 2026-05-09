@@ -5,6 +5,7 @@ import dynamics.content.DyItems;
 import dynamics.content.DyLiquids;
 import dynamics.graphics.DrawPress;
 import dynamics.graphics.DyPal;
+import dynamics.world.blocks.production.OreGrinder;
 import mindustry.content.Fx;
 import mindustry.entities.effect.MultiEffect;
 import mindustry.entities.effect.WrapEffect;
@@ -25,7 +26,9 @@ public class DyProduction {
             // attribute
             fluxCollector,
             // drills
-            clockworkDrill, microDrill;
+            clockworkDrill, microDrill,
+            chlorineGrinder
+                    ;
     public static void load() {
         microDrill = new Drill("micro-drill") {{
             requirements(Category.production, BuildVisibility.sandboxOnly, with(DyItems.zinc,10, DyItems.malachite, 5));
@@ -65,6 +68,18 @@ public class DyProduction {
             itemCapacity = 0;
             outputLiquid = new LiquidStack(DyLiquids.flux, 45f / 60f);
             liquidCapacity = 60f;
+        }};
+        chlorineGrinder = new OreGrinder("chlorine-grinder"){{
+            requirements(Category.production, with(DyItems.tantalum, 40, DyItems.sodium, 10, DyItems.partBasic, 3));
+            researchCost = ItemStack.mult(requirements, 5);
+            size = 3;
+            drillTime = 2.5f * 60f; // 10 times faster than clockwork drill
+            consumeLiquid(DyLiquids.chlorine, 1.25f / 60f);
+            liquidBoostIntensity = 1;
+            tier = 3;
+            drillMultipliers.put(DyItems.zinc, 2f);
+            placeableLiquid = true;
+            //countdownMultiplier = 0.05f;
         }};
     }
 }

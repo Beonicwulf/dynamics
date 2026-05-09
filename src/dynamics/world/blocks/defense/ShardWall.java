@@ -30,7 +30,7 @@ public class ShardWall extends Wall {
             //create shard if necessary
             if (shardChance > 0f) {
                 if (Mathf.chance(shardChance)) {
-                    shard.create(team.core(), x, y, Mathf.random(0f, 360f));
+                    shard.create(this, x, y, Mathf.random(0f, 360f));
                 }
             }
             return true;

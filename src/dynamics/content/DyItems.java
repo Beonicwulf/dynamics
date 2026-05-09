@@ -8,7 +8,7 @@ import mindustry.type.*;
 public class DyItems {
     public static Item
             // resources
-            zinc, malachite,
+            zinc, malachite, tantalum,
             // components
             partBasic,
             // crafted
@@ -32,6 +32,11 @@ public class DyItems {
             healthScaling = 3f;
         }};
         sodium = new Item("sodium", DyPal.sodium);
+        tantalum = new Item("tantalum", DyPal.tantalum){{
+            hardness = 3;
+            cost = 1.4f;
+            healthScaling = 1f;
+        }};
         dynamicsItems.addAll(
                 zinc, malachite, partBasic, sodium
         );

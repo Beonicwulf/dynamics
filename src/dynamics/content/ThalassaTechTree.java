@@ -5,6 +5,8 @@ import arc.struct.Seq;
 import mindustry.game.Objectives;
 import mindustry.type.Item;
 
+import static dynamics.content.DyItems.*;
+import static dynamics.content.DyLiquids.*;
 import static dynamics.content.DyLoreFragments.*;
 import static dynamics.content.DyUnits.*;
 import static dynamics.content.blocks.DyCrafting.*;
@@ -35,7 +37,7 @@ public class ThalassaTechTree {
                 node(zincMessage, () -> node(zincCanvas));
             });
             node(fluxCollector, () -> {
-                node(clockworkDrill);
+                node(clockworkDrill, () -> node(chlorineGrinder));
                 node(fluxOutlet, () -> {
                     node(grafter);
                     node(saltSplitter);
@@ -51,10 +53,10 @@ public class ThalassaTechTree {
             node(malachiteWall, () -> node(warFrame));
             node(withdraw);
             node(augerPad, () -> node(augerDrone));
-            nodeProduce(DyItems.zinc, () -> {
-                nodeProduce(DyItems.malachite, () -> {});
-                nodeProduce(DyItems.partBasic, () -> nodeProduce(DyItems.sodium, () -> {}));
-                nodeProduce(DyLiquids.flux, () -> {});
+            nodeProduce(zinc, () -> {
+                nodeProduce(malachite, () -> nodeProduce(tantalum, () -> {}));
+                nodeProduce(partBasic, () -> nodeProduce(sodium, () -> {}));
+                nodeProduce(flux, () -> {});
             });
             node(splitFabricator, () -> {
                 node(split);
