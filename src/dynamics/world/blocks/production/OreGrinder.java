@@ -14,6 +14,7 @@ import mindustry.world.draw.*;
 public class OreGrinder extends Drill {
     public float countdownMultiplier;
     public DrawBlock drawer = new DrawDefault();
+    public boolean grind = true;
 
     public OreGrinder(String name) {
         super(name);
@@ -44,16 +45,12 @@ public class OreGrinder extends Drill {
 
     @Override
     public boolean canPlaceOn(Tile tile, Team team, int rotation){
-        if(isMultiblock()){
-            for(Tile other : tile.getLinkedTilesAs(this, tempTiles)){
-                if(canMine(other) && other.floor() != DyEnvironment.resonantChalcocite){
-                    return true;
-                }
+        for (Tile other : tile.getLinkedTilesAs(this, tempTiles)){
+            if (other.floor() == DyEnvironment.resonantChalcocite){
+                return false;
             }
-            return false;
-        }else{
-            return canMine(tile) && tile.floor() != DyEnvironment.resonantChalcocite;
         }
+        return super.canPlaceOn(tile, team, rotation);
     }
 
     public class OreGrinderBuild extends DrillBuild {
@@ -86,10 +83,12 @@ public class OreGrinder extends Drill {
                 warmup = Mathf.approachDelta(warmup, speed, warmupSpeed);
                 progress += delta() * dominantItems * speed * warmup;
 
-                countdown -= 1;
-                if (countdown < 1){
-                    tryOre(this.tile);
-                    countdown = setCountdown(delay);
+                if (grind){
+                    countdown -= 1;
+                    if (countdown < 1){
+                        tryOre(this.tile);
+                        countdown = setCountdown(delay);
+                    }
                 }
 
                 if(Mathf.chanceDelta(updateEffectChance * warmup))
