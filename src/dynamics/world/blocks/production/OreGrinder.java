@@ -3,16 +3,23 @@ package dynamics.world.blocks.production;
 import arc.math.Mathf;
 import arc.util.io.Reads;
 import arc.util.io.Writes;
+import dynamics.content.DyFX;
+import dynamics.content.blocks.DyEnvironment;
 import mindustry.content.Blocks;
+import mindustry.game.Team;
 import mindustry.world.Tile;
 import mindustry.world.blocks.production.Drill;
+import mindustry.world.draw.*;
 
 public class OreGrinder extends Drill {
     public float countdownMultiplier;
+    public DrawBlock drawer = new DrawDefault();
 
     public OreGrinder(String name) {
         super(name);
         countdownMultiplier = 1f;
+        drillEffect = DyFX.groundCrack;
+        drillEffectChance = 0.05f;
     }
 
     protected float setCountdown(float delay){
@@ -20,9 +27,32 @@ public class OreGrinder extends Drill {
         return delay * timeMultiplier * countdownMultiplier;
     }
 
-    protected void destroyOre(Tile tile){
+    protected void tryOre(Tile tile){
         for (Tile other : tile.getLinkedTilesAs(this, tempTiles)){
-            other.setOverlay(Blocks.air);
+            if (Mathf.random(1, size * size) == 1){
+                destroyOre(other);
+            }
+        }
+    }
+
+    protected void destroyOre(Tile tile){
+        tile.setOverlay(Blocks.air);
+        if (tile.floor() == DyEnvironment.gildedChalcocite){
+            tile.setFloor(DyEnvironment.chalcociteFloor.asFloor());
+        }
+    }
+
+    @Override
+    public boolean canPlaceOn(Tile tile, Team team, int rotation){
+        if(isMultiblock()){
+            for(Tile other : tile.getLinkedTilesAs(this, tempTiles)){
+                if(canMine(other) && other.floor() != DyEnvironment.resonantChalcocite){
+                    return true;
+                }
+            }
+            return false;
+        }else{
+            return canMine(tile) && tile.floor() != DyEnvironment.resonantChalcocite;
         }
     }
 
@@ -58,7 +88,7 @@ public class OreGrinder extends Drill {
 
                 countdown -= 1;
                 if (countdown < 1){
-                    destroyOre(this.tile);
+                    tryOre(this.tile);
                     countdown = setCountdown(delay);
                 }
 
@@ -80,6 +110,11 @@ public class OreGrinder extends Drill {
 
                 if(wasVisible && Mathf.chanceDelta(drillEffectChance * warmup)) drillEffect.at(x + Mathf.range(drillEffectRnd), y + Mathf.range(drillEffectRnd), dominantItem.color);
             }
+        }
+
+        @Override
+        public void draw(){
+            drawer.draw(this);
         }
 
         @Override

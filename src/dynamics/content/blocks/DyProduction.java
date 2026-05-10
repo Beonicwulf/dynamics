@@ -79,7 +79,7 @@ public class DyProduction {
             tier = 3;
             drillMultipliers.put(DyItems.zinc, 2f);
             placeableLiquid = true;
-            //countdownMultiplier = 0.05f;
+            //countdownMultiplier = 0.5f;
         }};
     }
 }
