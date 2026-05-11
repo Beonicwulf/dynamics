@@ -3,6 +3,7 @@ package dynamics.content.blocks;
 import dynamics.content.DyAttributes;
 import dynamics.content.DyItems;
 import dynamics.content.DyLiquids;
+import dynamics.graphics.DrawGearR;
 import dynamics.graphics.DrawPress;
 import dynamics.graphics.DyPal;
 import dynamics.world.blocks.production.OreGrinder;
@@ -80,6 +81,9 @@ public class DyProduction {
             drillMultipliers.put(DyItems.zinc, 2f);
             placeableLiquid = true;
             //countdownMultiplier = 0.5f;
+            topDrawer = new DrawMulti(
+                    new DrawGearR(1, 5)
+            );
         }};
     }
 }

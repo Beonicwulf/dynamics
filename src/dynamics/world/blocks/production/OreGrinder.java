@@ -1,23 +1,26 @@
 package dynamics.world.blocks.production;
 
+import arc.graphics.*;
+import arc.graphics.g2d.*;
 import arc.math.Mathf;
-import arc.util.io.Reads;
-import arc.util.io.Writes;
+import arc.util.io.*;
 import dynamics.content.DyFX;
 import dynamics.content.blocks.DyEnvironment;
 import mindustry.content.Blocks;
 import mindustry.game.Team;
+import mindustry.graphics.*;
 import mindustry.world.Tile;
 import mindustry.world.blocks.production.Drill;
 import mindustry.world.draw.*;
 
 public class OreGrinder extends Drill {
     public float countdownMultiplier;
-    public DrawBlock drawer = new DrawDefault();
     public boolean grind = true;
+    public DrawBlock topDrawer = new DrawDefault();
 
     public OreGrinder(String name) {
         super(name);
+        drawSpinSprite = false;
         countdownMultiplier = 1f;
         drillEffect = DyFX.groundCrack;
         drillEffectChance = 0.05f;
@@ -51,6 +54,12 @@ public class OreGrinder extends Drill {
             }
         }
         return super.canPlaceOn(tile, team, rotation);
+    }
+
+    @Override
+    public void load() {
+        super.load();
+        topDrawer.load(this);
     }
 
     public class OreGrinderBuild extends DrillBuild {
@@ -113,7 +122,8 @@ public class OreGrinder extends Drill {
 
         @Override
         public void draw(){
-            drawer.draw(this);
+            super.draw();
+            topDrawer.draw(this);
         }
 
         @Override
