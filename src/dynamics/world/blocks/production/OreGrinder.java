@@ -16,7 +16,7 @@ import mindustry.world.draw.*;
 public class OreGrinder extends Drill {
     public float countdownMultiplier;
     public boolean grind = true;
-    public DrawBlock topDrawer = new DrawDefault();
+    public DrawBlock drawer = new DrawDefault();
 
     public OreGrinder(String name) {
         super(name);
@@ -59,7 +59,7 @@ public class OreGrinder extends Drill {
     @Override
     public void load() {
         super.load();
-        topDrawer.load(this);
+        drawer.load(this);
     }
 
     public class OreGrinderBuild extends DrillBuild {
@@ -122,8 +122,12 @@ public class OreGrinder extends Drill {
 
         @Override
         public void draw(){
-            super.draw();
-            topDrawer.draw(this);
+            drawer.draw(this);
+            if(dominantItem != null && drawMineItem){
+                Draw.color(dominantItem.color);
+                Draw.rect(itemRegion, x, y);
+                Draw.color();
+            }
         }
 
         @Override

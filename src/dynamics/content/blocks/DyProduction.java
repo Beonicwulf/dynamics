@@ -81,8 +81,14 @@ public class DyProduction {
             drillMultipliers.put(DyItems.zinc, 2f);
             placeableLiquid = true;
             //countdownMultiplier = 0.5f;
-            topDrawer = new DrawMulti(
-                    new DrawGearR(1, 5)
+            drawer = new DrawMulti(
+                    new DrawDefault(),
+                    new DrawGearR(1, 6),
+                    new DrawGearR(1, 6){{x = 4; y = 4;}},
+                    new DrawGearR(1, 6){{x = 4; y = -4;}},
+                    new DrawGearR(1, 6){{x = -4; y = 4;}},
+                    new DrawGearR(1, 6){{x = -4; y = -4;}},
+                    new DrawRegion("-top")
             );
         }};
     }
