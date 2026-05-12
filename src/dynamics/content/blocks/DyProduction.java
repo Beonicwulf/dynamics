@@ -80,14 +80,17 @@ public class DyProduction {
             tier = 3;
             drillMultipliers.put(DyItems.zinc, 2f);
             placeableLiquid = true;
-            //countdownMultiplier = 0.5f;
+            countdownMultiplier = 1.5f;
+            float gearOffset = 3.75f;
+            float gearSpeed = 1.2f;
+            int teeth = 7;
             drawer = new DrawMulti(
                     new DrawDefault(),
-                    new DrawGearR(1, 6),
-                    new DrawGearR(1, 6){{x = 4; y = 4;}},
-                    new DrawGearR(1, 6){{x = 4; y = -4;}},
-                    new DrawGearR(1, 6){{x = -4; y = 4;}},
-                    new DrawGearR(1, 6){{x = -4; y = -4;}},
+                    new DrawGearR(-gearSpeed, teeth + 2){{gearSuffix = "-gear-big";}},
+                    new DrawGearR(gearSpeed, teeth){{x = gearOffset; y = gearOffset;}},
+                    new DrawGearR(gearSpeed, teeth){{x = gearOffset; y = -gearOffset;}},
+                    new DrawGearR(gearSpeed, teeth){{x = -gearOffset; y = gearOffset;}},
+                    new DrawGearR(gearSpeed, teeth){{x = -gearOffset; y = -gearOffset;}},
                     new DrawRegion("-top")
             );
         }};
