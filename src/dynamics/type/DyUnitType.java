@@ -26,6 +26,6 @@ public class DyUnitType extends UnitType {
     }
 
     public void drawBlades(){
-        drawBlades(blades);
+        if (blades > 0){drawBlades(blades);}
     }
 }
