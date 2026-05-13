@@ -2,12 +2,10 @@ package dynamics.content;
 
 import arc.math.geom.Rect;
 import arc.struct.Seq;
+import dynamics.type.DyUnitType;
 import mindustry.ai.UnitCommand;
-import mindustry.ai.types.AssemblerAI;
-import mindustry.ai.types.BuilderAI;
+import mindustry.ai.types.*;
 import mindustry.content.Fx;
-import mindustry.entities.part.DrawPart;
-import mindustry.entities.part.RegionPart;
 import mindustry.entities.pattern.*;
 import mindustry.gen.*;
 import mindustry.graphics.*;
@@ -191,7 +189,7 @@ public class DyUnits {
         }};
         // sprite by aerodynamic_attorney
 
-        ember = new UnitType("ember"){{
+        ember = new DyUnitType("ember"){{
             constructor = UnitEntity::create;
             flying = true;
             engineSize = 0;
@@ -202,26 +200,9 @@ public class DyUnits {
             accel = 0.12f;
             speed = 2f;
             health = 420f;
-            parts.addAll(
-                    new RegionPart("-blade"){{
-                        outline = false;
-                        moveRot = 3600f;
-                        progress = DrawPart.PartProgress.time.loop(360);
-                    }},
-                    new RegionPart("-blade"){{
-                        outline = false;
-                        moveRot = 3600f;
-                        progress = DrawPart.PartProgress.time.loop(360);
-                        rotation = -120f;
-                    }},
-                    new RegionPart("-blade"){{
-                        outline = false;
-                        moveRot = 3600f;
-                        progress = DrawPart.PartProgress.time.loop(360);
-                        rotation = -240f;
-                    }},
-                    new RegionPart("-top")
-            );
+            // copter blades
+            blades = 3;
+            drawBlades();
         }};
         // thanks a lot uujuju for help with weapon parts,
         // and thanks, aerodynamic_attorney for the sprites
