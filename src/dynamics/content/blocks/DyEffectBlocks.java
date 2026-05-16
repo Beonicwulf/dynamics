@@ -56,6 +56,7 @@ public class DyEffectBlocks {
             size = 4;
             consumeItems(ItemStack.with(DyItems.tantalum, 100, DyItems.partBasic, 5));
             consumeLiquid(DyLiquids.chlorine, 5f/60f);
+            itemCapacity = 200;
         }};
     }
 }
