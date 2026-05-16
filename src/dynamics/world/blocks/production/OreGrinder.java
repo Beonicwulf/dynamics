@@ -3,11 +3,14 @@ package dynamics.world.blocks.production;
 import arc.graphics.*;
 import arc.graphics.g2d.*;
 import arc.math.Mathf;
+import arc.util.Eachable;
 import arc.util.io.*;
 import dynamics.content.DyFX;
 import dynamics.content.blocks.DyEnvironment;
 import mindustry.content.Blocks;
+import mindustry.entities.units.BuildPlan;
 import mindustry.game.Team;
+import mindustry.gen.Building;
 import mindustry.graphics.*;
 import mindustry.world.Tile;
 import mindustry.world.blocks.production.Drill;
@@ -60,6 +63,11 @@ public class OreGrinder extends Drill {
     public void load() {
         super.load();
         drawer.load(this);
+    }
+
+    @Override
+    public void drawPlanRegion(BuildPlan plan, Eachable<BuildPlan> list){
+        drawer.drawPlan(this, plan, list);
     }
 
     public class OreGrinderBuild extends DrillBuild {
@@ -128,6 +136,12 @@ public class OreGrinder extends Drill {
                 Draw.rect(itemRegion, x, y);
                 Draw.color();
             }
+        }
+
+        @Override
+        public void drawLight(){
+            super.drawLight();
+            drawer.drawLight(this);
         }
 
         @Override

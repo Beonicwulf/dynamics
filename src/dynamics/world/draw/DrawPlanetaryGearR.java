@@ -1,13 +1,15 @@
-package dynamics.graphics;
+package dynamics.world.draw;
 
 import arc.Core;
 import arc.graphics.g2d.Draw;
 import arc.graphics.g2d.TextureRegion;
 import arc.math.Mathf;
+import arc.util.Eachable;
+import mindustry.entities.units.BuildPlan;
 import mindustry.gen.Building;
 import mindustry.world.Block;
 
-public class DrawPlanetaryGearR extends DrawGearR{
+public class DrawPlanetaryGearR extends DrawGearR {
     public float length, armRotateSpeed;
     public TextureRegion armRegion;
     public String armSuffix = "-arm";

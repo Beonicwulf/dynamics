@@ -5,6 +5,8 @@ import dynamics.content.DyItems;
 import dynamics.content.DyLiquids;
 import dynamics.graphics.*;
 import dynamics.world.blocks.production.*;
+import dynamics.world.draw.DrawGearR;
+import dynamics.world.draw.DrawPress;
 import mindustry.content.Fx;
 import mindustry.entities.effect.*;
 import mindustry.gen.Sounds;

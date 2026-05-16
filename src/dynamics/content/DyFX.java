@@ -20,7 +20,7 @@ public class DyFX {
     public static final Rand rand = new Rand();
     public static final Vec2 temp = new Vec2();
     public static Effect
-            geyserFx = new Effect(180f, f -> {
+            geyserFx = new Effect(180f, 64f, f -> {
                 rand.setSeed(f.id);
                 for(int i = 0; i < 12; i++){
                     f.scaled(f.lifetime * rand.random(0.8f, 1), e -> {
@@ -46,6 +46,8 @@ public class DyFX {
                         lastPos.set(temp);
                     }
                 }
-            }).layer(Layer.block - 1);
+            }).layer(Layer.block - 1),
     // thanks, uujuju for groundCrack
+            blast = new MultiEffect(Fx.mineImpact, Fx.drillSteam, Fx.mineImpactWave.wrap(DyPal.fluxLight, 40f))
+            ;
 }

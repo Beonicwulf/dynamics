@@ -246,3 +246,22 @@ liquid.dy-purified-water.description = Has a variety of uses, including being us
                      }},
                      new RegionPart("-top")
              );
+
+    @Override
+    public void drawPlan(Block block, BuildPlan plan, Eachable<BuildPlan> list){
+        Draw.rect(armRegion, plan.drawx() + x, plan.drawy() + y, rotation);
+        for (int i = 0; i < toothCount; i++) {
+            Draw.rect(gearToothRegion, plan.drawx() + x + Mathf.cosDeg(rotation) * length, plan.drawy() + y + Mathf.sinDeg(rotation) * length, rotation + 360f/toothCount * i);
+        }
+        Draw.rect(gearTopRegion, plan.drawx() + x + Mathf.cosDeg(rotation) * length, plan.drawy() + y + Mathf.sinDeg(rotation) * length, rotation);
+    }
+
+    @Override
+    public void drawPlan(Block block, BuildPlan plan, Eachable<BuildPlan> list){
+        for (int i = 0; i < toothCount; i++) {
+            Draw.rect(gearToothRegion, plan.drawx() + x, plan.drawy() + y, rotation + 360f/toothCount * i);
+        }
+        Draw.rect(gearTopRegion, plan.drawx() + x, plan.drawy() + y, rotation);
+    }
+
+

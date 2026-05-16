@@ -5,6 +5,7 @@ import dynamics.content.DyLiquids;
 import dynamics.content.DyMusic;
 import dynamics.content.DyUnits;
 import dynamics.graphics.DyPal;
+import dynamics.world.blocks.effect.FoundationBuilder;
 import dynamics.world.blocks.effect.UnitPad;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
@@ -17,6 +18,8 @@ public class DyEffectBlocks {
     public static Block
             // Cores
             coreSurface, augerPad;
+    public static Block foundationBuilder;
+
     public static void load() {
         coreSurface = new CoreBlock("core-surface") {{
             requirements(Category.effect, with(DyItems.zinc, 1000, DyItems.partBasic, 100));
@@ -47,6 +50,12 @@ public class DyEffectBlocks {
             polyColor = DyPal.malachite;
             health = 1410;
             drawTeam = requiresCoreZone = true;
+        }};
+        foundationBuilder = new FoundationBuilder("foundation-builder"){{
+            requirements(Category.effect, with(DyItems.tantalum, 200, DyItems.sodium, 50, DyItems.partBasic, 10));
+            size = 4;
+            consumeItems(ItemStack.with(DyItems.tantalum, 100, DyItems.partBasic, 5));
+            consumeLiquid(DyLiquids.chlorine, 5f/60f);
         }};
     }
 }

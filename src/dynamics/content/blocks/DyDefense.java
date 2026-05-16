@@ -1,7 +1,7 @@
 package dynamics.content.blocks;
 
 import dynamics.content.*;
-import dynamics.graphics.DrawPress;
+import dynamics.world.draw.DrawPress;
 import dynamics.graphics.DyPal;
 import dynamics.world.blocks.defense.ShardWall;
 import mindustry.content.Fx;

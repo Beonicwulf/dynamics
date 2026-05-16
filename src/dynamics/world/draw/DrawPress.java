@@ -1,4 +1,4 @@
-package dynamics.graphics;
+package dynamics.world.draw;
 
 import arc.Core;
 import arc.graphics.g2d.Draw;
