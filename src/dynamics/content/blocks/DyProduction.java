@@ -5,7 +5,7 @@ import dynamics.content.DyItems;
 import dynamics.content.DyLiquids;
 import dynamics.graphics.*;
 import dynamics.world.blocks.production.*;
-import dynamics.world.draw.DrawGearR;
+import dynamics.world.draw.DrawGear;
 import dynamics.world.draw.DrawPress;
 import mindustry.content.Fx;
 import mindustry.entities.effect.*;
@@ -82,11 +82,11 @@ public class DyProduction {
             int teeth = 7;
             drawer = new DrawMulti(
                     new DrawDefault(),
-                    new DrawGearR(-gearSpeed, teeth + 2){{gearSuffix = "-gear-big";}},
-                    new DrawGearR(gearSpeed, teeth){{x = gearOffset; y = gearOffset;}},
-                    new DrawGearR(gearSpeed, teeth){{x = gearOffset; y = -gearOffset;}},
-                    new DrawGearR(gearSpeed, teeth){{x = -gearOffset; y = gearOffset;}},
-                    new DrawGearR(gearSpeed, teeth){{x = -gearOffset; y = -gearOffset;}},
+                    new DrawGear(-gearSpeed, teeth + 2){{gearSuffix = "-gear-big";}},
+                    new DrawGear(gearSpeed, teeth){{x = gearOffset; y = gearOffset;}},
+                    new DrawGear(gearSpeed, teeth){{x = gearOffset; y = -gearOffset;}},
+                    new DrawGear(gearSpeed, teeth){{x = -gearOffset; y = gearOffset;}},
+                    new DrawGear(gearSpeed, teeth){{x = -gearOffset; y = -gearOffset;}},
                     new DrawRegion("-top")
             );
         }};

@@ -7,10 +7,14 @@ import dynamics.content.DyUnits;
 import dynamics.graphics.DyPal;
 import dynamics.world.blocks.effect.FoundationBuilder;
 import dynamics.world.blocks.effect.UnitPad;
+import dynamics.world.draw.DrawOrbitingGears;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.storage.CoreBlock;
+import mindustry.world.draw.DrawDefault;
+import mindustry.world.draw.DrawMulti;
+import mindustry.world.draw.DrawRegion;
 
 import static mindustry.type.ItemStack.with;
 
@@ -51,12 +55,21 @@ public class DyEffectBlocks {
             health = 1410;
             drawTeam = requiresCoreZone = true;
         }};
-        foundationBuilder = new FoundationBuilder("foundation-builder"){{
+        foundationBuilder = new FoundationBuilder("founder"){{
             requirements(Category.effect, with(DyItems.tantalum, 200, DyItems.sodium, 50, DyItems.partBasic, 10));
             size = 4;
             consumeItems(ItemStack.with(DyItems.tantalum, 100, DyItems.partBasic, 5));
             consumeLiquid(DyLiquids.chlorine, 5f/60f);
             itemCapacity = 200;
+            drawer = new DrawMulti(new DrawDefault(),
+                    new DrawOrbitingGears(6, 4f, 5f, 2.3f, 3){{
+                        toothInterval = 1;
+                        speedInterval = -0.5f;
+                        lengthInterval = 0.2f;
+                        iterateArmSprites = false;
+                    }},
+                    new DrawRegion("-top")
+            );
         }};
     }
 }

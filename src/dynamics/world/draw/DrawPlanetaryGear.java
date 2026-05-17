@@ -4,21 +4,19 @@ import arc.Core;
 import arc.graphics.g2d.Draw;
 import arc.graphics.g2d.TextureRegion;
 import arc.math.Mathf;
-import arc.util.Eachable;
-import mindustry.entities.units.BuildPlan;
 import mindustry.gen.Building;
 import mindustry.world.Block;
 
-public class DrawPlanetaryGearR extends DrawGearR {
+public class DrawPlanetaryGear extends DrawGear {
     public float length, armRotateSpeed;
     public TextureRegion armRegion;
     public String armSuffix = "-arm";
     public boolean mirror = false;
-    public DrawPlanetaryGearR(float rotateSpeed, float length, float armRotateSpeed) {
+    public DrawPlanetaryGear(float rotateSpeed, float length, float armRotateSpeed) {
         super(rotateSpeed);
         this.length = length; this.armRotateSpeed = armRotateSpeed;
     }
-    public DrawPlanetaryGearR(float rotateSpeed, int toothCount, float length, float armRotateSpeed) {
+    public DrawPlanetaryGear(float rotateSpeed, float length, float armRotateSpeed, int toothCount) {
         super(rotateSpeed, toothCount);
         this.length = length; this.armRotateSpeed = armRotateSpeed;
     }
@@ -32,6 +30,13 @@ public class DrawPlanetaryGearR extends DrawGearR {
             Draw.rect(gearToothRegion, build.x + x + Mathf.cosDeg(build.totalProgress() * armRotateSpeed + rotation) * length, build.y + y + Mathf.sinDeg(build.totalProgress() * armRotateSpeed + rotation) * length, build.totalProgress() * (armRotateSpeed + rotateSpeed) + rotation + 360f/toothCount * i);
         }
         Draw.rect(gearTopRegion, build.x + x + Mathf.cosDeg(build.totalProgress() * armRotateSpeed + rotation) * length, build.y + y + Mathf.sinDeg(build.totalProgress() * armRotateSpeed + rotation) * length, build.totalProgress() * (armRotateSpeed + rotateSpeed) + rotation);
+        if (mirror){
+            Draw.rect(armRegion, build.x + x, build.y + y, build.totalProgress() * armRotateSpeed + rotation + 180);
+            for (int i = 0; i < toothCount; i++) {
+                Draw.rect(gearToothRegion, build.x + x + Mathf.cosDeg(build.totalProgress() * armRotateSpeed + rotation + 180) * length, build.y + y + Mathf.sinDeg(build.totalProgress() * armRotateSpeed + rotation + 180) * length, build.totalProgress() * (armRotateSpeed + rotateSpeed) + rotation + 360f/toothCount * i);
+            }
+            Draw.rect(gearTopRegion, build.x + x + Mathf.cosDeg(build.totalProgress() * armRotateSpeed + rotation + 180) * length, build.y + y + Mathf.sinDeg(build.totalProgress() * armRotateSpeed + rotation + 180) * length, build.totalProgress() * (armRotateSpeed + rotateSpeed) + rotation);
+        }
         Draw.z(z);
     }
 

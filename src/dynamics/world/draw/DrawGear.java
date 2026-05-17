@@ -2,13 +2,11 @@ package dynamics.world.draw;
 
 import arc.Core;
 import arc.graphics.g2d.*;
-import arc.util.Eachable;
-import mindustry.entities.units.BuildPlan;
 import mindustry.gen.Building;
 import mindustry.world.Block;
 import mindustry.world.draw.DrawRegion;
 
-public class DrawGearR extends DrawRegion {
+public class DrawGear extends DrawRegion {
     public TextureRegion gearToothRegion, gearTopRegion;
     public String gearSuffix = "-gear";
     public String gearToothSuffix = "-tooth";
@@ -18,11 +16,11 @@ public class DrawGearR extends DrawRegion {
     //Any number <=0 disables layer changes.
     public float layer = -1;
 
-    public DrawGearR(float rotateSpeed){
+    public DrawGear(float rotateSpeed){
         this.rotateSpeed = rotateSpeed;
     }
 
-    public DrawGearR(float rotateSpeed, int toothCount){
+    public DrawGear(float rotateSpeed, int toothCount){
         this.rotateSpeed = rotateSpeed;
         this.toothCount = toothCount;
     }
