@@ -162,7 +162,7 @@ public class DyPlanets {
                 r.onlyDepositCore = false;
             };
             campaignRuleDefaults.fog = false;
-            campaignRuleDefaults.showSpawns = true;
+            
             campaignRuleDefaults.rtsAI = campaignRuleDefaults.randomWaveAI = false;
 
             unlockedOnLand.add(DyEffectBlocks.coreSurface);
