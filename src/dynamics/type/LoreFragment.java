@@ -11,7 +11,7 @@ public class LoreFragment extends Item {
         color = color;
         databaseTag = tag;
         localizedName = Core.bundle.get("lore." + name + ".name", name);
-        description = Core.bundle.getOrNull("lore." name + ".description");
+        description = Core.bundle.getOrNull("lore." + name + ".description");
         details = Core.bundle.getOrNull("lore." + name + ".details");
         credit = Core.bundle.getOrNull("lore." + name + ".credit");
     }
