@@ -8,12 +8,12 @@ public class LoreFragment extends Item {
     public LoreFragment(String name, Color color, String tag){
         super(name);
         databaseCategory = "lore-fragment";
-        this.color = color;
-        this.databaseTag = tag;
-        this.localizedName = Core.bundle.get("lore." + this.name + ".name", this.name);
-        this.description = Core.bundle.getOrNull("lore." + this.name + ".description");
-        this.details = Core.bundle.getOrNull("lore." + this.name + ".details");
-        this.credit = Core.bundle.getOrNull("lore." + this.name + ".credit");
+        color = color;
+        databaseTag = tag;
+        localizedName = Core.bundle.get("lore." + name + ".name", name);
+        description = Core.bundle.getOrNull("lore." name + ".description");
+        details = Core.bundle.getOrNull("lore." + name + ".details");
+        credit = Core.bundle.getOrNull("lore." + name + ".credit");
     }
     public LoreFragment(String name, Color color){
         this(name, color, "test");
