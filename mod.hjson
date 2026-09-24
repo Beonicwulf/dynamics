@@ -1,8 +1,7 @@
 name: "dy"
 main: "dynamics.Dynamics"
-version: Alpha-1.3
+version: Alpha-1.4
 minGameVersion: 160
-java: true
 repo: Beonicwulf/dynamics
 
 displayName: "Farborne Dynamics"
