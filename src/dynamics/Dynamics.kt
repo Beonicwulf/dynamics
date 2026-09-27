@@ -6,5 +6,6 @@ import mindustry.mod.*
 
 class Dynamics : Mod(){
     override fun loadContent(){
+        DyResources.load()
     }
 }
