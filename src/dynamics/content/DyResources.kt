@@ -30,15 +30,15 @@ object DyResources {
 		// Embark
 		zinc = Item("zinc", DyPal.zinc).apply{
 			cost = 1f
-			hardness = 1f
+			hardness = 1
 			healthScaling = 0.1f
 		}
 		quartz = Item("quartz", DyPal.quartz).apply{
-            hardness = 2f
+            hardness = 2
             lowPriority = true
         }
         cinnabar = Item("cinnabar", DyPal.cinnabar).apply{
-            hardness = 1f
+            hardness = 1
             lowPriority = true
             buildable = false
         }
@@ -56,17 +56,17 @@ object DyResources {
         // Cove
         malachite = Item("malachite", DyPal.malachite).apply{
             cost = 1.2f
-            hardness = 2f
+            hardness = 2
             charge = 0.3f
         }
         // Trench
         tantalum = Item("tantalum", DyPal.tantalum).apply{
-            hardness = 3f
+            hardness = 3
             cost = 1.4f
             healthScaling = 1f
         }
         // Ichorites
-        ichor = new Liquid("ichor").apply{
+        ichor = Liquid("ichor").apply{
             viscosity = 0.75f
             flammability = 0.9f
             explosiveness = 0.7f
