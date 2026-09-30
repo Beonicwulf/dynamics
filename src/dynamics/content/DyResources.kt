@@ -4,6 +4,7 @@ import arc.struct.*
 
 import dynamics.graphics.DyPal
 import mindustry.type.*
+import mindustry.content.Liquids.water
 
 object DyResources {
 	// Embark
