@@ -16,7 +16,7 @@ object DyPal {
     val malachite = Color.valueOf("#356a46")
     val tantalum = Color.valueOf("#606d90")
 
-    val ichor = Color.valueOf("#000000")
+    val ichor = Color.valueOf("#b79638")
     val aether = Color.valueOf("#e56084")
     val pneuma = Color.valueOf("#9375ff")
 
