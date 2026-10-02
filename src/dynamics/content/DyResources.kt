@@ -5,25 +5,26 @@ import arc.struct.*
 import dynamics.graphics.DyPal
 import mindustry.type.*
 import mindustry.content.Liquids.water
+import dynamics.type.Gas
 
 object DyResources {
 	// Embark
 	lateinit var zinc: Item
 	lateinit var quartz: Item
 	lateinit var cinnabar: Item
-	lateinit var steam: Liquid
+	lateinit var steam: Gas
 	lateinit var amalgam: Item
 	// Shallows
 	lateinit var sodium: Item
-	lateinit var chlorine: Liquid
+	lateinit var chlorine: Gas
 	// Cove
 	lateinit var malachite: Item
 	// Trench
 	lateinit var tantalum: Item
 	// Ichorites
 	lateinit var ichor: Liquid
-	lateinit var aether: Liquid
-	lateinit var pneuma: Liquid
+	lateinit var aether: Gas
+	lateinit var pneuma: Gas
 
 	val dynamicsItems = Seq<Item>()
 
@@ -43,15 +44,13 @@ object DyResources {
             lowPriority = true
             buildable = false
         }
-        steam = Liquid("steam", DyPal.steam).apply{
-        	gas = true
+        steam = Gas("steam", DyPal.steam).apply{
             explosiveness = 0.6f
         }
         amalgam = Item("amalgam", DyPal.amalgam)
         // Shallows
         sodium = Item("sodium", DyPal.sodium)
-        chlorine = Liquid("chlorine", DyPal.chlorine).apply{
-        	gas = true
+        chlorine = Gas("chlorine", DyPal.chlorine).apply{
             flammability = 1f
         }
         // Cove
@@ -73,14 +72,11 @@ object DyResources {
             explosiveness = 0.7f
             canStayOn.add(water)
         }
-        aether = Liquid("aether", DyPal.aether).apply{
-        	gas = true
+        aether = Gas("aether", DyPal.aether).apply{
             flammability = 1.2f
             explosiveness = 1.2f
         }
-        pneuma = Liquid("pneuma", DyPal.pneuma).apply{
-        	gas = true
-        }
+        pneuma = Gas("pneuma", DyPal.pneuma)
 
         dynamicsItems.addAll(zinc, quartz, cinnabar, amalgam, sodium, malachite, tantalum)
 	}
