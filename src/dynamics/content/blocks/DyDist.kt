@@ -14,7 +14,7 @@ object DyDist {
 	fun load() {
 		cargoCannon = MassDriver("cargo-cannon").apply{
 			requirements(Category.distribution, with(DyResources.zinc, 5))
-			researchCost = ItemStack.mult(requirements, 5)
+			researchCost = ItemStack.mult(requirements, 5f)
 			size = 1
 			itemCapacity = 15
 			hasPower = false
