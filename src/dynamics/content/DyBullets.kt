@@ -9,10 +9,12 @@ object DyBullets {
 	fun load() {
 		cargoBolt = MassDriverBolt().apply{
 			collidesTiles = false;
-			width = height = 7
+			width = 7
+			height = 7
 			shrinkY = 0f
-			spin = 3
-			backColor = frontColor = DyPal.zinc
+			spin = 3f
+			backColor = DyPal.zinc
+			frontColor = DyPal.zinc
 		}
 	}
 }

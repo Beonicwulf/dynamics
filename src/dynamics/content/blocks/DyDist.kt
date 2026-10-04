@@ -25,7 +25,7 @@ object DyDist {
 			shake = 0.4f
 			knockback = 2f
 			shootSoundVolume = 0.1f
-			massDriverBolt = DyBullets.cargoBolt
+			MassDriverBolt = DyBullets.cargoBolt
 		}
 	}
 }
