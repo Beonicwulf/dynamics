@@ -7,6 +7,7 @@ import mindustry.world.Block
 import mindustry.world.blocks.distribution.MassDriver
 
 import mindustry.type.ItemStack.with
+import dynamics.content.DyBullets
 
 object DyDist {
 	lateinit var cargoCannon: Block
@@ -16,7 +17,7 @@ object DyDist {
 			requirements(Category.distribution, with(DyResources.zinc, 5))
 			researchCost = ItemStack.mult(requirements, 5f)
 			size = 1
-			itemCapacity = 15
+			itemCapacity = 10
 			hasPower = false
 			range = 60f
 			rotateSpeed = 10f
@@ -24,6 +25,7 @@ object DyDist {
 			shake = 0.4f
 			knockback = 2f
 			shootSoundVolume = 0.1f
+			massDriverBolt = DyBullets.cargoBolt
 		}
 	}
 }

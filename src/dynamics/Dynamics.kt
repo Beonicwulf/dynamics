@@ -8,6 +8,7 @@ import dynamics.content.*
 class Dynamics : Mod() {
     override fun loadContent() {
         DyResources.load()
+        DyBullets.load()
         DyBlocks.load()
     }
 }
