@@ -11,7 +11,6 @@ object DyBullets {
 			collidesTiles = false;
 			width = 7f
 			height = 7f
-			shrinkY = 0f
 			spin = 3f
 			backColor = DyPal.zinc
 			frontColor = DyPal.zinc
