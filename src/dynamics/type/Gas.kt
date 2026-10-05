@@ -5,11 +5,18 @@ import arc.graphics.Color
 import mindustry.type.Liquid
 
 class Gas: Liquid {
+	var pressure: float = 0.3f
+
 	constructor(name: String, color: Color): super(name, color) {
 		gas = true
 		localizedName = Core.bundle.get("gas.$name.name", name)
         description = Core.bundle.getOrNull("gas.$name.description")
         details = Core.bundle.getOrNull("gas.$name.details")
         credit = Core.bundle.getOrNull("gas.$name.credit")
+	}
+
+	override fun setStats(){
+		super.setStats()
+		stats.addPercent(Stat.pressure, pressure);
 	}
 }

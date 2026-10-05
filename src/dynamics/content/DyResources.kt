@@ -46,6 +46,7 @@ object DyResources {
         }
         steam = Gas("steam", DyPal.steam).apply{
             explosiveness = 0.6f
+            pressure = 0.5f
         }
         amalgam = Item("amalgam", DyPal.amalgam)
         // Shallows
@@ -76,7 +77,9 @@ object DyResources {
             flammability = 1.2f
             explosiveness = 1.2f
         }
-        pneuma = Gas("pneuma", DyPal.pneuma)
+        pneuma = Gas("pneuma", DyPal.pneuma).apply{
+            pressure = 0.8f
+        }
 
         dynamicsItems.addAll(zinc, quartz, cinnabar, amalgam, sodium, malachite, tantalum)
 	}
