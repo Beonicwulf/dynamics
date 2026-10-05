@@ -6,7 +6,7 @@ import mindustry.type.Liquid
 import dynamics.world.meta.DyStat
 
 class Gas: Liquid {
-	var pressure: float = 0.3f
+	var pressure = 0.3f
 
 	constructor(name: String, color: Color): super(name, color) {
 		gas = true
