@@ -21,7 +21,7 @@ object DyDist {
 			hasPower = false
 			range = 60f
 			rotateSpeed = 10f
-			reload = 5f
+			reload = 15f
 			shake = 0.4f
 			knockback = 2f
 			shootSoundVolume = 0.1f

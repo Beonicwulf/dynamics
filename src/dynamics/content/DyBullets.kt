@@ -7,7 +7,7 @@ object DyBullets {
 	lateinit var cargoBolt: MassDriverBolt
 
 	fun load() {
-		cargoBolt = MassDriverBolt().apply{
+		cargoBolt = MassDriverBolt(0.3f, 50).apply{
 			collidesTiles = false;
 			width = 7f
 			height = 7f
