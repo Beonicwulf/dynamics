@@ -3,6 +3,7 @@ package dynamics.type
 import arc.Core
 import arc.graphics.Color
 import mindustry.type.Liquid
+import dynamics.world.meta.DyStat
 
 class Gas: Liquid {
 	var pressure: float = 0.3f
@@ -17,6 +18,6 @@ class Gas: Liquid {
 
 	override fun setStats(){
 		super.setStats()
-		stats.addPercent(Stat.pressure, pressure);
+		stats.addPercent(DyStat.pressure, pressure);
 	}
 }
