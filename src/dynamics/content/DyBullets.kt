@@ -7,7 +7,7 @@ object DyBullets {
 	lateinit var cargoBolt: MassDriverBolt
 
 	fun load() {
-		cargoBolt = MassDriverBolt(0.3f, 50).apply{
+		cargoBolt = MassDriverBolt().apply{
 			collidesTiles = false;
 			width = 7f
 			height = 7f
@@ -15,6 +15,8 @@ object DyBullets {
 			spin = 3f
 			backColor = DyPal.zinc
 			frontColor = DyPal.zinc
+			speed = 0.3f
+			damage = 50
 		}
 	}
 }
