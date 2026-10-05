@@ -4,7 +4,7 @@ import mindustry.entities.bullet.*
 import dynamics.graphics.DyPal
 
 object DyBullets {
-	lateinit var cargoBolt: BulletType
+	lateinit var cargoBolt: MassDriverBolt
 
 	fun load() {
 		cargoBolt = MassDriverBolt().apply{
