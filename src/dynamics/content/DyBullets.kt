@@ -16,7 +16,7 @@ object DyBullets {
 			backColor = DyPal.zinc
 			frontColor = DyPal.zinc
 			speed = 0.3f
-			damage = 50
+			damage = 50f
 		}
 	}
 }
