@@ -16,6 +16,7 @@ object DyBullets {
 			speed = 0.3f
 			damage = 50f
 			backSprite = "shell"
+			shrinkY = 0f
 		}
 	}
 }
