@@ -28,14 +28,14 @@ class DySorter(name: String): Sorter(name) {
         Draw.rect(baseRegion, plan.drawx(), plan.drawy())
     }
 
-    override fun minimapColor(Tile tile): Int {
+    override fun minimapColor(tile: Tile): Int {
         val build = tile.build as? DySorterBuild
         return if (build == null || build.sortItem == null) 0 else build.sortItem.color.rgba()
     }
 
     override fun icons() = arrayOf(region)
 
-    inner class DySorterBuild: SorterBuild {
+    inner class DySorterBuild: SorterBuild() {
         override fun draw() {
             Draw.rect(baseRegion, x, y)
             if (sortItem != null) {
