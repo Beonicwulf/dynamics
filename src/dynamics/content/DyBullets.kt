@@ -2,7 +2,7 @@ package dynamics.content
 
 import mindustry.entities.bullet.*
 import dynamics.graphics.DyPal
-import mindustry.content.Fx;
+import mindustry.content.Fx
 
 object DyBullets {
 	lateinit var cargoBolt: MassDriverBolt
@@ -18,20 +18,19 @@ object DyBullets {
 			frontColor = DyPal.zinc
 			shrinkY = 0f
 			speed = 0.3f
-			damage = 50
+			damage = 50f
 			sprite = "dy-shell"
 		}
 
-		respireBolt = BasicBulletType(4f, 15, "dy-respire-bolt").apply{
+		respireBolt = BasicBulletType(4f, 15f, "dy-respire-bolt").apply{
 			hitColor = DyPal.sodium
 			trailColor = DyPal.sodium
 			lifetime = 40f
-			homingDelay = 15f
 			height = 7f
             width = 7f
             shrinkY = 0f
             trailWidth = 0.9f
-            trailLength = 5f
+            trailLength = 5
             homingPower = 0.3f
             homingDelay = 4f
             homingRange = 50f
