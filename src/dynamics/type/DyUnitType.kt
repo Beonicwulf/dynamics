@@ -6,7 +6,7 @@ import mindustry.type.UnitType
 class DyUnitType(name: String): UnitType(name) {
 	var bladeSpeed: Float = 10f
 	var bladeTime: Float = 360f
-	var blades: Int
+	var blades: Int = 0
 
 	fun drawBlades(bladeCount: Int = this.blades) {
 		if (bladeCount <= 0) return
