@@ -1,14 +1,9 @@
 package dynamics.content
 
-import arc.math.geom.Rect
-import arc.struct.Seq
 import dynamics.type.DyUnitType
-import mindustry.ai.UnitCommand
 import mindustry.ai.types.*
-import mindustry.content.Fx
 import mindustry.entities.pattern.*
 import mindustry.gen.*
-import mindustry.graphics.*
 import mindustry.type.UnitType
 import mindustry.type.Weapon
 
@@ -23,23 +18,23 @@ object DyUnits {
 		respireWeapon = Weapon("respire-weapon").apply{
 			x = -2f
 			y = -2f
-			reload = 40
-			inaccuracy = 10
+			reload = 40f
+			inaccuracy = 10f
 			minWarmup = 0.25f
 			bullet = DyBullets.respireBolt
 			shoot = ShootPattern().apply{
 				shots = 3
-				shotDelay = 5
+				shotDelay = 5f
 			}
 		}
 	}
 
 	fun load(){
-		var coreFleeRange = 500f
+		val coreFleeRange = 500f
 		loadWeapons()
 		respire = DyUnitType("respire").apply{
-			controller = u -> new BuilderAI(true, coreFleeRange)
-			constructor = LegsUnit::create
+			controller = { u -> BuilderAI(true, coreFleeRange) }
+			constructor = { LegsUnit.create() } 
 		}
 	}
 }
