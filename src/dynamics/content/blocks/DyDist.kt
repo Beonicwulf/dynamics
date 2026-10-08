@@ -12,7 +12,7 @@ import dynamics.world.blocks.distribution.DySorter
 
 object DyDist {
 	lateinit var cargoCannon: Block
-	lateinit var dySorter: Block
+	lateinit var cargoSorter: Block
 
 	fun load() {
 		cargoCannon = MassDriver("cargo-cannon").apply{
@@ -29,7 +29,7 @@ object DyDist {
 			shootSoundVolume = 0.1f
 			bullet = DyBullets.cargoBolt
 		}
-		dySorter = DySorter("dy-sorter").apply{
+		cargoSorter = DySorter("cargo-sorter").apply{
 			requirements(Category.distribution, with(DyResources.zinc, 10, DyResources.amalgam, 10))
 			researchCost = ItemStack.mult(requirements, 5f)
 		}

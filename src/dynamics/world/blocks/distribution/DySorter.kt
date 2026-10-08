@@ -20,8 +20,8 @@ class DySorter(name: String): Sorter(name) {
 
     override fun load() {
         super.load()
-        baseRegion = Core.atlas.find(name)
-        itemRegion = Core.atlas.find(name + "-item")
+        baseRegion = Core.atlas.find("dy-" + name)
+        itemRegion = Core.atlas.find("dy-" + name + "-item")
     }
 
     override fun drawPlanRegion(plan: BuildPlan, list: Eachable<BuildPlan>) {

@@ -27,16 +27,16 @@ object DyBullets {
 			trailColor = DyPal.sodium
 			lifetime = 40f
 			height = 7f
-            width = 7f
-            shrinkY = 0f
-            trailWidth = 0.9f
-            trailLength = 5
-            homingPower = 0.3f
-            homingDelay = 4f
-            homingRange = 50f
-            spin = 3.5f
-            hitEffect = Fx.hitBulletColor
-            despawnEffect = Fx.hitBulletColor
+			width = 7f
+			shrinkY = 0f
+			trailWidth = 0.9f
+			trailLength = 5
+			homingPower = 0.3f
+			homingDelay = 4f
+			homingRange = 50f
+			spin = 3.5f
+			hitEffect = Fx.hitBulletColor
+			despawnEffect = Fx.hitBulletColor
 		}
 	}
 }

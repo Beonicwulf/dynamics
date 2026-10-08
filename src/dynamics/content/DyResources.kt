@@ -8,34 +8,34 @@ import mindustry.content.Liquids.water
 import dynamics.type.Gas
 
 object DyResources {
-	// Embark
-	lateinit var zinc: Item
-	lateinit var quartz: Item
-	lateinit var cinnabar: Item
-	lateinit var steam: Gas
-	lateinit var amalgam: Item
-	// Shallows
-	lateinit var sodium: Item
-	lateinit var chlorine: Gas
-	// Cove
-	lateinit var malachite: Item
-	// Trench
-	lateinit var tantalum: Item
-	// Ichorites
-	lateinit var ichor: Liquid
-	lateinit var aether: Gas
-	lateinit var pneuma: Gas
+    // Embark
+    lateinit var zinc: Item
+    lateinit var quartz: Item
+    lateinit var cinnabar: Item
+    lateinit var steam: Gas
+    lateinit var amalgam: Item
+    // Shallows
+    lateinit var sodium: Item
+    lateinit var chlorine: Gas
+    // Cove
+    lateinit var malachite: Item
+    // Trench
+    lateinit var tantalum: Item
+    // Ichorites
+    lateinit var ichor: Liquid
+    lateinit var aether: Gas
+    lateinit var pneuma: Gas
 
-	val dynamicsItems = Seq<Item>()
+    val dynamicsItems = Seq<Item>()
 
-	fun load() {
-		// Embark
-		zinc = Item("zinc", DyPal.zinc).apply{
-			cost = 1f
-			hardness = 1
-			healthScaling = 0.1f
-		}
-		quartz = Item("quartz", DyPal.quartz).apply{
+    fun load() {
+       // Embark
+       zinc = Item("zinc", DyPal.zinc).apply{
+         cost = 1f
+         hardness = 1
+         healthScaling = 0.1f
+       }
+       quartz = Item("quartz", DyPal.quartz).apply{
             hardness = 2
             lowPriority = true
         }
@@ -82,5 +82,5 @@ object DyResources {
         }
 
         dynamicsItems.addAll(zinc, quartz, cinnabar, amalgam, sodium, malachite, tantalum)
-	}
+    }
 }

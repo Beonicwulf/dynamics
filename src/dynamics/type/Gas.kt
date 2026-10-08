@@ -11,9 +11,9 @@ class Gas: Liquid {
 	constructor(name: String, color: Color): super(name, color) {
 		gas = true
 		localizedName = Core.bundle.get("gas.$name.name", name)
-        description = Core.bundle.getOrNull("gas.$name.description")
-        details = Core.bundle.getOrNull("gas.$name.details")
-        credit = Core.bundle.getOrNull("gas.$name.credit")
+		description = Core.bundle.getOrNull("gas.$name.description")
+		details = Core.bundle.getOrNull("gas.$name.details")
+		credit = Core.bundle.getOrNull("gas.$name.credit")
 	}
 
 	override fun setStats(){
